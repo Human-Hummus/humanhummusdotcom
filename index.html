@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<title>Human Hummus</title>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+	</head>
+	<body>
+		<style>
+			body {
+				background-color: cyan;
+			}
+			@keyframes for_p {
+				0%{border-color:#ff0000;}
+				33%{border-color:#00ff00;}
+				66%{border-color:#0000ff;}
+				100%{border-color:#ff0000;}
+			}
+			ul {
+				top:100px;
+				border:10px solid #ffffff;
+				position:absolute;
+				animation-duration:3s;
+				animation-name:for_p;
+				animation-iteration-count:infinite;
+				animation-timing-function: linear;
+				border-radius:10px;
+			}
+
+
+			@keyframes for_header{
+                                0%{color:#ff0000;transform:rotateX(0deg);}
+                                33%{color:#00ff00;}
+                                66%{color:#0000ff;}
+                                100%{color:#ff0000;transform:rotateX(360deg);}
+
+			}
+			@keyframes for_wee{
+				0%{transform:rotateZ(0deg);font-size:100%;}
+				50%{font-size:400%;}
+				100%{transform:rotateZ(360deg);font-size:100%;}
+			}
+
+			h2{
+				animation-timing-function: linear;
+				animation-iteration-count:infinite;
+				animation-name: for_wee;
+				animation-duration: 2s;
+				position:absolute;
+				top:50%;
+				left:auto;
+				
+			}
+	
+			h1 {
+				animation-timing-function: linear;
+				animation-iteration-count:infinite;
+				animation-name: for_header;
+				animation-duration: 3s;
+			}
+		</style>
+		<h1>Human Hummus</h1>
+		<h2>Weeeee!</h2>
+		<ul>
+			<li><a href="YandolSim/index.html">Yandelere Simulator</a></li>
+		</ul>
+	</body>
+</html>

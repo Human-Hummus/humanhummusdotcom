@@ -1,0 +1,14 @@
+body {
+	background-color: lightblue;
+}
+
+
+@keyframes for_header{
+	0% {color: red;}
+	100% {color: blue:}
+}
+
+h1 {
+	animation-name: for_header;
+	animation-duration: 3s;
+}
