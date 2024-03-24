@@ -1,14 +1,21 @@
+@font-face { font-family: handdrawn; src: url("assets/cms.ttf"); }
+@font-face { font-family: scary; src: url("assets/czk.ttf"); }
+@font-face { font-family: courier; src: url("assets/Courier Prime Code.ttf");}
+
 body {
-	background-color: lightblue;
+	background-color: cyan;
 }
 
-
-@keyframes for_header{
-	0% {color: red;}
-	100% {color: blue:}
-}
 
 h1 {
-	animation-name: for_header;
-	animation-duration: 3s;
+	font-size:400%;
+}
+#standard-head {
+	font-size:400%;
+	font-family:handdrawn;
+}
+#standard-list {
+	font-size:150%;
+	font-family:handdrawn;
+	list-style:url("assets/bullet.webp");
 }
