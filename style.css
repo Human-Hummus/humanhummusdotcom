@@ -1,6 +1,6 @@
 @font-face { font-family: handdrawn; src: url("assets/cms.ttf"); }
 @font-face { font-family: scary; src: url("assets/czk.ttf"); }
-@font-face { font-family: courier; src: url("assets/Courier Prime Code.ttf");}
+@font-face { font-family: courier; src: url("assets/Courier Prime Code.ttf"); }
 
 body {
 	background-color: cyan;
@@ -17,5 +17,5 @@ h1 {
 #standard-list {
 	font-size:150%;
 	font-family:handdrawn;
-	/*list-style:url("assets/bullet.webp");*/
+	list-style:url("assets/bullet.webp");
 }
