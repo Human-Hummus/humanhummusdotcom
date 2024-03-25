@@ -17,5 +17,5 @@ h1 {
 #standard-list {
 	font-size:150%;
 	font-family:handdrawn;
-	list-style:url("assets/bullet.webp");
+	/*list-style:url("assets/bullet.webp");*/
 }
