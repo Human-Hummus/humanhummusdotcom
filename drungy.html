@@ -6,14 +6,21 @@
 	</head>
 	<body>
 		<a href="index.html"><img src="assets/home.webp"></a>
-		<center><h1>My Fursona;  The Drungalwort</h1></center>
-		<center><button onclick="document.getElementById('changed_sound').play();document.getElementById('drungy_img').src='assets/sussy_drungy.webp';" style="position:absolute;margin-left:20%;"><img src=assets/Changed_Puro.webp></button></center>
+		<center><h1>My Fursona: The Drungalwort</h1></center>
+		<center><button onclick="
+				document.getElementById('changed_sound').cloneNode().play();
+				var drungy = document.getElementById('drungy_img');
+				console.log(drungy.src);
+				if (drungy.src.includes('sussy')){drungy.src='drungy.webp';}
+
+				else{drungy.src='assets/sussy_drungy.webp';}
+				" style="position:absolute;margin-left:20%;"><img src=assets/Changed_Puro.webp></button></center>
 		<center><img id="drungy_img" src=drungy.webp></center>
 		<center><h2> INFORMATION </h2></center>
 		<audio id="sound1" src="assets/heheheha.opus" preload="auto"></audio>
 		<audio id="changed_sound" src="assets/changed_sound.opus" preload="auto"></audio>
 		<ul id=standard-list>
-			<li><button onclick="document.getElementById('sound1').play();">Pronouns: He/He(<img width=50 height=50 src=assets/michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
+			<li><button onclick="document.getElementById('sound1').cloneNode().play();">Pronouns: He/He(<img width=50 height=50 src=assets/michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
 			<li>The Drungalwort has two horns</li>
 			<li>One of the horns is broken</li>
 			<li>He has insect wings</li>
