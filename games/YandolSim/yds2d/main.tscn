@@ -1,0 +1,117 @@
+[gd_scene load_steps=18 format=3 uid="uid://7qtms3yu31ut"]
+
+[ext_resource type="Script" path="res://main_scene.gd" id="1_hojt1"]
+[ext_resource type="PackedScene" uid="uid://b4qqg12lhcije" path="res://yandy.tscn" id="3_6y374"]
+[ext_resource type="PackedScene" uid="uid://dfyo71xnahb3y" path="res://mr_mcglee.tscn" id="3_snii1"]
+[ext_resource type="PackedScene" uid="uid://djlhroxrwlpr2" path="res://person.tscn" id="3_wxl47"]
+[ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="5_scl6x"]
+[ext_resource type="PackedScene" uid="uid://bscq6bp1sder3" path="res://items/coffee.tscn" id="6_fg14g"]
+[ext_resource type="PackedScene" uid="uid://cvxd3p0olvcam" path="res://mr_c.tscn" id="7_6n8kf"]
+[ext_resource type="PackedScene" uid="uid://bmocgtymt7n0m" path="res://school.tscn" id="7_o8xta"]
+[ext_resource type="Texture2D" uid="uid://cckn6ffrbr78k" path="res://assets/Other/lock_0.png" id="9_7ycia"]
+[ext_resource type="PackedScene" uid="uid://de2x1m6qx2h88" path="res://myrawr.tscn" id="11_ajwuk"]
+[ext_resource type="PackedScene" uid="uid://b23gakx7x1myq" path="res://pe_teacher.tscn" id="12_2ylrw"]
+[ext_resource type="PackedScene" uid="uid://cds8gf2bscm7y" path="res://karisan.tscn" id="12_v3222"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wa2lu"]
+size = Vector2(93, 2380)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crhvt"]
+size = Vector2(4696.25, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6qst"]
+size = Vector2(83.5, 1863)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j417s"]
+size = Vector2(710, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlkmm"]
+size = Vector2(4681, 112)
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_hojt1")
+
+[node name="School" parent="." instance=ExtResource("7_o8xta")]
+position = Vector2(57, -823)
+gravity_scale = 1.66533e-16
+
+[node name="mr_mcglee" parent="." instance=ExtResource("3_snii1")]
+position = Vector2(-1144, -2687)
+gravity_scale = 1.66533e-16
+
+[node name="mr_c" parent="." instance=ExtResource("7_6n8kf")]
+position = Vector2(1999, -1257)
+gravity_scale = 1.66533e-16
+
+[node name="yandy" parent="." instance=ExtResource("3_6y374")]
+position = Vector2(-183, -276)
+motion_mode = 1
+
+[node name="PE teacher" parent="." instance=ExtResource("12_2ylrw")]
+position = Vector2(-2000, -1547)
+scale = Vector2(0.545, 0.545)
+disable_mode = 1
+gravity_scale = 1.66533e-16
+can_sleep = false
+freeze = true
+
+[node name="coffee" parent="." instance=ExtResource("6_fg14g")]
+position = Vector2(1762, -1212)
+
+[node name="world border" type="RigidBody2D" parent="."]
+gravity_scale = 1.66533e-16
+lock_rotation = true
+freeze = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="world border"]
+position = Vector2(-2287, 453)
+shape = SubResource("RectangleShape2D_wa2lu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="world border"]
+position = Vector2(104.125, 1509.5)
+shape = SubResource("RectangleShape2D_crhvt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="world border"]
+position = Vector2(2394, 552.5)
+shape = SubResource("RectangleShape2D_o6qst")
+
+[node name="myrawrs" parent="." instance=ExtResource("11_ajwuk")]
+position = Vector2(2155, -2711)
+scale = Vector2(0.46, 0.46)
+gravity_scale = 0.0
+
+[node name="door" type="RigidBody2D" parent="."]
+position = Vector2(300, -379.92)
+gravity_scale = 1.66533e-16
+
+[node name="Sprite2D" type="Sprite2D" parent="door"]
+position = Vector2(-30, -78)
+scale = Vector2(2.88235, 2.84921)
+texture = ExtResource("9_7ycia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(-39, 0)
+shape = SubResource("RectangleShape2D_j417s")
+
+[node name="Label" type="Label" parent="door"]
+offset_left = -215.0
+offset_top = -86.0
+offset_right = 142.0
+offset_bottom = -25.0
+text = "You must talk to Yandol before you can enter"
+autowrap_mode = 3
+
+[node name="Houses" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Houses"]
+position = Vector2(44.5, 1392)
+shape = SubResource("RectangleShape2D_vlkmm")
+
+[node name="karisan" parent="." instance=ExtResource("12_v3222")]
+position = Vector2(1627, -1828)
+
+[node name="person" parent="." instance=ExtResource("3_wxl47")]
+position = Vector2(61, 600)
+
+[node name="sfx" parent="person" instance=ExtResource("5_scl6x")]
+position = Vector2(-46, 347)

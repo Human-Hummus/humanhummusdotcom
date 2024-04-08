@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxhmjdgmubys8"]
+
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_xmpl2"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50
+text = "You were rude to everyone. You were expelled
+from the school, never to be loved again."
+
+[node name="restart_tscn" parent="." instance=ExtResource("1_xmpl2")]
+position = Vector2(419, 406)

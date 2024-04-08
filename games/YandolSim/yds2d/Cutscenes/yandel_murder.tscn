@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg62ciy3ev4ea"]
+
+[ext_resource type="Texture2D" uid="uid://du5x7s6ghojaw" path="res://assets/cutscenes/yandolstab.webp" id="1_fnn3k"]
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="2_gk6pa"]
+
+[node name="mainnode" type="Node2D"]
+
+[node name="Yandolstab" type="Sprite2D" parent="."]
+texture_filter = 4
+texture_repeat = 1
+position = Vector2(564.5, 319)
+scale = Vector2(1.56407, 1.61929)
+texture = ExtResource("1_fnn3k")
+
+[node name="restart_tscn" parent="." instance=ExtResource("2_gk6pa")]
+position = Vector2(419, 406)

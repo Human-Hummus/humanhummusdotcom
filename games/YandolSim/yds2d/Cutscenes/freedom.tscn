@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://drosrbp73fm1p"]
+
+[ext_resource type="Texture2D" uid="uid://myx2g2pggesn" path="res://assets/cutscenes/escape.jpg" id="1_0ydqr"]
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="2_3h7u2"]
+
+[node name="Freedom" type="Node2D"]
+
+[node name="Escape" type="Sprite2D" parent="."]
+position = Vector2(591, 320)
+texture = ExtResource("1_0ydqr")
+
+[node name="restart_tscn" parent="." instance=ExtResource("2_3h7u2")]
+position = Vector2(419, 406)

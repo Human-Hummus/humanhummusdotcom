@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=3 uid="uid://bg4bcj3k6ni1i"]
+
+[ext_resource type="Script" path="res://speech.gd" id="1_6pm7w"]
+[ext_resource type="Texture2D" uid="uid://cmqp4l62ep5cf" path="res://assets/black.webp" id="2_fbtjw"]
+[ext_resource type="Texture2D" uid="uid://doh8pg24f827m" path="res://assets/border.jpg" id="3_b5psg"]
+[ext_resource type="Texture2D" uid="uid://cd87eb78oywrr" path="res://assets/minichars/nothing.png" id="3_fvi2i"]
+[ext_resource type="Texture2D" uid="uid://q20l6kds4uul" path="res://assets/minichars/cowo.png" id="4_lxkfd"]
+[ext_resource type="Texture2D" uid="uid://yeaiw4u1vx45" path="res://assets/minichars/yandol.png" id="5_bwdh3"]
+[ext_resource type="Texture2D" uid="uid://cxxvho21manqw" path="res://assets/minichars/mcglee.png" id="7_n8qj0"]
+[ext_resource type="Texture2D" uid="uid://fv5lld0slil3" path="res://assets/minichars/owolin.png" id="8_14bnm"]
+
+[sub_resource type="Theme" id="Theme_e0y3p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlueo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fvi2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lxkfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bwdh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n8qj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_14bnm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="speech" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pm7w")
+
+[node name="black" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(56.445, 7.902)
+texture = ExtResource("2_fbtjw")
+
+[node name="displayed text" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -37.0
+offset_right = 284.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_e0y3p")
+
+[node name="text_press" type="Button" parent="displayed text"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 0
+offset_left = -5.0
+offset_top = -2.0
+offset_right = 558.0
+offset_bottom = 74.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -246.0
+offset_right = 279.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bebebeba" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.433
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(-212, -101)
+scale = Vector2(0.258806, 0.221538)
+texture = ExtResource("3_b5psg")
+
+[node name="icon" type="AnimatedSprite2D" parent="."]
+position = Vector2(-213, -108)
+scale = Vector2(1.253, 1.894)
+sprite_frames = SubResource("SpriteFrames_jlueo")
+frame = 1

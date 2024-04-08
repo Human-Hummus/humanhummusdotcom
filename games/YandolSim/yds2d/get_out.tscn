@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://hfd7opomjf1h"]
+
+[ext_resource type="Script" path="res://Get_out.gd" id="1_isiru"]
+[ext_resource type="PackedScene" uid="uid://bmocgtymt7n0m" path="res://school.tscn" id="2_q2mss"]
+[ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="3_irvt6"]
+[ext_resource type="PackedScene" uid="uid://djlhroxrwlpr2" path="res://person.tscn" id="4_kct31"]
+[ext_resource type="Texture2D" uid="uid://dstgs0dtnbbp0" path="res://assets/charecter_assets/olin/owolin-fs8.png" id="5_qfdkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xweh"]
+size = Vector2(409.314, 297.251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p7jk"]
+size = Vector2(713.75, 87)
+
+[node name="Get_out" type="Node2D"]
+script = ExtResource("1_isiru")
+
+[node name="School" parent="." instance=ExtResource("2_q2mss")]
+position = Vector2(76, 801)
+
+[node name="Olin" type="Sprite2D" parent="."]
+position = Vector2(-1838, -1545)
+scale = Vector2(0.501037, 0.341934)
+texture = ExtResource("5_qfdkb")
+
+[node name="hitbox" type="Area2D" parent="Olin"]
+position = Vector2(-3098.8, -2412.12)
+scale = Vector2(2.99401, 3.0303)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Olin/hitbox"]
+position = Vector2(1079.66, 996.741)
+shape = SubResource("RectangleShape2D_1xweh")
+
+[node name="outside" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outside"]
+position = Vector2(293.125, 1310)
+shape = SubResource("RectangleShape2D_2p7jk")
+
+[node name="person" parent="." instance=ExtResource("4_kct31")]
+position = Vector2(304, -1129)
+
+[node name="sfx" parent="person" instance=ExtResource("3_irvt6")]
+position = Vector2(7, 17)

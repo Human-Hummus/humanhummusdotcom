@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn7d5b71ulqon"]
+
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_11vbw"]
+[ext_resource type="Texture2D" uid="uid://ml3egaxeev6q" path="res://assets/cutscenes/grade_too_low.webp" id="1_jj5ws"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GradeTooLow" type="Sprite2D" parent="."]
+position = Vector2(573, 324)
+scale = Vector2(1.66571, 1.12903)
+texture = ExtResource("1_jj5ws")
+
+[node name="restart_tscn" parent="." instance=ExtResource("1_11vbw")]
+position = Vector2(463, 325)

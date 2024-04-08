@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4qqg12lhcije"]
+
+[ext_resource type="Script" path="res://yandy.gd" id="1_5h5ko"]
+[ext_resource type="Texture2D" uid="uid://bgqqx0ytbthle" path="res://assets/charecter_assets/Yandel/yandol.webp" id="1_o1cw3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ir72n"]
+radius = 30.0
+height = 176.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmo1a"]
+radius = 100.245
+
+[node name="yandy" type="CharacterBody2D"]
+script = ExtResource("1_5h5ko")
+
+[node name="Yandol" type="Sprite2D" parent="."]
+texture_filter = 5
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_o1cw3")
+
+[node name="collide" type="CollisionShape2D" parent="."]
+position = Vector2(-25, -1)
+shape = SubResource("CapsuleShape2D_ir72n")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-24.24, 2.08165e-12)
+disable_mode = 1
+
+[node name="interact" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_nmo1a")
+one_way_collision = true

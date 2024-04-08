@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmysrumj1cohm"]
+
+[ext_resource type="Script" path="res://restrt.gd" id="1_4nw8r"]
+
+[node name="restart_tscn" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 60
+text = "Restart"
+script = ExtResource("1_4nw8r")

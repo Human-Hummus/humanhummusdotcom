@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://tl4wf3qto408"]
+
+[ext_resource type="Texture2D" uid="uid://dbjq6ul4p6eye" path="res://assets/cutscenes/mcgleeoffice.jpg" id="1_58mxm"]
+[ext_resource type="Script" path="res://Cutscenes/grade_too_low.gd" id="1_mqj7k"]
+[ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="2_hpget"]
+[ext_resource type="Texture2D" uid="uid://cmqp4l62ep5cf" path="res://assets/black.webp" id="4_30f74"]
+
+[node name="grade_too_low" type="Node2D"]
+script = ExtResource("1_mqj7k")
+
+[node name="GradeTooLow" type="Sprite2D" parent="."]
+position = Vector2(583, 328.75)
+scale = Vector2(1.544, 1.33025)
+texture = ExtResource("1_58mxm")
+
+[node name="sfx" parent="." instance=ExtResource("2_hpget")]
+
+[node name="Black" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(598.5, 559.5)
+scale = Vector2(96.9, 13.9)
+texture = ExtResource("4_30f74")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 492.0
+offset_top = 99.0
+offset_right = 651.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 59
+text = "Ok..."
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 137.0
+offset_top = 501.0
+offset_right = 1066.0
+offset_bottom = 587.0
+theme_override_font_sizes/normal_font_size = 30
+text = "I'm sorry, but your grade is too low. We cannot have you in this school anymore. Please make your way to the exit."

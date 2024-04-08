@@ -1,0 +1,188 @@
+[gd_scene load_steps=28 format=3 uid="uid://djlhroxrwlpr2"]
+
+[ext_resource type="Script" path="res://charman.gd" id="1_253hg"]
+[ext_resource type="Texture2D" uid="uid://8q3fe7mnhuno" path="res://assets/charecter_assets/Player/left_1.png" id="2_bwde0"]
+[ext_resource type="Texture2D" uid="uid://dlxe3fxpqgvnb" path="res://assets/green.webp" id="2_k3s7w"]
+[ext_resource type="Texture2D" uid="uid://cblowrdh5uv51" path="res://assets/charecter_assets/Player/left_2.png" id="3_6ohy7"]
+[ext_resource type="Texture2D" uid="uid://cejc1lt26o6at" path="res://assets/charecter_assets/Player/left_3.png" id="4_uas4e"]
+[ext_resource type="Texture2D" uid="uid://2ifs6abddvs6" path="res://assets/charecter_assets/Player/left_4.png" id="5_rkqxf"]
+[ext_resource type="Texture2D" uid="uid://cw4p7s1b53g5" path="res://assets/charecter_assets/Player/down1.png" id="6_62icf"]
+[ext_resource type="PackedScene" uid="uid://bg4bcj3k6ni1i" path="res://speech.tscn" id="6_c62h5"]
+[ext_resource type="Texture2D" uid="uid://bsv1utet2bjjx" path="res://assets/charecter_assets/Player/down2.png" id="7_nnjcj"]
+[ext_resource type="Texture2D" uid="uid://cu80kwsbom32o" path="res://assets/charecter_assets/Player/down3.png" id="8_q7gg0"]
+[ext_resource type="Texture2D" uid="uid://cyvmrm850kcbx" path="res://assets/arrow.png" id="8_w0epg"]
+[ext_resource type="Texture2D" uid="uid://dgjpu7n42a860" path="res://assets/charecter_assets/Player/down4.png" id="9_kxpu7"]
+[ext_resource type="Texture2D" uid="uid://de26kqeg2p7bi" path="res://assets/charecter_assets/Player/up1.png" id="10_amd86"]
+[ext_resource type="Texture2D" uid="uid://ctmayhgtmuh5a" path="res://assets/charecter_assets/Player/up2.png" id="11_rbkmn"]
+[ext_resource type="Texture2D" uid="uid://x7wlletxppw1" path="res://assets/charecter_assets/Player/up3.png" id="12_j8wvb"]
+[ext_resource type="Texture2D" uid="uid://bbm8w4i1q83fy" path="res://assets/charecter_assets/Player/up4.png" id="13_jomk7"]
+[ext_resource type="Texture2D" uid="uid://dkmt4u6omnxhr" path="res://assets/charecter_assets/Player/right_4.png" id="14_k7xh4"]
+[ext_resource type="Texture2D" uid="uid://d0liaogv3hhao" path="res://assets/charecter_assets/Player/right_3.png" id="15_pachx"]
+[ext_resource type="Texture2D" uid="uid://bu5m7jxntqv0h" path="res://assets/charecter_assets/Player/right_2.png" id="16_b7grr"]
+[ext_resource type="Texture2D" uid="uid://bd7y08anf0g2n" path="res://assets/charecter_assets/Player/right_1.png" id="17_xdrxp"]
+[ext_resource type="Texture2D" uid="uid://f3n62nlt6151" path="res://assets/redbox.png" id="21_xfdo2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owirx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bwde0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6ohy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uas4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rkqxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_62icf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nnjcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q7gg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kxpu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_amd86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rbkmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j8wvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jomk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k7xh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pachx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b7grr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xdrxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bin65"]
+radius = 17.0
+height = 76.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6skx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4ew5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fts2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yx2t"]
+
+[node name="person" type="CharacterBody2D"]
+position = Vector2(50, 50)
+up_direction = Vector2(1, 6.31759e-13)
+script = ExtResource("1_253hg")
+
+[node name="texture" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_owirx")
+frame = 1
+frame_progress = 0.266171
+
+[node name="colision shape" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+shape = SubResource("CapsuleShape2D_bin65")
+
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(1.17, 1.17)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+drag_left_margin = 0.04
+drag_top_margin = 0.04
+drag_right_margin = 0.04
+drag_bottom_margin = 0.04
+
+[node name="greenbox" type="Sprite2D" parent="camera"]
+position = Vector2(-360, -249)
+scale = Vector2(0.309, 0.042)
+texture = ExtResource("2_k3s7w")
+
+[node name="Button" type="Button" parent="camera/greenbox"]
+offset_left = -430.0
+offset_top = -630.0
+offset_right = 430.0
+offset_bottom = 630.0
+
+[node name="space" type="Label" parent="camera"]
+offset_left = -459.0
+offset_top = -264.0
+offset_right = -284.0
+offset_bottom = -238.0
+text = "Press space to interact"
+
+[node name="moveup" type="TouchScreenButton" parent="camera"]
+visible = false
+texture_filter = 1
+position = Vector2(-258, 28)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("8_w0epg")
+shape = SubResource("RectangleShape2D_q6skx")
+
+[node name="movedown" type="TouchScreenButton" parent="camera"]
+visible = false
+texture_filter = 1
+position = Vector2(-227, 179)
+rotation = 3.14159
+scale = Vector2(3, 3)
+texture_normal = ExtResource("8_w0epg")
+shape = SubResource("RectangleShape2D_h4ew5")
+
+[node name="moveleft" type="TouchScreenButton" parent="camera"]
+visible = false
+texture_filter = 1
+position = Vector2(-318, 118)
+rotation = -1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("8_w0epg")
+shape = SubResource("RectangleShape2D_fts2j")
+
+[node name="moveright" type="TouchScreenButton" parent="camera"]
+visible = false
+texture_filter = 1
+position = Vector2(-168, 88)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture_normal = ExtResource("8_w0epg")
+shape = SubResource("RectangleShape2D_4yx2t")
+
+[node name="speech" parent="camera" instance=ExtResource("6_c62h5")]
+offset_left = -7.0
+offset_top = 200.0
+offset_right = -7.0
+offset_bottom = 200.0
+scale = Vector2(1.505, 1.505)
+
+[node name="Redbox" type="Sprite2D" parent="camera"]
+position = Vector2(354, -247)
+scale = Vector2(160.5, 49.5)
+texture = ExtResource("21_xfdo2")
+
+[node name="hp" type="RichTextLabel" parent="camera"]
+offset_left = 300.0
+offset_top = -262.0
+offset_right = 445.0
+offset_bottom = -222.0
+text = "HEALTHBAR---"

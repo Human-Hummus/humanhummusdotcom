@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvxd3p0olvcam"]
+
+[ext_resource type="Texture2D" uid="uid://c3hatk5bmtyuv" path="res://assets/charecter_assets/C/cowo.webp" id="1_o7ovs"]
+[ext_resource type="Script" path="res://mr_c.gd" id="1_xqk4s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bc6g"]
+radius = 383.349
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7e5v"]
+radius = 166.667
+height = 515.464
+
+[node name="mr_c" type="RigidBody2D"]
+script = ExtResource("1_xqk4s")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.18, 0.291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1bc6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.18, 0.291)
+texture = ExtResource("1_o7ovs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.18, 0.291)
+shape = SubResource("CapsuleShape2D_h7e5v")

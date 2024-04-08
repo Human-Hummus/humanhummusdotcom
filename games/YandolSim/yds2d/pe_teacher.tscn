@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b23gakx7x1myq"]
+
+[ext_resource type="Script" path="res://pe_teacher.gd" id="1_q77rl"]
+[ext_resource type="Texture2D" uid="uid://bxeewl4j84kp" path="res://assets/charecter_assets/gym/gim.webp" id="2_31fjq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3blcq"]
+radius = 94.0
+height = 364.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qp102"]
+radius = 246.018
+
+[node name="PE teacher" type="RigidBody2D"]
+script = ExtResource("1_q77rl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-19, -20)
+shape = SubResource("CapsuleShape2D_3blcq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qp102")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-24, -15)
+scale = Vector2(0.585, 0.585)
+texture = ExtResource("2_31fjq")

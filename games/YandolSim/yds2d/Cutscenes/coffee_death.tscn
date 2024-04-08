@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://de833xg0xtk6w"]
+
+[ext_resource type="Script" path="res://Cutscenes/coffee_death.gd" id="1_iq50s"]
+[ext_resource type="Texture2D" uid="uid://dydqwtw38clte" path="res://assets/cutscenes/coffee_death.webp" id="2_b6u54"]
+[ext_resource type="AudioStream" uid="uid://m8xbub6v3bo2" path="res://assets/cutscenes/oof.mp3" id="2_hp62p"]
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="3_hcq4v"]
+
+[node name="heart attack" type="Node2D"]
+script = ExtResource("1_iq50s")
+
+[node name="CoffeeDeath" type="Sprite2D" parent="."]
+position = Vector2(572.5, 322.75)
+scale = Vector2(1.52667, 1.34787)
+texture = ExtResource("2_b6u54")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_hp62p")
+
+[node name="restart_tscn" parent="." instance=ExtResource("3_hcq4v")]
+position = Vector2(836, 525)

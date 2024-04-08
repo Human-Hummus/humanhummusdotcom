@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://de2x1m6qx2h88"]
+
+[ext_resource type="Texture2D" uid="uid://u0qtt6v5oc2b" path="res://assets/charecter_assets/My rawr/myr.webp" id="1_2k1op"]
+[ext_resource type="Script" path="res://myrawr.gd" id="1_leet2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4lw3a"]
+radius = 30.0
+height = 160.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgrh8"]
+radius = 130.004
+
+[node name="myrawrs" type="RigidBody2D"]
+script = ExtResource("1_leet2")
+
+[node name="Myr" type="Sprite2D" parent="."]
+position = Vector2(-3, 26)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_2k1op")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 22)
+shape = SubResource("CapsuleShape2D_4lw3a")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, 22)
+shape = SubResource("CircleShape2D_pgrh8")

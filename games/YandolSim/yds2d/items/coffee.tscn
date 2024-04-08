@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bscq6bp1sder3"]
+
+[ext_resource type="Texture2D" uid="uid://c3eohekaiis2n" path="res://assets/items/coffee.png" id="1_cv3n7"]
+[ext_resource type="Script" path="res://items/coffee.gd" id="1_svfhx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbx5r"]
+radius = 73.0274
+
+[node name="coffee" type="Node2D"]
+script = ExtResource("1_svfhx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cv3n7")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+disable_mode = 1
+
+[node name="interact" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_tbx5r")
+one_way_collision = true

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfyo71xnahb3y"]
+
+[ext_resource type="Script" path="res://mr_mcglee.gd" id="1_4tvfv"]
+[ext_resource type="Texture2D" uid="uid://dqm3bfwklf6n7" path="res://assets/charecter_assets/McGlee/mcglee.png" id="2_4wogu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bc6g"]
+radius = 383.349
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7e5v"]
+radius = 166.667
+height = 515.464
+
+[node name="mr_mcglee" type="RigidBody2D"]
+script = ExtResource("1_4tvfv")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.18, 0.291)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1bc6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("2_4wogu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.18, 0.291)
+shape = SubResource("CapsuleShape2D_h7e5v")

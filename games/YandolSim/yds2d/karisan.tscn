@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cds8gf2bscm7y"]
+
+[ext_resource type="Script" path="res://karisan.gd" id="1_fu3je"]
+[ext_resource type="Texture2D" uid="uid://g3l6abpul76o" path="res://assets/charecter_assets/karisan/ks.webp" id="1_q4uln"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mlvnu"]
+radius = 41.0
+height = 190.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pevli"]
+radius = 128.413
+
+[node name="karisan" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_fu3je")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("1_q4uln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mlvnu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pevli")
