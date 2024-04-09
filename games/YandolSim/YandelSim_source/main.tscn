@@ -125,4 +125,4 @@ texture = ExtResource("13_17cwu")
 
 [node name="pencil" parent="." instance=ExtResource("14_5nwvk")]
 position = Vector2(722, -631)
-scale = Vector2(0.25, 0.25)
+gravity_scale = 0.0

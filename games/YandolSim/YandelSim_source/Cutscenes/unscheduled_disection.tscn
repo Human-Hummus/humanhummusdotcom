@@ -11,4 +11,4 @@ scale = Vector2(1.71471, 1.45045)
 texture = ExtResource("1_kipup")
 
 [node name="restart_tscn" parent="." instance=ExtResource("2_e17jh")]
-position = Vector2(419, 406)
+position = Vector2(73, 528)

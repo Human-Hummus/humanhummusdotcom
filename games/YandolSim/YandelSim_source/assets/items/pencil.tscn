@@ -4,17 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://g03xmawfklym" path="res://assets/items/pencil.webp" id="2_swyxw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsvei"]
-radius = 21.2693
-height = 438.064
+radius = 4.10153
+height = 112.639
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nk1cj"]
-radius = 393.011
+radius = 83.3847
 
 [node name="pencil" type="RigidBody2D"]
 script = ExtResource("1_4mqa6")
 
 [node name="Pencil" type="Sprite2D" parent="."]
-position = Vector2(-16, 1)
+position = Vector2(-6, -1.19209e-07)
+scale = Vector2(0.29, 0.29)
 texture = ExtResource("2_swyxw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

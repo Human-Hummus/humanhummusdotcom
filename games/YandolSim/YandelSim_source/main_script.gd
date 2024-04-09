@@ -312,9 +312,13 @@ func olin_talk():
 				if boss_health<=0:
 					await say ("You Win; Owolin is defeated.")
 					get_tree().change_scene_to_file("res://Cutscenes/freedom.tscn")
+					return
 				await say("you did " + str(data.strength) + " damage (equal to your strength). He's now at " + str(boss_health) + " health")
 			hurt(owolin_damage)
 			r = await say("OwOlin did " + str(owolin_damage) + " damage.")
+			if data.health <=0:
+				await say("You lose")
+				get_tree().change_scene_to_file("res://Cutscenes/unscheduled_disection.tscn")
 		
 		#if data.strength >= 20:
 		#	r = await say("You defeated OwoOin.")
