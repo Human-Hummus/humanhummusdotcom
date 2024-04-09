@@ -170,8 +170,12 @@ func dotalk():
 				if await say("Do you want to train?", ["yes", "no"]) == 0:train()
 				else:await say("Goodbye!")
 		elif is_collide(myr_collide):
-			print("myr talk")
-			myr_talk()
+			to_talk = "myr"
+			if !data.met_myr:
+				data.met_myr=true
+				await say("I'm Mr. MyRawrs. UwU.")
+			else:
+				await say("Hi")
 		elif is_collide(road_collide):
 			to_talk = "misc"
 			var r = await say("Do you want to go to your house?", ["yes", "no"])
@@ -190,9 +194,11 @@ func dotalk():
 				await say("you took a nap; health restored.")
 		elif is_collide(karisan_collide):
 			to_talk="karisan"
-			var r = await say("Hello, sir!", ["Hi", "I farded", "asdasdsad", "fart", "poop", "yeet"])
+			var r = await say("Are you so ready to hear the learning targets so you can learn how to succeed beyond your wildest dreams?", ["Hello", "I farded"])
+			if r == 0:
+				await say("Hey, kid. Get out of my sight.")
 			if r == 1:
-				await say("OMG; I happen to also have commited a fard.")
+				await say("Total fail. Try harder, kid.")
 		elif is_collide(pencil_collide):
 			to_talk = "misc"
 			var r = await say("Pick up the pencil?", ["yes","no"])
@@ -233,13 +239,6 @@ func mcglee_talk():
 		else:await say("You've got a grade of " + str(get_grade()) + "%.")
 	if resp == 2:
 		await say("No.")
-func myr_talk():
-	to_talk = "myr"
-	if !data.met_myr:
-		data.met_myr=true
-		say("I'm Mr. MyRawrs. UwU.")
-	else:
-		say("Hi")
 		
 	
 func get_grade():
