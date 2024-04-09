@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://7qtms3yu31ut"]
+[gd_scene load_steps=20 format=3 uid="uid://7qtms3yu31ut"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_hojt1"]
 [ext_resource type="PackedScene" uid="uid://b4qqg12lhcije" path="res://yandy.tscn" id="3_6y374"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b23gakx7x1myq" path="res://pe_teacher.tscn" id="12_2ylrw"]
 [ext_resource type="PackedScene" uid="uid://cds8gf2bscm7y" path="res://karisan.tscn" id="12_v3222"]
 [ext_resource type="Texture2D" uid="uid://dstgs0dtnbbp0" path="res://assets/charecter_assets/olin/owolin-fs8.png" id="13_17cwu"]
+[ext_resource type="PackedScene" uid="uid://cckqqw4vkrofu" path="res://assets/items/pencil.tscn" id="14_5nwvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa2lu"]
 size = Vector2(93, 2380)
@@ -121,3 +122,7 @@ position = Vector2(-46, 347)
 position = Vector2(-1593, -2754)
 scale = Vector2(0.501037, 0.341934)
 texture = ExtResource("13_17cwu")
+
+[node name="pencil" parent="." instance=ExtResource("14_5nwvk")]
+position = Vector2(722, -631)
+scale = Vector2(0.25, 0.25)

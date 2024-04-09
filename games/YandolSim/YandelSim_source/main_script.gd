@@ -46,6 +46,7 @@ var step_play_interval_run = step_play_interval_normal/(player_run_speed/player_
 var camera_shake_amount = 3
 const yandy_love_death = -20
 var bbscore = 0
+var pencil_collide = null
 
 
 
@@ -100,6 +101,7 @@ var statement = default_statement.duplicate()
 var data = default_data.duplicate()
 func start_up():
 	data = default_data.duplicate()
+	data.inventory = []
 	statement = default_statement.duplicate()
 	started = true
 	is_dead = false
@@ -186,8 +188,18 @@ func dotalk():
 			var r = await say("Hello, sir!", ["Hi", "I farded", "asdasdsad", "fart", "poop", "yeet"])
 			if r == 1:
 				await say("OMG; I happen to also have commited a fard.")
-
-
+		elif is_collide(pencil_collide):
+			to_talk = "misc"
+			var r = await say("Pick up the pencil?", ["yes","no"])
+			if r == 0:
+				add_to_inventory("pencil")
+				print("added pencil")
+				print(data.inventory)				
+func add_to_inventory(item):
+	if len(data.inventory) >4:
+		await say("inventory is full; throw something away in the trash can.")
+	else:
+		data.inventory.append(item)
 	
 func is_collide(obj):
 	if obj == null:
@@ -356,7 +368,7 @@ func _physics_process(delta):
 		return
 	var can_interact_temp = false
 	for item in [coffee_collide, yandy_collide, c_collide, mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide,
-	bed_collide, karisan_collide]:
+	bed_collide, karisan_collide, pencil_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break

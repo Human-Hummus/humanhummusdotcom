@@ -83,6 +83,12 @@ func render_inventory():
 	var count = 0
 	for i in main.data.inventory:
 		count+=1
+		if count >5:
+			print("error in inventory")
+			return
+		var thing = get_node("Hotbar/b"+str(count))
+		if i == "pencil":
+			thing.texture_normal = load("res://assets/items/pencil_small.webp")
 		
 	
 var animation = null
