@@ -33,8 +33,9 @@ func _ready():
 		get_node("camera/moveleft").show()
 		get_node("camera/moveright").show()
 		get_node("camera/space").text = "click here to interact"
+
 	
-		
+
 
 var move_up = false
 var move_down = false
@@ -77,10 +78,18 @@ func _input(event):
 	
 func enable_interact():main.interact = true
 	
+	
+func render_inventory():
+	var count = 0
+	for i in main.data.inventory:
+		count+=1
+		
+	
 var animation = null
 var direction = char_images.down
 func _physics_process(delta):
-	get_node("camera/hp").text = "Health: " + str(main.health) + "%"
+	render_inventory()
+	get_node("camera/hp").text = "Health: " + str(main.data.health) + "%"
 	if main.shake_camera:
 		camera.set_offset(Vector2( 
 			random.randi()%main.camera_shake_amount-main.camera_shake_amount/2,

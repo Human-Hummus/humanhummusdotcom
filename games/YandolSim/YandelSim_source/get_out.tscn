@@ -28,7 +28,7 @@ position = Vector2(-3098.8, -2412.12)
 scale = Vector2(2.99401, 3.0303)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Olin/hitbox"]
-position = Vector2(1079.66, 996.741)
+position = Vector2(1035.67, 897.336)
 shape = SubResource("RectangleShape2D_1xweh")
 
 [node name="outside" type="Area2D" parent="."]

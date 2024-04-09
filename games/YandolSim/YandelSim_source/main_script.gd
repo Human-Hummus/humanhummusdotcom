@@ -4,7 +4,6 @@ var time_since_start = 0
 var is_dead = false
 var can_interact = false
 var is_mobile = false
-var health = 100
 var boss_health = -1
 var myr_collide = null
 var house_go = null
@@ -65,8 +64,8 @@ const default_data = {
 		"c_love":0,
 		"misc_action":"",
 		"coffees_drank":0,
-		"grade_points": 1.0,
-		"total_grade_points": 1.0,
+		"grade_points": 5.0,
+		"total_grade_points": 10.0,
 		"met_myr":false,
 		"strength":0.0,
 		
@@ -74,6 +73,7 @@ const default_data = {
 		"met_c":false,
 		"met_mcglee":false, "mcglee_explained": false,
 		"met_gym":false,
+		"health":100,
 	
 		"olin_scene": {
 			"fight": null,
@@ -82,7 +82,9 @@ const default_data = {
 			"has_chosen":false,
 			"unscheduled_disection":false,
 			"freedom":false,
-		}
+		},
+		
+		"inventory":[]
 	}
 	
 var persistant_data = {}
@@ -177,11 +179,11 @@ func dotalk():
 			to_talk = "misc"
 			var r = await say("Do you want to take a nap?", ["yes", "no"])
 			if r == 0:
-				health = 100
+				data.health = 100
 				await say("you took a nap; health restored.")
 		elif is_collide(karisan_collide):
 			to_talk="karisan"
-			var r = await say("Hello, sir!", ["Hi", "I farded"])
+			var r = await say("Hello, sir!", ["Hi", "I farded", "asdasdsad", "fart", "poop", "yeet"])
 			if r == 1:
 				await say("OMG; I happen to also have commited a fard.")
 
@@ -210,10 +212,10 @@ func mcglee_talk():
 	if resp == 1:
 		if !data.mcglee_explained:
 			data.mcglee_explained = true
-			say("You've got a grade of " + str(get_grade()) + "%. Be careful, if your grade gets too low, you'll drop out, and be poor and sad for the rest of your life. UwU.")
-		else:say("You've got a grade of " + str(get_grade()) + "%.")
+			await say("You've got a grade of " + str(get_grade()) + "%. Be careful, if your grade gets too low, you'll drop out, and be poor and sad for the rest of your life. UwU.")
+		else:await say("You've got a grade of " + str(get_grade()) + "%.")
 	if resp == 2:
-		say("No.")
+		await say("No.")
 func myr_talk():
 	to_talk = "myr"
 	if !data.met_myr:
@@ -284,7 +286,7 @@ var owolin_damage = 10
 
 func hurt(pain):
 	play_sound("res://assets/cutscenes/oof.mp3")
-	health-=pain
+	data.health-=pain
 
 func olin_talk():
 	print(started)
@@ -300,7 +302,11 @@ func olin_talk():
 			r = await say("what do you want to do?", ["Punch (" + str(data.strength) + " damage)", "wait"])
 			if r == 0:
 				boss_health-=data.strength
-				await say("you did " + str(data.strength) + " damage (equal to your strength).")
+				print("boss health: " + str(boss_health))
+				if boss_health<=0:
+					await say ("You Win; Owolin is defeated.")
+					get_tree().change_scene_to_file("res://Cutscenes/freedom.tscn")
+				await say("you did " + str(data.strength) + " damage (equal to your strength). He's now at " + str(boss_health) + " health")
 			hurt(owolin_damage)
 			r = await say("OwOlin did " + str(owolin_damage) + " damage.")
 		

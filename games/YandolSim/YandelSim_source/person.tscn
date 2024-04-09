@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djlhroxrwlpr2"]
+[gd_scene load_steps=29 format=3 uid="uid://djlhroxrwlpr2"]
 
 [ext_resource type="Script" path="res://charman.gd" id="1_253hg"]
 [ext_resource type="Texture2D" uid="uid://8q3fe7mnhuno" path="res://assets/charecter_assets/Player/left_1.png" id="2_bwde0"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bu5m7jxntqv0h" path="res://assets/charecter_assets/Player/right_2.png" id="16_b7grr"]
 [ext_resource type="Texture2D" uid="uid://bd7y08anf0g2n" path="res://assets/charecter_assets/Player/right_1.png" id="17_xdrxp"]
 [ext_resource type="Texture2D" uid="uid://f3n62nlt6151" path="res://assets/redbox.png" id="21_xfdo2"]
+[ext_resource type="Texture2D" uid="uid://bxydmhmhxrikd" path="res://assets/hotbar.webp" id="22_73ev1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owirx"]
 animations = [{
@@ -186,3 +187,37 @@ offset_top = -262.0
 offset_right = 445.0
 offset_bottom = -222.0
 text = "HEALTHBAR---"
+
+[node name="Hotbar" type="Sprite2D" parent="."]
+position = Vector2(145, -241)
+texture = ExtResource("22_73ev1")
+
+[node name="b1" type="TextureButton" parent="Hotbar"]
+offset_left = -99.0
+offset_top = -16.0
+offset_right = -70.0
+offset_bottom = 24.0
+
+[node name="b2" type="TextureButton" parent="Hotbar"]
+offset_left = -59.0
+offset_top = -16.0
+offset_right = -30.0
+offset_bottom = 24.0
+
+[node name="b3" type="TextureButton" parent="Hotbar"]
+offset_left = -15.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = 23.0
+
+[node name="b4" type="TextureButton" parent="Hotbar"]
+offset_left = 30.0
+offset_top = -16.0
+offset_right = 59.0
+offset_bottom = 24.0
+
+[node name="b5" type="TextureButton" parent="Hotbar"]
+offset_left = 70.0
+offset_top = -16.0
+offset_right = 99.0
+offset_bottom = 24.0
