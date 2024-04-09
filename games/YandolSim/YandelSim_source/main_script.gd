@@ -11,6 +11,7 @@ var road2_collide = null
 var bed_collide = null
 var updatebbscore = false
 var karisan_collide = null
+var meat_collide = null
 
 var has_drama = false
 var place = "home"
@@ -205,7 +206,15 @@ func dotalk():
 			if r == 0:
 				add_to_inventory("pencil")
 				print("added pencil")
-				print(data.inventory)				
+				print(data.inventory)	
+		elif is_collide(meat_collide):
+			to_talk="meat"
+			var r = await say("Hello, I'm Meatchal Derosin. What may I do for you?", ["Nothing", "Could I have some laxitives?"])
+			if r == 0:
+				await say("Very well; I shall see you soon, child")
+			elif r == 1:
+				await say("Indeed, here you are")
+				add_to_inventory("poop pills")			
 func add_to_inventory(item):
 	if len(data.inventory) >4:
 		await say("inventory is full; throw something away in the trash can.")
@@ -319,16 +328,7 @@ func olin_talk():
 			if data.health <=0:
 				await say("You lose")
 				get_tree().change_scene_to_file("res://Cutscenes/unscheduled_disection.tscn")
-		
-		#if data.strength >= 20:
-		#	r = await say("You defeated OwoOin.")
-		#	get_tree().change_scene_to_file("res://Cutscenes/freedom.tscn")
-		#else:
-		#	r = await say("You lost.")
-		#	r = await say("If only you had 20 or more strength...")
-		#	get_tree().change_scene_to_file("res://Cutscenes/unscheduled_disection.tscn")
-	else:
-		pass
+
 
 
 
@@ -366,7 +366,7 @@ func _physics_process(delta):
 		return
 	var can_interact_temp = false
 	for item in [coffee_collide, yandy_collide, c_collide, mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide,
-	bed_collide, karisan_collide, pencil_collide]:
+	bed_collide, karisan_collide, pencil_collide, meat_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break
@@ -455,6 +455,9 @@ func make_new_message(text, options=[]):
 	if statement.talking == "karisan":
 		statement.text = "Kari San: "
 		statement.displayed_text = "Kari San: "
+	if statement.talking == "meat":
+		statement.text = "Meatchal: "
+		statement.displayed_text = "Meatchal: "
 	statement.text+=text
 	
 var responded = -1
@@ -483,8 +486,3 @@ func play_random_sound(sounds):
 	play_sound(file_to_play)
 
 func play_sound(sound):sounds_to_play.append(sound)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-				

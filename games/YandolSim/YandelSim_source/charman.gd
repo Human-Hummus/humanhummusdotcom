@@ -89,7 +89,8 @@ func render_inventory():
 		var thing = get_node("Hotbar/b"+str(count))
 		if i == "pencil":
 			thing.texture_normal = load("res://assets/items/pencil_small.webp")
-		
+		elif i == "poop pills":
+			thing.texture_normal = load("res://assets/items/lax.webp")
 	
 var animation = null
 var direction = char_images.down
