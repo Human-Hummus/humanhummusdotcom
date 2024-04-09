@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsvei"]
 radius = 4.10153
-height = 112.639
+height = 56.3833
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nk1cj"]
 radius = 83.3847
@@ -15,10 +15,11 @@ script = ExtResource("1_4mqa6")
 
 [node name="Pencil" type="Sprite2D" parent="."]
 position = Vector2(-6, -1.19209e-07)
-scale = Vector2(0.29, 0.29)
+scale = Vector2(0.13, 0.130001)
 texture = ExtResource("2_swyxw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -3)
 rotation = 0.347321
 shape = SubResource("CapsuleShape2D_dsvei")
 

@@ -7,7 +7,7 @@
 	<body>
 		<a href="index.html"><img src="assets/home.webp"></a>
 		<center><h1>My Fursona: The Drungalwort</h1></center>
-		<center><button onclick="
+		<center><button id="cool-button" onclick="
 				document.getElementById('changed_sound').cloneNode().play();
 				var drungy = document.getElementById('drungy_img');
 				console.log(drungy.src);
@@ -20,7 +20,7 @@
 		<audio id="sound1" src="assets/heheheha.ogg" preload="auto"></audio>
 		<audio id="changed_sound" src="assets/changed_sound.ogg" preload="auto"></audio>
 		<ul id=standard-list>
-			<li><button onclick="document.getElementById('sound1').cloneNode().play();">Pronouns: He/He(<img width=50 height=50 src=assets/michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
+			<li><button id=cool-button onclick="document.getElementById('sound1').cloneNode().play();">Pronouns: He/He(<img width=50 height=50 src=assets/michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
 			<li>The Drungalwort has two horns</li>
 			<li>One of the horns is broken</li>
 			<li>He has insect wings</li>
@@ -33,7 +33,6 @@
 		<link rel=stylesheet href=style.css></link>
 <style>
 li {font-size:150%;}
-button {font-size:150%;text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #000, 1px 1px 0 #FFF; background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);}
 h1{font-family:scary;font-size:500%;}
 h2{font-style:bold;}</style>
 	</body>

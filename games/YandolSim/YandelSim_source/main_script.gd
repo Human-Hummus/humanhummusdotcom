@@ -249,19 +249,19 @@ func c_talk():
 		data.met_c=true
 		var resp = await say("I'm mister CeOwOha... w-what's your name...?", ["I don't like you", "I'm your worst nightmare", "I don't know", "UwU"])
 		if resp == 0:
-			say("That's mean!")
+			await say("That's mean!")
 			data.c_love -= 2
 		elif resp == 1:
-			say("Oh no! >~< t-t-that's scawie (」゜ロ゜)」")
+			await say("Oh no! >~< t-t-that's scawie (」゜ロ゜)」")
 			data.c_love -= 8
 		elif resp == 2:
-			say("You should probably know by now...")
+			await say("You should probably know by now...")
 		else:
-			say("UwU")
+			await say("UwU")
 			data.c_love+=3
 	else:
 		if data.c_love <= c_hate:
-			say("I.. I don't wanna talk 2 u 😞😞😞")
+			await say("I.. I don't wanna talk 2 u 😞😞😞")
 			return
 		var resp = 0
 		if !data.yandy_love<=-10:
@@ -270,20 +270,20 @@ func c_talk():
 			resp = await say("Hello!", ["Can I do some work?", "I hate you", "I wuv you (UwU)", "I hate Yandol"])
 		if resp == 0:
 			if !data.mcglee_explained:
-				say("You should talk to Mr. McGlee about your grade first.")
+				await say("You should talk to Mr. McGlee about your grade first.")
 			else:
 				started=false
 				get_tree().change_scene_to_file("res://Cutscenes/games/mr_c_game.tscn")
 		elif resp == 1:
 			data.c_love-=5
-			say("That's m-m-mean!")
+			await say("That's m-m-mean!")
 		elif resp == 2:
 			data.c_love+=3
-			say("I wuv you too")
+			await say("I wuv you too")
 		else:
 			data.c_love-=1
 			data.yandy_love-=5
-			say("don't you think that's mean to Yandol?")
+			await say("don't you think that's mean to Yandol?")
 
 func train():
 	get_tree().change_scene_to_file("res://Cutscenes/basketball.tscn")
@@ -353,7 +353,7 @@ func _physics_process(delta):
 		to_talk = "misc"
 		data.strength+=bbscore
 		updatebbscore = false
-		say("you gained "+str(bbscore)+" strength. You now have " + str(round(data.strength)) + " strength.")
+		await say("you gained "+str(bbscore)+" strength. You now have " + str(round(data.strength)) + " strength.")
 		return
 
 
@@ -403,24 +403,24 @@ func talk_yandel():
 		
 		if resp == 0:
 			data.yandy_love+=5
-			say("N-Nice to meet you too, baka 😊")
+			await say("N-Nice to meet you too, baka 😊")
 			
 		elif resp == 1:
 			data.yandy_love-=6
-			say("(yandol will remember that)")
+			await say("(yandol will remember that)")
 	elif data.yandy_love >= -10:
 		sounds_to_play.append("res://assets/voice/hello.mp3")
 		var resp = await say("Hi", ["Hewwo", "hi", "I don't like you."])
 		if  resp == 0:
-			say("Thanks >~<")
+			await say("Thanks >~<")
 			print("was nice")
 			data.yandy_love+=2
 		elif resp == 2:
-			say("Ur mean 😔")
+			await say("Ur mean 😔")
 			print("was mean")
 			data.yandy_love-=6
 	else:
-		say("I don't want to talk to you ( ͡° ʖ̯ ͡°)")
+		await say("I don't want to talk to you ( ͡° ʖ̯ ͡°)")
 
 
 func is_talking():return statement.talking != "none"
