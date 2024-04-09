@@ -53,6 +53,14 @@ func _physics_process(delta):
 			charimg.frame = 3
 		elif main.statement.talking == "olin":
 			charimg.frame = 4
+		elif main.statement.talking == "gym":
+			charimg.frame = 5
+		elif main.statement.talking == "karisan":
+			charimg.frame = 6
+		elif main.statement.talking == "meat":
+			charimg.frame = 7
+		elif main.statement.talking == "myr":
+			charimg.frame = 8
 		else:
 			charimg.frame = 0
 		var start_text = main.statement.displayed_text

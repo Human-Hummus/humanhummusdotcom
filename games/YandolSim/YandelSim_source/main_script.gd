@@ -162,8 +162,13 @@ func dotalk():
 			print("talk to mcglee")
 			mcglee_talk()
 		elif is_collide(gym_collide):
-			print("gym guy talk")
-			gym_guy_talk()
+			to_talk = "gym"
+			if !data.met_gym:
+				data.met_gym = true
+				await say("Hey, my name is Howlead. Here you can exercise to increase strength. It'd help in a battle... not that that would happen...")
+			else:
+				if await say("Do you want to train?", ["yes", "no"]) == 0:train()
+				else:await say("Goodbye!")
 		elif is_collide(myr_collide):
 			print("myr talk")
 			myr_talk()
@@ -280,17 +285,7 @@ func c_talk():
 			data.c_love-=1
 			data.yandy_love-=5
 			say("don't you think that's mean to Yandol?")
-func gym_guy_talk():
-	to_talk = "gym"
-	if !data.met_gym:
-		data.met_gym = true
-		say("Hey, my name is (GYMGUYNAME). Here you can exercise to increase strength. It'd help in a battle... not that that would happen...")
-	else:
-		var resp = await say("Do you want to train?", ["yes", "no"])
-		if resp == 0:
-			train()
-		else:
-			say("Goodbye!")
+
 func train():
 	get_tree().change_scene_to_file("res://Cutscenes/basketball.tscn")
 
@@ -446,8 +441,8 @@ func make_new_message(text, options=[]):
 		statement.text = "OwOin: "
 		statement.displayed_text = "OwOin: "
 	if statement.talking == "gym":
-		statement.text = "Gym guy: "
-		statement.displayed_text = "Gym guy: "
+		statement.text = "Howlead: "
+		statement.displayed_text = "Howlead: "
 	if statement.talking == "olin":
 		statement.text = "Owolin: "
 		statement.displayed_text = "Owolin: "
