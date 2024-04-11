@@ -12,6 +12,7 @@ var bed_collide = null
 var updatebbscore = false
 var karisan_collide = null
 var meat_collide = null
+var trash_collide = null
 
 var has_drama = false
 var place = "home"
@@ -214,7 +215,19 @@ func dotalk():
 				await say("Very well; I shall see you soon, child")
 			elif r == 1:
 				await say("Indeed, here you are")
-				add_to_inventory("poop pills")			
+				add_to_inventory("poop pills")
+		elif is_collide(trash_collide):
+			to_talk = "misc"
+			var options = data.inventory
+			options.append("Nothing")
+			var r = await say("What item do you want to throw away?", options)
+			var new_inv = []
+			var x = 0
+			while x < len(data.inventory) && x < len(options)-1:
+				if r != x && data.inventory[x] != "Nothing":
+					new_inv.append(data.inventory[x])
+				x+=1
+			data.inventory = new_inv
 func add_to_inventory(item):
 	if len(data.inventory) >4:
 		await say("inventory is full; throw something away in the trash can.")
@@ -366,7 +379,7 @@ func _physics_process(delta):
 		return
 	var can_interact_temp = false
 	for item in [coffee_collide, yandy_collide, c_collide, mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide,
-	bed_collide, karisan_collide, pencil_collide, meat_collide]:
+	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break

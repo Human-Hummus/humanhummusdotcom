@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cckqqw4vkrofu"]
 
 [ext_resource type="Script" path="res://assets/items/pencil.gd" id="1_4mqa6"]
-[ext_resource type="Texture2D" uid="uid://g03xmawfklym" path="res://assets/items/pencil.webp" id="2_swyxw"]
+[ext_resource type="Texture2D" uid="uid://cfvm3ra7uqwmg" path="res://assets/items/pencil_small.webp" id="2_ejc34"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dsvei"]
 radius = 4.10153
@@ -15,8 +15,8 @@ script = ExtResource("1_4mqa6")
 
 [node name="Pencil" type="Sprite2D" parent="."]
 position = Vector2(-6, -1.19209e-07)
-scale = Vector2(0.13, 0.130001)
-texture = ExtResource("2_swyxw")
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("2_ejc34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -3)

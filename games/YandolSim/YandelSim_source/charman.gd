@@ -80,17 +80,12 @@ func enable_interact():main.interact = true
 	
 	
 func render_inventory():
-	var count = 0
-	for i in main.data.inventory:
-		count+=1
-		if count >5:
-			print("error in inventory")
-			return
-		var thing = get_node("Hotbar/b"+str(count))
-		if i == "pencil":
-			thing.texture_normal = load("res://assets/items/pencil_small.webp")
-		elif i == "poop pills":
-			thing.texture_normal = load("res://assets/items/lax.webp")
+	for count in range(0,5):
+		var thing = get_node("Hotbar/b"+str(1+count))
+		if count >= len(main.data.inventory):thing.texture_normal = null
+		elif main.data.inventory[count] == "pencil":thing.texture_normal = load("res://assets/items/pencil_small.webp")
+		elif main.data.inventory[count] == "poop pills":thing.texture_normal = load("res://assets/items/lax.webp")
+		else:thing.texture_normal = null
 	
 var animation = null
 var direction = char_images.down

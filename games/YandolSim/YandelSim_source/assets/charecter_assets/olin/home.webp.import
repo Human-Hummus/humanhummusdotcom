@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g03xmawfklym"
-path="res://.godot/imported/pencil.webp-cac9303414b96d17df461415481a4632.ctex"
+uid="uid://bot1x321kg24j"
+path="res://.godot/imported/home.webp-5e0b9e0ef2a993142a4687d3bc4d93e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/pencil.webp"
-dest_files=["res://.godot/imported/pencil.webp-cac9303414b96d17df461415481a4632.ctex"]
+source_file="res://assets/charecter_assets/olin/home.webp"
+dest_files=["res://.godot/imported/home.webp-5e0b9e0ef2a993142a4687d3bc4d93e6.ctex"]
 
 [params]
 

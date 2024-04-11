@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://baru5v63yham2"]
 
 [ext_resource type="Script" path="res://Cutscenes/games/mr_c_game.gd" id="1_dnosj"]
-[ext_resource type="Texture2D" uid="uid://cn177wkgohaa7" path="res://assets/Other/95window.png" id="1_g5d1t"]
 [ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="3_1fywk"]
+[ext_resource type="Texture2D" uid="uid://cadd6ujv5o7tf" path="res://assets/Other/95window.webp" id="3_cxeg8"]
 
 [sub_resource type="Gradient" id="Gradient_qoaqp"]
 offsets = PackedFloat32Array(0, 0.239316, 0.794872, 0.974359, 1)
@@ -31,7 +31,7 @@ script = ExtResource("1_dnosj")
 
 [node name="window" type="Sprite2D" parent="."]
 scale = Vector2(1, 0.87)
-texture = ExtResource("1_g5d1t")
+texture = ExtResource("3_cxeg8")
 centered = false
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]

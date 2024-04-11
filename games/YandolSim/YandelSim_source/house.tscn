@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bd5o7q2qg480p"]
+[gd_scene load_steps=20 format=3 uid="uid://bd5o7q2qg480p"]
 
 [ext_resource type="Script" path="res://house.gd" id="1_bnuh7"]
 [ext_resource type="Texture2D" uid="uid://cnugljfm1rfry" path="res://assets/house.webp" id="1_njt5e"]
 [ext_resource type="PackedScene" uid="uid://djlhroxrwlpr2" path="res://person.tscn" id="2_c52j2"]
+[ext_resource type="PackedScene" uid="uid://ccaum1uv8pqjj" path="res://meatchal.tscn" id="4_y2rrc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_teepu"]
 size = Vector2(1910, 2174.5)
@@ -260,6 +261,10 @@ shape = SubResource("RectangleShape2D_2y4hm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bed"]
 position = Vector2(-1686, -670.5)
 shape = SubResource("RectangleShape2D_rt5lv")
+
+[node name="meatchal" parent="." instance=ExtResource("4_y2rrc")]
+position = Vector2(-31, -591)
+gravity_scale = 0.0
 
 [node name="person" parent="." instance=ExtResource("2_c52j2")]
 position = Vector2(2843, 361)

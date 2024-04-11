@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://de2x1m6qx2h88" path="res://myrawr.tscn" id="11_ajwuk"]
 [ext_resource type="PackedScene" uid="uid://b23gakx7x1myq" path="res://pe_teacher.tscn" id="12_2ylrw"]
 [ext_resource type="PackedScene" uid="uid://cds8gf2bscm7y" path="res://karisan.tscn" id="12_v3222"]
-[ext_resource type="Texture2D" uid="uid://dstgs0dtnbbp0" path="res://assets/charecter_assets/olin/owolin-fs8.png" id="13_17cwu"]
 [ext_resource type="PackedScene" uid="uid://cckqqw4vkrofu" path="res://assets/items/pencil.tscn" id="14_5nwvk"]
-[ext_resource type="PackedScene" uid="uid://ccaum1uv8pqjj" path="res://meatchal.tscn" id="15_sjbp5"]
+[ext_resource type="Texture2D" uid="uid://bot1x321kg24j" path="res://assets/charecter_assets/olin/home.webp" id="14_wu0hy"]
+[ext_resource type="PackedScene" uid="uid://iq0sy2hspnjn" path="res://assets/items/trash.tscn" id="15_3hikm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa2lu"]
 size = Vector2(93, 2380)
@@ -113,20 +113,19 @@ shape = SubResource("RectangleShape2D_vlkmm")
 [node name="karisan" parent="." instance=ExtResource("12_v3222")]
 position = Vector2(1627, -1828)
 
+[node name="pencil" parent="." instance=ExtResource("14_5nwvk")]
+position = Vector2(722, -631)
+gravity_scale = 0.0
+
+[node name="Home" type="Sprite2D" parent="."]
+position = Vector2(-1658, -2766)
+texture = ExtResource("14_wu0hy")
+
+[node name="trash" parent="." instance=ExtResource("15_3hikm")]
+position = Vector2(677, -869)
+
 [node name="person" parent="." instance=ExtResource("3_wxl47")]
 position = Vector2(61, 600)
 
 [node name="sfx" parent="person" instance=ExtResource("5_scl6x")]
 position = Vector2(-46, 347)
-
-[node name="Olin" type="Sprite2D" parent="."]
-position = Vector2(-1593, -2754)
-scale = Vector2(0.501037, 0.341934)
-texture = ExtResource("13_17cwu")
-
-[node name="pencil" parent="." instance=ExtResource("14_5nwvk")]
-position = Vector2(722, -631)
-gravity_scale = 0.0
-
-[node name="meatchal" parent="." instance=ExtResource("15_sjbp5")]
-position = Vector2(1398, 184)

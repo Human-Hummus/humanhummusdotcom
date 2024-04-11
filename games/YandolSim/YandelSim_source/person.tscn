@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d0liaogv3hhao" path="res://assets/charecter_assets/Player/right_3.png" id="15_pachx"]
 [ext_resource type="Texture2D" uid="uid://bu5m7jxntqv0h" path="res://assets/charecter_assets/Player/right_2.png" id="16_b7grr"]
 [ext_resource type="Texture2D" uid="uid://bd7y08anf0g2n" path="res://assets/charecter_assets/Player/right_1.png" id="17_xdrxp"]
-[ext_resource type="Texture2D" uid="uid://f3n62nlt6151" path="res://assets/redbox.png" id="21_xfdo2"]
+[ext_resource type="Texture2D" uid="uid://byhggm17uxw68" path="res://assets/redbox.webp" id="21_ry6ci"]
 [ext_resource type="Texture2D" uid="uid://bxydmhmhxrikd" path="res://assets/hotbar.webp" id="22_73ev1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owirx"]
@@ -179,7 +179,7 @@ scale = Vector2(1.505, 1.505)
 [node name="Redbox" type="Sprite2D" parent="camera"]
 position = Vector2(354, -247)
 scale = Vector2(160.5, 49.5)
-texture = ExtResource("21_xfdo2")
+texture = ExtResource("21_ry6ci")
 
 [node name="hp" type="RichTextLabel" parent="camera"]
 offset_left = 300.0

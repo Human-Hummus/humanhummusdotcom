@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f3n62nlt6151"
-path="res://.godot/imported/redbox.png-56c952caa4cefefc1c373b3d9564e3a5.ctex"
+uid="uid://bfvwjanfm0pdd"
+path="res://.godot/imported/trash.webp-afde6a9cc80912469f0b7b69fe1a8cfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/redbox.png"
-dest_files=["res://.godot/imported/redbox.png-56c952caa4cefefc1c373b3d9564e3a5.ctex"]
+source_file="res://assets/items/trash.webp"
+dest_files=["res://.godot/imported/trash.webp-afde6a9cc80912469f0b7b69fe1a8cfb.ctex"]
 
 [params]
 
