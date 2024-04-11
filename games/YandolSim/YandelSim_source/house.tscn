@@ -92,8 +92,24 @@ shape = SubResource("RectangleShape2D_33v8i")
 position = Vector2(-305.5, 688.5)
 shape = SubResource("RectangleShape2D_b8o7q")
 
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(98, -335)
+shape = SubResource("RectangleShape2D_b8o7q")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-477, -335)
+shape = SubResource("RectangleShape2D_b8o7q")
+
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(135, 680)
+shape = SubResource("RectangleShape2D_b8o7q")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(389, -335)
+shape = SubResource("RectangleShape2D_b8o7q")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(863, -335)
 shape = SubResource("RectangleShape2D_b8o7q")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="RigidBody2D"]
@@ -263,7 +279,7 @@ position = Vector2(-1686, -670.5)
 shape = SubResource("RectangleShape2D_rt5lv")
 
 [node name="meatchal" parent="." instance=ExtResource("4_y2rrc")]
-position = Vector2(-31, -591)
+position = Vector2(-59, -670)
 gravity_scale = 0.0
 
 [node name="person" parent="." instance=ExtResource("2_c52j2")]

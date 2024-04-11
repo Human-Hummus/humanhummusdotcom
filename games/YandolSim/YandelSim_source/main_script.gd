@@ -87,7 +87,8 @@ const default_data = {
 			"freedom":false,
 		},
 		
-		"inventory":[]
+		"inventory":[],
+		"coffee_has_drugs":false,
 	}
 	
 var persistant_data = {}
@@ -146,18 +147,37 @@ func dotalk():
 		if is_collide(yandy_collide):
 			talk_yandel()
 		elif is_collide(coffee_collide):
+			print(data.inventory)
 			to_talk="misc"
 			var resp
+			var options = ["yes","no"]
+			for i in data.inventory:
+				if i == "poop pills":
+					options.append("no, add poop pills")
+					break
 			if data.coffees_drank == 0:
-				resp = await say("You found Coffee. Drink it? (temporary run speed boost)", ["yes", "no"])
+				resp = await say("You found Coffee. Drink it? (temporary run speed boost)", options)
 			elif data.coffees_drank < 2:
-				resp = await say("Drink more? (you get more speed the more coffees you've drank)", ["yes", "no"])
+				resp = await say("Drink more? (you get more speed the more coffees you've drank)", options)
 			else:
-				resp = await say("Drink more?", ["yes", "no"])
+				resp = await say("Drink more?", options)
 			if resp == 0:			
 				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
+				if data.coffee_has_drugs:
+					play_sound("res://assets/cutscenes/aaaararrgagghhhhePOOPOPPOOPPPOPOPOPP.mp3")
 				coffee_effect = coffee_effect_length
 				data.coffees_drank+=1
+			elif resp == 2:
+				data.coffee_has_drugs = true
+				var new_inv = []
+				var got_rid_of_drug = false
+				for i in data.inventory:
+					if got_rid_of_drug || i!="poop pills":
+						new_inv.append(i)
+						got_rid_of_drug = true
+				data.inventory = new_inv
+					
+				
 		elif is_collide(c_collide):
 			c_talk()
 		elif is_collide(mcglee_collide):
