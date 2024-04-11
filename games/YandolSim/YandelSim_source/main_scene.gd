@@ -15,4 +15,7 @@ func _physics_process(delta):
 		if main.data.met_yandel:
 			deleted_door=true
 			door.queue_free()
+	if main.data.got_karisan_body:
+		main.data.got_karisan_body = false
+		get_node("karisan").queue_free()
 			

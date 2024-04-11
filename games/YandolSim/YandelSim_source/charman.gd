@@ -85,6 +85,8 @@ func render_inventory():
 		if count >= len(main.data.inventory):thing.texture_normal = null
 		elif main.data.inventory[count] == "pencil":thing.texture_normal = load("res://assets/items/pencil_small.webp")
 		elif main.data.inventory[count] == "poop pills":thing.texture_normal = load("res://assets/items/lax.webp")
+		elif main.data.inventory[count] == "coffee":thing.texture_normal = load("res://assets/items/coffee.png")
+		elif main.data.inventory[count] == "karisan":thing.texture_normal = load("res://assets/minichars/ks.webp")
 		else:thing.texture_normal = null
 	
 var animation = null

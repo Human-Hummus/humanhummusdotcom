@@ -39,15 +39,7 @@ function redraw_screen(){
 	prev_data_amt = datapoints_slider.value
 
 }
-
-function is_sorted(){
-	let prev = -1;
-	for (i in data){
-		if (i<prev){return false}
-		prev = i
-	}
-	return true;
-}
+const is_sorted = arr => arr.every((v,i,a) => !i || a[i-1] <= v);
 
 async function reset(){
 	console.log("reset");
@@ -93,7 +85,7 @@ async function bubblesort(){
 	let bubblesort_cycles = 0;
 	let bubblesort_pos = 0;
 	while (bubblesort_cycles<data.length-1){
-		if (terminate || is_sorted()){return}
+		if (terminate || is_sorted(data)){return}
 		let end = data.length-bubblesort_cycles;
 		if (data[bubblesort_pos] > data[bubblesort_pos+1]){
 			swap_data(bubblesort_pos, bubblesort_pos+1);
@@ -125,7 +117,7 @@ async function ctail(){
 	let ctail_pos = 0;
 	let ctail_dir = 1;
 	while (ctail_cycles<data.length-1){
-		if (terminate || is_sorted()){return}
+		if (terminate || is_sorted(data)){return}
 		let end = 0;
 		if (ctail_dir == 1){end = data.length-ctail_cycles/2;}
 		else{end = Math.floor(ctail_cycles/2)}

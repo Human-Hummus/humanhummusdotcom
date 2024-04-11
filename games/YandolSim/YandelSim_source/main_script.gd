@@ -71,6 +71,8 @@ const default_data = {
 		"total_grade_points": 10.0,
 		"met_myr":false,
 		"strength":0.0,
+		"karisan_alive": true,
+		"got_karisan_body":false,
 		
 		"met_yandel":false,
 		"met_c":false,
@@ -150,7 +152,7 @@ func dotalk():
 			print(data.inventory)
 			to_talk="misc"
 			var resp
-			var options = ["yes","no"]
+			var options = ["yes","no","take a cup"]
 			for i in data.inventory:
 				if i == "poop pills":
 					options.append("no, add poop pills")
@@ -168,6 +170,8 @@ func dotalk():
 				coffee_effect = coffee_effect_length
 				data.coffees_drank+=1
 			elif resp == 2:
+				add_to_inventory("coffee")
+			elif resp == 3:
 				data.coffee_has_drugs = true
 				var new_inv = []
 				var got_rid_of_drug = false
@@ -216,11 +220,31 @@ func dotalk():
 				await say("you took a nap; health restored.")
 		elif is_collide(karisan_collide):
 			to_talk="karisan"
-			var r = await say("Are you so ready to hear the learning targets so you can learn how to succeed beyond your wildest dreams?", ["Hello", "I farded"])
+			if !data.karisan_alive:
+				to_talk="misc"
+				if 0==await say("What do you want to do?", ["pick up the body", "leave"]):
+					add_to_inventory("karisan")
+					data.got_karisan_body = true
+				return
+			var options = ["Hewwo", "I farded"];
+			if inventory_has("coffee"):options.append("Do you want some coffee?")
+			var r = await say("Are you so ready to hear the learning targets so you can learn how to succeed beyond your wildest dreams?", options)
 			if r == 0:
 				await say("Hey, kid. Get out of my sight.")
-			if r == 1:
+			elif r == 1:
 				await say("Total fail. Try harder, kid.")
+			elif r == 2:
+				await say("Sure; thanks, kid!")
+				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
+				delete_from_inventory("coffee")
+				if data.coffee_has_drugs:
+					play_sound("res://assets/cutscenes/aaaararrgagghhhhePOOPOPPOOPPPOPOPOPP.mp3")
+					await say("ARRRGHHHH!! *poops self*")
+					to_talk = "misc"
+					await say("Karisan died of vowel movements")
+					data.karisan_alive = false
+				else:await say("That was great, good thing it didn't have laxitives!")
+			
 		elif is_collide(pencil_collide):
 			to_talk = "misc"
 			var r = await say("Pick up the pencil?", ["yes","no"])
@@ -241,19 +265,31 @@ func dotalk():
 			var options = data.inventory
 			options.append("Nothing")
 			var r = await say("What item do you want to throw away?", options)
-			var new_inv = []
-			var x = 0
-			while x < len(data.inventory) && x < len(options)-1:
-				if r != x && data.inventory[x] != "Nothing":
-					new_inv.append(data.inventory[x])
-				x+=1
-			data.inventory = new_inv
+			if r >= len(data.inventory):
+				return
+			delete_from_inventory(data.inventory[r])
+func delete_from_inventory(item):
+	var new_inv = []
+	var x = 0
+	var already_removed = false
+	while x < len(data.inventory):
+		if data.inventory[x] != item || already_removed:
+			new_inv.append(data.inventory[x])
+
+		elif data.inventory[x] == item:
+			already_removed=true
+		x+=1
+	data.inventory = new_inv
 func add_to_inventory(item):
 	if len(data.inventory) >4:
 		await say("inventory is full; throw something away in the trash can.")
 	else:
 		data.inventory.append(item)
 	
+func inventory_has(item):
+	for i in data.inventory:
+		if i == item:return true
+	return false
 func is_collide(obj):
 	if obj == null:
 		return false
@@ -283,8 +319,7 @@ func mcglee_talk():
 		await say("No.")
 		
 	
-func get_grade():
-	return round((data.grade_points/data.total_grade_points) * 100)
+func get_grade():return round((data.grade_points/data.total_grade_points) * 100)
 func c_talk():
 	to_talk = "mr c"
 	if !data.met_c:
@@ -375,13 +410,7 @@ func _physics_process(delta):
 		olin_talk()
 	if interact:
 		dotalk()
-	if is_grade_scene || !started:
-		return
 
-
-	time_since_start+=delta
-	if time_since_start<2:
-		return
 	if updatebbscore:
 		to_talk = "misc"
 		data.strength+=bbscore
@@ -454,8 +483,6 @@ func talk_yandel():
 			data.yandy_love-=6
 	else:
 		await say("I don't want to talk to you ( ͡° ʖ̯ ͡°)")
-
-
 func is_talking():return statement.talking != "none"
 func make_new_message(text, options=[]):
 	statement.talking = to_talk
@@ -492,7 +519,6 @@ func make_new_message(text, options=[]):
 		statement.text = "Meatchal: "
 		statement.displayed_text = "Meatchal: "
 	statement.text+=text
-	
 var responded = -1
 func say(text, options=[]):
 	make_new_message(text, options)
@@ -501,8 +527,7 @@ func say(text, options=[]):
 		if responded != -1:
 			var rspd_tmp = responded
 			responded = -1
-			return rspd_tmp
-		
+			return rspd_tmp		
 func pressed_response(button_number):
 	print(statement.options[button_number])
 	statement.instant_finish = false
@@ -511,11 +536,8 @@ func pressed_response(button_number):
 	statement.displayed_text = ""
 	var was_talking = statement.talking
 	responded=button_number
-	statement.talking = "none"
-	
-	
+	statement.talking = "none"	
 func play_random_sound(sounds):
 	var file_to_play = sounds[randi_range(0,len(sounds)-1)]
 	play_sound(file_to_play)
-
 func play_sound(sound):sounds_to_play.append(sound)
