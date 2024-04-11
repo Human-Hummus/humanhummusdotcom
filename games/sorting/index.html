@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+	<body>
+		<h1>sorting</h1>
+		<center><div><div><input type="range" id="speed" name="approx. ms/step" value=50 min=0.01 max=100 step=0.1>speed (ms/step)<p id=speed_num></p></div>
+		<select id="algo" name=algorithem>
+			<option value=cock>Cocktail Shaker Sort</option>
+			<option value=bubble>Bubble Sort</option>
+		</select>
+
+		<input type=range id=datapoints value=10 min=2 max=100 step=1 />Number of Datapoints
+		<input type=button id=run value="run"/></div></center>
+		<center><canvas id=data style="width=500px;height:500px;image-rendering: pixelated;"></canvas></center>
+
+		<center><input type=button id=reset value="RESET"/></center>
+		<script src="index.js"></script>
+	</body>
+</html>
