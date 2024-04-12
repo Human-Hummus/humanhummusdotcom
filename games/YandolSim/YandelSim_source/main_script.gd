@@ -163,7 +163,7 @@ func dotalk():
 			if resp == 0:			
 				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
 				if data.coffee_has_drugs:
-					play_sound("res://assets/cutscenes/aaaararrgagghhhhePOOPOPPOOPPPOPOPOPP.mp3")
+					play_sound("res://assets/cutscenes/untitled.ogg")
 				coffee_effect = coffee_effect_length
 				data.coffees_drank+=1
 			elif resp == 2:
@@ -235,7 +235,7 @@ func dotalk():
 				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
 				delete_from_inventory("coffee")
 				if data.coffee_has_drugs:
-					play_sound("res://assets/cutscenes/aaaararrgagghhhhePOOPOPPOOPPPOPOPOPP.mp3")
+					play_sound("res://assets/cutscenes/untitled.ogg")
 					await say("ARRRGHHHH!! *poops self*")
 					to_talk = "misc"
 					await say("Karisan died of vowel movements")
@@ -259,7 +259,7 @@ func dotalk():
 				add_to_inventory("poop pills")
 		elif is_collide(trash_collide):
 			to_talk = "misc"
-			var options = data.inventory
+			var options = data.inventory.duplicate()
 			options.append("Nothing")
 			var r = await say("What item do you want to throw away?", options)
 			if r >= len(data.inventory):
@@ -306,7 +306,7 @@ func mcglee_talk():
 	if !data.met_mcglee:
 		data.met_mcglee = true
 		resp = await say("Hi, I'm Mr. McGlee!", ["Hi!", "What's my grade?", "Can I get into the room behind you?"])
-	resp = await say("Hi!", ["Hi!", "What's my grade?", "Can I get into the room behind you?"])
+	else: resp = await say("Hi!", ["Hi!", "What's my grade?", "Can I get into the room behind you?"])
 	if resp == 1:
 		if !data.mcglee_explained:
 			data.mcglee_explained = true
@@ -375,7 +375,6 @@ func olin_talk():
 	r = await say("well, well, well, who have we here?")
 	var resp = await say("A fine specimin for experimentation...", ["Fight", "Wait"])
 	if resp == 0:
-
 		boss_health = 100
 		while true:
 			to_talk = "misc"
@@ -393,7 +392,13 @@ func olin_talk():
 			if data.health <=0:
 				await say("You lose")
 				get_tree().change_scene_to_file("res://Cutscenes/unscheduled_disection.tscn")
-
+	elif data.yandy_love > 10:
+		to_talk = "misc"
+		await say("yandy saves you!")
+	else:
+		to_talk = "misc"
+		await say("You wait, but no one comes to save you. Maybe try talking to some people next time? Maybe Yandol?")
+		get_tree().change_scene_to_file("res://Cutscenes/unscheduled_disection.tscn")
 
 
 
@@ -422,7 +427,6 @@ func _physics_process(delta):
 		get_tree().change_scene_to_file("res://Cutscenes/grade_too_low.tscn")
 		has_drama = true
 		is_grade_scene = true
-		return
 	var can_interact_temp = false
 	for item in [coffee_collide, yandy_collide, c_collide, mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide,
 	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide]:
