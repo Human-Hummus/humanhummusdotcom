@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bd5o7q2qg480p"]
+[gd_scene load_steps=21 format=3 uid="uid://bd5o7q2qg480p"]
 
 [ext_resource type="Script" path="res://house.gd" id="1_bnuh7"]
 [ext_resource type="Texture2D" uid="uid://cnugljfm1rfry" path="res://assets/house.webp" id="1_njt5e"]
@@ -48,7 +48,10 @@ size = Vector2(4791.25, 52)
 size = Vector2(38, 2189)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rt5lv"]
-size = Vector2(204, 253)
+size = Vector2(163, 253)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fe6b8"]
+radius = 162.0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bnuh7")
@@ -275,7 +278,7 @@ shape = SubResource("RectangleShape2D_2y4hm")
 [node name="bed" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bed"]
-position = Vector2(-1686, -670.5)
+position = Vector2(-1706.5, -670.5)
 shape = SubResource("RectangleShape2D_rt5lv")
 
 [node name="meatchal" parent="." instance=ExtResource("4_y2rrc")]
@@ -284,3 +287,9 @@ gravity_scale = 0.0
 
 [node name="person" parent="." instance=ExtResource("2_c52j2")]
 position = Vector2(2843, 361)
+
+[node name="computer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer"]
+position = Vector2(-1525, -713)
+shape = SubResource("CircleShape2D_fe6b8")
