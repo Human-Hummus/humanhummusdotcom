@@ -135,6 +135,7 @@ offset_bottom = -238.0
 text = "Press space to interact"
 
 [node name="moveup" type="TouchScreenButton" parent="camera"]
+visible = false
 texture_filter = 1
 position = Vector2(-382, 0)
 scale = Vector2(4.115, 4.115)
@@ -142,6 +143,7 @@ texture_normal = ExtResource("8_w0epg")
 shape = SubResource("RectangleShape2D_q6skx")
 
 [node name="movedown" type="TouchScreenButton" parent="camera"]
+visible = false
 texture_filter = 1
 position = Vector2(-339, 202)
 rotation = 3.14159
@@ -150,6 +152,7 @@ texture_normal = ExtResource("8_w0epg")
 shape = SubResource("RectangleShape2D_h4ew5")
 
 [node name="moveleft" type="TouchScreenButton" parent="camera"]
+visible = false
 texture_filter = 1
 position = Vector2(-462, 123)
 rotation = -1.5708
@@ -158,6 +161,7 @@ texture_normal = ExtResource("8_w0epg")
 shape = SubResource("RectangleShape2D_fts2j")
 
 [node name="moveright" type="TouchScreenButton" parent="camera"]
+visible = false
 texture_filter = 1
 position = Vector2(-260, 79)
 rotation = 1.5708
