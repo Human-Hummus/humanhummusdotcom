@@ -13,6 +13,7 @@ var updatebbscore = false
 var karisan_collide = null
 var meat_collide = null
 var trash_collide = null
+var is_grade_scene = false
 
 var has_drama = false
 var place = "home"
@@ -23,7 +24,6 @@ var c_hate =     -10
 const death_coffee = 5
 var strength = 0
 var strength_for_olin = 5
-var is_grade_scene = false
 var grade_scene_time = 0
 var player = null
 var c_collide = null
@@ -58,9 +58,6 @@ var shake_camera = false
 const garbage_collect_interval = 0.5
 var sounds_to_play = []
 
-
-func _ready():
-	pass
 
 const default_data = {
 		"yandy_love":0,
@@ -403,14 +400,14 @@ func olin_talk():
 
 var triggered_olin = false
 func _physics_process(delta):
-	if is_dead:
-		return
+
 	if olin_hitbox != null && has_drama && is_collide(olin_hitbox) && !triggered_olin:
 		triggered_olin = true
 		olin_talk()
 	if interact:
 		dotalk()
-
+	if is_dead || is_grade_scene || triggered_olin:
+		return
 	if updatebbscore:
 		to_talk = "misc"
 		data.strength+=bbscore
