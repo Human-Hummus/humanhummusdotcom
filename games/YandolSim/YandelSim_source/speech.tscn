@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bg4bcj3k6ni1i"]
+[gd_scene load_steps=16 format=3 uid="uid://bg4bcj3k6ni1i"]
 
 [ext_resource type="Script" path="res://speech.gd" id="1_6pm7w"]
 [ext_resource type="Texture2D" uid="uid://cmqp4l62ep5cf" path="res://assets/black.webp" id="2_fbtjw"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ms6jxx7203q" path="res://assets/minichars/ks.webp" id="10_832u3"]
 [ext_resource type="Texture2D" uid="uid://c4n7rbq7pxd3s" path="res://assets/minichars/meatchal.webp" id="11_oio6l"]
 [ext_resource type="Texture2D" uid="uid://bmj87jsl07s5g" path="res://assets/minichars/myr.webp" id="12_jl4ye"]
+[ext_resource type="Texture2D" uid="uid://d1de20kvvw0k7" path="res://assets/minichars/loreinc.webp" id="13_t1yk1"]
 
 [sub_resource type="Theme" id="Theme_e0y3p"]
 
@@ -44,6 +45,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_jl4ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t1yk1")
 }],
 "loop": true,
 "name": &"default",

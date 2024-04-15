@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfcds2d6suir2"]
+
+[ext_resource type="Script" path="res://Cutscenes/ks work.gd" id="1_ava2r"]
+
+[node name="ks work" type="Node2D"]
+script = ExtResource("1_ava2r")

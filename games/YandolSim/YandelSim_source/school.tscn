@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bmocgtymt7n0m"]
+[gd_scene load_steps=37 format=3 uid="uid://bmocgtymt7n0m"]
 
 [ext_resource type="Texture2D" uid="uid://ci3mf7phdyvlt" path="res://assets/school_inside2.webp" id="1_rmjci"]
 
@@ -103,6 +103,9 @@ size = Vector2(180.5, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmod4"]
 size = Vector2(175, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfalk"]
+size = Vector2(84, 35)
 
 [node name="School" type="RigidBody2D"]
 lock_rotation = true
@@ -425,3 +428,11 @@ shape = SubResource("RectangleShape2D_lospd")
 [node name="CollisionShape2D70" type="CollisionShape2D" parent="."]
 position = Vector2(-1926.5, -2250)
 shape = SubResource("RectangleShape2D_nmod4")
+
+[node name="CollisionShape2D77" type="CollisionShape2D" parent="."]
+position = Vector2(92, 437.5)
+shape = SubResource("RectangleShape2D_nfalk")
+
+[node name="CollisionShape2D78" type="CollisionShape2D" parent="."]
+position = Vector2(362, 439)
+shape = SubResource("RectangleShape2D_nfalk")

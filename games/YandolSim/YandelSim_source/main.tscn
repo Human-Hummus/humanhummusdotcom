@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://7qtms3yu31ut"]
+[gd_scene load_steps=22 format=3 uid="uid://7qtms3yu31ut"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_hojt1"]
 [ext_resource type="PackedScene" uid="uid://b4qqg12lhcije" path="res://yandy.tscn" id="3_6y374"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cckqqw4vkrofu" path="res://assets/items/pencil.tscn" id="14_5nwvk"]
 [ext_resource type="Texture2D" uid="uid://bot1x321kg24j" path="res://assets/charecter_assets/olin/home.webp" id="14_wu0hy"]
 [ext_resource type="PackedScene" uid="uid://iq0sy2hspnjn" path="res://assets/items/trash.tscn" id="15_3hikm"]
+[ext_resource type="PackedScene" uid="uid://dcengcmv0o7jq" path="res://loreinc.tscn" id="16_s3g0u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa2lu"]
 size = Vector2(93, 2380)
@@ -118,7 +119,7 @@ position = Vector2(722, -631)
 gravity_scale = 0.0
 
 [node name="Home" type="Sprite2D" parent="."]
-position = Vector2(-1658, -2766)
+position = Vector2(-1675, -2776)
 texture = ExtResource("14_wu0hy")
 
 [node name="trash" parent="." instance=ExtResource("15_3hikm")]
@@ -129,3 +130,7 @@ position = Vector2(61, 600)
 
 [node name="sfx" parent="person" instance=ExtResource("5_scl6x")]
 position = Vector2(-46, 347)
+
+[node name="loreinc" parent="." instance=ExtResource("16_s3g0u")]
+position = Vector2(542, -260)
+gravity_scale = 0.0

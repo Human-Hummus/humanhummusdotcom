@@ -14,6 +14,7 @@ var karisan_collide = null
 var meat_collide = null
 var trash_collide = null
 var is_grade_scene = false
+var loreinc_collide = null
 
 var has_drama = false
 var place = "home"
@@ -223,7 +224,7 @@ func dotalk():
 					add_to_inventory("karisan")
 					data.got_karisan_body = true
 				return
-			var options = ["Hewwo", "I farded"];
+			var options = ["Hewwo", "I farded", "Can I do a sentence quiz?"]
 			if inventory_has("coffee"):options.append("Do you want some coffee?")
 			var r = await say("Are you so ready to hear the learning targets so you can learn how to succeed beyond your wildest dreams?", options)
 			if r == 0:
@@ -265,6 +266,10 @@ func dotalk():
 			if r >= len(data.inventory):
 				return
 			delete_from_inventory(data.inventory[r])
+		elif is_collide(loreinc_collide):
+			to_talk = "loreinc"
+			await say("Hewwow (UwU)")
+			
 func delete_from_inventory(item):
 	var new_inv = []
 	var x = 0
@@ -428,8 +433,10 @@ func _physics_process(delta):
 		has_drama = true
 		is_grade_scene = true
 	var can_interact_temp = false
-	for item in [coffee_collide, yandy_collide, c_collide, mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide,
-	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide]:
+	for item in [coffee_collide, yandy_collide, c_collide, 
+	mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide, 
+	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide, 
+	loreinc_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break
@@ -519,6 +526,9 @@ func make_new_message(text, options=[]):
 	if statement.talking == "meat":
 		statement.text = "Meatchal: "
 		statement.displayed_text = "Meatchal: "
+	if statement.talking == "loreinc":
+		statement.text = "Sr. Lore, Inc.: "
+		statement.displayed_text = "Sr. Lore, Inc.:"
 	statement.text+=text
 var responded = -1
 func say(text, options=[]):
