@@ -1,15 +1,15 @@
+AnimatedSprite2D
 Button
+RichTextLabel
 CollisionShape2D
 Area2D
 RigidBody2D
 Sprite2D
 TextureButton
-RichTextLabel
 Node
 CharacterBody2D
 Label
 CheckButton
 TouchScreenButton
 Control
-AnimatedSprite2D
 TileMap

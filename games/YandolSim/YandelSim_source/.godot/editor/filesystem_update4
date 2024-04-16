@@ -8,3 +8,6 @@ res://speech.tscn
 res://Cutscenes/basketball.tscn
 res://Cutscenes/grade_too_low.tscn
 res://person.tscn
+res://Cutscenes/ks_work.tscn
+res://Cutscenes/ks work.gd
+res://restart.tscn

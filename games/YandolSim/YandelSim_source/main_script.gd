@@ -36,6 +36,7 @@ var olin_hitbox = null
 var is_in_olin_scene = true
 
 var coffee_effect = 0
+var triggered_olin = false
 const char_time = 0.03
 const standard_run_mul = 2
 const more_coffee_mul = 3
@@ -52,8 +53,13 @@ const yandy_love_death = -20
 var bbscore = 0
 var pencil_collide = null
 
+var score = 0
+var max_score = 0
+var add_score = false
 
-
+func combobulate_score():
+	data.grade_points+=score
+	data.total_grade_points+=max_score
 
 var shake_camera = false
 
@@ -111,6 +117,7 @@ func start_up():
 	is_dead = false
 	can_interact = false
 	boss_health = -1
+	triggered_olin=false
 
 	has_drama = false
 	place = "home"
@@ -236,7 +243,8 @@ func dotalk():
 			elif r == 1:
 				await say("Total fail. Try harder, kid.")
 			elif r == 2:
-				await say("That feature has to be implemmented")
+				if await say("You wanna do a sentence quiz", ["yeah", "no"]) == 0:
+					get_tree().change_scene_to_file("res://Cutscenes/ks_work.tscn")
 			elif r == 3:
 				await say("Sure; thanks, kid!")
 				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
@@ -417,7 +425,7 @@ func olin_talk():
 
 
 
-var triggered_olin = false
+
 func _physics_process(delta):
 
 	if olin_hitbox != null && has_drama && is_collide(olin_hitbox) && !triggered_olin:
