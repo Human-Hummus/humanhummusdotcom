@@ -15,6 +15,7 @@ var meat_collide = null
 var trash_collide = null
 var is_grade_scene = false
 var loreinc_collide = null
+var computer_collide = null
 
 var has_drama = false
 var place = "home"
@@ -269,6 +270,8 @@ func dotalk():
 		elif is_collide(loreinc_collide):
 			to_talk = "loreinc"
 			await say("Hewwow (UwU)")
+		elif is_collide(computer_collide):
+			get_tree().change_scene_to_file("res://computer.tscn")
 			
 func delete_from_inventory(item):
 	var new_inv = []
@@ -436,7 +439,7 @@ func _physics_process(delta):
 	for item in [coffee_collide, yandy_collide, c_collide, 
 	mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide, 
 	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide, 
-	loreinc_collide]:
+	loreinc_collide, computer_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break

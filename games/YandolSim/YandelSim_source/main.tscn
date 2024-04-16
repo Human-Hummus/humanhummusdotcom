@@ -125,12 +125,12 @@ texture = ExtResource("14_wu0hy")
 [node name="trash" parent="." instance=ExtResource("15_3hikm")]
 position = Vector2(677, -869)
 
+[node name="loreinc" parent="." instance=ExtResource("16_s3g0u")]
+position = Vector2(542, -260)
+gravity_scale = 0.0
+
 [node name="person" parent="." instance=ExtResource("3_wxl47")]
 position = Vector2(61, 600)
 
 [node name="sfx" parent="person" instance=ExtResource("5_scl6x")]
 position = Vector2(-46, 347)
-
-[node name="loreinc" parent="." instance=ExtResource("16_s3g0u")]
-position = Vector2(542, -260)
-gravity_scale = 0.0
