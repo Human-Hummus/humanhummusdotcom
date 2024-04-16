@@ -171,6 +171,7 @@ func dotalk():
 			elif resp == 2:
 				add_to_inventory("coffee")
 			elif resp == 3:
+				play_sound("res://assets/items/splash.mp3")
 				data.coffee_has_drugs = true
 				var new_inv = []
 				var got_rid_of_drug = false
@@ -178,6 +179,7 @@ func dotalk():
 					if got_rid_of_drug || i!="poop pills":
 						new_inv.append(i)
 						got_rid_of_drug = true
+						break
 				data.inventory = new_inv
 					
 				
@@ -266,6 +268,7 @@ func dotalk():
 			var r = await say("What item do you want to throw away?", options)
 			if r >= len(data.inventory):
 				return
+			play_sound("res://assets/items/garbage.mp3")
 			delete_from_inventory(data.inventory[r])
 		elif is_collide(loreinc_collide):
 			to_talk = "loreinc"
