@@ -227,14 +227,17 @@ func dotalk():
 					add_to_inventory("karisan")
 					data.got_karisan_body = true
 				return
+			const want_coffee = "Do you want some coffee?"
 			var options = ["Hewwo", "I farded", "Can I do a sentence quiz?"]
-			if inventory_has("coffee"):options.append("Do you want some coffee?")
+			if inventory_has("coffee"):options.append(want_coffee)
 			var r = await say("Are you so ready to hear the learning targets so you can learn how to succeed beyond your wildest dreams?", options)
 			if r == 0:
 				await say("Hey, kid. Get out of my sight.")
 			elif r == 1:
 				await say("Total fail. Try harder, kid.")
 			elif r == 2:
+				await say("That feature has to be implemmented")
+			elif r == 3:
 				await say("Sure; thanks, kid!")
 				play_sound("res://assets/items/minecraft-drinking-sound-effect.mp3")
 				delete_from_inventory("coffee")
