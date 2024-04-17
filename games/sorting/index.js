@@ -137,6 +137,62 @@ async function ctail(){
 	}
 }
 
+async function gnomesort(){
+	var pos = 0
+	while (pos < data.length){
+		if (pos == 0 || data[pos] >= data[pos-1]){pos+=1}
+		else{swap_data(pos,pos-1);pos-=1}
+		if (speed_slider.value > 1){
+			await sleep(speed_slider.value);
+		}
+	}
+}
+
+
+
+async function insertion_sort(){
+	var i = 1;
+	while(i<data.length){
+		var j = i;
+		while (j>0 && data[j-1]>data[j]){
+			swap_data(j,j-1)
+			j-=1
+			if (speed_slider.value > 1){
+				await sleep(speed_slider.value);
+			}
+		}
+		i+=1
+	}
+}
+
+async function comb_sort(){
+	let gap = data.length
+	let shrink = 1.3
+	let sorted = false
+	while (!sorted){
+		gap = Math.floor(gap/shrink)
+		if (gap<=1){
+			gap=1
+			sorted=true
+		}
+		else if (gap == 9 || gap == 10){
+			gap = 11
+		}
+		let i = 0
+		while (i+gap < data.length){
+			if (data[i] > data[i+gap]){
+				swap_data(i, i+gap)
+				if (speed_slider.value > 1){
+					await sleep(speed_slider.value);
+				}
+				sorted=false
+			}
+			i+=1
+		}
+	}
+}
+
+
 function run(){
 	if (algo_dropdown.value == "bubble"){
 		bubblesort()
@@ -144,7 +200,13 @@ function run(){
 	if (algo_dropdown.value == "cock"){
 		ctail()
 	}
-
+	if (algo_dropdown.value == "gnome"){
+		gnomesort()
+	}
+	if (algo_dropdown.value == "insertion"){
+		insertion_sort()
+	}
+	if (algo_dropdown.value == "comb"){comb_sort()}
 }
 
 setInterval(redraw_screen, 100);

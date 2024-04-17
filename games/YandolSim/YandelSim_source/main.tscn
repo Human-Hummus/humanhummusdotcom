@@ -130,7 +130,7 @@ position = Vector2(542, -260)
 gravity_scale = 0.0
 
 [node name="person" parent="." instance=ExtResource("3_wxl47")]
-position = Vector2(61, 600)
+position = Vector2(235, 1166)
 
 [node name="sfx" parent="person" instance=ExtResource("5_scl6x")]
 position = Vector2(-46, 347)

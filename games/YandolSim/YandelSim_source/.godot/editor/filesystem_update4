@@ -1,5 +1,3 @@
-res://computer.tscn
-res://main_script.gd
 res://main.tscn
 res://school.tscn
 res://Cutscenes/unscheduled_disection.tscn
@@ -8,6 +6,6 @@ res://speech.tscn
 res://Cutscenes/basketball.tscn
 res://Cutscenes/grade_too_low.tscn
 res://person.tscn
+res://computer.tscn
 res://Cutscenes/ks_work.tscn
-res://Cutscenes/ks work.gd
 res://restart.tscn

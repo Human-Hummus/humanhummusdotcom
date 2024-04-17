@@ -1,17 +1,24 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title>Human Hummus</title>
-		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+		<link rel="icon" type="image/x-icon" href="../../favicon.jpg">
 		<link rel=stylesheet href=../../style.css></link>
 	</head>
 	<body>
-		<a href="../../index.html"><img src="../../assets/home.webp"></a>
+		<div>
+			<a href="../../index.html"><img style="height:40px;" src="../../assets/home.webp"></a>
+			<a href="../index.html"><img style="height:40px;" src="../../assets/back.webp"></a>
+		</div>
 		<h1>Sorting Algorithms</h1>
 		<center><div><div><input type="range" id="speed" name="approx. ms/step" value=50 min=0.01 max=100 step=0.1>speed (ms/step)<p id=speed_num></p></div>
 		<select id="algo" name=algorithms>
 			<option value=cock>Cocktail Shaker Sort</option>
 			<option value=bubble>Bubble Sort</option>
+			<option value=gnome>Gnome Sort</option>
+			<option value=insertion>Insertion Sort</option>
+			<option value=comb>Comb Sort</option>
 		</select>
 
 		<input type=range id=datapoints value=10 min=2 max=100 step=1 />Number of Datapoints
