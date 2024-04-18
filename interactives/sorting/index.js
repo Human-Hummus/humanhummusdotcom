@@ -8,9 +8,9 @@ let algo_dropdown = document.getElementById("algo");
 let set_button = document.getElementById("reset");
 let run_button = document.getElementById("run");
 let sn = document.getElementById("speed_num");
+let dpn = document.getElementById("dpn");
 
-
-const max_freq = 2000;
+const max_freq = 3000;
 
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
@@ -53,8 +53,9 @@ function redraw_screen(){
 	let x = 0;
 	let dp = datapoints_slider.value;
 	sn.innerHTML = speed_slider.value
+	dpn.innerHTML = datapoints_slider.value;
 	ctx.fillStyle = "rgb(0 0 0)";
-	ctx.fillRect(0, 0, dp, dp);
+	ctx.fillRect(0, 1, dp, dp);
 	while (x < data.length){
 	       	ctx.fillStyle = "rgb(0 255 0)";
 		let posx = x;
@@ -75,6 +76,7 @@ async function reset(){
 	console.log("reset");
 	canvas.height = datapoints_slider.value*1.3;
 	canvas.width = datapoints_slider.value*1.3;
+
 	data = []
 	let x = 0;
 	while (x < datapoints_slider.value){
@@ -106,8 +108,8 @@ function shuffle(array) {
 }
 
 async function swap_data(pos1,pos2){
-	playNote(pos1/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
-	playNote(pos2/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
+	playNote(pos1/datapoints_slider.value * max_freq+200, speed_slider.value/1000)
+	playNote(pos2/datapoints_slider.value * max_freq+200, speed_slider.value/1000)
 	let tmp = data[pos1];
 	data[pos1] = data[pos2];
 	data[pos2] = tmp;
