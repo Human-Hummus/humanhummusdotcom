@@ -27,7 +27,9 @@ function playNote(frequency, duration) {
 
 set_button.addEventListener("click", reset);
 run_button.addEventListener("click", run);
-
+function speed(){
+	return 1000/speed_slider.value
+}
 
 function start_osc(){
 	stop_osc();
@@ -103,12 +105,15 @@ function shuffle(array) {
   return array;
 }
 
-function swap_data(pos1,pos2){
+async function swap_data(pos1,pos2){
 	playNote(pos1/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
 	playNote(pos2/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
 	let tmp = data[pos1];
 	data[pos1] = data[pos2];
 	data[pos2] = tmp;
+	if (speed() > 2){
+		await sleep(speed());
+	}
 }
 
 async function bubblesort(){
@@ -118,17 +123,13 @@ async function bubblesort(){
 		if (terminate || is_sorted(data)){return}
 		let end = data.length-bubblesort_cycles;
 		if (data[bubblesort_pos] > data[bubblesort_pos+1]){
-			swap_data(bubblesort_pos, bubblesort_pos+1);
+			await swap_data(bubblesort_pos, bubblesort_pos+1);
 		}
 		bubblesort_pos+=1;
 
 		if (!(bubblesort_pos < end-1)){
 			bubblesort_pos=0;
 			bubblesort_cycles+=1;}
-
-		if (speed_slider.value > 1){
-			await sleep(speed_slider.value);
-		}
 	}
 
 }
@@ -154,28 +155,20 @@ async function ctail(){
 		else{end = Math.floor(ctail_cycles/2)}
 	
 		if (data[ctail_pos] > data[ctail_pos+1]){
-			swap_data(ctail_pos, ctail_pos+1);
+			await swap_data(ctail_pos, ctail_pos+1);
 		}
 		ctail_pos+=ctail_dir;
 		if (ctail_pos==end){
 			ctail_dir*=-1;
 			ctail_cycles+=1;
-		}
-
-		if (speed_slider.value > 1){
-			await sleep(speed_slider.value);
-		}
-	}
+		}	}
 }
 
 async function gnomesort(){
 	var pos = 0
 	while (pos < data.length){
 		if (pos == 0 || data[pos] >= data[pos-1]){pos+=1}
-		else{swap_data(pos,pos-1);pos-=1}
-		if (speed_slider.value > 1){
-			await sleep(speed_slider.value);
-		}
+		else{await swap_data(pos,pos-1);pos-=1}
 	}
 }
 
@@ -186,11 +179,8 @@ async function insertion_sort(){
 	while(i<data.length){
 		var j = i;
 		while (j>0 && data[j-1]>data[j]){
-			swap_data(j,j-1)
+			await swap_data(j,j-1)
 			j-=1
-			if (speed_slider.value > 1){
-				await sleep(speed_slider.value);
-			}
 		}
 		i+=1
 	}
@@ -212,10 +202,7 @@ async function comb_sort(){
 		let i = 0
 		while (i+gap < data.length){
 			if (data[i] > data[i+gap]){
-				swap_data(i, i+gap)
-				if (speed_slider.value > 1){
-					await sleep(speed_slider.value);
-				}
+				await swap_data(i, i+gap)
 				sorted=false
 			}
 			i+=1
@@ -238,7 +225,9 @@ async function run(){
 	if (algo_dropdown.value == "insertion"){
 		await insertion_sort()
 	}
-	if (algo_dropdown.value == "comb"){await comb_sort()}
+	if (algo_dropdown.value == "comb"){
+		await comb_sort()
+	}
 	stop_osc()
 }
 
