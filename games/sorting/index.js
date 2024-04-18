@@ -10,28 +10,35 @@ let run_button = document.getElementById("run");
 let sn = document.getElementById("speed_num");
 
 
-const max_freq = 1000;
+const max_freq = 2000;
 
 var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
+var oscillator = audioCtx.createOscillator();
 function playNote(frequency, duration) {
-  // create Oscillator node
-  var oscillator = audioCtx.createOscillator();
-
-  oscillator.type = 'triangle';
+  oscillator.type = 'square';
   oscillator.frequency.value = frequency; // value in hertz
   oscillator.connect(audioCtx.destination);
-  oscillator.start();
 
   setTimeout(
     function() {
-      oscillator.stop();
-      playMelody();
     }, duration);
 }
 
 set_button.addEventListener("click", reset);
 run_button.addEventListener("click", run);
+
+
+function start_osc(){
+	stop_osc();
+	oscillator.start()
+}
+function stop_osc(){
+	audioCtx.close()
+	audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+	oscillator = audioCtx.createOscillator();
+
+}
 
 
 let data = []
@@ -62,6 +69,7 @@ function redraw_screen(){
 const is_sorted = arr => arr.every((v,i,a) => !i || a[i-1] <= v);
 
 async function reset(){
+	stop_osc()
 	console.log("reset");
 	canvas.height = datapoints_slider.value*1.3;
 	canvas.width = datapoints_slider.value*1.3;
@@ -96,8 +104,8 @@ function shuffle(array) {
 }
 
 function swap_data(pos1,pos2){
-	playNote(pos1/datapoints_slider.value * max_freq, speed_slider.value/1000)
-	playNote(pos2/datapoints_slider.value * max_freq, speed_slider.value/1000)
+	playNote(pos1/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
+	playNote(pos2/datapoints_slider.value * max_freq+20, speed_slider.value/1000)
 	let tmp = data[pos1];
 	data[pos1] = data[pos2];
 	data[pos2] = tmp;
@@ -122,6 +130,7 @@ async function bubblesort(){
 			await sleep(speed_slider.value);
 		}
 	}
+
 }
 
 function sleep(ms) {
@@ -215,20 +224,22 @@ async function comb_sort(){
 }
 
 
-function run(){
+async function run(){
+	start_osc()
 	if (algo_dropdown.value == "bubble"){
-		bubblesort()
+		await bubblesort()
 	}
 	if (algo_dropdown.value == "cock"){
-		ctail()
+		await ctail()
 	}
 	if (algo_dropdown.value == "gnome"){
-		gnomesort()
+		await gnomesort()
 	}
 	if (algo_dropdown.value == "insertion"){
-		insertion_sort()
+		await insertion_sort()
 	}
-	if (algo_dropdown.value == "comb"){comb_sort()}
+	if (algo_dropdown.value == "comb"){await comb_sort()}
+	stop_osc()
 }
 
-setInterval(redraw_screen, 100);
+setInterval(redraw_screen, 50);
