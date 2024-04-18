@@ -10,6 +10,26 @@ let run_button = document.getElementById("run");
 let sn = document.getElementById("speed_num");
 
 
+const max_freq = 1000;
+
+var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+
+function playNote(frequency, duration) {
+  // create Oscillator node
+  var oscillator = audioCtx.createOscillator();
+
+  oscillator.type = 'triangle';
+  oscillator.frequency.value = frequency; // value in hertz
+  oscillator.connect(audioCtx.destination);
+  oscillator.start();
+
+  setTimeout(
+    function() {
+      oscillator.stop();
+      playMelody();
+    }, duration);
+}
+
 set_button.addEventListener("click", reset);
 run_button.addEventListener("click", run);
 
@@ -43,8 +63,8 @@ const is_sorted = arr => arr.every((v,i,a) => !i || a[i-1] <= v);
 
 async function reset(){
 	console.log("reset");
-	canvas.height = datapoints_slider.value*2;
-	canvas.width = datapoints_slider.value*2;
+	canvas.height = datapoints_slider.value*1.3;
+	canvas.width = datapoints_slider.value*1.3;
 	data = []
 	let x = 0;
 	while (x < datapoints_slider.value){
@@ -76,6 +96,8 @@ function shuffle(array) {
 }
 
 function swap_data(pos1,pos2){
+	playNote(pos1/datapoints_slider.value * max_freq, speed_slider.value/1000)
+	playNote(pos2/datapoints_slider.value * max_freq, speed_slider.value/1000)
 	let tmp = data[pos1];
 	data[pos1] = data[pos2];
 	data[pos2] = tmp;
