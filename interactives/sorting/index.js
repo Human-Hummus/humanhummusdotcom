@@ -17,7 +17,7 @@ var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 var oscillator = audioCtx.createOscillator();
 function playNote(frequency, duration) {
   oscillator.type = 'square';
-  oscillator.frequency.value = frequency; // value in hertz
+  oscillator.frequency.value = Math.round(frequency); // value in hertz
   oscillator.connect(audioCtx.destination);
 
   setTimeout(
@@ -117,6 +117,13 @@ async function swap_data(pos1,pos2){
 		await sleep(speed());
 	}
 }
+async function set_data_pos(pos, val){
+	playNote(val/datapoints_slider.value * max_freq+200, speed_slider.value/1000)
+	data[pos] = val
+	if (speed() > 2){
+		await sleep(speed());
+	}
+}
 
 async function bubblesort(){
 	let bubblesort_cycles = 0;
@@ -209,11 +216,57 @@ async function comb_sort(){
 			}
 			i+=1
 		}
+	}}
+function range(start,end){
+	var array = []
+	var x = start
+	while (x<end){
+		array.push(x)
+		x+=1
+	}
+	return array
+}
+
+async function cycle_sort(){
+	for (var cycle_start = 0; cycle_start < data.length - 1; cycle_start+=1){
+		var item = data[cycle_start];
+
+		var pos = cycle_start;
+		for (var i = cycle_start + 1; i < data.length; i+=1){
+			if (data[i] < item){
+				pos += 1;
+			}
+		}
+		if (pos == cycle_start){
+			continue;
+		}
+		while (item == data[pos]){
+			pos += 1;
+		}
+		let temp = data[pos]
+		await set_data_pos(pos, item);
+		item = temp
+
+		while (pos != cycle_start){
+			pos = cycle_start;
+			for (var i = cycle_start + 1; i < data.length; i+=1){
+				if (data[i] < item){
+					pos += 1;
+				}
+			}
+			while (item == data[pos]){
+				pos += 1;
+			}
+			let temp = data[pos]
+			await set_data_pos(pos, item);
+			item = temp
+		}
 	}
 }
 
 
 async function run(){
+	console.log(range(0,10))
 	start_osc()
 	if (algo_dropdown.value == "bubble"){
 		await bubblesort()
@@ -229,6 +282,9 @@ async function run(){
 	}
 	if (algo_dropdown.value == "comb"){
 		await comb_sort()
+	}
+	if (algo_dropdown.value == "cycle"){
+		await cycle_sort()
 	}
 	stop_osc()
 }
