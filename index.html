@@ -7,6 +7,7 @@
 		<link rel="icon" type="image/x-icon" href="favicon.jpg">
 	</head>
 	<body>
+		<script src="parse_cookie.js"></script>
 		<link rel=stylesheet href=style.css></link>
 		<style>
 			@keyframes for_p {
@@ -74,7 +75,10 @@ font-family:handdrawn;
 			<li><a href="todo.html">TODO List</a></li>
 			<li><a href="about.html"><b>About</b></a></li>
 		</ul>
-		<img id=standard-head style="margin-left:96.5%;width:3.5%;" src="assets/boykisser.webp" style="position: absolute;">
+		<button id=standard-head style="margin-left:95%;width:5%;padding-right:0px;padding-top:0px;padding-bottom:0px;" onclick="
+																if (!is_uwu){enable_uwu()}
+																else{disable_uwu()}
+		"><img style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;"src="assets/boykisser.webp" style="position: absolute;"></button>
 
 		<div style="left:50%;position:absolute;
 				animation-timing-function: linear;
