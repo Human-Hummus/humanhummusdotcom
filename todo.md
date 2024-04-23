@@ -1,0 +1,94 @@
+- Games
+    - Furry Simulator
+    - Joe Biden's Burgers
+        - Info page
+        - Burger mechanics
+        - Joe Biden Mechanics
+    - Poop Game
+        - Clicker
+        - Farm
+        - Intro
+        - Info
+        - Shop
+        - Title
+    - Algorithms
+        - Bitonic sort
+        - Counting sort
+        - Timsort
+        - Merge sort
+        - Quick sort
+        - Radix sort
+        - Descriptions of the algorithems
+        - Better fonts
+        - Better buttons
+        - Better sliders
+        - Better header
+        - End button
+        - Footer
+    - Drungalwort
+        - Driver's license
+        - Passport
+        - Wikipedia article
+        - Music
+            - Beat
+            - Vocal text
+            - Music Video
+        - Height
+        - Precise colors
+        - Fan art
+        - 3D model
+        - Dynamic HeHeHeHa sounds
+        - TTS
+    - Yandelere Simulator
+        - Acheivements
+        - Make sentences minigame universal
+        - Fix footsteps in the house
+        - COwOha murder
+        - Has lead murder
+        - mcglee minigame
+        - Assets
+            - Airplane
+            - Aviator ending
+            - Bully
+        - Aviator Ending
+        - Bully
+        - Vicdrawria
+        - Itch.io link
+        - murder end
+        - myrawrs murder
+        - myrawrs minigame
+        - Pee minigame
+    - take care of drungalwort simulator
+    - Gatcha Drungalwort Game
+- Check IOS compatability
+- Boykisser link
+- New icon
+- Lesser UwU mode
+- GitHub changelog link
+- get website unblocked
+- Fan pages
+    - CalyxOS
+    - Linus Torvalds
+    - Linux
+    - Fabrice Bellard
+- Re-name "other projects"
+- MDS
+    - Tutorial
+    - General info
+    - Improve installer
+- Tech info update
+- About Page
+    - chrontab -e
+    - Contact info
+        - Github link
+        - E-mail me
+        - YouTube link
+    - Bio
+    - Name
+    - Software Stack
+- Configs
+    - Cleanup
+    - System Cleanup Script
+    - Readme
+    - Fix brightness
+ 
