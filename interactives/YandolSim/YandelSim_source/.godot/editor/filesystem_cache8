@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1713807999
+::res://::1713900703
 charman.gd::GDScript::-1::1712862144::0::1::::<>CharacterBody2D<>::
 computer.gd::GDScript::-1::1713226219::0::1::::<>Node2D<>::
 computer.tscn::PackedScene::2803046153189920750::1713469256::0::1::::<><>::res://computer.gd<>uid://lna46eabgw7t::::res://assets/computer_home_screen.webp
@@ -16,7 +16,7 @@ karisan.tscn::PackedScene::5022581377794150936::1712525948::0::1::::<><>::res://
 loreinc.gd::GDScript::-1::1713224908::0::1::::<>RigidBody2D<>::
 loreinc.tscn::PackedScene::7308697409613493602::1713225696::0::1::::<><>::res://loreinc.gd<>uid://c8nfcwm781bem
 main.tscn::PackedScene::2280249082664548675::1713469256::0::1::::<><>::res://main_scene.gd<>uid://b4qqg12lhcije::::res://yandy.tscn<>uid://dfyo71xnahb3y::::res://mr_mcglee.tscn<>uid://djlhroxrwlpr2::::res://person.tscn<>uid://qnttl6isq1ww::::res://sfx.tscn<>uid://bscq6bp1sder3::::res://items/coffee.tscn<>uid://cvxd3p0olvcam::::res://mr_c.tscn<>uid://bmocgtymt7n0m::::res://school.tscn<>uid://cckn6ffrbr78k::::res://assets/Other/lock_0.png<>uid://de2x1m6qx2h88::::res://myrawr.tscn<>uid://b23gakx7x1myq::::res://pe_teacher.tscn<>uid://cds8gf2bscm7y::::res://karisan.tscn<>uid://cckqqw4vkrofu::::res://assets/items/pencil.tscn<>uid://bot1x321kg24j::::res://assets/charecter_assets/olin/home.webp<>uid://iq0sy2hspnjn::::res://assets/items/trash.tscn<>uid://dcengcmv0o7jq::::res://loreinc.tscn
-main_scene.gd::GDScript::-1::1712941026::0::1::::<>Node2D<>::
+main_scene.gd::GDScript::-1::1713895762::0::1::::<>Node2D<>::
 main_script.gd::GDScript::-1::1713297395::0::1::::<>Node<>::
 meatchal.gd::GDScript::-1::1712699575::0::1::::<>RigidBody2D<>::
 meatchal.tscn::PackedScene::4914456221546498339::1712721023::0::1::::<><>::uid://bub6oitkrrfvt

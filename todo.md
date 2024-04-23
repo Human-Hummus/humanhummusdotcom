@@ -50,6 +50,8 @@
             - Airplane
             - Aviator ending
             - Bully
+            - karisan english game background
+            - Lore, inc
         - Aviator Ending
         - Bully
         - Vicdrawria
@@ -59,7 +61,7 @@
         - myrawrs minigame
         - Pee minigame
     - take care of drungalwort simulator
-    - Gatcha Drungalwort Game
+    - ~~Gatcha Drungalwort Game~~
 - Check IOS compatability
 - Boykisser link
 - New icon
@@ -78,7 +80,6 @@
     - Improve installer
 - Tech info update
 - About Page
-    - chrontab -e
     - Contact info
         - Github link
         - E-mail me
@@ -90,5 +91,6 @@
     - Cleanup
     - System Cleanup Script
     - Readme
+    - Personal homepage
     - Fix brightness
  

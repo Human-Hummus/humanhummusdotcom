@@ -10,6 +10,7 @@ func _ready():
 
 var deleted_karisan = false
 var deleted_door = false
+
 func _physics_process(delta):
 	if deleted_door == false:
 		if main.data.met_yandel:
