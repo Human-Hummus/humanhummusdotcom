@@ -21,13 +21,13 @@ else{
 function enable_uwu(){
 	if (!is_uwu){
 		is_uwu = true
-		document.cookie = "enable_uwu_mode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT;SameSite=None; Secure"
+		document.cookie = "enable_uwu_mode"
 	}
 }
 function disable_uwu(){
 	if (is_uwu){
 		is_uwu = false
-		document.cookie = "enable_uwu_mode=false; expires=Fri, 31 Dec 9999 23:59:59 GMT;SameSite=None; Secure"
+		document.cookie = "enable_uwu_mode"
 	}
 }
 
