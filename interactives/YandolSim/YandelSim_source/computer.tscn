@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bf6204jemibqk"]
+[gd_scene load_steps=8 format=3 uid="uid://bf6204jemibqk"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_f30uf"]
 [ext_resource type="Texture2D" uid="uid://lna46eabgw7t" path="res://assets/computer_home_screen.webp" id="1_p4e83"]
+[ext_resource type="Texture2D" uid="uid://c2vvldoyppcbe" path="res://assets/website.webp" id="3_kcb7p"]
 
 [sub_resource type="Theme" id="Theme_brwn6"]
 
@@ -32,3 +33,8 @@ theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mn1nn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_m613w")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_1roku")
+
+[node name="Website" type="Sprite2D" parent="."]
+position = Vector2(724, 162)
+scale = Vector2(1.77, 2.25)
+texture = ExtResource("3_kcb7p")

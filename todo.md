@@ -46,6 +46,7 @@
         - COwOha murder
         - Has lead murder
         - mcglee minigame
+        - add site to the computer
         - Assets
             - Airplane
             - Aviator ending
@@ -59,13 +60,13 @@
         - myrawrs minigame
         - Pee minigame
     - take care of drungalwort simulator
-    - ~~Gatcha Drungalwort Game~~
 - Check IOS compatability
 - Boykisser link
 - New icon
-- Lesser UwU mode
+- UwU mode sounds
 - GitHub changelog link
-- get website unblocked
+- Low power mode
+- Get website unblocked
 - Fan pages
     - CalyxOS
     - Linus Torvalds

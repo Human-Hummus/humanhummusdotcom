@@ -1,8 +1,10 @@
 console.log(document.cookie)
 var is_uwu = false;
-if (get_cookie("uwu_mode") == 'true'){is_uwu=true}     
-//document.cookie = "yummy_cookie=choco";
-//document.cookie = "tasty_cookie=strawberry";
+var power = "standard";
+if (get_cookie("uwu_mode") == 'true'){is_uwu=true}   
+if (get_cookie("power") == 'high'){power="high";}
+else if (get_cookie("power") == 'low'){power="low";}
+else{power="standard"}
 console.log(document.cookie);
 if (is_uwu == true){
         console.log("uwu mode engaged")
@@ -12,11 +14,28 @@ else{
 }
 
 function enable_uwu(){
+	is_uwu=true
         set_cookie("uwu_mode", true)
 }
 function disable_uwu(){
+	is_uwu=false
         set_cookie("uwu_mode", false)
 }
+function set_low_power(){
+	power = "low"
+	set_cookie("power", "low")
+}
+function set_standard_power(){
+	power="standard"
+	set_cookie("power", "standard")
+}
+function set_high_power(){
+	power="high"
+	set_cookie("power", "high")
+}
+
+
+
 function get_cookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);

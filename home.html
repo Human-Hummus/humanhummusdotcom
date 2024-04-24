@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+	</head>
+	<body>
+		<script src=parse_cookie.js></script>
+			<div class="search">
+				<h2>Search:</h2>
+				<input autofocus id="search-field" type="text" name="search-field"/>
+				<select id="search-engine">
+					<option value="duckduckgo">DuckDuckGo</option>
+					<option value="google">Google</option>
+					<option value="mojeek">mojeek</option>
+					<option value="yahoo">Yahoo</option>
+					<option value="startpage">Startpage</option>
+
+				</select>
+			</div>
+		<script>
+			const replacems=[
+				["™",99],
+				["˜",98],
+				["—",97],
+				["-",96],
+				["•",95],
+				["‰",89],
+				["ˆ",88],
+				["‡",87],
+				["†",86],
+				["…",85],
+				["„",84],
+				["ƒ",83],
+				["‚",82],
+				["€",80],
+				["`",60],
+				["@",40],
+				[")",29],
+				["(",28],
+				["'",27],
+				["%",25],
+				["$",24],
+				["#",23],
+				["\"",22],
+				["!",21],
+			];
+			document.getElementById("search-field").addEventListener("keydown",event=>{
+				if(event.keyCode==13){
+					var tourl=""
+					var val=document.getElementById("search-field").value
+					for (i in replacems){
+						val=val.replace(i[0],"%"+i[1])
+					}
+					switch(document.getElementById("search-engine").value){
+						case"duckduckgo":
+							tourl="https://duckduckgo.com/?q="+val
+							break
+						case"google":
+							tourl="https://google.com/search?q="+val
+							breakc
+						case"mojeek":
+							tourl="https://www.mojeek.com/search?q="+val
+							break
+						case"yahoo":
+							tourl="https://search.yahoo.com/search?q="+val
+							break
+						case"startpage":
+							tourl="https://www.startpage.com/search?q="+val
+							break
+
+
+					}
+					window.location.replace(tourl)
+				}
+			});
+
+			
+		</script>
+	</body>
+</html>
+	

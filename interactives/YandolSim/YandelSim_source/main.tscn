@@ -119,7 +119,9 @@ position = Vector2(722, -631)
 gravity_scale = 0.0
 
 [node name="Home" type="Sprite2D" parent="."]
-position = Vector2(-1675, -2776)
+modulate = Color(1, 0.509804, 0.498039, 1)
+position = Vector2(-1671, -2732)
+scale = Vector2(1.34816, 0.860746)
 texture = ExtResource("14_wu0hy")
 
 [node name="trash" parent="." instance=ExtResource("15_3hikm")]

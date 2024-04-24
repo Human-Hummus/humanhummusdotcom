@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Human Hummus</title>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+		<link rel=stylesheet href=style.css></link>
+	</head>
+	<body>
+		<div>
+			<a href="index.html"><img style="height:40px;" src="assets/home.webp"></a>
+			<a href="index.html"><img style="height:40px;" src="assets/back.webp"></a>
+		</div>
+		<script src="parse_cookie.js"></script>
+		<h1 id=standard-head style="width:200px">Configure</h1>
+		<ul id=standard-list>
+			<li><button id=uwumode></button><ul><li>Enables some sussier features, namely the latex drungalwort.</li></ul></li>
+			<li><button id=p_button></button><ul>
+					<li>High power mode: Extra animations, more sounds, faster frame rates in some games.</li>
+					<li>Standard power mode: The standard experience</li>
+					<li>Low power mode: less sounds and animations, lower frame rates in some games, and generally a more minimalistic experience</li>
+				</ul></li>
+		</ul>
+		<script>
+			var uwumode = document.getElementById("uwumode")
+			var p_button = document.getElementById("p_button")
+			function set_buttons(){
+				if (is_uwu){
+					uwumode.innerHTML="UwU mode: ON"
+				}
+				else{
+					uwumode.innerHTML="UwU mode: OFF"
+				}
+				if (power == "low"){
+					p_button.innerHTML="Power mode: LOW"
+				}
+				else if (power == "high"){
+					p_button.innerHTML="Power mode: HIGH"
+				}
+				else{
+					p_button.innerHTML="Power mode: STANDARD"
+				}
+			}
+			setInterval(set_buttons,100)
+			uwumode.onclick=async()=>{
+				if (is_uwu){
+					disable_uwu()
+				}
+				else{
+					enable_uwu()
+				}
+			}
+			p_button.onclick=async()=>{
+				if (power == "high"){
+					set_low_power()
+				}
+				else if (power == "low"){
+					set_standard_power()
+				}
+				else{
+					set_high_power()
+				}
+			}
+		</script>
+	</body>
+</html>

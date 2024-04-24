@@ -288,5 +288,12 @@ async function run(){
 	}
 	stop_osc()
 }
-
-setInterval(redraw_screen, 50);
+if (power == "high"){
+	setInterval(redraw_screen, 10);
+}
+else if (power == "low"){
+	setInterval(redraw_screen, 100);
+}
+else{
+	setInterval(redraw_screen, 50);
+}
