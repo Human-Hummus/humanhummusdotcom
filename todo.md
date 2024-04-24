@@ -61,11 +61,9 @@
         - Pee minigame
     - take care of drungalwort simulator
 - Check IOS compatability
-- Boykisser link
 - New icon
-- UwU mode sounds
+- high power drungy
 - GitHub changelog link
-- Low power mode
 - Get website unblocked
 - Fan pages
     - CalyxOS

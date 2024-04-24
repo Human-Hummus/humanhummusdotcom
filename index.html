@@ -50,6 +50,11 @@
 				50%{font-size:1000%;}
 				100%{font-size:500%;}
 			}
+			@keyframes rotate_drungy{
+				0%{transform:rotateZ(60deg);}
+				50%{transform:rotateZ(-60deg);}
+				100%{transform:rotateZ(60deg);}
+			} 
 
 			h2{
 				animation-timing-function: linear;
@@ -88,10 +93,10 @@ font-family:handdrawn;
 				animation-iteration-count:infinite;
 				animation-duration: 3s;">
 			<a href=drungy.html>
-				<img src="drungy.webp">
+				<img id="dim" src="drungy.webp">
 			</a>
 		</div>
-		<a href="drungy.html"><h3 style="position:absolute;align:center;left:58%;top:45%;color:yellow;font-size:200%;background-color:black;transform:rotateZ(45deg);">CLICK ME!</h3></a>
+		<a id=dim href="drungy.html"><h3 style="position:absolute;align:center;left:58%;top:70%;color:yellow;font-size:200%;background-color:black;">CLICK ME!</h3></a>
 		<h4 style="font-size:500%;color:red;background:black;position:absolute;margin-top:auto;margin-left:auto;margin-right:auto;width:1150px;left:0;right:0;top:40%;font-family:death;" id=uwu_prompt></h4>
 		<audio id=meow_sound src=assets/meow.mp3></audio>
 		<script>
@@ -99,6 +104,12 @@ font-family:handdrawn;
 				document.getElementById("main_header").style.animationName="null";
 				document.getElementById("the_list").style.animationName="null";
 				document.getElementById("the_list").style.borderColor="#ff00ff";
+			}
+			if (power=="high"){
+				document.getElementById("dim").style.animationName="rotate_drungy"
+				document.getElementById("dim").style.animationDuration="3s";
+				document.getElementById("dim").style.animationIterationCount="infinite";
+				//document.getElementById("bkimg").style.animationTimingFunction="linear"
 			}
 			document.getElementById("boykb").onclick=async()=>{
 			var uwup = document.getElementById('uwu_prompt')
@@ -115,7 +126,7 @@ font-family:handdrawn;
 				is_uwu=false
 			}
 			uwup.hidden = false
-			await new Promise(resolve => setTimeout(resolve, 3000));
+			await new Promise(resolve => setTimeout(resolve, 1500));
 			uwup.hidden = true
 			}
 			bkimg = document.getElementById("bkimg")
