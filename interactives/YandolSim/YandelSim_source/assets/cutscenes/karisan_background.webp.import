@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfkv08cb24hy2"
-path="res://.godot/imported/paper2.webp-c3bf642a1ce63f83191862e0dbac715f.ctex"
+uid="uid://br67hct4b2k4v"
+path="res://.godot/imported/karisan_background.webp-52181a2b970ddd2d8fa6621403a4a8aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Other/paper/paper2.webp"
-dest_files=["res://.godot/imported/paper2.webp-c3bf642a1ce63f83191862e0dbac715f.ctex"]
+source_file="res://assets/cutscenes/karisan_background.webp"
+dest_files=["res://.godot/imported/karisan_background.webp-52181a2b970ddd2d8fa6621403a4a8aa.ctex"]
 
 [params]
 

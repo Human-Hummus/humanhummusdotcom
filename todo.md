@@ -50,12 +50,10 @@
             - Airplane
             - Aviator ending
             - Bully
-            - karisan english game background
             - Lore, inc
         - Aviator Ending
         - Bully
         - Vicdrawria
-        - Itch.io link
         - murder end
         - myrawrs murder
         - myrawrs minigame
@@ -80,17 +78,10 @@
     - Improve installer
 - Tech info update
 - About Page
-    - Contact info
-        - Github link
-        - E-mail me
-        - YouTube link
-    - Bio
-    - Name
     - Software Stack
 - Configs
-    - Cleanup
+    - Make description page
     - System Cleanup Script
     - Readme
     - Personal homepage
-    - Fix brightness
  

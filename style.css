@@ -1,6 +1,7 @@
 @font-face { font-family: handdrawn; src: url("assets/cms.ttf"); }
 @font-face { font-family: scary; src: url("assets/czk.ttf"); }
 @font-face { font-family: courier; src: url("assets/Courier Prime Code.ttf"); }
+@font-face { font-family: death; src: url("assets/Younger than me.ttf"); }
 
 body {
 	background-color: cyan;

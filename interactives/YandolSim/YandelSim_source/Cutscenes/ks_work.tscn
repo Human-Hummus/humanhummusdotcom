@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfcds2d6suir2"]
+[gd_scene load_steps=8 format=3 uid="uid://cfcds2d6suir2"]
 
 [ext_resource type="Script" path="res://Cutscenes/ks work.gd" id="1_ava2r"]
 [ext_resource type="Texture2D" uid="uid://bflhxk1ff8ot6" path="res://assets/Other/paper/paper1.webp" id="2_5gs6e"]
 [ext_resource type="Texture2D" uid="uid://dopb04b5logaq" path="res://assets/Other/paper/check.webp" id="2_bpc2k"]
+[ext_resource type="Texture2D" uid="uid://br67hct4b2k4v" path="res://assets/cutscenes/karisan_background.webp" id="2_ojkri"]
 [ext_resource type="Texture2D" uid="uid://db0ojn7i7fe6d" path="res://assets/Other/paper/x.webp" id="3_repg5"]
-[ext_resource type="Texture2D" uid="uid://bfkv08cb24hy2" path="res://assets/Other/paper/paper2.webp" id="3_x8w3c"]
 [ext_resource type="Texture2D" uid="uid://cq2il3h3b3bwj" path="res://assets/Other/paper/paper3.webp" id="4_ytn8m"]
-[ext_resource type="Texture2D" uid="uid://dbji6xaevhhp" path="res://assets/Other/paper/paper4.webp" id="5_ywnaa"]
-[ext_resource type="Texture2D" uid="uid://d2kr7xvghv32j" path="res://assets/Other/paper/paper5.webp" id="6_810nk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xqw44"]
 animations = [{
@@ -26,90 +24,70 @@ animations = [{
 [node name="ks work" type="Node2D"]
 script = ExtResource("1_ava2r")
 
+[node name="KarisanBackground" type="Sprite2D" parent="."]
+position = Vector2(457, 331)
+scale = Vector2(1.35522, 1.20463)
+texture = ExtResource("2_ojkri")
+
 [node name="wasrights" type="AnimatedSprite2D" parent="."]
-position = Vector2(103, 121)
+position = Vector2(112, 80)
 scale = Vector2(3.22, 3.02)
 sprite_frames = SubResource("SpriteFrames_xqw44")
 
 [node name="Paper1" type="Sprite2D" parent="."]
-position = Vector2(570, 107)
-scale = Vector2(0.13848, 0.137454)
+position = Vector2(447, 346)
+scale = Vector2(0.13848, 0.0871772)
 texture = ExtResource("2_5gs6e")
 
-[node name="Paper2" type="Sprite2D" parent="."]
-position = Vector2(560, 275)
-rotation = 0.0954545
-scale = Vector2(0.353125, 0.214844)
-texture = ExtResource("3_x8w3c")
-
-[node name="Paper3" type="Sprite2D" parent="."]
-position = Vector2(184, 455)
-rotation = 0.308111
-scale = Vector2(0.1705, 0.194494)
-texture = ExtResource("4_ytn8m")
-
-[node name="Paper4" type="Sprite2D" parent="."]
-position = Vector2(501, 564)
-rotation = -0.109894
-scale = Vector2(0.297991, 0.418367)
-texture = ExtResource("5_ywnaa")
-
-[node name="Paper5" type="Sprite2D" parent="."]
-position = Vector2(844.125, 450.125)
-rotation = 0.243585
-scale = Vector2(0.671902, 0.582203)
-texture = ExtResource("6_810nk")
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 387.0
-offset_top = 64.0
-offset_right = 743.0
-offset_bottom = 146.0
+offset_left = 255.0
+offset_top = 332.0
+offset_right = 664.0
+offset_bottom = 378.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
-text = "What is wrong with the following sentence?"
+text = "What's wrong with the sentence?"
 
 [node name="Sentence" type="RichTextLabel" parent="."]
-offset_left = 335.0
-offset_top = 207.0
-offset_right = 829.0
-offset_bottom = 294.0
-rotation = 0.0865549
+offset_left = 248.0
+offset_top = 157.0
+offset_right = 742.0
+offset_bottom = 244.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 text = "test"
 
 [node name="Button" type="Button" parent="."]
-offset_left = 39.0
-offset_top = 380.0
-offset_right = 348.0
-offset_bottom = 436.0
-rotation = 0.351936
+offset_left = 230.0
+offset_top = 483.0
+offset_right = 723.0
+offset_bottom = 523.0
+rotation = 0.00244612
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 684.0
-offset_top = 358.0
-offset_right = 1038.0
-offset_bottom = 465.0
-rotation = 0.234382
+offset_left = 229.0
+offset_top = 437.0
+offset_right = 717.0
+offset_bottom = 479.0
+rotation = -0.0045751
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 374.0
-offset_top = 537.0
-offset_right = 628.0
-offset_bottom = 610.0
-rotation = -0.108775
+offset_left = 231.0
+offset_top = 396.0
+offset_right = 720.0
+offset_bottom = 435.0
+rotation = -0.00954307
 
 [node name="Paper6" type="Sprite2D" parent="."]
-position = Vector2(970, 77.0001)
-scale = Vector2(0.189, 0.221137)
+position = Vector2(929, 71)
+scale = Vector2(0.1805, 0.221137)
 texture = ExtResource("4_ytn8m")
 
 [node name="score" type="RichTextLabel" parent="."]
-offset_left = 802.0
-offset_top = 47.0
-offset_right = 1158.0
-offset_bottom = 129.0
+offset_left = 752.0
+offset_top = 37.0
+offset_right = 1107.0
+offset_bottom = 157.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 text = "What is wrong with the following sentence?"

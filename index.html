@@ -45,6 +45,11 @@
 				50%{font-size:300%;}
 				100%{font-size:100%;}
 			}
+			@keyframes for_uwu{
+				0%{font-size:500%;}
+				50%{font-size:1000%;}
+				100%{font-size:500%;}
+			}
 
 			h2{
 				animation-timing-function: linear;
@@ -75,10 +80,7 @@ font-family:handdrawn;
 			<li><a href="todo.html">TODO List</a></li>
 			<li><a href="about.html"><b>About</b></a></li>
 		</ul>
-		<button id=standard-head style="margin-left:95%;width:5%;padding-right:0px;padding-top:0px;padding-bottom:0px;" onclick="
-																if (!is_uwu){enable_uwu()}
-																else{disable_uwu()}
-		"><img style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;"src="assets/boykisser.webp" style="position: absolute;"></button>
+		<button id=boykb style="margin-left:95%;width:5%;padding-right:0px;padding-top:0px;padding-bottom:0px;" ><img id="bkimg" style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;" src="assets/boykisser.webp"></button>
 
 		<div style="left:50%;position:absolute;
 				animation-timing-function: linear;
@@ -89,5 +91,37 @@ font-family:handdrawn;
 			</a>
 		</div>
 		<a href="drungy.html"><h3 style="position:absolute;align:center;left:58%;top:45%;color:yellow;font-size:200%;background-color:black;transform:rotateZ(45deg);">CLICK ME!</h3></a>
+		<h4 style="font-size:500%;color:red;background:black;position:absolute;margin-top:auto;margin-left:auto;margin-right:auto;width:1100px;left:0;right:0;top:40%;font-family:death;" id=uwu_prompt></h4>
+		<script>
+			document.getElementById("boykb").onclick=async()=>{
+			var uwup = document.getElementById('uwu_prompt')
+			if (!is_uwu){
+				enable_uwu()
+				is_uwu=true
+				uwup.innerHTML = 'UwU mode <b>ACTIVATED</b>'
+			}
+			else{
+				uwup.innerHTML = 'UwU mode <b>DEACTIVATED</b>'
+				disable_uwu()
+				is_uwu=false
+			}
+			uwup.hidden = false
+			await new Promise(resolve => setTimeout(resolve, 3000));
+			uwup.hidden = true
+			}
+			bkimg = document.getElementById("bkimg")
+			var bk_state = false
+			function boykisser_updater(){
+				if (is_uwu && !bk_state){
+					bk_state=true
+					bkimg.src="assets/boykisser_cool.webp"
+				}
+				if (!is_uwu && bk_state){
+					bk_state=false
+					bkimg.src = "assets/boykisser.webp"
+				}
+			}
+			setInterval(boykisser_updater, 100)
+		</script>
 	</body>
 </html>

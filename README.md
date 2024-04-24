@@ -7,6 +7,15 @@ My personal website, with information, games, demos, and more!
 You can view [the source code for the website on GitHub](https://github.com/Human-Hummus/humanhummusdotcom/tree/main) (if you aren't already!).
 On these pages, you can view the source code for the games and demos as well.
 
+
+About me:
+- My name is Alex. Hello!
+- Social Media & Contact
+    - [My GitHub account](https://github.com/Human-Hummus/)
+    - [My YouTube channel](https://www.youtube.com/@human_hummus6175)
+    - [E-mail me](mailto:michael.a.deross@gmail.com)
+
+
 ### Misc. Tech Info:
 - copy etc.nginx to /etc/nginx on the host server
 - add autoupdate.sh to run on boot, to keep the server up to date.
