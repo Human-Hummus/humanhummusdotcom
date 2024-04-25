@@ -24,3 +24,12 @@ About me:
 - **if building the server from scratch, the /etc/nginx files *will* be invalid; be sure to update them**
 - this folder should be at /humanhummusdotcom
 - if you want to host this website locally, just cd into the directory and run `python3 -m http.server`
+
+Software used on the server:
+- [NGiNX](https://nginx.org/en/)
+- [Neovim](https://neovim.io/)
+- [Fish](https://fishshell.com/)
+- [cron](https://en.wikipedia.org/wiki/Cron)
+- [debian](https://www.debian.org/)
+- [git](https://git-scm.com/)
+- [btop](https://github.com/aristocratos/btop)
