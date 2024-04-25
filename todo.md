@@ -28,6 +28,7 @@
     - Drungalwort
         - Driver's license
         - Passport
+        - Organize
         - Wikipedia article
         - Music
             - Beat
@@ -35,25 +36,23 @@
             - Music Video
         - Height
         - Precise colors
-        - Fan art
         - 3D model
         - Dynamic HeHeHeHa sounds
         - TTS
     - Yandelere Simulator
         - Acheivements
         - Make sentences minigame universal
-        - Fix footsteps in the house
         - COwOha murder
         - Has lead murder
         - mcglee minigame
         - add site to the computer
         - Assets
-            - Airplane
-            - Aviator ending
             - Bully
             - Lore, inc
+            - soundtrack 2
         - Aviator Ending
         - Bully
+        - add music
         - Vicdrawria
         - murder end
         - myrawrs murder
@@ -62,7 +61,6 @@
     - take care of drungalwort simulator
 - Check IOS compatability
 - New icon
-- high power drungy
 - GitHub changelog link
 - Get website unblocked
 - Fan pages
