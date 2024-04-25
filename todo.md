@@ -37,7 +37,6 @@
         - Height
         - Precise colors
         - 3D model
-        - Dynamic HeHeHeHa sounds
         - TTS
     - Yandelere Simulator
         - Acheivements

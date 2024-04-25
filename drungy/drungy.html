@@ -29,7 +29,23 @@
 		<audio id="sound1" src="heheheha.ogg" preload="auto"></audio>
 		<audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio>
 		<ul id=standard-list>
-			<li><button id=cool-button onclick="document.getElementById('sound1').cloneNode().play();">Pronouns: He/He(<img width=50 height=50 src=michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
+			<li><button id=cool-button onclick="
+					const files = [
+							'heheheha.ogg',
+						   	'teemo.ogg',
+						   	'clash-royale-laugh.ogg',
+						   	'cat_laugh.ogg',
+						   	'chipmonk_laf.ogg',
+						   	'baloon_boy.ogg',
+						   	'anime.ogg',
+						   	'baby-laughing-meme.ogg',
+						   	'rehehehe.ogg',
+						   	'sitcom.ogg'
+						   ]
+					var sound = document.getElementById('sound1')
+					sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)]
+					sound.cloneNode().play();
+					">Pronouns: He/He(<img width=50 height=50 src=michael_jackson.webp>)<small style="font-size:50%;"><b>  (click me!)</b></small></button></li>
 			<li>The Drungalwort has two horns</li>
 			<li>One of the horns is broken</li>
 			<li>He has insect wings</li>
