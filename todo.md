@@ -28,7 +28,6 @@
         - Footer
     - Drungalwort
         - Driver's license
-        - add michael jackson hehe
         - Organize
         - Music
             - Beat
