@@ -1,5 +1,6 @@
 - Games
     - Furry Simulator
+    - gedagedigedagedo
     - Joe Biden's Burgers
         - Info page
         - Burger mechanics
@@ -27,6 +28,7 @@
         - Footer
     - Drungalwort
         - Driver's license
+        - add michael jackson hehe
         - Organize
         - Music
             - Beat
@@ -47,14 +49,12 @@
             - soundtrack 2
         - Aviator Ending
         - Bully
-        - add music
         - Vicdrawria
         - murder end
         - myrawrs murder
         - myrawrs minigame
         - Pee minigame
     - take care of drungalwort simulator
-- Check IOS compatability
 - New icon
 - GitHub changelog link(s)
 - Get website unblocked
@@ -73,4 +73,3 @@
     - System Cleanup Script
     - Readme
     - Personal homepage
- 

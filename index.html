@@ -29,10 +29,10 @@
 
 
 			@keyframes for_header{
-                                0%{color:#ff0000;transform:rotateX(0deg);}
-                                33%{color:#00ff00;}
-                                66%{color:#0000ff;}
-                                100%{color:#ff0000;transform:rotateX(360deg);}
+				0%{color:#ff0000;transform:rotateX(0deg);}
+				33%{color:#00ff00;}
+				66%{color:#0000ff;}
+				100%{color:#ff0000;transform:rotateX(360deg);}
 
 			}
 			@keyframes for_wee{
@@ -72,10 +72,11 @@
 				animation-iteration-count:infinite;
 				animation-name: for_header;
 				animation-duration: 3s;
-font-family:handdrawn;
+				font-family:handdrawn;
 			}
 			a{color:black;font-family:handdrawn;font-size:150%;}
 		</style>
+		<button id=boykb style="margin-left:95%;width:5%;padding-right:0px;padding-top:0px;padding-bottom:0px;position:absolute;" ><img id="bkimg" style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;" src="assets/boykisser.webp"></button>
 		<h1 id=main_header>Human Hummus</h1>
 		<ul id=the_list>
 			<li><a href="interactives/index.html">Interactive Experiences</a></li>
@@ -86,7 +87,6 @@ font-family:handdrawn;
 			<li><a href="about.html"><b>About</b></a></li>
 			<li><a href="config.html">Configure this site</a></li>
 		</ul>
-		<button id=boykb style="margin-left:95%;width:5%;padding-right:0px;padding-top:0px;padding-bottom:0px;" ><img id="bkimg" style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;" src="assets/boykisser.webp"></button>
 
 		<div style="left:50%;position:absolute;
 				animation-timing-function: linear;
@@ -109,7 +109,6 @@ font-family:handdrawn;
 				document.getElementById("dim").style.animationName="rotate_drungy"
 				document.getElementById("dim").style.animationDuration="3s";
 				document.getElementById("dim").style.animationIterationCount="infinite";
-				//document.getElementById("bkimg").style.animationTimingFunction="linear"
 			}
 			document.getElementById("boykb").onclick=async()=>{
 			var uwup = document.getElementById('uwu_prompt')
