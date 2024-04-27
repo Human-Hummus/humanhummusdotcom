@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bf6204jemibqk"]
+[gd_scene load_steps=9 format=3 uid="uid://bf6204jemibqk"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_f30uf"]
 [ext_resource type="Texture2D" uid="uid://lna46eabgw7t" path="res://assets/computer_home_screen.webp" id="1_p4e83"]
 [ext_resource type="Texture2D" uid="uid://c2vvldoyppcbe" path="res://assets/website.webp" id="3_kcb7p"]
+[ext_resource type="Texture2D" uid="uid://cfyjtipmw55qr" path="res://assets/website_thing.webp" id="4_acsin"]
 
 [sub_resource type="Theme" id="Theme_brwn6"]
 
@@ -35,6 +36,11 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_m613w")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_1roku")
 
 [node name="Website" type="Sprite2D" parent="."]
-position = Vector2(724, 162)
-scale = Vector2(1.77, 2.25)
+position = Vector2(641, 238)
+scale = Vector2(2.88, 4.355)
 texture = ExtResource("3_kcb7p")
+
+[node name="WebsiteThing" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(122, 428)
+texture = ExtResource("4_acsin")

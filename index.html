@@ -98,7 +98,7 @@ font-family:handdrawn;
 		</div>
 		<a id=dim href="drungy/drungy.html"><h3 style="position:absolute;align:center;left:58%;top:70%;color:yellow;font-size:200%;background-color:black;">CLICK ME!</h3></a>
 		<h4 style="font-size:500%;color:red;background:black;position:absolute;margin-top:auto;margin-left:auto;margin-right:auto;width:1150px;left:0;right:0;top:40%;font-family:death;" id=uwu_prompt></h4>
-		<audio id=meow_sound src=assets/meow.mp3></audio>
+		<audio id=meow_sound src=assets/meow.ogg></audio>
 		<script>
 			if (power=="low"){
 				document.getElementById("main_header").style.animationName="null";
@@ -114,19 +114,22 @@ font-family:handdrawn;
 			document.getElementById("boykb").onclick=async()=>{
 			var uwup = document.getElementById('uwu_prompt')
 
-			document.getElementById("meow_sound").cloneNode().play();
+			var ms = document.getElementById("meow_sound")
 			if (!is_uwu){
 				enable_uwu()
 				is_uwu=true
 				uwup.innerHTML = 'UwU mode:   <b>ACTIVATED</b>'
+				ms.src = "assets/meow.ogg"
 			}
 			else{
 				uwup.innerHTML = 'UwU mode: <b>DEACTIVATED</b>'
 				disable_uwu()
 				is_uwu=false
+				ms.src = "assets/im_really_mad.ogg"
 			}
+			ms.cloneNode().play();
 			uwup.hidden = false
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise(resolve => setTimeout(resolve, 4000));
 			uwup.hidden = true
 			}
 			bkimg = document.getElementById("bkimg")
