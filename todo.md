@@ -1,6 +1,5 @@
 - Games
     - Furry Simulator
-    - gedagedigedagedo
     - Joe Biden's Burgers
         - Info page
         - Burger mechanics
