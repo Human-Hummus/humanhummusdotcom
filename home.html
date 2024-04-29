@@ -3,27 +3,51 @@
 	<head>
 		<title>Home</title>
 		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+		<meta charset="UTF-8" />
 	</head>
 	<body>
+		<link rel=stylesheet href=style.css></link>
+		<style>
+			
+			body{
+				background-color:#2b2730;
+			}
+			h2{
+				color:white;
+				font-size:200%;
+				font-family:readable;
+			}
+			p{
+				color:white;
+				font-family:readable;
+			}
+		</style>
 		<script src=parse_cookie.js></script>
-			<div class="search">
-				<h2>Search:</h2>
-				<input autofocus id="search-field" type="text" name="search-field"/>
-				<select id="search-engine">
-					<option value="duckduckgo">DuckDuckGo</option>
-					<option value="google">Google</option>
-					<option value="mojeek">mojeek</option>
-					<option value="yahoo">Yahoo</option>
-					<option value="startpage">Startpage</option>
-
-				</select>
+		<div class="first-div" style="display:flex;justify-content:spaced">
+			<div class="search" style="width:50%;display:flex;justify-content:center;flex-direction:column;">
+				<center><h2>Search</h2></center>
+				<center><input autofocus id="search-field" type="text" name="search-field" style="width:50%;"/></center>
+				<center>
+					<select id="search-engine" style="width:25%;">
+						<option value="duckduckgo">DuckDuckGo</option>
+						<option value="google">Google</option>
+						<option value="mojeek">mojeek</option>
+						<option value="yahoo">Yahoo</option>
+						<option value="startpage">Startpage</option>
+					</select>
+				</center>
 			</div>
+			<div style="width:50%">
+				<p>example</p>
+		</div>
 		<script>
-			const replacems=[
+			var replacems=[
+				["%",25],
 				["™",99],
 				["˜",98],
 				["—",97],
 				["-",96],
+				["&",26],
 				["•",95],
 				["‰",89],
 				["ˆ",88],
@@ -39,19 +63,43 @@
 				[")",29],
 				["(",28],
 				["'",27],
-				["%",25],
 				["$",24],
 				["#",23],
 				["\"",22],
 				["!",21],
+				["+","2B"],
+				["*","2A"],
+				[",","2C"],
+				["/","2F"],
+				[":","3A"],
+				[";","3B"],
+				["<","3C"],
+				["=","3D"],
+				[">","3E"],
+				["?","3F"],
+
 			];
 			document.getElementById("search-field").addEventListener("keydown",event=>{
 				if(event.keyCode==13){
 					var tourl=""
 					var val=document.getElementById("search-field").value
-					for (i in replacems){
-						val=val.replace(i[0],"%"+i[1])
+					var x = 0;
+					var real_val = ""
+					while (x<val.length){
+						var y = 0
+						while (y<replacems.length){
+							if (val.charAt(x)==replacems[y][0]){
+								real_val+="%" + replacems[y][1].toString()
+								console.log(real_val)
+								x+=1
+								break
+							}
+							y+=1
+						}
+						real_val+=val.charAt(x)
+						x+=1
 					}
+					val=real_val
 					switch(document.getElementById("search-engine").value){
 						case"duckduckgo":
 							tourl="https://duckduckgo.com/?q="+val

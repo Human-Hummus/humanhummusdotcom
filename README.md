@@ -7,7 +7,6 @@ My personal website, with information, games, demos, and more!
 You can view [the source code for the website on GitHub](https://github.com/Human-Hummus/humanhummusdotcom/tree/main) (if you aren't already!).
 On these pages, you can view the source code for the games and demos as well.
 
-
 About me:
 - My name is Alex. Hello!
 - Social Media & Contact
