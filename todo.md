@@ -54,7 +54,6 @@
         - Pee minigame
     - take care of drungalwort simulator
 - New icon
-- GitHub changelog link(s)
 - Get website unblocked
 - Fan pages
     - CalyxOS
