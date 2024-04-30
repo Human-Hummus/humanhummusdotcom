@@ -68,5 +68,11 @@
 - Configs
     - Make description page
     - System Cleanup Script
-    - Readme
-    - Personal homepage
+- Startpage
+    - Optional backgroud color changes
+    - Site list
+        - links/list
+        - favicons
+    - Image backgrounds
+    - Seperate config page
+
