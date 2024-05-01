@@ -1,98 +1,86 @@
-- Games
-    - Furry Simulator
-    - Joe Biden's Burgers
-        - Info page
-        - Burger mechanics
-        - Joe Biden Mechanics
-    - Poop Game
-        - Clicker
-        - Farm
-        - Intro
-        - Info
-        - Shop
-        - Title
-    - Algorithms
-        - Bitonic sort
-        - Counting sort
-        - Timsort
-        - Merge sort
-        - Quick sort
-        - Radix sort
-        - Descriptions of the algorithems
-        - Better fonts
-        - Better buttons
-        - Better sliders
-        - Better header
-        - End button
-        - Footer
-    - Drungalwort
-        - Driver's license
-        - Organize
-        - Music
-            - Beat
-            - Vocal text
-            - Music Video
-        - 3D model
-        - TTS
-    - Yandelere Simulator
-        - Acheivements
-        - Make sentences minigame universal
-        - COwOha murder
-        - Has lead murder
-        - mcglee minigame
-        - add site to the computer
-        - Assets
-            - Bully
-            - Lore, inc
-            - soundtrack 2
-        - Aviator Ending
-        - Bully
-        - Vicdrawria
-        - murder end
-        - myrawrs murder
-        - myrawrs minigame
-        - Pee minigame
-    - take care of drungalwort simulator
-- New icon
-- Get website unblocked
-- Make main config a sub-page
-- Fan pages
-    - CalyxOS
-    - Linus Torvalds
-    - Linux
-    - Fabrice Bellard
-- MDS
-    - Tutorial
-    - General info
-    - Improve installer
-- Tech info update
-- Change css id to classes
-- New page format
-    - fix home/back buttons
-    - todo
-    - interactives/index.txt
-        - sorting
-        - yandelsim
-    - functional software
-    - about
-    - tech stuff
-    - drungalwort
-        - main
-        - fanart
-- Configs
-    - Make description page
-    - System Cleanup Script
-    - New Wallpaper
-    - new wallpaper
-    - new wallpaper
-    - new wallpaper
-    - new wallpaper
-- Startpage
-    - Background color fix
-    - Optional backgroud color changes
-    - Site list
-        - links/list
-        - favicons
-    - Image backgrounds
-    - Seperate config page
-
+-   Games
+    -   Furry Simulator
+    -   Joe Biden's Burgers
+        -   Info page
+        -   Burger mechanics
+        -   Joe Biden Mechanics
+    -   Poop Game
+        -   Clicker
+        -   Farm
+        -   Intro
+        -   Info
+        -   Shop
+        -   Title
+    -   Algorithms
+        -   Bitonic sort
+        -   Counting sort
+        -   Timsort
+        -   Merge sort
+        -   Quick sort
+        -   Radix sort
+        -   Descriptions of the algorithems
+        -   Better fonts
+        -   Better buttons
+        -   Better sliders
+        -   Better header
+        -   End button
+        -   Footer
+    -   Drungalwort
+        -   Driver's license
+        -   Organize
+        -   Music
+            -   Beat
+            -   Vocal text
+            -   Music Video
+        -   3D model
+        -   TTS
+    -   Yandelere Simulator
+        -   Acheivements
+        -   Make sentences minigame universal
+        -   COwOha murder
+        -   Has lead murder
+        -   mcglee minigame
+        -   add site to the computer
+        -   Assets
+            -   Bully
+            -   Lore, inc
+            -   soundtrack 2
+        -   Aviator Ending
+        -   Bully
+        -   Vicdrawria
+        -   murder end
+        -   myrawrs murder
+        -   myrawrs minigame
+        -   Pee minigame
+    -   take care of drungalwort simulator
+-   New icon
+-   Get website unblocked
+-   Make main config a sub-page
+-   Fan pages
+    -   CalyxOS
+    -   Linus Torvalds
+    -   Linux
+    -   Fabrice Bellard
+-   MDS
+    -   Tutorial
+    -   General info
+    -   Improve installer
+-   Tech info update
+-   Change css id to classes
+-   fix misc tech stuff
+-   Configs
+    -   Make description page
+    -   System Cleanup Script
+    -   New Wallpaper
+    -   new wallpaper
+    -   new wallpaper
+    -   new wallpaper
+    -   new wallpaper
+-   Startpage
+    -   Background color fix
+    -   Optional backgroud color changes
+    -   Site list
+        -   links/list
+        -   favicons
+    -   Image backgrounds
+    -   Seperate config page

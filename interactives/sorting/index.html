@@ -1,56 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
 	<head>
 		<title>Human Hummus</title>
-		<link rel="icon" type="image/x-icon" href="../../favicon.jpg">
-		<link rel=stylesheet href=../../style.css></link>
+		<link rel="icon" type="image/x-icon" href="../../favicon.jpg" />
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<div>
-			<a href="../../index.html"><img style="height:40px;" src="../../assets/home.webp"></a>
-			<a href="../index.html"><img style="height:40px;" src="../../assets/back.webp"></a>
+			<a href="../../index.html"><img style="height: 40px" src="../../assets/home.webp" /></a>
+			<a href="../index.html"><img style="height: 40px" src="../../assets/back.webp" /></a>
 		</div>
 		<script src="../../parse_cookie.js"></script>
-		<h1 style="font-family:readable;">Sorting Algorithms</h1>
+
+		<h1>Sorting Algorithms</h1>
 		<center>
-			<div style="display:flex;">
+			<div style="display: flex">
 				<div>
 					<center>
 						<div>
-							<div style="display:flex;">
-								<p>Operations / Second </p>
-								<input type="range" id="speed" name="approx. ms/step" value=50 min=1 max=500 step=1>
-								<p id=speed_num></p>
-
+							<div style="display: flex">
+								<p>Operations / Second</p>
+								<input type="range" id="speed" name="approx. ms/step" value="50" min="1" max="500" step="1" />
+								<p id="speed_num"></p>
 							</div>
-							<div style="display:flex;">
+							<div style="display: flex">
 								<p>Number of Datapoints</p>
-								<input type=range id=datapoints value=10 min=2 max=250 step=1 /><p id=dpn />
-							</div>	
-							<select id="algo" name=algorithms>
-								<option value=cock>Cocktail Shaker Sort</option>
-								<option value=bubble>Bubble Sort</option>
-								<option value=gnome>Gnome(Stupid) Sort</option>
-								<option value=insertion>Insertion Sort</option>
-								<option value=comb>Comb Sort</option>
-								<option value=cycle>Cycle Sort</option>
+								<input type="range" id="datapoints" value="10" min="2" max="250" step="1" />
+								<p id="dpn" />
+							</div>
+							<select id="algo" name="algorithms">
+								<option value="cock">Cocktail Shaker Sort</option>
+								<option value="bubble">Bubble Sort</option>
+								<option value="gnome">Gnome(Stupid) Sort</option>
+								<option value="insertion">Insertion Sort</option>
+								<option value="comb">Comb Sort</option>
+								<option value="cycle">Cycle Sort</option>
 							</select>
-
 						</div>
 					</center>
 				</div>
 
-				<div style="position:relative;margin-top:auto;margin-left:auto;margin-right:auto;width:500px;left:0;top:100;right:0;padding-bottom:0;">
+				<div style="position: relative; margin-top: auto; margin-left: auto; margin-right: auto; width: 500px; left: 0; top: 100; right: 0; padding-bottom: 0">
 					<center>
-						<canvas id=data style="width=600px;height:600px;image-rendering: pixelated;"></canvas>
+						<canvas id="data" style="width=600px;height:600px;image-rendering: pixelated;"></canvas>
 					</center>
 					<center>
-						<div style="display:flex;">
-							<input type=button id=reset value="RESET"/>
-							<input type=button id=run value="run"/>
+						<div style="display: flex">
+							<input type="button" id="reset" value="RESET" />
+							<input type="button" id="run" value="run" />
 						</div>
-
 					</center>
 				</div>
 			</div>
