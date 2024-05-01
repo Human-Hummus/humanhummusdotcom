@@ -55,6 +55,7 @@
     - take care of drungalwort simulator
 - New icon
 - Get website unblocked
+- Make main config a sub-page
 - Fan pages
     - CalyxOS
     - Linus Torvalds
@@ -65,10 +66,29 @@
     - General info
     - Improve installer
 - Tech info update
+- Change css id to classes
+- New page format
+    - fix home/back buttons
+    - todo
+    - interactives/index.txt
+        - sorting
+        - yandelsim
+    - functional software
+    - about
+    - tech stuff
+    - drungalwort
+        - main
+        - fanart
 - Configs
     - Make description page
     - System Cleanup Script
+    - New Wallpaper
+    - new wallpaper
+    - new wallpaper
+    - new wallpaper
+    - new wallpaper
 - Startpage
+    - Background color fix
     - Optional backgroud color changes
     - Site list
         - links/list

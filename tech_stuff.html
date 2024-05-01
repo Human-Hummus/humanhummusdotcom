@@ -1,54 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
 	<head>
 		<title>Human Hummus</title>
-		<link rel="icon" type="image/x-icon" href="favicon.jpg">
-		<link rel=stylesheet href=style.css></link>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body>
 		<div>
-			<a href="index.html"><img style="height:40px;" src="assets/home.webp"></a>
-			<a href="index.html"><img style="height:40px;" src="assets/back.webp"></a>
+			<a href="index.html"><img style="height: 40px" src="assets/home.webp" /></a>
+			<a href="index.html"><img style="height: 40px" src="assets/back.webp" /></a>
 		</div>
-		<h1 id=standard-head>Misc. Code; Might Be Interesting</h1>
-		<ul id=standard-list>
+		<h1 id="standard-head">Misc. Code; Might Be Interesting</h1>
+		<ul id="standard-list">
 			<li>
 				<h2>Typical Head/Footer:</h2>
-				<pre id=code>
-&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;Human Hummus&lt;/title&gt;
-		&lt;link rel="icon" type="image/x-icon" href="favicon.jpg"&gt;
-		&lt;link rel=stylesheet href=style.css&gt;&lt;/link&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;div&gt;
-			&lt;a href="index.html"&gt;&lt;img style="height:40px;" src="assets/home.webp"&gt;&lt;/a&gt;
-			&lt;a href="[<b>PREV_PAGE_HERE</b>]"&gt;&lt;img style="height:40px;" src="assets/back.webp"&gt;&lt;/a&gt;
-		&lt;/div&gt;
-		[REST OF PAGE HERE]
-	&lt;/body&gt;
-&lt;html&gt;
-					</pre>
+				<code>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Human Hummus&lt;/title&gt; &lt;link rel="icon" type="image/x-icon" href="favicon.jpg"&gt; &lt;link rel=stylesheet href=style.css&gt;&lt;/link&gt; &lt;/head&gt; &lt;body&gt; &lt;div&gt; &lt;a href="index.html"&gt;&lt;img style="height:40px;" src="assets/home.webp"&gt;&lt;/a&gt; &lt;a href="[<b>PREV_PAGE_HERE</b>]"&gt;&lt;img style="height:40px;" src="assets/back.webp"&gt;&lt;/a&gt; &lt;/div&gt; &lt;script src="parse_cookie.js"&gt;&lt;/script&gt; [REST OF PAGE HERE] &lt;/body&gt; &lt;html&gt;</code>
 			</li>
 			<li>
-				<h2> Home Button (<a href="index.html"><img src="assets/home.webp"></a>)</h2>
-				<pre id=code>&lt;a href="index.html"&gt;&lt;img style="height:40px;" src="assets/home.webp"&gt;&lt;/a&gt;</pre>
-
+				<h2>
+					Home Button (<a href="index.html"><img src="assets/home.webp" /></a>)
+				</h2>
+				<code>&lt;a href="index.html"&gt;&lt;img style="height:40px;" src="assets/home.webp"&gt;&lt;/a&gt;</code>
 			</li>
 			<li>
-				<h2> Back Button <b>TEMPLATE</b> (<a href="index.html"><img style="height:40px;" src="assets/back.webp"></a>)</h2>
-				<pre id=code>&lt;a href="[<b>PREV_PAGE_HERE</b>]"&gt;&lt;img style="height:40px;" src="assets/back.webp"&gt;&lt;/a&gt;</pre>
+				<h2>
+					Back Button <b>TEMPLATE</b> (<a href="index.html"><img style="height: 40px" src="assets/back.webp" /></a>)
+				</h2>
+				<code>&lt;a href="[<b>PREV_PAGE_HERE</b>]"&gt;&lt;img style="height:40px;" src="assets/back.webp"&gt;&lt;/a&gt;</code>
+			</li>
+
 			<li>
 				<h2>current style.css:</h2>
-				<code><iframe src="style.css" width=80% height=80%></iframe></code>
+				<code id="stcss"></code>
 			</li>
 			<li><a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main">Site Source Code</a></li>
-			
 		</ul>
+		<script>
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status == 200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
+			document.getElementById("stcss").innerHTML = loadFile("style.css");
+		</script>
 	</body>
 </html>

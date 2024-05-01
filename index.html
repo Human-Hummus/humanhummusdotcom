@@ -1,157 +1,205 @@
-<!DOCTYPE html>
-
+<!doctype html>
 
 <html>
 	<head>
 		<title>Human Hummus</title>
-		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
 	</head>
 	<body>
 		<script src="parse_cookie.js"></script>
-		<link rel=stylesheet href=style.css></link>
+		<link rel="stylesheet" href="style.css" />
 		<style>
 			@keyframes for_p {
-				0%{border-color:#ff0000;}
-				33%{border-color:#00ff00;}
-				66%{border-color:#0000ff;}
-				100%{border-color:#ff0000;}
+				0% {
+					border-color: #ff0000;
+				}
+				33% {
+					border-color: #00ff00;
+				}
+				66% {
+					border-color: #0000ff;
+				}
+				100% {
+					border-color: #ff0000;
+				}
 			}
 			ul {
-				top:100px;
-				border:10px solid #ffffff;
-				position:absolute;
-				animation-duration:3s;
-				animation-name:for_p;
-				animation-iteration-count:infinite;
+				top: 100px;
+				border: 10px solid #ffffff;
+				animation-duration: 3s;
+				width: 50%;
+				animation-name: for_p;
+				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				border-radius:10px;
+				border-radius: 10px;
+				text-align: left;
 			}
 
+			@keyframes for_header {
+				0% {
+					color: #ff0000;
+					transform: rotateX(0deg);
+				}
+				33% {
+					color: #00ff00;
+				}
+				66% {
+					color: #0000ff;
+				}
+				100% {
+					color: #ff0000;
+					transform: rotateX(360deg);
+				}
+			}
+			@keyframes for_wee {
+				0% {
+					transform: rotateZ(0deg);
+					font-size: 100%;
+				}
+				50% {
+					font-size: 400%;
+				}
+				100% {
+					transform: rotateZ(360deg);
+					font-size: 100%;
+				}
+			}
+			@keyframes for_clickme {
+				0% {
+					font-size: 100%;
+				}
+				50% {
+					font-size: 300%;
+				}
+				100% {
+					font-size: 100%;
+				}
+			}
+			@keyframes for_uwu {
+				0% {
+					font-size: 500%;
+				}
+				50% {
+					font-size: 1000%;
+				}
+				100% {
+					font-size: 500%;
+				}
+			}
+			@keyframes rotate_drungy {
+				0% {
+					transform: rotateZ(60deg);
+				}
+				50% {
+					transform: rotateZ(-60deg);
+				}
+				100% {
+					transform: rotateZ(60deg);
+				}
+			}
 
-			@keyframes for_header{
-				0%{color:#ff0000;transform:rotateX(0deg);}
-				33%{color:#00ff00;}
-				66%{color:#0000ff;}
-				100%{color:#ff0000;transform:rotateX(360deg);}
-
-			}
-			@keyframes for_wee{
-				0%{transform:rotateZ(0deg);font-size:100%;}
-				50%{font-size:400%;}
-				100%{transform:rotateZ(360deg);font-size:100%;}
-			}
-			@keyframes for_clickme{
-				0%{font-size:100%;}
-				50%{font-size:300%;}
-				100%{font-size:100%;}
-			}
-			@keyframes for_uwu{
-				0%{font-size:500%;}
-				50%{font-size:1000%;}
-				100%{font-size:500%;}
-			}
-			@keyframes rotate_drungy{
-				0%{transform:rotateZ(60deg);}
-				50%{transform:rotateZ(-60deg);}
-				100%{transform:rotateZ(60deg);}
-			} 
-
-			h2{
+			h2 {
 				animation-timing-function: linear;
-				animation-iteration-count:infinite;
+				animation-iteration-count: infinite;
 				animation-name: for_wee;
 				animation-duration: 2s;
-				position:absolute;
-				top:50%;
-				left:auto;
-				
+				position: absolute;
+				top: 50%;
+				left: auto;
 			}
-	
+
 			h1 {
 				animation-timing-function: linear;
-				animation-iteration-count:infinite;
+				animation-iteration-count: infinite;
 				animation-name: for_header;
 				animation-duration: 3s;
-				font-family:handdrawn;
+				font-family: handdrawn;
+				font-size: 600%;
 			}
-			a{color:black;font-family:handdrawn;font-size:150%;}
+			a {
+				color: black;
+				font-family: handdrawn;
+				font-size: 150%;
+			}
 		</style>
-		<h1 id=main_header>Human Hummus</h1>
-		<button id=boykb style="margin-left:95%;width:5%;top:0px;right:20px;position:absolute;" ><img id="bkimg" style="padding-left:0px;width:50px;padding-right:0px;padding-top:0px;padding-bottom:0px;" src="assets/boykisser.webp"></button>
-		<ul id=the_list>
-			<li><a href="interactives/index.html">Interactive Experiences</a></li>
-			<li><a href=drungy/drungy.html>Educational Resource Regaurding Drungalwort</a></li>
-			<li><a href="functional software/index.html">Functional Software</a></li>
-			<li><a href="tech_stuff.html">Misc. Tech Stuff</a></li>
-			<li><a href="todo.html">TODO List</a></li>
-			<li><a href="about.html"><b>About</b></a></li>
-			<li><a href="config.html">Configure this site</a></li>
-		</ul>
-
-		<div style="left:50%;position:absolute;
-				animation-timing-function: linear;
-				animation-iteration-count:infinite;
-				animation-duration: 3s;">
-			<a href=drungy/drungy.html>
-				<img id="dim" src="drungy/drungy.webp">
-			</a>
+		<div class="main">
+			<center><h1 id="main_header">Human Hummus</h1></center>
+			<button id="boykb" style="margin-left: 95%; width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="assets/boykisser.webp" /></button>
+			<div class="main-container">
+				<div>
+					<center>
+						<ul id="the_list">
+							<li><a href="interactives/index.html">Interactive Experiences</a></li>
+							<li><a href="drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
+							<li><a href="functional software/index.html">Functional Software</a></li>
+							<li><a href="tech_stuff.html">Misc. Tech Stuff</a></li>
+							<li><a href="todo.html">TODO List</a></li>
+							<li>
+								<a href="about.html"><b>About</b></a>
+							</li>
+							<li><a href="config.html">Configure this site</a></li>
+						</ul>
+						<h2 style="position: relative; animation-name: null"><a style="font-size: 200%; font-family: readable" href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/">Changelog</a></h2>
+					</center>
+				</div>
+				<div class="container">
+					<a href="drungy/drungy.html">
+						<center>
+							<img style="animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 3s" id="dim" src="drungy/drungy.webp" />
+							<div class="centered">
+								<h3 style="color: yellow; font-size: 200%; background-color: black">CLICK ME!</h3>
+							</div>
+						</center>
+					</a>
+				</div>
+			</div>
+			<h4 style="font-size: 500%; color: red; background: black; position: absolute; margin-top: auto; margin-left: auto; margin-right: auto; width: 1150px; left: 0; right: 0; top: 40%; font-family: death" id="uwu_prompt"></h4>
+			<audio id="meow_sound" src="assets/meow.ogg"></audio>
 		</div>
-		<a id=dim href="drungy/drungy.html"><h3 style="position:absolute;align:center;left:58%;top:70%;color:yellow;font-size:200%;background-color:black;">CLICK ME!</h3></a>
-		<h4 style="font-size:500%;color:red;background:black;position:absolute;margin-top:auto;margin-left:auto;margin-right:auto;width:1150px;left:0;right:0;top:40%;font-family:death;" id=uwu_prompt></h4>
-		<audio id=meow_sound src=assets/meow.ogg></audio>
-		<h2 style="
-			position:absolute;
-			bottom:0;
-			animation-name:null;
-			"><a style="
-				font-size:200%;
-				font-family:readable;
-				" href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/">Changelog</a></h2>
 		<script>
-			if (power=="low"){
-				document.getElementById("main_header").style.animationName="null";
-				document.getElementById("the_list").style.animationName="null";
-				document.getElementById("the_list").style.borderColor="#ff00ff";
+			if (power == "low") {
+				document.getElementById("main_header").style.animationName = "null";
+				document.getElementById("the_list").style.animationName = "null";
+				document.getElementById("the_list").style.borderColor = "#ff00ff";
 			}
-			if (power=="high"){
-				document.getElementById("dim").style.animationName="rotate_drungy"
-				document.getElementById("dim").style.animationDuration="3s";
-				document.getElementById("dim").style.animationIterationCount="infinite";
+			if (power == "high") {
+				document.getElementById("dim").style.animationName = "rotate_drungy";
+				document.getElementById("dim").style.animationDuration = "3s";
+				document.getElementById("dim").style.animationIterationCount = "infinite";
 			}
-			document.getElementById("boykb").onclick=async()=>{
-			var uwup = document.getElementById('uwu_prompt')
+			document.getElementById("boykb").onclick = async () => {
+				var uwup = document.getElementById("uwu_prompt");
 
-			var ms = document.getElementById("meow_sound")
-			if (!is_uwu){
-				enable_uwu()
-				is_uwu=true
-				uwup.innerHTML = 'UwU mode:   <b>ACTIVATED</b>'
-				ms.src = "assets/meow.ogg"
-			}
-			else{
-				uwup.innerHTML = 'UwU mode: <b>DEACTIVATED</b>'
-				disable_uwu()
-				is_uwu=false
-				ms.src = "assets/im_really_mad.ogg"
-			}
-			ms.cloneNode().play();
-			uwup.hidden = false
-			await new Promise(resolve => setTimeout(resolve, 4000));
-			uwup.hidden = true
-			}
-			bkimg = document.getElementById("bkimg")
-			var bk_state = false
-			function boykisser_updater(){
-				if (is_uwu && !bk_state){
-					bk_state=true
-					bkimg.src="assets/boykisser_cool.webp"
+				var ms = document.getElementById("meow_sound");
+				if (!is_uwu) {
+					enable_uwu();
+					is_uwu = true;
+					uwup.innerHTML = "UwU mode:   <b>ACTIVATED</b>";
+					ms.src = "assets/meow.ogg";
+				} else {
+					uwup.innerHTML = "UwU mode: <b>DEACTIVATED</b>";
+					disable_uwu();
+					is_uwu = false;
+					ms.src = "assets/im_really_mad.ogg";
 				}
-				if (!is_uwu && bk_state){
-					bk_state=false
-					bkimg.src = "assets/boykisser.webp"
+				ms.cloneNode().play();
+				uwup.hidden = false;
+				await new Promise((resolve) => setTimeout(resolve, 4000));
+				uwup.hidden = true;
+			};
+			bkimg = document.getElementById("bkimg");
+			var bk_state = false;
+			function boykisser_updater() {
+				if (is_uwu && !bk_state) {
+					bk_state = true;
+					bkimg.src = "assets/boykisser_cool.webp";
+				}
+				if (!is_uwu && bk_state) {
+					bk_state = false;
+					bkimg.src = "assets/boykisser.webp";
 				}
 			}
-			setInterval(boykisser_updater, 100)
+			setInterval(boykisser_updater, 100);
 		</script>
 	</body>
 </html>
