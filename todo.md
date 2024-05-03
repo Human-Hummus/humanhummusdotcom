@@ -58,12 +58,12 @@
     -   take care of drungalwort simulator
 -   New icon
 -   Get website unblocked
+-   make changelog button cooler
 -   New wallpaper
 -   merge drungy's personal documents into main page
 -   ensure autoupdate.py works; update cron
 -   Apply new theme
-    -   functional software
-    -   tech page
+    - functional software
 -   Make main config a sub-page
 -   Fan pages
     -   CalyxOS
