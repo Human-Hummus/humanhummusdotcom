@@ -140,7 +140,7 @@ li {
 	text-shadow: 4px 4px black;
 }
 
-.cool-button{
+.cool-button {
 	font-size: 150%;
 	text-shadow:
 		-1px -1px 0 #fff,
@@ -149,10 +149,11 @@ li {
 		1px 1px 0 #fff;
 	background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
 }
-.cool-list{
-				border: 10px solid #ffffff;
-				animation-duration: 3s;
-				animation-name: fun-border;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
-				border-radius: 10px;}
+.cool-list {
+	border: 10px solid #ffffff;
+	animation-duration: 3s;
+	animation-name: fun-border;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	border-radius: 10px;
+}

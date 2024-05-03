@@ -60,8 +60,7 @@
 -   Get website unblocked
 -   New wallpaper
 -   merge drungy's personal documents into main page
-- ensure autoupdate.py works; update cron
-- fix boykisser
+-   ensure autoupdate.py works; update cron
 -   Apply new theme
     -   interactives
     -   yandelere simulator
