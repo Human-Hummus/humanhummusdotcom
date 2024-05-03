@@ -22,6 +22,7 @@ About me:
 -   **if building the server from scratch, the /etc/nginx files _will_ be invalid; be sure to update them**
 -   this folder should be at /humanhummusdotcom
 -   if you want to host this website locally, just cd into the directory and run `python3 -m http.server`
+-   Run `python3 autoupdate cl` to update the changelog locally.
 
 Software used on the server:
 
