@@ -62,8 +62,6 @@
 -   New wallpaper
 -   merge drungy's personal documents into main page
 -   ensure autoupdate.py works; update cron
--   Apply new theme
-    - functional software
 -   Make main config a sub-page
 -   Fan pages
     -   CalyxOS
