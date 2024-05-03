@@ -4,29 +4,29 @@
 	<head>
 		<title>Human Hummus</title>
 		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
-		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<link rel="stylesheet" href="style.css" />
+		<center><h1 class=standard-head>To-Do</h1></center>
 		<div class="main">
-			<div class="header">
-				<a href="index.html"><img style="height: 40px" src="assets/home.webp" /></a>
-				<a href="index.html" style="padding-left: 10px;"><img style="height: 40px" src="assets/back.webp" /></a>
-				<h1 id="standard-head" style="width: 300px">To-Do</h1>
+			<div class="menu" id="menu"></div>
+			<div class="content">
+				<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+				<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+				<zero-md style="font-size: 150%" src="todo.md">
+					<template>
+						<style>
+							ul,
+							h2 {
+								font-family: readable;
+								color: white;
+								list-style: url("assets/bullet.webp");
+							}
+						</style>
+					</template>
+				</zero-md>
 			</div>
-
-			<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-			<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-			<zero-md style="font-size: 150%" src="todo.md">
-				<template>
-					<style>
-						ul {
-							font-family: handdrawn;
-							list-style: url("assets/bullet.webp");
-						}
-					</style>
-				</template>
-			</zero-md>
 		</div>
+		<script src="main.js"></script>
 	</body>
-	<html></html>
 </html>

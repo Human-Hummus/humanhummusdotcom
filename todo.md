@@ -1,3 +1,5 @@
+## To-Do list for **all** of my public projects (plus config files)
+
 -   Games
     -   Furry Simulator
     -   Joe Biden's Burgers
@@ -28,6 +30,7 @@
     -   Drungalwort
         -   Driver's license
         -   Organize
+        -   add heather drungalwort fanart
         -   Music
             -   Beat
             -   Vocal text
@@ -55,6 +58,17 @@
     -   take care of drungalwort simulator
 -   New icon
 -   Get website unblocked
+-   New wallpaper
+-   merge drungy's personal documents into main page
+- ensure autoupdate.py works; update cron
+- fix boykisser
+-   Apply new theme
+    -   interactives
+    -   yandelere simulator
+    -   algos demo
+    -   functional software
+    -   drungy
+    -   tech page
 -   Make main config a sub-page
 -   Fan pages
     -   CalyxOS
@@ -66,11 +80,10 @@
     -   General info
     -   Improve installer
 -   Tech info update
--   Change css id to classes
--   fix misc tech stuff
 -   Configs
     -   Make description page
     -   System Cleanup Script
+    -   Vim autocomplete
     -   New Wallpaper
     -   new wallpaper
     -   new wallpaper
