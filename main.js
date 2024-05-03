@@ -1,11 +1,16 @@
+var path_to_root
+if (path_to_root == undefined){
+	path_to_root="./"
+} 
+
 var menu = `
 <ul class=cool-list> 
-	<li><a href="interactives/index.html">Interactive Experiences</a></li>
-	<li><a href="drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
-	<li><a href="functional software/index.html">Functional Software</a></li>
-	<li><a href="tech_stuff.html">Misc. Tech Stuff</a></li>
-	<li><a href="todo.html">TODO List</a></li>
-	<li><a href="config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
+	<li><a href="`+path_to_root+`interactives/index.html">Interactive Experiences</a></li>
+	<li><a href="`+path_to_root+`drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
+	<li><a href="`+path_to_root+`functional software/index.html">Functional Software</a></li>
+	<li><a href="`+path_to_root+`tech_stuff.html">Misc. Tech Stuff</a></li>
+	<li><a href="`+path_to_root+`todo.html">TODO List</a></li>
+	<li><a href="`+path_to_root+`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
 </ul>
 <center> -- CHANGE LOG -- </center>
 <ul id="change_log" style="color:var(--standard-text-color);font-size:50%;">

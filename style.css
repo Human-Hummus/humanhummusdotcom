@@ -91,6 +91,7 @@ li {
 	width: 100%;
 	border-radius: 3px;
 	color: var(--content-text-color);
+	flex-direction:column;
 }
 
 .fancy-header {
@@ -156,4 +157,9 @@ li {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	border-radius: 10px;
+}
+.standard-list {
+	font-size: 150%;
+	font-family: handdrawn;
+	list-style: url("assets/bullet.webp");
 }

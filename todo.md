@@ -62,11 +62,7 @@
 -   merge drungy's personal documents into main page
 -   ensure autoupdate.py works; update cron
 -   Apply new theme
-    -   interactives
-    -   yandelere simulator
-    -   algos demo
     -   functional software
-    -   drungy
     -   tech page
 -   Make main config a sub-page
 -   Fan pages
@@ -82,6 +78,7 @@
 -   Configs
     -   Make description page
     -   System Cleanup Script
+    -   Fix clockspeed
     -   Vim autocomplete
     -   New Wallpaper
     -   new wallpaper

@@ -4,47 +4,49 @@
 	<head>
 		<title>Human Hummus</title>
 		<link rel="icon" type="image/x-icon" href="../favicon.jpg" />
-		<link rel="stylesheet" href="../style.css" />
 	</head>
 	<body>
-		<div class="main">
-			<div class="header">
-				<a href="../index.html"><img style="height: 40px" src="../assets/home.webp" /></a>
-				<a href="../index.html" style="padding-left: 10px;"><img style="height: 40px" src="../assets/back.webp" /></a>
-				<h1 id="standard-head" style="width: 600px">Games & Demos</h1>
-			</div>
-		<script src="../parse_cookie.js"></script>
-		<button id="gedage" style="background: none; border: none; top: 2.5%; right: 2.5%;position:absolute;"><img src="../assets/gedagedegedagedaoh.webp" style="width: 100px" /></button>
-		<audio id="ggg" src="../assets/gedagedegedagedaoh.ogg"></audio>
+		<link rel="stylesheet" href="../style.css" />
+		<center><h1 class="standard-head">Games & Demos</h1></center>
 		<script>
-			var ge = document.getElementById("gedage");
-			var gg = document.getElementById("ggg");
-			ge.onclick = async () => {
-				gg.cloneNode().play();
-			};
+			var path_to_root = "../";
 		</script>
-		<ul id="standard-list">
-			<li>
-				<a href="YandolSim/info.html">
-					<div class="grid-container" style="width: 300px">
-						<div class="grid-item">
-							<center><img style="width: 100px; height: 100px" src="YandolSim/index.png" /></center>
-						</div>
-						<div class="grid-item"><center>Yandelere Simulator</center></div>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="sorting/index.html">
-					<div class="grid-container" style="width: 300px">
-						<div class="grid-item">
-							<center><img style="width: 100px; height: 100px" src="sorting/icon.webp" /></center>
-						</div>
-						<div class="grid-item"><center>Sorting Algorithems, Visualized</center></div>
-					</div>
-				</a>
-			</li>
-		</ul>
+		<div class="main">
+			<div class="menu" id="menu"></div>
+			<div class="content">
+				<button id="gedage" style="background: none; border: none; top: 2.5%; right: 2.5%; position: absolute"><img src="../assets/gedagedegedagedaoh.webp" style="width: 100px" /></button>
+				<audio id="ggg" src="../assets/gedagedegedagedaoh.ogg"></audio>
+				<script>
+					var ge = document.getElementById("gedage");
+					var gg = document.getElementById("ggg");
+					ge.onclick = async () => {
+						gg.cloneNode().play();
+					};
+				</script>
+				<ul class="standard-list">
+					<li>
+						<a href="YandolSim/info.html">
+							<div class="grid-container" style="width: 300px">
+								<div class="grid-item">
+									<center><img style="width: 100px; height: 100px" src="YandolSim/index.png" /></center>
+								</div>
+								<div class="grid-item"><center>Yandelere Simulator</center></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="sorting/index.html">
+							<div class="grid-container" style="width: 300px">
+								<div class="grid-item">
+									<center><img style="width: 100px; height: 100px" src="sorting/icon.webp" /></center>
+								</div>
+								<div class="grid-item"><center>Sorting Algorithems, Visualized</center></div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
+		<script src="../main.js"></script>
 	</body>
 </html>
