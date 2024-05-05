@@ -76,8 +76,68 @@
 -   Configs
     -   Make description page
     -   System Cleanup Script
+    -   openrc configs
+    -   fix sound
+    -   install packages
+        - steam
+        - tor
+
+        - pandoc
+        - pulseaudio
+        - ghex
+        - espeak-ng
+        - simple-scan
+        - prismlauncher
+        - gnome-disk-utility
+
+        - slicer program
+
+        - **l**
+        - bleachbit
+        - vlc
+        - gtk3
+        - **l**
+        - imagemagick
+        - lmms
+        - gnome-boxes
+        - jre8
+        - obs-studio
+        - inkscape
+        - go
+        - super-slicer
+        - blender
+        - qutebrowser
+        - zig
+        - preload
+        - brscan5
+    -   fix nvim script
+        -   Vim autocomplete
+        - prettier
     -   Fix clockspeed
-    -   Vim autocomplete
+    -   fix readme
+    -   add portage
+    - services
+        - desktop manager
+        - chronyd
+        - preload
+        - cron
+        - tlp
+        - powertop
+    -   fonts and stuff
+        - volantes-cursors
+        - add user to groups
+            - network manager
+            - wheel
+            - vboxusers
+            - cdrom
+            - scanner
+            - lp
+        - fira-code-symbols
+        - noto-fonts
+        - noto-fonts-emoji
+        - liberation
+        - font-awesome
+        - nerdfonts
     -   New Wallpaper
     -   new wallpaper
     -   new wallpaper

@@ -37,6 +37,7 @@
 }
 
 body {
+	image-rendering: pixelated;
 	background: var(--bg-color);
 	background-size: contain;
 	color: var(--standard-text-color);
@@ -49,7 +50,7 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: inherit;
+	text-decoration: underline;
 }
 
 h1,

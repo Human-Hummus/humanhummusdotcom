@@ -4,6 +4,8 @@ if (path_to_root == undefined){
 } 
 
 var menu = `
+
+<center><a href="`+path_to_root+`index.html">HumanHummus.com</a></center>
 <ul class=cool-list> 
 	<li><a href="`+path_to_root+`interactives/index.html">Interactive Experiences</a></li>
 	<li><a href="`+path_to_root+`drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
@@ -12,7 +14,7 @@ var menu = `
 	<li><a href="`+path_to_root+`todo.html">TODO List</a></li>
 	<li><a href="`+path_to_root+`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
 </ul>
-<center> -- CHANGE LOG -- </center>
+<center><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"> -- CHANGE LOG -- </a></center>
 <ul id="change_log" style="color:var(--standard-text-color);font-size:50%;">
 </ul>
 `;
