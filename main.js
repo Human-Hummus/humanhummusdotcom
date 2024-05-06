@@ -22,6 +22,7 @@ var menu = `
 console.log(document.cookie);
 var is_uwu = false;
 var power = "standard";
+
 if (get_cookie("uwu_mode") == "true") {
 	is_uwu = true;
 }
@@ -64,6 +65,7 @@ function get_cookie(cname) {
 	let name = cname + "=";
 	let decodedCookie = decodeURIComponent(document.cookie);
 	let ca = decodedCookie.split(";");
+	console.log(ca)
 	for (let i = 0; i < ca.length; i++) {
 		let c = ca[i];
 		while (c.charAt(0) == " ") {
@@ -98,3 +100,6 @@ if (power != "low") {
 try {
 	document.getElementById("menu").innerHTML = menu;
 } catch {}
+
+
+
