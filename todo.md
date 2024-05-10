@@ -59,6 +59,10 @@
 -   New icon
 -   Get website unblocked
 -   blog site
+-   interactives grid layout
+-   text to ascii art
+    -   line wrapping
+    -   interactives page thing
 -   merge drungy's personal documents into main page
 -   fix lists
 -   Make main config a sub-page
@@ -75,29 +79,10 @@
 -   Configs
 
     -   Make description page
-    -   setup emerge default params
-    -   setup emerge features
     -   System Cleanup Script
-    -   openrc configs
-    -   fix sound
+    -   re-enable opengl openimageio
     -   install packages
-
         -   tor
-
-        -   slicer program
-        -   vlc
-        -   go
-        -   fastfetch
-        -   inkscape
-        -   imagemagick
-        -   obs-studio
-        -   virtualbox
-        -   bleachbit
-        -   ntp
-        -   lmms
-        -   blender
-        -   qutebrowser
-        -   zig
         -   brscan5
 
     -   fix nvim script
@@ -122,7 +107,6 @@
             -   scanner
             -   lp
     -   New Wallpaper
-    -   new wallpaper
     -   new wallpaper
     -   new wallpaper
     -   new wallpaper
