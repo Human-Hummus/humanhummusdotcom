@@ -50,7 +50,6 @@
             -   soundtrack 2
         -   Aviator Ending
         -   Bully
-        -   Vicdrawria
         -   murder end
         -   myrawrs murder
         -   myrawrs minigame
