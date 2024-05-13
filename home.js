@@ -3,6 +3,8 @@ var siteslist = document.getElementById("the_sites_list");
 var config_button = document.getElementById("openconfig");
 var config_menu = document.getElementById("configmenu");
 var close_config_button = document.getElementById("closeconfig");
+var save_and_apply = document.getElementById("save_and_apply");
+var 
 
 const site_sep = "ʮ";
 var is_config = false;
@@ -13,6 +15,10 @@ config_button.onclick = async () => {
 close_config_button.onclick = async () => {
 	is_config = false;
 };
+save_and_apply.onclick = async () => {
+	save_config()
+	setup()
+}
 
 var home = {
 	bg_color: "#2b2730",
@@ -166,10 +172,10 @@ document.getElementById("search-field").addEventListener("keydown", (event) => {
 
 function config_loop() {
 	if (!is_config) {
-		config_menu.hidden = true;
+		config_menu.style.display = "none";
 		return;
 	}
-	config_menu.hidden = false
+	config_menu.style.display = "flex";
 }
 
 setInterval(config_loop, 100);

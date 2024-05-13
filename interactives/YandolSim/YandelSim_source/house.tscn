@@ -300,6 +300,7 @@ shape = SubResource("CircleShape2D_fe6b8")
 
 [node name="vicdrawer" parent="." instance=ExtResource("4_fnjby")]
 position = Vector2(390, 282)
+gravity_scale = 1.66533e-16
 
 [node name="person" parent="." instance=ExtResource("2_c52j2")]
 position = Vector2(2843, 361)

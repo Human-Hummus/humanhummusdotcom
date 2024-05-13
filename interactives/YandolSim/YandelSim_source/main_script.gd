@@ -193,7 +193,6 @@ func dotalk():
 				data.inventory = new_inv
 		elif is_collide(vicdraweria_collide):
 			vicdraweria_talk()
-				
 		elif is_collide(c_collide):
 			c_talk()
 		elif is_collide(mcglee_collide):
