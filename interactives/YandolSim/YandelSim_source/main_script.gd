@@ -52,6 +52,7 @@ var camera_shake_amount = 3
 const yandy_love_death = -20
 var bbscore = 0
 var pencil_collide = null
+var vicdraweria_collide = null
 
 var score = 0
 var max_score = 0
@@ -93,6 +94,8 @@ const default_data = {
 			"unscheduled_disection":false,
 			"freedom":false,
 		},
+		
+		"money": 0,
 		
 		"inventory":[],
 		"coffee_has_drugs":false,
@@ -188,7 +191,8 @@ func dotalk():
 						got_rid_of_drug = true
 						break
 				data.inventory = new_inv
-					
+		elif is_collide(vicdraweria_collide):
+			vicdraweria_talk()
 				
 		elif is_collide(c_collide):
 			c_talk()
@@ -286,7 +290,11 @@ func dotalk():
 			await say("Hewwow (UwU)")
 		elif is_collide(computer_collide):
 			get_tree().change_scene_to_file("res://computer.tscn")
-			
+func vicdraweria_talk():
+	to_talk = "vicdrawer"
+	var response = await say("Greetings, fellow! I'm Vicdraweria, what would you like me to do?", ["How much money do I have?"])
+	if response == 0:
+		await say("You've got $" + str(data.money) + ".")
 func delete_from_inventory(item):
 	var new_inv = []
 	var x = 0
@@ -453,7 +461,7 @@ func _physics_process(delta):
 	for item in [coffee_collide, yandy_collide, c_collide, 
 	mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide, 
 	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide, 
-	loreinc_collide, computer_collide]:
+	loreinc_collide, computer_collide, vicdraweria_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break

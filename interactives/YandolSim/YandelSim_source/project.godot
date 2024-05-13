@@ -22,6 +22,10 @@ config/icon="res://dispimg.webp"
 
 MainScript="*res://main_script.gd"
 
+[compression]
+
+formats/zstd/compression_level=22
+
 [display]
 
 window/stretch/mode="canvas_items"
@@ -85,4 +89,7 @@ textures/default_filters/anisotropic_filtering_level=1
 camera/depth_of_field/depth_of_field_bokeh_shape=0
 environment/ssao/quality=1
 environment/ssil/quality=1
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/glow/upscale_mode=0
+environment/volumetric_fog/use_filter=0
 environment/defaults/default_clear_color=Color(0.431373, 0.431373, 0.431373, 1)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://bd5o7q2qg480p"]
+[gd_scene load_steps=24 format=3 uid="uid://bd5o7q2qg480p"]
 
 [ext_resource type="Script" path="res://house.gd" id="1_bnuh7"]
 [ext_resource type="Texture2D" uid="uid://cnugljfm1rfry" path="res://assets/house.webp" id="1_njt5e"]
 [ext_resource type="PackedScene" uid="uid://djlhroxrwlpr2" path="res://person.tscn" id="2_c52j2"]
+[ext_resource type="PackedScene" uid="uid://b66h5nrjqsuff" path="res://vicdrawer.tscn" id="4_fnjby"]
 [ext_resource type="PackedScene" uid="uid://ccaum1uv8pqjj" path="res://meatchal.tscn" id="4_y2rrc"]
 [ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="5_3ndv1"]
 [ext_resource type="PackedScene" uid="uid://dghpuiubnm4p5" path="res://music_player.tscn" id="6_mekjg"]
@@ -291,15 +292,18 @@ shape = SubResource("RectangleShape2D_rt5lv")
 position = Vector2(-59, -670)
 gravity_scale = 0.0
 
+[node name="computer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computer"]
+position = Vector2(-1525, -713)
+shape = SubResource("CircleShape2D_fe6b8")
+
+[node name="vicdrawer" parent="." instance=ExtResource("4_fnjby")]
+position = Vector2(390, 282)
+
 [node name="person" parent="." instance=ExtResource("2_c52j2")]
 position = Vector2(2843, 361)
 
 [node name="sfx" parent="person" instance=ExtResource("5_3ndv1")]
 
 [node name="music_player" parent="person" instance=ExtResource("6_mekjg")]
-
-[node name="computer" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="computer"]
-position = Vector2(-1525, -713)
-shape = SubResource("CircleShape2D_fe6b8")
