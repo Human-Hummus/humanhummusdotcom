@@ -11,7 +11,8 @@ if len(sys.argv)>1 and sys.argv[1] == "cl":
     exit(0)
 while True:
     os.chdir("/humanhummusdotcom")
-    subprocess.call(["git", "reset", "--hard", "origin/master"])
+    subprocess.call(["git", "fetch", "--all"])
+    subprocess.call(["git", "reset", "--hard"])
     update_cl()
     time.sleep((60**2) * 4) # 4 hours
 
