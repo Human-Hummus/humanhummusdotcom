@@ -1,10 +1,22 @@
 var body = document.getElementById("thebody");
 var siteslist = document.getElementById("the_sites_list");
+var config_button = document.getElementById("openconfig");
+var config_menu = document.getElementById("configmenu");
+var close_config_button = document.getElementById("closeconfig");
 
 const site_sep = "ʮ";
+var is_config = false;
+
+config_button.onclick = async () => {
+	is_config = true;
+};
+close_config_button.onclick = async () => {
+	is_config = false;
+};
 
 var home = {
 	bg_color: "#2b2730",
+	text_color: "#FFFFFF",
 	sites: [],
 };
 
@@ -14,7 +26,7 @@ function setup() {
 	var sites_list = "";
 	while (x < home.sites.length) {
 		if (home.sites[x].length > 0 && home.sites[x][0] != "") {
-			sites_list += '<li><a href="' + home.sites[x][0] + '">' + home.sites[x][1] + "</a></li>";
+			sites_list += '<li><a href="' + home.sites[x][0] + '" style="font-size:200%;color:' + home.text_color + ';">' + home.sites[x][1] + "</a></li>";
 		}
 		x += 1;
 	}
@@ -151,3 +163,13 @@ document.getElementById("search-field").addEventListener("keydown", (event) => {
 		window.location.replace(tourl);
 	}
 });
+
+function config_loop() {
+	if (!is_config) {
+		config_menu.hidden = true;
+		return;
+	}
+	config_menu.hidden = false
+}
+
+setInterval(config_loop, 100);
