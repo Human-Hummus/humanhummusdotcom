@@ -4,7 +4,7 @@ var config_button = document.getElementById("openconfig");
 var config_menu = document.getElementById("configmenu");
 var close_config_button = document.getElementById("closeconfig");
 var save_and_apply = document.getElementById("save_and_apply");
-var 
+var bg_color_picker = document.getElementById("bg_color_picker");
 
 const site_sep = "ʮ";
 var is_config = false;
@@ -16,6 +16,7 @@ close_config_button.onclick = async () => {
 	is_config = false;
 };
 save_and_apply.onclick = async () => {
+	home.bg_color = bg_color_picker.value
 	save_config()
 	setup()
 }
@@ -31,6 +32,9 @@ function setup() {
 	var x = 0;
 	var sites_list = "";
 	while (x < home.sites.length) {
+		if (!home.sites[x].includes("https://") && !home.sites[x].includes("http://")){
+			home.sites[x][0] = "https://" + home.sites[x][0]
+		}
 		if (home.sites[x].length > 0 && home.sites[x][0] != "") {
 			sites_list += '<li><a href="' + home.sites[x][0] + '" style="font-size:200%;color:' + home.text_color + ';">' + home.sites[x][1] + "</a></li>";
 		}
@@ -78,6 +82,7 @@ function get_home_stuff() {
 
 get_home_stuff();
 setup();
+bg_color_picker.value=home.bg_color
 
 function save_config() {
 	var to_save = "";
