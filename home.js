@@ -165,6 +165,7 @@ function get_home_stuff() {
 		var cur_state = false; // false is reading site URL true is reading site title
 		x += 1;
 		var cur_site = [];
+		var cleared_home = false;
 		var curs = "";
 		while (x < c.length) {
 			console.log("cur site: " + cur_site);
@@ -174,6 +175,10 @@ function get_home_stuff() {
 				cur_state = !cur_state;
 				cur_site.push(curs);
 				if (cur_state == false) {
+					if (!cleared_home){
+						cleared_home = true;
+						home.sites = []
+					}
 					home.sites.push(cur_site);
 					cur_site = [];
 				}
