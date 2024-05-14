@@ -51,6 +51,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: underline;
+	text-decoration-thickness:2px;
 }
 
 h1,
@@ -79,6 +80,7 @@ li {
 	border-radius: 2px;
 	overflow: hidden;
 	position: sticky;
+	text-decoration-thickness: 2px;
 
 	height: 30%;
 	flex-direction: column;

@@ -27,6 +27,13 @@ document.getElementById("config_add_site_button").onclick = async () => {
 
 	site_div.appendChild(site_url);
 
+
+		var delete_button = document.createElement("button")
+		delete_button.innerHTML = "<img src=\"assets/trash.webp\">"
+		delete_button.addEventListener("click", function() {this.parentNode.style.display = "none";})
+
+		site_div.appendChild(delete_button);
+
 	config_sites_list.appendChild(site_div);
 };
 
@@ -48,6 +55,7 @@ save_and_apply.onclick = async () => {
 	home.sites = [];
 	while (x < todo.length) {
 		console.log(todo[x]);
+		if (todo[x].style.display == "none"){x+=1;continue}
 		var site_to_add = ["", ""];
 		var y = 0;
 		var todochild = todo[x].children;
@@ -87,6 +95,7 @@ function setup() {
 		}
 		var site_div = document.createElement("div");
 		site_div.style.display = "flex";
+		site_div.id = x
 		site_div.style.flexDirection = "row";
 		if (!home.sites[x][0].includes("https") && !home.sites[x][0].includes("http")) {
 			home.sites[x][0] = "https://" + home.sites[x][0];
@@ -108,6 +117,12 @@ function setup() {
 		site_url.value = home.sites[x][0];
 
 		site_div.appendChild(site_url);
+
+		var delete_button = document.createElement("button")
+		delete_button.innerHTML = "<img src=\"assets/trash.webp\">"
+		delete_button.addEventListener("click", function() {this.parentNode.style.display = "none";})
+
+		site_div.appendChild(delete_button);
 
 		config_sites_list.appendChild(site_div);
 		x += 1;

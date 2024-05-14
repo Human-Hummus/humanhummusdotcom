@@ -56,7 +56,6 @@
     -   take care of drungalwort simulator
 -   New icon
 -   Quotes
--   Get website unblocked
 -   blog site
 -   interactives grid layout
 -   text to ascii art
@@ -109,7 +108,6 @@
         -   Favicons
         -   Better fonts
         -   List formatting improvement
-        -   Trash ability
     -   Image backgrounds
     -   Config formatting
     -   More elaborate defaults
