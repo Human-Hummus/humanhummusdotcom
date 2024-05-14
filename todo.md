@@ -105,8 +105,6 @@
 
 -   Startpage
     -   Site list
-        -   Favicons
-        -   Better fonts
         -   List formatting improvement
     -   Image backgrounds
     -   Config formatting

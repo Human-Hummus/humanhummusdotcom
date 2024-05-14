@@ -1,3 +1,15 @@
+//THIS IS THE DEFAULT SETTINGS
+var home = {
+	bg_color: "#AAAAAA",
+	text_color: "#0000FF",
+	sites: [
+		["www.youtube.com", "YouTube"],
+		["www.humanhummus.com", "HumanHummus"],
+		["reddit.com", "Reddit"],
+		["google.com", "Google"],
+	],
+};
+
 var body = document.getElementById("thebody");
 var siteslist = document.getElementById("the_sites_list");
 var config_button = document.getElementById("openconfig");
@@ -27,12 +39,13 @@ document.getElementById("config_add_site_button").onclick = async () => {
 
 	site_div.appendChild(site_url);
 
+	var delete_button = document.createElement("button");
+	delete_button.innerHTML = '<img src="assets/trash.webp">';
+	delete_button.addEventListener("click", function () {
+		this.parentNode.style.display = "none";
+	});
 
-		var delete_button = document.createElement("button")
-		delete_button.innerHTML = "<img src=\"assets/trash.webp\">"
-		delete_button.addEventListener("click", function() {this.parentNode.style.display = "none";})
-
-		site_div.appendChild(delete_button);
+	site_div.appendChild(delete_button);
 
 	config_sites_list.appendChild(site_div);
 };
@@ -55,7 +68,10 @@ save_and_apply.onclick = async () => {
 	home.sites = [];
 	while (x < todo.length) {
 		console.log(todo[x]);
-		if (todo[x].style.display == "none"){x+=1;continue}
+		if (todo[x].style.display == "none") {
+			x += 1;
+			continue;
+		}
 		var site_to_add = ["", ""];
 		var y = 0;
 		var todochild = todo[x].children;
@@ -77,12 +93,6 @@ save_and_apply.onclick = async () => {
 	setup();
 };
 
-var home = {
-	bg_color: "#2b2730",
-	text_color: "#FFFFFF",
-	sites: [],
-};
-
 function setup() {
 	body.style.backgroundColor = home.bg_color;
 	var x = 0;
@@ -95,13 +105,13 @@ function setup() {
 		}
 		var site_div = document.createElement("div");
 		site_div.style.display = "flex";
-		site_div.id = x
+		site_div.id = x;
 		site_div.style.flexDirection = "row";
 		if (!home.sites[x][0].includes("https") && !home.sites[x][0].includes("http")) {
 			home.sites[x][0] = "https://" + home.sites[x][0];
 		}
 		if (home.sites[x].length > 0 && home.sites[x][0] != "") {
-			sites_list += '<li><a href="' + home.sites[x][0] + '" style="font-size:200%;color:' + home.text_color + ';">' + home.sites[x][1] + "</a></li>";
+			sites_list += '<li><a href="' + home.sites[x][0] + '" style="font-size:200%;font-family:fira;color:' + home.text_color + ';"><img style="width:2rem;" src="https://favicone.com/' + home.sites[x][0].split("://")[1] + '">' + home.sites[x][1] + "</a></li>";
 		}
 
 		var site_title = document.createElement("input");
@@ -118,9 +128,11 @@ function setup() {
 
 		site_div.appendChild(site_url);
 
-		var delete_button = document.createElement("button")
-		delete_button.innerHTML = "<img src=\"assets/trash.webp\">"
-		delete_button.addEventListener("click", function() {this.parentNode.style.display = "none";})
+		var delete_button = document.createElement("button");
+		delete_button.innerHTML = '<img src="assets/trash.webp">';
+		delete_button.addEventListener("click", function () {
+			this.parentNode.style.display = "none";
+		});
 
 		site_div.appendChild(delete_button);
 
