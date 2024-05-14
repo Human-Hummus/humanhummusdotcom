@@ -1,9 +1,9 @@
 ![Website icon](favicon.jpg)
 
-My personal website, with information, games, demos, and more!
+My website, with information, games, demos, and more!
 
 You can view [the source code for the website on GitHub](https://github.com/Human-Hummus/humanhummusdotcom/tree/main) (if you aren't already!).
-On these pages, you can view the source code for the games and demos as well.
+On these pages, you can view the source code for the games and demos too.
 
 About me:
 
@@ -17,7 +17,7 @@ About me:
 
 -   copy etc.nginx to /etc/nginx on the host server
 -   add autoupdate.sh to run on boot, to keep the server up to date.
-    -   `chrontab -e` to get to the config file 
+    -   `crontab -e` to get to the config file 
         -   add `@reboot python3 /humanhummusdotcom/autoupdate.py`
 -   **if building the server from scratch, the /etc/nginx files _will_ be invalid; be sure to update them**
 -   this folder should be at /humanhummusdotcom
@@ -30,7 +30,7 @@ Software used on the server:
 -   [Neovim](https://neovim.io/)
 -   [Fish](https://fishshell.com/)
 -   [cron](https://en.wikipedia.org/wiki/Cron)
--   [debian](https://www.debian.org/)
+-   [Debian](https://www.debian.org/)
 -   [git](https://git-scm.com/)
 -   [btop](https://github.com/aristocratos/btop)
 -   [Python](https://www.python.org/)

@@ -13,6 +13,7 @@ var menu = `
 	<li><a href="`+path_to_root+`tech_stuff.html">Misc. Tech Stuff(BROKEN;USELESS)</a></li>
 	<li><a href="`+path_to_root+`todo.html">TODO List</a></li>
 	<li><a href="`+path_to_root+`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
+	<li><a href="`+path_to_root+`home.html">Startpage</a></li>
 </ul>
 <center><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"> -- CHANGE LOG -- </a></center>
 <ul id="change_log" style="color:var(--standard-text-color);font-size:50%;">

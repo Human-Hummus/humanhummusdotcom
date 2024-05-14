@@ -106,9 +106,11 @@
 
 -   Startpage
     -   Site list
-        -   favicons
-        -   better fonts
-        -   list formatting improvement
-        -   trash ability
+        -   Favicons
+        -   Better fonts
+        -   List formatting improvement
+        -   Trash ability
     -   Image backgrounds
-    -   config formatting
+    -   Config formatting
+    -   More elaborate defaults
+    -   Main website link
