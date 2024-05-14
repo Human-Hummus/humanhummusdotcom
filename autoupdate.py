@@ -12,7 +12,7 @@ def update_cl():
         print("chosen quote: " + quote)
         file.write(
                 "document.getElementById(\"change_log\").innerHTML = `" + os.popen("git log --pretty=format:'<li>%ar - %s</li>' -20").read() + "`;\n"
-                + "document.getElementById(\"quote_of_the_hour\").innerHTML = \"Quote of the hour:<br />" + quote + "\";"
+                + "document.getElementById(\"quote_of_the_hour\").innerHTML = \"Quote of the hour:<br />\\\"" + quote + "\\\"\";"
                 )
 
 
