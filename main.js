@@ -1,23 +1,40 @@
-var path_to_root
-if (path_to_root == undefined){
-	path_to_root="./"
-} 
+var path_to_root;
+if (path_to_root == undefined) {
+	path_to_root = "./";
+}
 
-var menu = `
+var menu =
+	`
 
-<center><a href="`+path_to_root+`index.html">HumanHummus.com</a></center>
+<center><a href="` +
+	path_to_root +
+	`index.html">HumanHummus.com</a></center>
 <ul class=cool-list> 
-	<li><a href="`+path_to_root+`interactives/index.html">Interactive Experiences</a></li>
-	<li><a href="`+path_to_root+`drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
-	<li><a href="`+path_to_root+`functional software/index.html">Functional Software</a></li>
-	<li><a href="`+path_to_root+`tech_stuff.html">Misc. Tech Stuff(BROKEN;USELESS)</a></li>
-	<li><a href="`+path_to_root+`todo.html">TODO List</a></li>
-	<li><a href="`+path_to_root+`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
-	<li><a href="`+path_to_root+`home.html">Startpage</a></li>
+	<li><a href="` +
+	path_to_root +
+	`interactives/index.html">Interactive Experiences</a></li>
+	<li><a href="` +
+	path_to_root +
+	`drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
+	<li><a href="` +
+	path_to_root +
+	`functional software/index.html">Functional Software</a></li>
+	<li><a href="` +
+	path_to_root +
+	`tech_stuff.html">Misc. Tech Stuff(BROKEN;USELESS)</a></li>
+	<li><a href="` +
+	path_to_root +
+	`todo.html">TODO List</a></li>
+	<li><a href="` +
+	path_to_root +
+	`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
+	<li><a href="` +
+	path_to_root +
+	`home.html">Startpage</a></li>
 </ul>
 <center><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"> -- CHANGE LOG -- </a></center>
-<ul id="change_log" style="color:var(--standard-text-color);font-size:50%;">
-</ul>
+<ul id="change_log" style="color:var(--standard-text-color);font-size:50%;"></ul>
+<p class=normal-p id="quote_of_the_hour" ></p>
 `;
 
 console.log(document.cookie);
@@ -66,7 +83,7 @@ function get_cookie(cname) {
 	let name = cname + "=";
 	let decodedCookie = decodeURIComponent(document.cookie);
 	let ca = decodedCookie.split(";");
-	console.log(ca)
+	console.log(ca);
 	for (let i = 0; i < ca.length; i++) {
 		let c = ca[i];
 		while (c.charAt(0) == " ") {
@@ -86,7 +103,6 @@ function set_cookie(cname, cvalue, exdays = 100) {
 }
 
 if (power != "low") {
-
 	try {
 		document.getElementById("cool_header").style = `
 			animation-timing-function: linear;
@@ -101,6 +117,3 @@ if (power != "low") {
 try {
 	document.getElementById("menu").innerHTML = menu;
 } catch {}
-
-
-

@@ -51,7 +51,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: underline;
-	text-decoration-thickness:2px;
+	text-decoration-thickness: 2px;
 }
 
 h1,
@@ -94,7 +94,7 @@ li {
 	width: 100%;
 	border-radius: 3px;
 	color: var(--content-text-color);
-	flex-direction:column;
+	flex-direction: column;
 }
 
 .fancy-header {
@@ -104,6 +104,11 @@ li {
 	-webkit-background-clip: text;
 	color: transparent;
 	padding-left: 50px;
+}
+
+.normal-p {
+	font-size: 1rem;
+	color: white;
 }
 
 @keyframes fun-border {

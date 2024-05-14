@@ -55,14 +55,12 @@
         -   Pee minigame
     -   take care of drungalwort simulator
 -   New icon
--   Quotes
 -   blog site
 -   interactives grid layout
 -   text to ascii art
     -   line wrapping
     -   interactives page thing
 -   merge drungy's personal documents into main page
--   fix lists
 -   Make main config a sub-page
 -   Fan pages
     -   CalyxOS
@@ -108,5 +106,10 @@
         -   List formatting improvement
     -   Image backgrounds
     -   Config formatting
+    -   Export
+    -   Clock
+    -   Notes
+    -   To-do
+    -   Google Calendar
     -   More elaborate defaults
     -   Main website link
