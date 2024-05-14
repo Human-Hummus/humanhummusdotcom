@@ -5,6 +5,30 @@ var config_menu = document.getElementById("configmenu");
 var close_config_button = document.getElementById("closeconfig");
 var save_and_apply = document.getElementById("save_and_apply");
 var bg_color_picker = document.getElementById("bg_color_picker");
+var text_color_picker = document.getElementById("text_color_picker");
+var config_sites_list = document.getElementById("sites_list_config");
+var new_site_name = document.getElementById("config_site_name");
+var new_site_url = document.getElementById("config_site_url");
+
+document.getElementById("config_add_site_button").onclick = async () => {
+	var site_div = document.createElement("div");
+
+	var site_title = document.createElement("input");
+	site_title.type = "text";
+	site_title.id = "sitetitle";
+	site_title.value = new_site_name.value;
+
+	site_div.appendChild(site_title);
+
+	var site_url = document.createElement("input");
+	site_url.type = "text";
+	site_url.id = "siteurl";
+	site_url.value = new_site_url.value;
+
+	site_div.appendChild(site_url);
+
+	config_sites_list.appendChild(site_div);
+};
 
 const site_sep = "ʮ";
 var is_config = false;
@@ -16,10 +40,34 @@ close_config_button.onclick = async () => {
 	is_config = false;
 };
 save_and_apply.onclick = async () => {
-	home.bg_color = bg_color_picker.value
-	save_config()
-	setup()
-}
+	home.bg_color = bg_color_picker.value;
+	home.text_color = text_color_picker.value;
+
+	var todo = config_sites_list.children;
+	var x = 0;
+	home.sites = [];
+	while (x < todo.length) {
+		console.log(todo[x]);
+		var site_to_add = ["", ""];
+		var y = 0;
+		var todochild = todo[x].children;
+		while (y < todochild.length) {
+			if (todochild[y].id == "siteurl") {
+				site_to_add[0] = todochild[y].value;
+			}
+			if (todochild[y].id == "sitetitle") {
+				site_to_add[1] = todochild[y].value;
+			}
+			y += 1;
+		}
+		home.sites.push(site_to_add);
+
+		x += 1;
+	}
+
+	save_config();
+	setup();
+};
 
 var home = {
 	bg_color: "#2b2730",
@@ -31,13 +79,37 @@ function setup() {
 	body.style.backgroundColor = home.bg_color;
 	var x = 0;
 	var sites_list = "";
+	config_sites_list.innerHTML = "";
 	while (x < home.sites.length) {
-		if (!home.sites[x].includes("https://") && !home.sites[x].includes("http://")){
-			home.sites[x][0] = "https://" + home.sites[x][0]
+		if (home.sites[x][1] == "" || home.sites[x][0] == "") {
+			x += 1;
+			continue;
+		}
+		var site_div = document.createElement("div");
+		site_div.style.display = "flex";
+		site_div.style.flexDirection = "row";
+		if (!home.sites[x][0].includes("https") && !home.sites[x][0].includes("http")) {
+			home.sites[x][0] = "https://" + home.sites[x][0];
 		}
 		if (home.sites[x].length > 0 && home.sites[x][0] != "") {
 			sites_list += '<li><a href="' + home.sites[x][0] + '" style="font-size:200%;color:' + home.text_color + ';">' + home.sites[x][1] + "</a></li>";
 		}
+
+		var site_title = document.createElement("input");
+		site_title.type = "text";
+		site_title.id = "sitetitle";
+		site_title.value = home.sites[x][1];
+
+		site_div.appendChild(site_title);
+
+		var site_url = document.createElement("input");
+		site_url.type = "text";
+		site_url.id = "siteurl";
+		site_url.value = home.sites[x][0];
+
+		site_div.appendChild(site_url);
+
+		config_sites_list.appendChild(site_div);
 		x += 1;
 	}
 	console.log(sites_list);
@@ -55,6 +127,14 @@ function get_home_stuff() {
 			x += 1;
 		}
 		home.bg_color = bg_color;
+		x += 1;
+		var text_color = "";
+		while (x < c.length && c[x] != "-") {
+			console.log(c[x]);
+			text_color += c[x];
+			x += 1;
+		}
+		home.text_color = text_color;
 		var cur_state = false; // false is reading site URL true is reading site title
 		x += 1;
 		var cur_site = [];
@@ -82,11 +162,14 @@ function get_home_stuff() {
 
 get_home_stuff();
 setup();
-bg_color_picker.value=home.bg_color
+bg_color_picker.value = home.bg_color;
+text_color_picker.value = home.text_color;
 
 function save_config() {
 	var to_save = "";
 	to_save += home.bg_color;
+	to_save += "-";
+	to_save += home.text_color;
 	to_save += "-";
 	var x = 0;
 	while (x < home.sites.length) {
@@ -182,5 +265,7 @@ function config_loop() {
 	}
 	config_menu.style.display = "flex";
 }
+
+config_loop();
 
 setInterval(config_loop, 100);

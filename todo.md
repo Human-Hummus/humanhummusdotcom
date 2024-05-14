@@ -45,7 +45,6 @@
         -   mcglee minigame
         -   add site to the computer
         -   Assets
-            -   Bully
             -   Lore, inc
             -   soundtrack 2
         -   Aviator Ending
@@ -56,6 +55,7 @@
         -   Pee minigame
     -   take care of drungalwort simulator
 -   New icon
+-   Quotes
 -   Get website unblocked
 -   blog site
 -   interactives grid layout
@@ -79,17 +79,15 @@
 
     -   Make description page
     -   System Cleanup Script
-    -   re-enable opengl openimageio
     -   install packages
+
         -   tor
         -   brscan5
 
     -   fix nvim script
         -   Vim autocomplete
-    -   Fix clockspeed
     -   add npm install prettier
     -   fix readme
-    -   add portage
     -   services
         -   desktop manager
         -   chronyd
@@ -105,15 +103,12 @@
             -   cdrom
             -   scanner
             -   lp
-    -   New Wallpaper
-    -   new wallpaper
-    -   new wallpaper
-    -   new wallpaper
 
 -   Startpage
-    -   Optional backgroud color changes
     -   Site list
-        -   links/list
         -   favicons
+        -   better fonts
+        -   list formatting improvement
+        -   trash ability
     -   Image backgrounds
-    -   Seperate config page
+    -   config formatting
