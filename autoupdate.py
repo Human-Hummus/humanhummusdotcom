@@ -24,6 +24,7 @@ while True:
     os.chdir("/humanhummusdotcom")
     subprocess.call(["git", "fetch", "--all"])
     subprocess.call(["git", "reset", "--hard"])
+    subprocess.call(["git", "pull"])
     update_cl()
     time.sleep((60**2) * 4) # 4 hours
 
