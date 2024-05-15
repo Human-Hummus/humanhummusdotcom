@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://b4jkw4xc4j2ku"]
+
+[ext_resource type="Script" path="res://bully.gd" id="1_336e3"]
+[ext_resource type="Texture2D" uid="uid://dgbr76fbelo18" path="res://assets/bully/1.png" id="1_jmx01"]
+[ext_resource type="Texture2D" uid="uid://ds0vin1aqfsbi" path="res://assets/bully/2.png" id="2_0rork"]
+[ext_resource type="Texture2D" uid="uid://c7ncogm5bsiwv" path="res://assets/bully/3.png" id="3_xwvmq"]
+[ext_resource type="Texture2D" uid="uid://bhc8oqs4dod72" path="res://assets/bully/4.png" id="4_pq7bq"]
+[ext_resource type="Texture2D" uid="uid://ct1dtryswero6" path="res://assets/bully/5.png" id="5_edwfi"]
+[ext_resource type="Texture2D" uid="uid://cgl3ra7we8cxb" path="res://assets/bully/6.png" id="6_ftwq6"]
+[ext_resource type="Texture2D" uid="uid://dl3ku73f3hwqr" path="res://assets/bully/7.png" id="7_hu4ce"]
+[ext_resource type="Texture2D" uid="uid://bn3h23k3ijh8u" path="res://assets/bully/8.png" id="8_bd3kk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2q58"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jmx01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0rork")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xwvmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pq7bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_edwfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ftwq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hu4ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bd3kk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t4ioa"]
+radius = 37.0
+height = 182.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vhcf8"]
+radius = 176.774
+
+[node name="Bully" type="RigidBody2D"]
+script = ExtResource("1_336e3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e2q58")
+frame_progress = 0.570275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_t4ioa")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vhcf8")

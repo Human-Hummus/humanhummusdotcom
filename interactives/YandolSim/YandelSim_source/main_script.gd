@@ -34,6 +34,7 @@ var coffee_collide = null
 var road_collide = null
 var olin_hitbox = null
 var is_in_olin_scene = true
+var bully_collide = null
 
 var coffee_effect = 0
 var triggered_olin = false
@@ -206,6 +207,28 @@ func dotalk():
 			else:
 				if await say("Do you want to train?", ["yes", "no"]) == 0:train()
 				else:await say("Goodbye!")
+		elif is_collide(bully_collide):
+			to_talk="bully"
+			var resps = ["Oh, no!"]
+			if inventory_has("pencil"):
+				resps.append("Stab bully with pencil")
+			var resp = await say("Mwahaha, I'm gonna steal your money!", resps)
+			if resp == 0:
+				var to_say = "Good thing you "
+				if inventory_has("pencil"):to_say+="didn't stab me with that pencil! "
+				else: to_say+="don't have a pencil to stab me with! "
+				to_say+="Now to take your money! "
+				if data.money<5:to_say+="... ah... you don't have money. Welp, bye!"
+				else: 
+					to_say+="Say goodbye to $5!"
+					data.money-=5
+				await say(to_say)
+			else:
+				play_sound("res://assets/bully/scream.mp3")
+				delete_from_inventory("pencil")
+				await say("ARGHHHAHHHAHHAHHA!!! (you stole $5)")
+				data.money+=5
+				
 		elif is_collide(myr_collide):
 			to_talk = "myr"
 			if !data.met_myr:
@@ -460,7 +483,7 @@ func _physics_process(delta):
 	for item in [coffee_collide, yandy_collide, c_collide, 
 	mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide, 
 	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide, 
-	loreinc_collide, computer_collide, vicdraweria_collide]:
+	loreinc_collide, computer_collide, vicdraweria_collide, bully_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break
@@ -553,6 +576,12 @@ func make_new_message(text, options=[]):
 	if statement.talking == "loreinc":
 		statement.text = "Sr. Lore, Inc.: "
 		statement.displayed_text = "Sr. Lore, Inc.:"
+	if statement.talking == "vicdrawer":
+		statement.text = "Vicdraweria: "
+		statement.displayed_text = statement.text
+	if statement.talking == "bully":
+		statement.text = "Bully: "
+		statement.displayed_text = statement.text
 	statement.text+=text
 var responded = -1
 func say(text, options=[]):
