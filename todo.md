@@ -102,14 +102,9 @@
             -   lp
 
 -   Startpage
-    -   Site list
-        -   List formatting improvement
     -   Image backgrounds
-    -   Config formatting
     -   Export
     -   Clock
     -   Notes
     -   To-do
     -   Google Calendar
-    -   More elaborate defaults
-    -   Main website link
