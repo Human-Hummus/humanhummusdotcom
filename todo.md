@@ -81,8 +81,6 @@
         -   tor
         -   brscan5
 
-    -   fix nvim script
-        -   Vim autocomplete
     -   add npm install prettier
     -   fix readme
     -   services
