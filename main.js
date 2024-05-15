@@ -15,19 +15,10 @@ var menu =
 	`interactives/index.html">Interactive Experiences</a></li>
 	<li><a href="` +
 	path_to_root +
-	`drungy/drungy.html">Educational Resource Regaurding Drungalwort</a></li>
-	<li><a href="` +
-	path_to_root +
 	`functional software/index.html">Functional Software</a></li>
 	<li><a href="` +
 	path_to_root +
-	`tech_stuff.html">Misc. Tech Stuff(BROKEN;USELESS)</a></li>
-	<li><a href="` +
-	path_to_root +
 	`todo.html">TODO List</a></li>
-	<li><a href="` +
-	path_to_root +
-	`config.html">Configure this site(WILL BE REPLACED SOON)</a></li>
 	<li><a href="` +
 	path_to_root +
 	`home.html">Startpage</a></li>

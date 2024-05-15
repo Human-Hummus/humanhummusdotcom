@@ -81,7 +81,7 @@ li {
 	border-radius: 2px;
 	overflow: hidden;
 	position: sticky;
-	text-decoration-thickness: 2px;
+	text-decoration-thickness: 1px;
 
 	height: 30%;
 	flex-direction: column;
@@ -164,8 +164,10 @@ li {
 	animation-duration: 3s;
 	animation-name: fun-border;
 	animation-iteration-count: infinite;
+	text-decoration: none;
+	list-style: url("assets/bullet.webp");
 	animation-timing-function: linear;
-	border-radius: 10px;
+		border-radius: 10px;
 }
 .standard-list {
 	font-size: 150%;

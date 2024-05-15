@@ -11,7 +11,7 @@ def update_cl():
         quote = random.choice(quotes)
         print("chosen quote: " + quote)
         file.write(
-                "document.getElementById(\"change_log\").innerHTML = `" + os.popen("git log --pretty=format:'<li><a style=\"text-decoration:underline;color:#FFFFFF;text-decoration-thickness:1px;font-family:fira;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a></li>' -20").read() + "`;\n"
+                "document.getElementById(\"change_log\").innerHTML = `" + os.popen("git log --pretty=format:'<li><a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a></li>' -20").read() + "`;\n"
                 + "document.getElementById(\"quote_of_the_hour\").innerHTML = \"Quote of the hour:<br />\\\"" + quote + "\\\"\";"
                 )
 
