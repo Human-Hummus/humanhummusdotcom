@@ -58,6 +58,7 @@
 -   blog site
 -   interactives grid layout
 -   merge drungy's personal documents into main page
+-   move interactives to games
 -   Make main config a sub-page
 -   Recreational gimkit
 -   Fan pages
