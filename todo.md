@@ -57,11 +57,9 @@
 -   New icon
 -   blog site
 -   interactives grid layout
--   text to ascii art
-    -   line wrapping
-    -   interactives page thing
 -   merge drungy's personal documents into main page
 -   Make main config a sub-page
+-   Recreational gimkit
 -   Fan pages
     -   CalyxOS
     -   Linus Torvalds
@@ -73,14 +71,7 @@
     -   Improve installer
 -   Tech info update
 -   Configs
-
-    -   Make description page
     -   System Cleanup Script
-    -   install packages
-
-        -   tor
-        -   brscan5
-
     -   add npm install prettier
     -   fix readme
     -   services

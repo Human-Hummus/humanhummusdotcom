@@ -6,17 +6,19 @@
 		<link rel="icon" type="image/x-icon" href="../../favicon.jpg" />
 	</head>
 	<body>
-		<script>var path_to_root="../../"</script>
+		<script>
+			var path_to_root = "../../";
+		</script>
 		<link rel="stylesheet" href="../../style.css" />
-		<center><h1>Ascii Art Text</h1</center>
+		<center><h1>Ascii Art Text</h1></center>
 		<div class="main">
 			<div class="menu" id="menu"></div>
 			<div class="content">
-				<input id="normal_text" type=text>
-				<textarea id="out" style="height:40%;"></textarea>
-				Use Whitespace<input type=checkbox id=whitespace>
-				Use Block Chars<input type=checkbox id=uni>
-
+				<input id="normal_text" type="text" />
+				<textarea id="out" style="height: 20rem"></textarea>
+				Use Whitespace<input type="checkbox" id="whitespace"  value=true /> Use Block Chars<input type="checkbox" id="uni" />
+				<div id="linelenlab">Chars Per Line</div>
+				<input type="range" id="linelen" min="1" max="30" step="1" value="5" />
 			</div>
 		</div>
 		<script src="../../main.js"></script>
