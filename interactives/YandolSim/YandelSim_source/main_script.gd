@@ -446,6 +446,7 @@ func olin_talk():
 	print(started)
 	var r
 	to_talk = "olin"
+	play_sound("res://assets/charecter_assets/olin/owolin_laugh.mp3")
 	r = await say("well, well, well, who have we here?")
 	var resp = await say("A fine specimin for experimentation...", ["Fight", "Wait"])
 	if resp == 0:

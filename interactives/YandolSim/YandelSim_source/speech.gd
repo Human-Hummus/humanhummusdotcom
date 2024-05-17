@@ -91,6 +91,19 @@ func _physics_process(delta):
 
 	
 func click_sound():
+	#var sounds2 = [
+		#load("res://assets/bebebe/alarm.mp3"), 
+	#	"res://assets/bebebe/dogbark.mp3",
+	#	"res://assets/bebebe/roar.mp3",
+	#	"res://assets/bebebe/whistle.mp3",
+		#load("res://assets/bebebe/wow.mp3"),    
+	#	"res://assets/bebebe/1.mp3",
+	#	"res://assets/bebebe/2.mp3",
+	#	"res://assets/bebebe/3.mp3",
+	#	"res://assets/bebebe/4.mp3",
+	#	"res://assets/bebebe/5.mp3",      
+	#	]
+	#main.play_random_sound(sounds2)
 	var sounds = [
 		#load("res://assets/bebebe/alarm.mp3"), 
 		load("res://assets/bebebe/dogbark.mp3"),

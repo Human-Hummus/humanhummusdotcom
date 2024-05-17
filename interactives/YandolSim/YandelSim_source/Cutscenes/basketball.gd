@@ -34,6 +34,7 @@ func _ready():
 	main.bbscore = 0
 	
 func throw_ball():
+	main.play_sound("res://assets/bloing.mp3")
 	ball.global_position = Vector2(xpos, 100)
 	bh = 500
 	
@@ -60,6 +61,7 @@ func _physics_process(delta):
 	
 	if bh < 230 && bh >100 && xpos>700 && xpos <1000:
 		main.bbscore+=10+round(main.bbscore**0.25)
+		
 		bh = -100
 	if throws == 0:
 		main.updatebbscore = true

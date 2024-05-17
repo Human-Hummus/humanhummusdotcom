@@ -38,7 +38,7 @@
         -   3D model
         -   TTS
     -   Yandelere Simulator
-        -   Acheivements
+        -   Achievements
         -   COwOha murder
         -   Has lead murder
         -   mcglee minigame
@@ -50,12 +50,11 @@
         -   myrawrs murder
         -   Pee minigame
     -   take care of drungalwort simulator
--   blog site
 -   interactives grid layout
 -   merge drungy's personal documents into main page
--   move interactives to games
 -   Make main config a sub-page
 -   Recreational gimkit
+-   blog site
 -   Fan pages
     -   CalyxOS
     -   Linus Torvalds
