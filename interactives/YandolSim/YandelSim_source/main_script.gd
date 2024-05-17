@@ -16,6 +16,7 @@ var trash_collide = null
 var is_grade_scene = false
 var loreinc_collide = null
 var computer_collide = null
+var airplane_collide = null
 
 var has_drama = false
 var place = "home"
@@ -100,6 +101,7 @@ const default_data = {
 		
 		"inventory":[],
 		"coffee_has_drugs":false,
+		"seen_plane":false,
 	}
 	
 var persistant_data = {}
@@ -312,6 +314,10 @@ func dotalk():
 			await say("Hewwow (UwU)")
 		elif is_collide(computer_collide):
 			get_tree().change_scene_to_file("res://computer.tscn")
+		elif is_collide(airplane_collide):
+			to_talk = "misc"
+			data.seen_plane = true;
+			await say("This is an airplane. It says \"Mr. McGlee's Aierplayne\". Interesting...")
 func vicdraweria_talk():
 	to_talk = "vicdrawer"
 	var response = await say("Greetings, fellow! I'm Vicdraweria, what would you like me to do?", ["How much money do I have?"])
@@ -354,11 +360,14 @@ func is_collide(obj):
 
 func mcglee_talk():
 	to_talk = "mcglee"
+	var resps = ["Hi!", "What's my grade?", "Can I get into the room behind you?"]
+	if data.seen_plane:
+		resps.append("What's with the plane outside?")
 	var resp
 	if !data.met_mcglee:
 		data.met_mcglee = true
-		resp = await say("Hi, I'm Mr. McGlee!", ["Hi!", "What's my grade?", "Can I get into the room behind you?"])
-	else: resp = await say("Hi!", ["Hi!", "What's my grade?", "Can I get into the room behind you?"])
+		resp = await say("Hi, I'm Mr. McGlee!", resps)
+	else: resp = await say("Hi!", resps)
 	if resp == 1:
 		if !data.mcglee_explained:
 			data.mcglee_explained = true
@@ -366,6 +375,9 @@ func mcglee_talk():
 		else:await say("You've got a grade of " + str(get_grade()) + "%.")
 	if resp == 2:
 		await say("No.")
+	if resp==3:
+		if await say("It's mine. Wanna fly in it?", ["No","Yea"]) == 1:
+			get_tree().change_scene_to_file("res://aviator_ending.tscn")
 		
 	
 func get_grade():return round((data.grade_points/data.total_grade_points) * 100)
@@ -483,7 +495,8 @@ func _physics_process(delta):
 	for item in [coffee_collide, yandy_collide, c_collide, 
 	mcglee_collide, gym_collide, myr_collide, road_collide, road2_collide, 
 	bed_collide, karisan_collide, pencil_collide, meat_collide, trash_collide, 
-	loreinc_collide, computer_collide, vicdraweria_collide, bully_collide]:
+	loreinc_collide, computer_collide, vicdraweria_collide, bully_collide,
+	airplane_collide]:
 		if is_collide(item):
 			can_interact_temp = true
 			break

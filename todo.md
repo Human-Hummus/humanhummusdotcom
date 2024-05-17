@@ -47,7 +47,6 @@
         -   Assets
             -   Lore, inc
             -   soundtrack 2
-        -   Aviator Ending
         -   murder end
         -   myrawrs murder
         -   myrawrs minigame

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://7qtms3yu31ut"]
+[gd_scene load_steps=25 format=3 uid="uid://7qtms3yu31ut"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_hojt1"]
 [ext_resource type="PackedScene" uid="uid://b4qqg12lhcije" path="res://yandy.tscn" id="3_6y374"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cckqqw4vkrofu" path="res://assets/items/pencil.tscn" id="14_5nwvk"]
 [ext_resource type="Texture2D" uid="uid://bot1x321kg24j" path="res://assets/charecter_assets/olin/home.webp" id="14_wu0hy"]
 [ext_resource type="PackedScene" uid="uid://iq0sy2hspnjn" path="res://assets/items/trash.tscn" id="15_3hikm"]
+[ext_resource type="PackedScene" uid="uid://bsivd1cbft3qg" path="res://airplane.tscn" id="15_tcnjn"]
 [ext_resource type="PackedScene" uid="uid://dcengcmv0o7jq" path="res://loreinc.tscn" id="16_s3g0u"]
 [ext_resource type="PackedScene" uid="uid://dghpuiubnm4p5" path="res://music_player.tscn" id="17_uyq3f"]
 [ext_resource type="PackedScene" uid="uid://b4jkw4xc4j2ku" path="res://bully.tscn" id="18_vqeh2"]
@@ -133,6 +134,13 @@ position = Vector2(677, -869)
 position = Vector2(542, -260)
 gravity_scale = 0.0
 
+[node name="Airplane" parent="." instance=ExtResource("15_tcnjn")]
+position = Vector2(831, 206)
+gravity_scale = 1.66533e-16
+
+[node name="Bully" parent="." instance=ExtResource("18_vqeh2")]
+position = Vector2(-351, -958)
+
 [node name="person" parent="." instance=ExtResource("3_wxl47")]
 position = Vector2(235, 1166)
 
@@ -140,6 +148,3 @@ position = Vector2(235, 1166)
 position = Vector2(-46, 347)
 
 [node name="music_player" parent="person" instance=ExtResource("17_uyq3f")]
-
-[node name="Bully" parent="." instance=ExtResource("18_vqeh2")]
-position = Vector2(-351, -958)

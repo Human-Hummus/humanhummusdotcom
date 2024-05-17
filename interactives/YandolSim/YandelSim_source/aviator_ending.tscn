@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://2r04btfwuoc3"]
+
+[ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_d6s0t"]
+
+[node name="aviator ending" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 664.0
+offset_bottom = 92.0
+theme_override_font_sizes/normal_font_size = 67
+text = "Aviator ending"
+
+[node name="restart_tscn" parent="." instance=ExtResource("1_d6s0t")]
+position = Vector2(339, 258)
