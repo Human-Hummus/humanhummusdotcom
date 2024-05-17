@@ -14,6 +14,9 @@ var random = RandomNumberGenerator.new()
 
 const right_answer_score = 10
 
+var wrong_answers
+var sentences
+
 func _ready():
 	main = get_node("/root/MainScript")
 	answer_display = get_node("wasrights")
@@ -25,6 +28,56 @@ func _ready():
 	button1.pressed.connect(button1_pressed)
 	button2.pressed.connect(button2_pressed)
 	button3.pressed.connect(button3_pressed)
+	if main.sentences_minigame == "ELA":
+		sentences = [
+			["I farted.", "farded is spelled wrong"],
+			["I love Mr Karisan <3", "it's missing punctuation"],
+			["Myrawrs is better than karisan", "karisan isn't capitalized"],
+			["Me teacher is Mr Karisan.", "use my instead of me"],
+			["They're watching", "it's missing punctuation"]
+		]
+		wrong_answers =[
+				"I farted",
+				"it's true",
+				"it isn't true",
+				"dfasfdhfjahs",
+				"my name isn't capitalized",
+				"UwU"
+		]
+	if main.sentences_minigame == "spanish":
+		sentences = [
+			["Como estas?", "It doesn't start with an upside down question mark."],
+			["Hola!", "Nothing"],
+			["I farted", "It isn't spanish"],
+			["Mr Lore, inc. es una caca.", "Mr should be Sr"]
+		]
+		
+		wrong_answers = [
+			"It's false",
+			"poop",
+			"IDK lol",
+			"Is mr. lore, inc. a representation of Mr. Lorincz?"
+		]
+	if main.sentences_minigame == "math":
+		get_node("RichTextLabel").text = "What's the answer to this problem?"
+		sentences = [
+			["1+1=(?)", "2"],
+			["2+2=(?)","fish"],
+			["you + me = (?)","A disaster"],
+			["Cards - humanity = (?)","A really boring game"],
+			["What is the hypotinuse of a square?","It doesn't have one."],
+			["Who am I?","You're nothing to me."],
+		]
+		
+		wrong_answers = [
+			"Whut",
+			"Ur mom",
+			"Joe mama",
+			"I pooped my pants",
+			"Myrawrs is dumb.",
+			"420",
+			"balls"
+		]
 	refresh_sentences()
 	
 	
@@ -63,6 +116,8 @@ func button3_pressed():
 func refresh_sentences():
 	if rounds_left<=0:
 		main.combobulate_score()
+		main.to_talk = "misc"
+		main.say("You got " + str(main.score) + "/" + str(main.max_score) + " points.")
 		get_tree().change_scene_to_file("res://main.tscn")
 	var working_sentence = sentences.pick_random().duplicate()
 	var button_text = []
@@ -80,21 +135,9 @@ func refresh_sentences():
 	button3.text = button_text[2]
 	
 
-const wrong_answers =[
-	"I farted",
-	"it's true",
-	"it isn't true",
-	"dfasfdhfjahs",
-	"my name isn't capitalized",
-	"UwU"
-]
-const sentences = [
-	["I farted.", "farded is spelled wrong"],
-	["I love Mr Karisan <3", "it's missing punctuation"],
-	["Myrawrs is better than karisan", "karisan isn't capitalized"],
-	["Me teacher is Mr Karisan.", "use my instead of me"],
-	["They're watching", "it's missing punctuation"]
-]
+
+
+
 
 func _physics_process(delta):
 	time_ans_displayed-=delta

@@ -39,7 +39,6 @@
         -   TTS
     -   Yandelere Simulator
         -   Acheivements
-        -   Make sentences minigame universal
         -   COwOha murder
         -   Has lead murder
         -   mcglee minigame
@@ -49,7 +48,6 @@
             -   soundtrack 2
         -   murder end
         -   myrawrs murder
-        -   myrawrs minigame
         -   Pee minigame
     -   take care of drungalwort simulator
 -   blog site

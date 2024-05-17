@@ -18,6 +18,8 @@ var loreinc_collide = null
 var computer_collide = null
 var airplane_collide = null
 
+var sentences_minigame = "NONE"
+
 var has_drama = false
 var place = "home"
 var yandy_collide = null
@@ -233,11 +235,16 @@ func dotalk():
 				
 		elif is_collide(myr_collide):
 			to_talk = "myr"
+			var resp
 			if !data.met_myr:
 				data.met_myr=true
-				await say("I'm Mr. MyRawrs. UwU.")
+				resp = await say("I'm Mr. MyRawrs. UwU.", ["UwU", "Can I do a test?"])
 			else:
-				await say("Hi")
+				resp = await say("Hi", ["UwU", "Can I do a test?"])
+			if resp == 1:
+				await say("Sure!")
+				sentences_minigame = "math"
+				get_tree().change_scene_to_file("res://Cutscenes/ks_work.tscn")
 		elif is_collide(road_collide):
 			to_talk = "misc"
 			var r = await say("Do you want to go to your house?", ["yes", "no"])
@@ -271,7 +278,8 @@ func dotalk():
 			elif r == 1:
 				await say("Total fail. Try harder, kid.")
 			elif r == 2:
-				if await say("You wanna do a sentence quiz", ["yeah", "no"]) == 0:
+				if await say("You wanna do a sentence quiz?", ["yeah", "no"]) == 0:
+					sentences_minigame = "ELA"
 					get_tree().change_scene_to_file("res://Cutscenes/ks_work.tscn")
 			elif r == 3:
 				await say("Sure; thanks, kid!")
@@ -311,7 +319,9 @@ func dotalk():
 			delete_from_inventory(data.inventory[r])
 		elif is_collide(loreinc_collide):
 			to_talk = "loreinc"
-			await say("Hewwow (UwU)")
+			if 1 == await say("Hewwow (UwU)", ["UwU", "Can I do a test?"]):
+				sentences_minigame = "spanish"
+				get_tree().change_scene_to_file("res://Cutscenes/ks_work.tscn")
 		elif is_collide(computer_collide):
 			get_tree().change_scene_to_file("res://computer.tscn")
 		elif is_collide(airplane_collide):
