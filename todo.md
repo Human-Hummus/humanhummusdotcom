@@ -54,7 +54,6 @@
 -   merge drungy's personal documents into main page
 -   Make main config a sub-page
 -   Recreational gimkit
--   Move home files to seperate folder
 -   Full changelog page
 -   Fan pages
     -   Linus Torvalds/Linux
@@ -64,6 +63,7 @@
     -   Improve installer
 -   Tech info update
 -   Configs
+
     -   System Cleanup Script
     -   services
         -   preload

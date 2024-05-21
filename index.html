@@ -11,17 +11,23 @@
 		<button id="boykb" style="width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="assets/boykisser.webp" /></button>
 		<div class="main">
 			<div class="menu" id="menu"></div>
-			<div class="content" style="flex-direction:row;">
+			<div class="content" style="flex-direction: row">
 				<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 				<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
 				<zero-md src="README.md">
 					<template>
 						<style>
-							 *{
+							* {
 								font-family: fira;
 								font-size: 1.25rem;
 								color: white;
 								list-style: url("assets/bullet.webp");
+							}
+							code {
+								font-family: fira;
+								color: green;
+								background: black;
+								display: table;
 							}
 							a {
 								color: cyan;
