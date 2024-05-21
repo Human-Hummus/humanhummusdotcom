@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmysrumj1cohm"]
+[gd_scene load_steps=3 format=3 uid="uid://bmysrumj1cohm"]
 
 [ext_resource type="Script" path="res://restrt.gd" id="1_4nw8r"]
+[ext_resource type="PackedScene" uid="uid://dghpuiubnm4p5" path="res://music_player.tscn" id="2_h3itj"]
 
 [node name="restart_tscn" type="Node2D"]
 
@@ -10,3 +11,5 @@ offset_bottom = 91.0
 theme_override_font_sizes/font_size = 60
 text = "Restart"
 script = ExtResource("1_4nw8r")
+
+[node name="music_player" parent="." instance=ExtResource("2_h3itj")]

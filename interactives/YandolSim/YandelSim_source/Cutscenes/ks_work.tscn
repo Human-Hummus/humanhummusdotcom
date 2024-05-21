@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfcds2d6suir2"]
+[gd_scene load_steps=10 format=3 uid="uid://cfcds2d6suir2"]
 
 [ext_resource type="Script" path="res://Cutscenes/ks work.gd" id="1_ava2r"]
 [ext_resource type="Texture2D" uid="uid://bflhxk1ff8ot6" path="res://assets/Other/paper/paper1.webp" id="2_5gs6e"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://db0ojn7i7fe6d" path="res://assets/Other/paper/x.webp" id="3_repg5"]
 [ext_resource type="Texture2D" uid="uid://cq2il3h3b3bwj" path="res://assets/Other/paper/paper3.webp" id="4_ytn8m"]
 [ext_resource type="PackedScene" uid="uid://qnttl6isq1ww" path="res://sfx.tscn" id="7_0llky"]
+[ext_resource type="PackedScene" uid="uid://dghpuiubnm4p5" path="res://music_player.tscn" id="8_lfcuw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xqw44"]
 animations = [{
@@ -94,3 +95,5 @@ theme_override_font_sizes/normal_font_size = 25
 text = "What is wrong with the following sentence?"
 
 [node name="sfx" parent="." instance=ExtResource("7_0llky")]
+
+[node name="music_player" parent="." instance=ExtResource("8_lfcuw")]

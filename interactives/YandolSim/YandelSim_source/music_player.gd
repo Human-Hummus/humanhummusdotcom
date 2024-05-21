@@ -1,8 +1,9 @@
 extends Node2D
 
 const songs = [
-	"res://assets/music/heathermusic.mp3"
-	
+	"res://assets/music/heathermusic.mp3",
+	"res://assets/music/funny_kids.mp3",
+	"res://assets/music/funny_notes.mp3"
 ]
 var asp = null
 
