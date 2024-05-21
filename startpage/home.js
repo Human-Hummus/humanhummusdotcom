@@ -4,7 +4,7 @@ var home = {
 	text_color: "#0000FF",
 	sites: [
 		["www.youtube.com", "YouTube"],
-		["www.humanhummus.com", "HumanHummus"],
+		["../index.html", "HumanHummus"],
 		["reddit.com", "Reddit"],
 		["google.com", "Google"],
 	],

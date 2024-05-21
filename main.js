@@ -18,10 +18,14 @@ var menu =
 	`functional software/index.html">Functional Software</a></li>
 	<li><a href="` +
 	path_to_root +
-	`todo.html">TODO List</a></li>
+	`roadmap.html">TODO List</a></li>
 	<li><a href="` +
 	path_to_root +
-	`home.html">Startpage</a></li>
+	`blog/index.html">Blog</a></li>
+	<li><a href="` +
+	path_to_root +
+	`startpage/home.html">Startpage</a></li>
+	<li><a href="`+path_to_root+`tech_stuff.html">Tech Stuff</a></li>
 </ul>
 <center><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"> -- CHANGE LOG -- </a></center>
 <ul id="change_log" style="color:var(--standard-text-color);font-size:50%;"></ul>

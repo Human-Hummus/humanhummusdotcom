@@ -54,12 +54,10 @@
 -   merge drungy's personal documents into main page
 -   Make main config a sub-page
 -   Recreational gimkit
--   blog site
+-   Move home files to seperate folder
+-   Full changelog page
 -   Fan pages
-    -   CalyxOS
-    -   Linus Torvalds
-    -   Linux
-    -   Fabrice Bellard
+    -   Linus Torvalds/Linux
 -   MDS
     -   Tutorial
     -   General info
@@ -67,15 +65,8 @@
 -   Tech info update
 -   Configs
     -   System Cleanup Script
-    -   add npm install prettier
-    -   fix readme
     -   services
-        -   desktop manager
-        -   chronyd
         -   preload
-        -   cron
-        -   tlp
-        -   powertop
     -   fonts and stuff
         -   add user to groups
             -   network manager

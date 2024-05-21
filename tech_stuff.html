@@ -4,52 +4,20 @@
 	<head>
 		<title>Human Hummus</title>
 		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
-		<link rel="stylesheet" href="style.css" />
 	</head>
-
-	<body>		<div class="main">
-			<div class="header">
-				<a href="index.html"><img style="height: 40px" src="assets/home.webp" /></a>
-				<a href="index.html" style="padding-left: 10px;"><img style="height: 40px" src="assets/back.webp" /></a>
-				<h1 id="standard-head" style="width:1200px;" >Misc. Code; Might Be Interesting</h1>
+	<body>
+		<link rel="stylesheet" href="style.css" />
+		<center><h1 class="standard-head">To-Do</h1></center>
+		<div class="main">
+			<div class="menu" id="menu"></div>
+			<div class="content">
+				<h2>Main page format</h2>
+				<div>Path To Root<input id="ptr" value="./" type="text" /></div><button id="compile">Compile</button>
+				<pre><code id="output" class="code"></code></pre>
 			</div>
-		<ul id="standard-list">
-			<li>
-				<h2>Typical Head/Footer:</h2>
-				<code></code>
-			</li>
-			<li>
-				<h2>
-					Home Button (<a href="index.html"><img src="assets/home.webp" /></a>)
-				</h2>
-				<code>&lt;a href="index.html"&gt;&lt;img style="height:40px;" src="assets/home.webp"&gt;&lt;/a&gt;</code>
-			</li>
-			<li>
-				<h2>
-					Back Button <b>TEMPLATE</b> (<a href="index.html"><img style="height: 40px" src="assets/back.webp" /></a>)
-				</h2>
-				<code>&lt;a href="[<b>PREV_PAGE_HERE</b>]"&gt;&lt;img style="height:40px;" src="assets/back.webp"&gt;&lt;/a&gt;</code>
-			</li>
-
-			<li>
-				<h2>current style.css:</h2>
-				<code id="stcss"></code>
-			</li>
-			<li><a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main">Site Source Code</a></li>
-		</ul>
-		<script>
-			function loadFile(filePath) {
-				var result = null;
-				var xmlhttp = new XMLHttpRequest();
-				xmlhttp.open("GET", filePath, false);
-				xmlhttp.send();
-				if (xmlhttp.status == 200) {
-					result = xmlhttp.responseText;
-				}
-				return result;
-			}
-			document.getElementById("stcss").innerHTML = loadFile("style.css");
-		</script>
 		</div>
+		<script src="main.js"></script>
+		<script src="changelog.js"></script>
+		<script src="tech_stuff.js"></script>
 	</body>
 </html>

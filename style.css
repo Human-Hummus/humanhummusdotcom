@@ -174,3 +174,10 @@ li {
 	font-family: handdrawn;
 	list-style: url("assets/bullet.webp");
 }
+
+code{
+	font-family:fira;
+	color:green;
+	background:black;
+	display: table;
+}
