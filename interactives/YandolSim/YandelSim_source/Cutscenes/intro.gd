@@ -16,9 +16,9 @@ func flip_mobile():
 	var btn = get_node("mobilemode")
 	main.is_mobile = !main.is_mobile
 	if main.is_mobile:
-		btn.text = "click here to disable\nmobile mode"
+		btn.text = "disable\nmobile mode"
 	else:
-		btn.text = "click here to enable\nmobile mode"
+		btn.text = "enable\nmobile mode"
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

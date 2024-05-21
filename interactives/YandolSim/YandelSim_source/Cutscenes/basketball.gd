@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var throws = 10
 var throws_display
 var ball = null
