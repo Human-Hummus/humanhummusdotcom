@@ -1,4 +1,6 @@
 extends Node
+
+const save_file_name = "user://yandelere_simulator_save_data.json"
 var started = false
 var time_since_start = 0
 var is_dead = false
@@ -106,7 +108,9 @@ const default_data = {
 		"seen_plane":false,
 	}
 	
-var persistant_data = {}
+var persistant_data = {
+	"acheivements":""
+}
 
 const default_statement = {
 	"text":"",

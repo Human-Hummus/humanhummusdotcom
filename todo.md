@@ -65,6 +65,9 @@
 -   Configs
 
     -   System Cleanup Script
+    -   Add descriptions to the stuff
+    -   Make the stuff links
+    -   Re-order stuff
     -   services
         -   preload
     -   fonts and stuff
