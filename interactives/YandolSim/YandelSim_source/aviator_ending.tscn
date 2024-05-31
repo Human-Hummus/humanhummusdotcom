@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://2r04btfwuoc3"]
+[gd_scene load_steps=3 format=3 uid="uid://2r04btfwuoc3"]
 
 [ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_d6s0t"]
+[ext_resource type="Script" path="res://aviator_ending.gd" id="1_ycmpm"]
 
 [node name="aviator ending" type="Node2D"]
+script = ExtResource("1_ycmpm")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 664.0

@@ -7,4 +7,5 @@ func _ready():
 	get_node("Button").pressed.connect(on_pressed_button)
 
 func on_pressed_button():
-	
+	var save_game = FileAccess.open(main.save_file_name, FileAccess.WRITE)
+	save_game.store_line(JSON.stringify(main.persistant_data))

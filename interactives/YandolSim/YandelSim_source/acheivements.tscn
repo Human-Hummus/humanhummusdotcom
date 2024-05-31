@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmitymsxnkvi0"]
+
+[ext_resource type="Script" path="res://acheivements.gd" id="1_nffxv"]
+[ext_resource type="Texture2D" uid="uid://0b5y8e8g5tr2" path="res://assets/airplane.webp" id="2_aoxiu"]
+
+[node name="acheivements" type="Node2D"]
+script = ExtResource("1_nffxv")
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_right = 465.0
+offset_bottom = 541.0
+
+[node name="Label" type="RichTextLabel" parent="ItemList"]
+layout_mode = 0
+offset_right = 461.0
+offset_bottom = 65.0
+theme_override_font_sizes/normal_font_size = 47
+text = "Acheivements"
+fit_content = true
+
+[node name="aviator ending" type="Node2D" parent="ItemList"]
+
+[node name="Airplane" type="Sprite2D" parent="ItemList/aviator ending"]
+position = Vector2(82, 104)
+scale = Vector2(0.213333, 0.211454)
+texture = ExtResource("2_aoxiu")
+
+[node name="Label" type="Label" parent="ItemList/aviator ending/Airplane"]
+offset_left = -177.273
+offset_top = 146.882
+offset_right = 159.727
+offset_bottom = 219.882
+theme_override_font_sizes/font_size = 48
+text = "Aviator Ending"
+justification_flags = 171

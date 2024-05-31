@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://jgp3qs0eoqyd"]
+[gd_scene load_steps=8 format=3 uid="uid://jgp3qs0eoqyd"]
 
 [ext_resource type="Script" path="res://Cutscenes/intro.gd" id="1_pe1ab"]
 [ext_resource type="Texture2D" uid="uid://bcbss5kwlxt4" path="res://assets/cutscenes/home_bg.webp" id="2_ysc1k"]
 [ext_resource type="PackedScene" uid="uid://dghpuiubnm4p5" path="res://music_player.tscn" id="3_6qgrt"]
+[ext_resource type="PackedScene" uid="uid://dmitymsxnkvi0" path="res://acheivements.tscn" id="4_75h5e"]
+[ext_resource type="PackedScene" uid="uid://b0gx1ynpwpigf" path="res://save.tscn" id="5_bupdw"]
+[ext_resource type="PackedScene" uid="uid://cxu63qskcrr7q" path="res://load_save.tscn" id="6_dghvm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s26ls"]
 
@@ -15,8 +18,10 @@ scale = Vector2(3.19444, 2.41729)
 texture = ExtResource("2_ysc1k")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1150.0
-offset_bottom = 128.0
+offset_left = -192.0
+offset_top = -1.0
+offset_right = 958.0
+offset_bottom = 127.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 48
 theme_override_font_sizes/font_size = 71
@@ -58,3 +63,12 @@ text = "enable
 mobile mode"
 
 [node name="music_player" parent="." instance=ExtResource("3_6qgrt")]
+
+[node name="acheivements" parent="." instance=ExtResource("4_75h5e")]
+position = Vector2(742, 50)
+
+[node name="save" parent="." instance=ExtResource("5_bupdw")]
+position = Vector2(23, 483)
+
+[node name="load_save" parent="." instance=ExtResource("6_dghvm")]
+position = Vector2(23, 537)
