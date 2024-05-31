@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://wwwokexmybqp"]
+[gd_scene load_steps=4 format=3 uid="uid://wwwokexmybqp"]
 
+[ext_resource type="Script" path="res://Cutscenes/unscheduled_disection.gd" id="1_fkwrc"]
 [ext_resource type="Texture2D" uid="uid://c6cfo4oy8siga" path="res://assets/unscheduled_disection.jpg" id="1_kipup"]
 [ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="2_e17jh"]
 
 [node name="UnscheduledDisection" type="Node2D"]
+script = ExtResource("1_fkwrc")
 
 [node name="UnscheduledDisection" type="Sprite2D" parent="."]
 position = Vector2(577, 323)

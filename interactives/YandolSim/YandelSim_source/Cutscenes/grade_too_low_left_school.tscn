@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn7d5b71ulqon"]
+[gd_scene load_steps=4 format=3 uid="uid://bn7d5b71ulqon"]
 
 [ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_11vbw"]
 [ext_resource type="Texture2D" uid="uid://ml3egaxeev6q" path="res://assets/cutscenes/grade_too_low.webp" id="1_jj5ws"]
+[ext_resource type="Script" path="res://Cutscenes/grade_too_low_left_school.gd" id="1_ptkpb"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ptkpb")
 
 [node name="GradeTooLow" type="Sprite2D" parent="."]
 position = Vector2(573, 324)

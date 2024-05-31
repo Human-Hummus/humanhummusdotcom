@@ -1,3 +1,5 @@
 extends Node2D
 
-func _ready():get_node("/root/MainScript").persistant_data.acheivements+="Aviator Ending"
+func _ready():
+	if !get_node("/root/MainScript").persistant_data.acheivements.contains("Aviator Ending"):
+		get_node("/root/MainScript").persistant_data.acheivements+="Aviator Ending"

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmitymsxnkvi0"]
+[gd_scene load_steps=6 format=3 uid="uid://dmitymsxnkvi0"]
 
 [ext_resource type="Script" path="res://acheivements.gd" id="1_nffxv"]
 [ext_resource type="Texture2D" uid="uid://0b5y8e8g5tr2" path="res://assets/airplane.webp" id="2_aoxiu"]
+[ext_resource type="Texture2D" uid="uid://c3eohekaiis2n" path="res://assets/items/coffee.png" id="3_n7wex"]
+[ext_resource type="Texture2D" uid="uid://cxxvho21manqw" path="res://assets/minichars/mcglee.png" id="4_eedqg"]
+[ext_resource type="Texture2D" uid="uid://fv5lld0slil3" path="res://assets/minichars/owolin.png" id="5_rkbtl"]
 
 [node name="acheivements" type="Node2D"]
 script = ExtResource("1_nffxv")
@@ -21,7 +24,7 @@ fit_content = true
 [node name="aviator ending" type="Node2D" parent="ItemList"]
 
 [node name="Airplane" type="Sprite2D" parent="ItemList/aviator ending"]
-position = Vector2(82, 104)
+position = Vector2(76, 94)
 scale = Vector2(0.213333, 0.211454)
 texture = ExtResource("2_aoxiu")
 
@@ -33,3 +36,49 @@ offset_bottom = 219.882
 theme_override_font_sizes/font_size = 48
 text = "Aviator Ending"
 justification_flags = 171
+
+[node name="Coffee" type="Sprite2D" parent="ItemList"]
+position = Vector2(193, 98)
+texture = ExtResource("3_n7wex")
+
+[node name="Node2D" type="Node2D" parent="ItemList/Coffee"]
+position = Vector2(-217, -110)
+
+[node name="Label" type="Label" parent="ItemList/Coffee"]
+offset_left = -32.0
+offset_top = 26.0
+offset_right = 29.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 10
+text = "Heart Attack"
+justification_flags = 171
+
+[node name="Grade" type="Sprite2D" parent="ItemList"]
+position = Vector2(283, 89)
+scale = Vector2(1.02632, 1)
+texture = ExtResource("4_eedqg")
+
+[node name="Label" type="Label" parent="ItemList/Grade"]
+offset_left = -25.0
+offset_top = 31.0
+offset_right = 18.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 10
+text = "Gradeful"
+justification_flags = 171
+
+[node name="Disected" type="Node2D" parent="ItemList"]
+
+[node name="Label" type="Label" parent="ItemList/Disected"]
+offset_left = 338.0
+offset_top = 118.0
+offset_right = 449.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 10
+text = "Unscheduled Disection"
+justification_flags = 171
+
+[node name="Owolin" type="Sprite2D" parent="ItemList/Disected"]
+position = Vector2(386, 84)
+scale = Vector2(0.596774, 0.623418)
+texture = ExtResource("5_rkbtl")

@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://2r04btfwuoc3"]
+[gd_scene load_steps=4 format=3 uid="uid://2r04btfwuoc3"]
 
 [ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="1_d6s0t"]
 [ext_resource type="Script" path="res://aviator_ending.gd" id="1_ycmpm"]
+[ext_resource type="Texture2D" uid="uid://btgcdt8jh0o7x" path="res://assets/aviator_ending.webp" id="2_36o7e"]
 
 [node name="aviator ending" type="Node2D"]
 script = ExtResource("1_ycmpm")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 664.0
-offset_bottom = 92.0
-theme_override_font_sizes/normal_font_size = 67
-text = "Aviator ending"
+[node name="AviatorEnding" type="Sprite2D" parent="."]
+position = Vector2(565.5, 322.75)
+scale = Vector2(1.508, 1.11698)
+texture = ExtResource("2_36o7e")
 
 [node name="restart_tscn" parent="." instance=ExtResource("1_d6s0t")]
-position = Vector2(339, 258)
+position = Vector2(35, 534)

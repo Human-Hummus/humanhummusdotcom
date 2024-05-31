@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://drosrbp73fm1p"]
+[gd_scene load_steps=4 format=3 uid="uid://drosrbp73fm1p"]
 
 [ext_resource type="Texture2D" uid="uid://myx2g2pggesn" path="res://assets/cutscenes/escape.jpg" id="1_0ydqr"]
+[ext_resource type="Script" path="res://Cutscenes/freedom.gd" id="1_cxw31"]
 [ext_resource type="PackedScene" uid="uid://bmysrumj1cohm" path="res://restart.tscn" id="2_3h7u2"]
 
 [node name="Freedom" type="Node2D"]
+script = ExtResource("1_cxw31")
 
 [node name="Escape" type="Sprite2D" parent="."]
 position = Vector2(591, 320)
