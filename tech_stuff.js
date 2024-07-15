@@ -3,8 +3,11 @@ var btn = document.getElementById("compile")
 
 btn.onclick = async() => {
 	var ptr = document.getElementById("ptr").value // ptr means Path To Root
-	var html = `
-<!doctype html>
+	var title = document.getElementById("title").value
+	if (ptr[ptr.length-1] != '/'){
+		ptr+="/"
+	}
+	var html = `<!doctype html>
 <html>
 	<head>
 		<title>Human Hummus</title>
@@ -16,15 +19,15 @@ btn.onclick = async() => {
 			var path_to_root = "`+ptr+`";
 		</script>
 		<link rel="stylesheet" href="`+ptr+`style.css" />
-		<center><h1>Ascii Art Text</h1></center>
+		<center><h1>`+title+`</h1></center>
 		<div class="main">
 			<div class="menu" id="menu"></div>
 			<div class="content">
-			[YOUR CONTENT HERE]
+				[CONTENT HERE]
 			</div>
 		</div>
-		<script src="../../main.js"></script>
-		<script src="../../changelog.js"></script>
+		<script src="`+ptr+`main.js"></script>
+		<script src="`+ptr+`changelog.js"></script>
 		<script src="index.js"></script>
 	</body>
 </html>

@@ -38,13 +38,11 @@
         -   3D model
         -   TTS
     -   Yandelere Simulator
-        -   Achievements
         -   COwOha murder
         -   Has lead murder
         -   mcglee minigame
         -   add site to the computer
         -   Assets
-            -   Lore, inc
             -   soundtrack 2
         -   murder end
         -   myrawrs murder
@@ -62,6 +60,11 @@
     -   General info
     -   Improve installer
 -   Tech info update
+-   Suggest Compress
+    - get on github
+    - make page
+    - make paralellization
+    - installer
 -   Configs
 
     -   System Cleanup Script
@@ -77,7 +80,21 @@
             -   cdrom
             -   scanner
             -   lp
-
+- fmd
+    - publish
+    - web page
+    - output functions
+        - image
+        - center
+    - functions
+        - divide
+        - if
+            - equals
+            - not
+            - or
+        - current date
+        - censor
+        - special chars
 -   Startpage
     -   Image backgrounds
     -   Export
