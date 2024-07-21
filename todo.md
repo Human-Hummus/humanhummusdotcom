@@ -51,6 +51,7 @@
 -   interactives grid layout
 -   merge drungy's personal documents into main page
 -   Make main config a sub-page
+-   jsynm
 -   Recreational gimkit
 -   Full changelog page
 -   Fan pages
@@ -58,6 +59,7 @@
 -   MDS
     -   Tutorial
     -   General info
+    -   Document all features
     -   Improve installer
 -   Tech info update
 -   Suggest Compress
@@ -80,21 +82,6 @@
             -   cdrom
             -   scanner
             -   lp
-- fmd
-    - publish
-    - web page
-    - output functions
-        - image
-        - center
-    - functions
-        - divide
-        - if
-            - equals
-            - not
-            - or
-        - current date
-        - censor
-        - special chars
 -   Startpage
     -   Image backgrounds
     -   Export
