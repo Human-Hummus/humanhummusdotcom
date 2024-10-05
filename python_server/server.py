@@ -2,6 +2,8 @@ from flask import Flask, request, send_file, render_template
 from io import BytesIO
 import random, string, subprocess, os, sys
 from email.utils import parseaddr
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
 import smtplib
 from email.mime.text import MIMEText
 import subprocess
@@ -43,24 +45,26 @@ def random_temp(fex):
 
 @app.route("/drungy_letter", methods=["POST"])
 def drungy_letter():
-    try:
+#    try:
         name = "anon"
         pic = ""
-        try:
-            tmp_if = random_tmp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
-            open(tmp_if, "w").write(request.files["file"].read())
-
+        #try:
+        tmp_if = random_temp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
+        open(tmp_if, "wb").write(request.files["file"].read())
 
             
-            for line in subprocess.run(['./drungy_selfie/executable', pic], stdout=subprocess.PIPE).stdout.split("\n"):
-                if "FINAL:/tmp/" in line:
-                    pic = line.split(":")[1]
+        for line in subprocess.run(['/humanhummusdotcom/python_server/drungy_selfie/executable', pic], stdout=subprocess.PIPE).stdout.decode('utf-8').split("\n"):
+            print(type(line))
+            if "FINAL:/tmp/" in line:
+                pic = line.split(":")[1]
+                print(pic)
             
 
-            os.system("rm \"" + tmp_if + "\"")
-        except:
-            os.system("cp ./drungy_selfie.webp /tmp/ds.webp")
-            pic = "/tmp/ds.webp"
+        os.system("rm \"" + tmp_if + "\"")
+        #except Exception as e:
+        #    print(e)
+        #    os.system("cp /humanhummusdotcom/python_server/drungy_selfie.webp /tmp/ds.webp")
+        #    pic = "/tmp/ds.webp"
         try:
             name = request.form["name"]
         except:
@@ -84,7 +88,7 @@ def drungy_letter():
             server.sendmail(email_addr, email, message.as_string())
             
         return "<script>history.back()</script>"
-    except Exception as e:
+#    except Exception as e:
         return f"Drungy couldn't send your message because \"{e}\"."
 
 if __name__ == '__main__':

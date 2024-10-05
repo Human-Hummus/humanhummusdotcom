@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "aho-corasick"
-version = "1.1.3"
+version = "0.7.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916"
+checksum = "cc936419f96fa211c1b9166887b38e5e40b19958e5b895be7c1f93adec7071ac"
 dependencies = [
  "memchr",
 ]
@@ -19,12 +19,11 @@ checksum = "0c4b4d0bd25bd0b74681c0ad21497610ce1b7c91b1022cd21c80c6fbdd9476b0"
 
 [[package]]
 name = "cc"
-version = "1.1.6"
+version = "1.0.79"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2aba8f4e9906c7ce3c73463f62a7f0c65183ada1a2d47e397cc8810827f9694f"
+checksum = "50d30906286121d95be3d479533b458f87493b30a4b5f79a607db8f5d11aa91f"
 dependencies = [
  "jobserver",
- "libc",
 ]
 
 [[package]]
@@ -51,6 +50,7 @@ checksum = "0b023947811758c97c59bf9d1c188fd619ad4718dcaa767947df1cadb14f39f4"
 dependencies = [
  "glob",
  "libc",
+ "libloading",
 ]
 
 [[package]]
@@ -59,6 +59,7 @@ version = "0.1.0"
 dependencies = [
  "opencv",
  "rand",
+ "regex",
 ]
 
 [[package]]
@@ -86,9 +87,9 @@ checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
 
 [[package]]
 name = "jobserver"
-version = "0.1.32"
+version = "0.1.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "48d1dbcbbeb6a7fec7e059840aa538bd62aaccf972c7346c4d9d2059312853d0"
+checksum = "936cfd212a0155903bcbc060e316fb6cc7cbf2e1907329391ebadc1fe0ce77c2"
 dependencies = [
  "libc",
 ]
@@ -98,6 +99,22 @@ name = "libc"
 version = "0.2.155"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+
+[[package]]
+name = "libloading"
+version = "0.8.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4979f22fdb869068da03c9f7528f8297c6fd2606bc3a4affe42e6a823fdb8da4"
+dependencies = [
+ "cfg-if",
+ "windows-targets",
+]
+
+[[package]]
+name = "maplit"
+version = "1.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3e2e65a1a2e43cfcb47a895c4c8b10d1f4a61097f9f254f183aee60cad9c651d"
 
 [[package]]
 name = "memchr"
@@ -122,11 +139,12 @@ checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
 
 [[package]]
 name = "opencv"
-version = "0.92.1"
+version = "0.71.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "678862494b50ee76f63f5dd4a43b68425d9f99656ff6012a275af2992b7d1a5d"
+checksum = "71544bbb94c3160d8596b0856ec8a276986cda507b764f0f8002fe4fe4160a20"
 dependencies = [
  "cc",
+ "clang",
  "dunce",
  "jobserver",
  "libc",
@@ -137,18 +155,18 @@ dependencies = [
  "semver",
  "shlex",
  "vcpkg",
- "windows",
 ]
 
 [[package]]
 name = "opencv-binding-generator"
-version = "0.90.1"
+version = "0.49.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8a321a980faa139ab6838fee13d0d60c104a787e00327589b9271590eae3f5c"
+checksum = "3001716b89afc895445a6b17f833e89fc014a96179583aba26fb0561a7b33f60"
 dependencies = [
  "clang",
  "clang-sys",
  "dunce",
+ "maplit",
  "once_cell",
  "percent-encoding",
  "regex",
@@ -171,24 +189,6 @@ name = "ppv-lite86"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5b40af805b3121feab8a3c29f04d8ad262fa8e0561883e7653e024ae4479e6de"
-
-[[package]]
-name = "proc-macro2"
-version = "1.0.86"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e719e8df665df0d1c8fbfd238015744736151d4445ec0836b8e628aae103b77"
-dependencies = [
- "unicode-ident",
-]
-
-[[package]]
-name = "quote"
-version = "1.0.36"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0fa76aaf39101c457836aec0ce2316dbdc3ab723cdda1c6bd4e6ad4208acaca7"
-dependencies = [
- "proc-macro2",
-]
 
 [[package]]
 name = "rand"
@@ -233,21 +233,9 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.10.5"
+version = "1.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b91213439dad192326a0d7c6ee3955910425f441d7038e0d6933b0aec5c4517f"
-dependencies = [
- "aho-corasick",
- "memchr",
- "regex-automata",
- "regex-syntax",
-]
-
-[[package]]
-name = "regex-automata"
-version = "0.4.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38caf58cc5ef2fed281f89292ef23f6365465ed9a41b7a7754eb4e26496c92df"
+checksum = "48aaa5748ba571fb95cd2c85c09f629215d3a6ece942baa100950af03a34f733"
 dependencies = [
  "aho-corasick",
  "memchr",
@@ -256,9 +244,9 @@ dependencies = [
 
 [[package]]
 name = "regex-syntax"
-version = "0.8.4"
+version = "0.6.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a66a03ae7c801facd77a29370b4faec201768915ac14a721ba36f20bc9c209b"
+checksum = "f162c6dd7b008981e4d40210aca20b4bd0f9b60ca9271061b07f78537722f2e1"
 
 [[package]]
 name = "semver"
@@ -273,23 +261,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
-name = "syn"
-version = "2.0.72"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc4b9b9bf2add8093d3f2c0204471e951b2285580335de42f9d2534f3ae7a8af"
-dependencies = [
- "proc-macro2",
- "quote",
- "unicode-ident",
-]
-
-[[package]]
-name = "unicode-ident"
-version = "1.0.12"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
-
-[[package]]
 name = "vcpkg"
 version = "0.2.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -300,59 +271,6 @@ name = "wasi"
 version = "0.9.0+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cccddf32554fecc6acb585f82a32a72e28b48f8c4c1883ddfeeeaa96f7d8e519"
-
-[[package]]
-name = "windows"
-version = "0.57.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12342cb4d8e3b046f3d80effd474a7a02447231330ef77d71daa6fbc40681143"
-dependencies = [
- "windows-core",
- "windows-targets",
-]
-
-[[package]]
-name = "windows-core"
-version = "0.57.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d2ed2439a290666cd67ecce2b0ffaad89c2a56b976b736e6ece670297897832d"
-dependencies = [
- "windows-implement",
- "windows-interface",
- "windows-result",
- "windows-targets",
-]
-
-[[package]]
-name = "windows-implement"
-version = "0.57.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9107ddc059d5b6fbfbffdfa7a7fe3e22a226def0b2608f72e9d552763d3e1ad7"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "windows-interface"
-version = "0.57.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "29bee4b38ea3cde66011baa44dba677c432a78593e202392d1e9070cf2a7fca7"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
-
-[[package]]
-name = "windows-result"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e383302e8ec8515204254685643de10811af0ed97ea37210dc26fb0032647f8"
-dependencies = [
- "windows-targets",
-]
 
 [[package]]
 name = "windows-targets"
