@@ -1,0 +1,18 @@
+[package]
+name = "drungy_selfie"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+opencv = "0.92.1"
+rand = "*"
+
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+strip = true
+lto = true

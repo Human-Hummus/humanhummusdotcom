@@ -1,4 +1,4 @@
-## To-Do list for **all** of my public projects (plus config files)
+## Ever-expanding to-Do list for **all** of my public projects & config files
 
 -   Games
     -   Furry Simulator
@@ -50,6 +50,8 @@
     -   take care of drungalwort simulator
 -   interactives grid layout
 -   merge drungy's personal documents into main page
+-   make drungy selfie maker
+-   move home page misc. tech info and software used to tech stuff page.
 -   Make main config a sub-page
 -   jsynm
 -   Recreational gimkit
@@ -58,6 +60,7 @@
     -   Linus Torvalds/Linux
 -   MDS
     -   Tutorial
+    -   Crashes when input file is in current directory without preceeding ./
     -   General info
     -   Document all features
     -   Improve installer

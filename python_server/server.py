@@ -4,6 +4,7 @@ import random, string, subprocess, os, sys
 from email.utils import parseaddr
 import smtplib
 from email.mime.text import MIMEText
+import subprocess
 
 
 app = Flask(__name__)
@@ -13,8 +14,16 @@ email_port = 587
 email_addr = "drungy@humanhummus.com"
 email_pass = ""
 
+
+
+#def generate_paragraph():
+#    output=""
+#    for i in range(0,random.randint(1,6)):
+#        output+=generate_sentence()
+
 def generate_message():
-    return "UwU"
+    return "lol"
+    #return "Drungy says: " + generate_paragraph()
 
 
 for line in open("/super-secret.txt", "r").read().split("\n"):
@@ -24,13 +33,48 @@ for line in open("/super-secret.txt", "r").read().split("\n"):
         if "app-pass" == action:
             email_pass = content
 
+def random_temp(fex):
+    length = 25
+    toret = "/tmp/"
+    while length > 0:
+        length-=1
+        toret+=random.choice(string.ascii_letters)
+    return toret+"."+fex
+
 @app.route("/drungy_letter", methods=["POST"])
 def drungy_letter():
     try:
+        name = "anon"
+        pic = ""
+        try:
+            tmp_if = random_tmp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
+            open(tmp_if, "w").write(request.files["file"].read())
+
+
+            
+            for line in subprocess.run(['./drungy_selfie/executable', pic], stdout=subprocess.PIPE).stdout.split("\n"):
+                if "FINAL:/tmp/" in line:
+                    pic = line.split(":")[1]
+            
+
+            os.system("rm \"" + tmp_if + "\"")
+        except:
+            os.system("cp ./drungy_selfie.webp /tmp/ds.webp")
+            pic = "/tmp/ds.webp"
+        try:
+            name = request.form["name"]
+        except:
+            pass
+
         email = request.form["email"]
         if not ('@' in parseaddr(email)[1]):
             raise NameError("Invalid e-mail address!")
-        message = MIMEText(generate_message(), "plain")
+        
+        message = MIMEMultipart()
+        message.attach(MIMEText(generate_message(), "plain"))
+        part = MIMEApplication(open(pic, "rb").read(), Name="Selfie.webp")
+        part['Content-Disposition'] = f'attachment; filename="Selfie.webp"'
+        message.attach(part)
         message["Subject"] = "Drungy's message"
         message["From"] = email_addr
         message["To"] = email
