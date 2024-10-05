@@ -11,8 +11,8 @@ use std::env;
 
 
 use rand::seq::SliceRandom;
+use rand::{ Rng};
 use std::process::Command;
-use rand::Rng;
 use std::path::Path;
 
 fn tmp_filename(fex:&str) -> String {
@@ -21,7 +21,7 @@ fn tmp_filename(fex:&str) -> String {
     let mut chs = 100;
     while chs > 0{
         chs-=1;
-        out.push(av[rand::thread_rng().gen_range(0,av.len()-1)]);
+        out.push(av[rand::thread_rng().gen_range(0..av.len()-1)]);
 
     }
     out+=&(".".to_owned()+fex);

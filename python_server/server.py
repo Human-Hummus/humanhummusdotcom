@@ -45,26 +45,28 @@ def random_temp(fex):
 
 @app.route("/drungy_letter", methods=["POST"])
 def drungy_letter():
-#    try:
+    try:
         name = "anon"
         pic = ""
-        #try:
-        tmp_if = random_temp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
-        open(tmp_if, "wb").write(request.files["file"].read())
+        try:
+            tmp_if = random_temp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
+            with open(tmp_if, "wb") as f:
+                f.write(request.files["file"].read())
+
+            print(tmp_if)
 
             
-        for line in subprocess.run(['/humanhummusdotcom/python_server/drungy_selfie/executable', pic], stdout=subprocess.PIPE).stdout.decode('utf-8').split("\n"):
-            print(type(line))
-            if "FINAL:/tmp/" in line:
-                pic = line.split(":")[1]
-                print(pic)
+            for line in subprocess.run(['/humanhummusdotcom/python_server/drungy_selfie/executable', tmp_if], stdout=subprocess.PIPE).stdout.decode('utf-8').split("\n"):
+                if "FINAL:/tmp/" in line:
+                    pic = line.split(":")[1]
+                    print(pic)
             
 
-        os.system("rm \"" + tmp_if + "\"")
-        #except Exception as e:
-        #    print(e)
-        #    os.system("cp /humanhummusdotcom/python_server/drungy_selfie.webp /tmp/ds.webp")
-        #    pic = "/tmp/ds.webp"
+            os.system("rm \"" + tmp_if + "\"")
+        except Exception as e:
+            print(e)
+            os.system("cp /humanhummusdotcom/python_server/drungy_selfie.webp /tmp/ds.webp")
+            pic = "/tmp/ds.webp"
         try:
             name = request.form["name"]
         except:
@@ -88,7 +90,7 @@ def drungy_letter():
             server.sendmail(email_addr, email, message.as_string())
             
         return "<script>history.back()</script>"
-#    except Exception as e:
+    except Exception as e:
         return f"Drungy couldn't send your message because \"{e}\"."
 
 if __name__ == '__main__':

@@ -5,9 +5,8 @@ edition = "2021"
 
 [dependencies]
 
-opencv = "0.71.0"
-rand = "0.7.0"
-regex="1.7.1"
+opencv = "*"
+rand = "*"
 
 
 [profile.dev]
