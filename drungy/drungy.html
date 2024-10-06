@@ -30,13 +30,13 @@
 					</button>
 				</center>
 				<input type=image onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position:absolute; scale:50px;" src="../assets/postcard.svg">
-				<div hidden=true id="postcard_submit" style="background:white;width:25rem;padding:5px;position:absolute;padding:1%;margin-top:20%;margin-left:20%;">
+				<div enctype="multipart/form-data" hidden=true id="postcard_submit" style="background:white;width:25rem;padding:5px;position:absolute;padding:1%;margin-top:20%;margin-left:20%;">
 					<center style="color:red;">Get a letter from drungy!</center>
-					<form action="/drungy_letter" method="POST">
+					<form action="/drungy_letter" method="POST" enctype="multipart/form-data">
 						<input name=email type=email required placeholder="Your e-mail address" />
 						<input name=name type=text placeholder="Your Name" />
 						<div style="display:flex;color:black;vertical-align: center;vertical-align: top;"><p style="font-size:24;vertical-align: top;">Your Selfie:</p>
-						<input style="vertical-align:top;padding:1rem;" name=file type=file />
+						<input style="vertical-align:top;padding:1rem;" name="file" type=file />
 						</div>
 						<input type=submit value="Ask Drungy to Send Postcard!">
 					</form>
