@@ -50,7 +50,6 @@
     -   take care of drungalwort simulator
 -   interactives grid layout
 -   merge drungy's personal documents into main page
--   shrink drungy selfie maker
 -   move home page misc. tech info and software used to tech stuff page.
 -   Make main config a sub-page
 -   jsynm
@@ -66,7 +65,6 @@
     -   Improve installer
 -   Tech info update
 -   Configs
-
     -   System Cleanup Script
     -   Re-order stuff
     -   Add mds
