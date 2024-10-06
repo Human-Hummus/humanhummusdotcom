@@ -1,4 +1,4 @@
-## Ever-expanding to-Do list for **all** of my public projects & config files
+## Ever-expanding To-Do list for **all** of my public projects & config files
 
 -   Games
     -   Furry Simulator
@@ -50,7 +50,7 @@
     -   take care of drungalwort simulator
 -   interactives grid layout
 -   merge drungy's personal documents into main page
--   make drungy selfie maker
+-   shrink drungy selfie maker
 -   move home page misc. tech info and software used to tech stuff page.
 -   Make main config a sub-page
 -   jsynm
@@ -65,11 +65,6 @@
     -   Document all features
     -   Improve installer
 -   Tech info update
--   Suggest Compress
-    - get on github
-    - make page
-    - make paralellization
-    - installer
 -   Configs
 
     -   System Cleanup Script
