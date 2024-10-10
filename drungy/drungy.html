@@ -32,6 +32,8 @@
 				<input type=image onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position:absolute; scale:50px;" src="../assets/postcard.svg">
 				<div enctype="multipart/form-data" hidden=true id="postcard_submit" style="background:white;width:25rem;padding:5px;position:absolute;padding:1%;margin-top:20%;margin-left:20%;">
 					<center style="color:red;">Get a letter from drungy!</center>
+					<input type=image style="position:absolute;right:-50px;top:-50px;scale:1px;" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg">
+	
 					<form action="/drungy_letter" method="POST" enctype="multipart/form-data">
 						<input name=email type=email required placeholder="Your e-mail address" />
 						<input name=name type=text placeholder="Your Name" />

@@ -36,5 +36,6 @@ Software used on the server:
 -   [btop](https://github.com/aristocratos/btop)
 -   [Python](https://www.python.org/)
 -   [certbot](https://certbot.eff.org/)
+-   [FFmpeg](https://ffmpeg.org/)
 
 If you're reading this on GitHub, and think it's strange I'd show my social media here, remember that this readme is shown on the main page of the site.
