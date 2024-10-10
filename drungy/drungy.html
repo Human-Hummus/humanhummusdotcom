@@ -12,6 +12,8 @@
 		<div class="main">
 			<div class="menu" id="menu"></div>
 			<div class="content">
+				<input type=image style="position:absolute;bottom:5%;right:5%;" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg">
+
 				<center>
 					<button
 						class="cool-button"
@@ -29,6 +31,7 @@
 						<img src="Changed_Puro.webp" />
 					</button>
 				</center>
+
 				<input type=image onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position:absolute; scale:50px;" src="../assets/postcard.svg">
 				<div enctype="multipart/form-data" hidden=true id="postcard_submit" style="background:white;width:25rem;padding:5px;position:absolute;padding:1%;margin-top:20%;margin-left:20%;">
 					<center style="color:red;">Get a letter from drungy!</center>
@@ -47,6 +50,18 @@
 				<center><h2 style="font-family: death; font-size: 300%">--- INFORMATION ---</h2></center>
 				<audio id="sound1" src="heheheha.ogg" preload="auto"></audio>
 				<audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio>
+				<style>
+					.faa{height:400px;width:400px;z-index:1000;overflow:hidden;background-color:white;}
+					.thething {backdrop-filter:blur(10px);}
+				</style>
+				<div class=thething style="background:rgba(255,255,255,0.5);padding:5px;position:absolute;padding:1%;margin-top:5%;margin-left:5%;" id="fanart" hidden=true>
+					<input type=image style="position:absolute;right:0px;top:0px;scale:1px;" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/x.svg">
+					<h2 style="color:black;"><a href=https://www.humanhummus.com>Drungy:</a></h2>
+					<img class=faa src="fanart/mine.webp">
+					<h2 style="color:black;"><a href="https://youtube.com/@whatamidoing7?si=XG0RIzhGqL446sjK">Sam:</a></h2>
+					<img src="fanart/sam.webp" class=faa>
+					<img src="fanart/sam_2.webp" class=faa>
+				</div>
 				<ul class="standard-list" style="font-size: 200%">
 					<li>
 						<button
@@ -81,14 +96,13 @@
 					<li>He has a spiked collar connecting his neck to one of his tails</li>
 					<li>He's 5 feet tall</li>
 				</ul>
-				<h2><a href="fanart.html">Fan Art</a></h2>
 				<a href="full_drungalwort.png">Full Res Image</a>
-
 				<script>
 					if (!is_uwu) {
 						document.getElementById("cool-button").hidden = true;
 					}
 				</script>
+
 			</div>
 		</div>
 		<script src="../main.js"></script>
