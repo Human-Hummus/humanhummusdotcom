@@ -12,13 +12,13 @@ var menu =
 <ul class=cool-list> 
 	<li><a href="` +
 	path_to_root +
-	`interactives/index.html">Interactive Experiences</a></li>
+	`interactives/index.html"><img style="width:100%;"src="`+path_to_root+`assets/gamez.svg"></a></li>
 	<li><a href="` +
 	path_to_root +
-	`functional software/index.html">Functional Software</a></li>
+	`functional software/index.html"><img style="width:100%;"src="`+path_to_root+`assets/software.svg"></a></li>
 	<li><a href="` +
 	path_to_root +
-	`roadmap.html">TODO List</a></li>
+	`roadmap.html"><img style="width:100%;"src="`+path_to_root+`assets/TODO.svg"></a></li>
 	<li><a href="` +
 	path_to_root +
 	`blog/index.html">Blog</a></li>

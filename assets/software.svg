@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="14mm"
+   height="10mm"
+   viewBox="0 0 14 10"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="software.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="12.457688"
+     inkscape:cx="25.245455"
+     inkscape:cy="18.90399"
+     inkscape:window-width="1914"
+     inkscape:window-height="1047"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#01e528;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dashoffset:721.861"
+       id="rect1"
+       width="7.5352459"
+       height="2.2389619"
+       x="3.2323771"
+       y="6.7720299" />
+    <rect
+       style="fill:#01e528;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dashoffset:721.861"
+       id="rect2"
+       width="2.3924265"
+       height="3.6483006"
+       x="5.8037868"
+       y="3.694293" />
+    <rect
+       style="fill:#01e528;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dashoffset:721.861"
+       id="rect3"
+       width="10.261586"
+       height="4.7976413"
+       x="1.8692069"
+       y="0.53724295" />
+    <rect
+       style="fill:#01e528;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dashoffset:721.861"
+       id="rect4"
+       width="9.1818209"
+       height="3.6935892"
+       x="2.4090896"
+       y="1.1365521" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.41111px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#01e528;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dashoffset:721.861"
+       x="2.6481097"
+       y="2.5631413"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.41111px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#01e528;fill-opacity:1;stroke-width:0.2"
+         x="2.6481097"
+         y="2.5631413">Software_</tspan></text>
+  </g>
+</svg>
