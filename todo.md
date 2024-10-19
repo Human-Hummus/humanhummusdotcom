@@ -49,7 +49,9 @@
         -   Pee minigame
     -   take care of drungalwort simulator
 -   interactives grid layout
--   Drungy fan art
+-   drungy fan art submission
+-   Document compresser
+-   postcard normal return
 -   postcard ai
 -   merge drungy's personal documents into main page
 -   move home page misc. tech info and software used to tech stuff page.
