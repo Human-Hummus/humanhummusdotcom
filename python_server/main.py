@@ -88,6 +88,7 @@ def make_text(text):
     for i in range(0,tl):
         try:output+=make_chr(output)
         except Exception as e:print(e)
+    print("---BEGIN---")
     print(output)
 
 

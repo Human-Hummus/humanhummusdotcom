@@ -7,6 +7,7 @@ from email.mime.multipart import MIMEMultipart
 import smtplib
 from email.mime.text import MIMEText
 import subprocess
+import base64
 
 
 app = Flask(__name__)
@@ -47,6 +48,8 @@ def random_temp(fex):
 def drungy_letter():
     try:
         name = "anon"
+        try:name=request.form["name"]
+        except:pass
         pic = ""
         try:
             tmp_if = random_temp(request.files["file"].filename.split(".")[len(request.files["file"].filename.split("."))-1])
@@ -64,32 +67,15 @@ def drungy_letter():
 
             os.system("rm \"" + tmp_if + "\"")
         except Exception as e:
+            print("error")
             print(e)
+        text = subprocess.run(['python', '/humanhummusdotcom/python_server/main.py', 'read', '/humanhummusdotcom/python_server/6e.h5', 'run', "Dear "+ name+","], stdout=subprocess.PIPE).stdout.decode('utf-8').split("---BEGIN---")[1]
+        if pic =="":
             os.system("cp /humanhummusdotcom/python_server/drungy_selfie.webp /tmp/ds.webp")
             pic = "/tmp/ds.webp"
-        try:
-            name = request.form["name"]
-        except:
-            pass
+        print(pic) 
 
-        email = request.form["email"]
-        if not ('@' in parseaddr(email)[1]):
-            raise NameError("Invalid e-mail address!")
-        
-        message = MIMEMultipart()
-        message.attach(MIMEText(generate_message(), "plain"))
-        part = MIMEApplication(open(pic, "rb").read(), Name="Selfie.webp")
-        part['Content-Disposition'] = f'attachment; filename="Selfie.webp"'
-        message.attach(part)
-        message["Subject"] = "Drungy's message"
-        message["From"] = email_addr
-        message["To"] = email
-        with smtplib.SMTP(smtp_server, email_port) as server:
-            server.starttls()
-            server.login(email_addr, email_pass)
-            server.sendmail(email_addr, email, message.as_string())
-            
-        return "<script>history.back()</script>"
+        return "<html><head><title>Drungy's Letter</title></head><body><img style=\"width:50%;\"src=\"data:image/webp;base64," + base64.b64encode(open(pic, "rb").read()).decode("ascii")+"\" /><p>" + text + "</p></body></html>"
     except Exception as e:
         return f"Drungy couldn't send your message because \"{e}\"."
 
