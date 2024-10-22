@@ -5,4 +5,5 @@ python_server/drungy_selfie/target
 python_server/drungy_selfie/executable
 python_server/drungy_selfie/Cargo.lock
 python_server/lib/
+python_server/lib64
 tmp/*

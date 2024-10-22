@@ -17,10 +17,6 @@
         -   Driver's license
         -   Organize
         -   add heather drungalwort fanart
-        -   Music
-            -   Beat
-            -   Vocal text
-            -   Music Video
         -   3D model
         -   TTS
     -   Yandelere Simulator
@@ -42,6 +38,10 @@
 -   better postcard ai
 -   move home page misc. tech info and software used to tech stuff page.
 -   figure out pip
+-   better music player
+-   message box
+-   home button
+-   changelog outline
 -   tech stuff logo
 -   blog logo
 -   startpage subpage

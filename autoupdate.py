@@ -1,4 +1,16 @@
 import time, os, subprocess, sys, random
+
+cpath = os.path.dirname(os.path.abspath(__file__)) + "/"
+print("current path: " + cpath)
+
+songs = [
+            ["Dark Moon OST E. Gadd's Theme.opus", "Luigi's Mansion Dark Moon OST - E. Gadd's Theme"],
+            ["OST E. Gadd's Theme.opus", "Luigi's Mansion OST - E. Gadd's Theme"],
+            ["Nyan Cat.opus", "Nyan Cat"],
+            ["FNaF2 Song.opus", "The Living Toumbstone - Five Nights at Freddy's 2 Song"],
+            ["I Can Swing My Sword.opus", "Tobuscus - I Can Swing My Sword"],
+        ]
+
 def update_cl():
     with open("changelog.js", 'w') as file:
         quotes = []
@@ -9,10 +21,18 @@ def update_cl():
 
 
         quote = random.choice(quotes)
-        print("chosen quote: " + quote)
+        song = random.choice(songs)
+        print("Chosen Quote: " + quote)
+        print("Chosen Song: " + song[1])
         file.write(
-                "document.getElementById(\"change_log\").innerHTML = `" + os.popen("git log --pretty=format:'<li><a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a></li>' -20").read() + "`;\n"
-                + "document.getElementById(\"quote_of_the_hour\").innerHTML = \"Quote of the hour:<br />\\\"" + quote + "\\\"\";"
+                "document.getElementById(\"change_log\").innerHTML = `<div style=\"border-color:black;border-width:2px;border-style:solid;\">" 
+                + os.popen("git log --pretty=format:'<li><a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a></li>' -20").read()
+                + "</div>"
+                +"`;\n"
+                + "document.getElementById(\"quote_of_the_hour\").innerHTML = `Quote of the hour:<br />\"" 
+                + quote 
+                + "\"<br><br>"
+                +"Song of the hour: "+ song[1] + "<br><audio src=\"`+ path_to_root+ `assets/music/" + song[0] + "\" controls/>`;"
                 )
 
 
