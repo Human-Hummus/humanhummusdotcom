@@ -41,6 +41,7 @@ sounds = [
         ["j", "j.wav"],
         ["r", "r.wav"],
         ["ɹ", "r.wav"],
+        ["ɚ", "r.wav"],
         ["l", "l.wav"],
         ["i", "i.wav"],
         ["ɪ", "ɪ.wav"],
@@ -57,7 +58,7 @@ sounds = [
         ["ɑ", "ɑ.wav"],
         ["x", "x.wav"],
         [" ", "none.wav"],
-        ["ˈ", "none.wav"],
+        #["ˈ", "none.wav"],
         ["\n", "none.wav"],
         ["ɐ", "ə.wav"],
         ]
@@ -65,7 +66,7 @@ sounds = [
 files = ""
 
 x = 0
-ipa+="#"
+ipa="#"+ipa+"#"
 while x < len(ipa):
     found_sound = False
     for s in sounds:
@@ -73,8 +74,11 @@ while x < len(ipa):
             d = dirf
             if ipa[x+2]=="ː":
                 d = dirf+"../sounds_slow/"
-            if ipa[x+2]=="ˈ":
+            if ipa[x-1]=="ˈ":
+                d = dirf+"../sounds_slow/"
+            if ipa[x-1]=="ˌ":
                 d = dirf+"../sounds_fast/"
+
 
             files+="file \'" + d + s[1] + "\'\n"
             found_sound=True
@@ -84,8 +88,12 @@ while x < len(ipa):
             d = dirf
             if ipa[x] != "#" and ipa[x+1]=="ː":
                 d = dirf+"../sounds_slow/"
-            if ipa[x] != "#" and ipa[x+1]=="ˈ":
+            if ipa[x] != "#" and ipa[x-1]=="ˈ":
+                d = dirf+"../sounds_slow/"
+            if ipa[x] != "#" and ipa[x-1]=="ˌ":
                 d = dirf+"../sounds_fast/"
+
+
 
             files+="file \'" + d + s[1] + "\'\n"
             found_sound = True

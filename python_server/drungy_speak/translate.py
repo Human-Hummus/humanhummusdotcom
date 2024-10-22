@@ -20,5 +20,6 @@ for i in todo:
     t = time.ctime(os.path.getmtime(i))
     print(fout)
     subprocess.call(["ffmpeg", "-i", i, 
-                    "-af", "atempo=0.5",
+                    "-af", "atempo=0.75",
+                     "-y",
                      out+fout])

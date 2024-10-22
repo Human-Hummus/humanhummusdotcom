@@ -167,7 +167,7 @@ li {
 	text-decoration: none;
 	list-style: url("assets/bullet.webp");
 	animation-timing-function: linear;
-		border-radius: 10px;
+	border-radius: 10px;
 }
 .standard-list {
 	font-size: 150%;
@@ -175,9 +175,9 @@ li {
 	list-style: url("assets/bullet.webp");
 }
 
-code{
-	font-family:fira;
-	color:green;
-	background:black;
+code {
+	font-family: fira;
+	color: green;
+	background: black;
 	display: table;
 }

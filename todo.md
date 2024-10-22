@@ -40,9 +40,7 @@
 -   Discord link
 -   Document compresser
 -   better postcard ai
--   merge drungy's personal documents into main page
 -   move home page misc. tech info and software used to tech stuff page.
--   improve Drungalwort voice
 -   figure out pip
 -   tech stuff logo
 -   blog logo
