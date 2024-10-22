@@ -13,20 +13,6 @@
         -   Info
         -   Shop
         -   Title
-    -   Algorithms
-        -   Bitonic sort
-        -   Counting sort
-        -   Timsort
-        -   Merge sort
-        -   Quick sort
-        -   Radix sort
-        -   Descriptions of the algorithems
-        -   Better fonts
-        -   Better buttons
-        -   Better sliders
-        -   Better header
-        -   End button
-        -   Footer
     -   Drungalwort
         -   Driver's license
         -   Organize
@@ -48,18 +34,26 @@
         -   myrawrs murder
         -   Pee minigame
     -   take care of drungalwort simulator
+    -   drungalworld
+        -   Recreational gimkit
 -   interactives grid layout
--   drungy fan art submission
 -   Discord link
 -   Document compresser
 -   better postcard ai
 -   merge drungy's personal documents into main page
 -   move home page misc. tech info and software used to tech stuff page.
--   Make main config a sub-page
 -   improve Drungalwort voice
 -   figure out pip
+-   tech stuff logo
+-   blog logo
+-   startpage subpage
+-   colors
+    -   games
+    -   software
+    -   todo
+    -   blog
+    -   techstuff
 -   jsynm
--   Recreational gimkit
 -   MDS
     -   Tutorial
     -   General info
