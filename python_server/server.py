@@ -19,16 +19,6 @@ email_pass = ""
 
 
 
-#def generate_paragraph():
-#    output=""
-#    for i in range(0,random.randint(1,6)):
-#        output+=generate_sentence()
-
-def generate_message():
-    return "lol"
-    #return "Drungy says: " + generate_paragraph()
-
-
 for line in open("/super-secret.txt", "r").read().split("\n"):
     if ":" in line:
         action=line.split(":")[0].strip()
@@ -43,6 +33,15 @@ def random_temp(fex):
         length-=1
         toret+=random.choice(string.ascii_letters)
     return toret+"."+fex
+
+@app.route("/drungy_voice", methods=["POST", "GET"])
+def drungy_voice():
+    if request.method == "POST":
+        subprocess.run(["python", "/humanhummus/python_server/drungy_speak/main.py", request.form["text"], "/tmp/speech.mp3"])
+        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "<audio src\"data:audio/mp3;base64,"+base64.b64encode(open("/tmp/speech.mp3", "rb").read()).decode("ascii")+ "\">")
+        
+    else:
+        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "")
 
 @app.route("/drungy_letter", methods=["POST"])
 def drungy_letter():
@@ -81,3 +80,5 @@ def drungy_letter():
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
+
+
