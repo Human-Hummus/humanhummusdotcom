@@ -7,7 +7,7 @@ out = sys.argv[2]
 
 ipa = subprocess.run(["espeak", inp, "-v", "en-us", "--ipa", '-q'], capture_output=True).stdout.decode("utf-8")
 
-dirf = "/home/user/drungy_speak/sounds/"
+dirf = "/humanhummusdotcom/python_server/drungy_speak/sounds/"
 
 sounds = [
         ["tʃ", "tʃ.wav"],

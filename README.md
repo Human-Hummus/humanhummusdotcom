@@ -37,5 +37,6 @@ Software used on the server:
 -   [Python](https://www.python.org/)
 -   [certbot](https://certbot.eff.org/)
 -   [FFmpeg](https://ffmpeg.org/)
+-   [espeak-ng](https://github.com/espeak-ng/espeak-ng/)
 
 If you're reading this on GitHub, and think it's strange I'd show my social media here, remember that this readme is shown on the main page of the site.

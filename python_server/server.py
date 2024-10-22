@@ -37,8 +37,8 @@ def random_temp(fex):
 @app.route("/drungy_voice", methods=["POST", "GET"])
 def drungy_voice():
     if request.method == "POST":
-        subprocess.run(["python", "/humanhummus/python_server/drungy_speak/main.py", request.form["text"], "/tmp/speech.mp3"])
-        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "<audio src\"data:audio/mp3;base64,"+base64.b64encode(open("/tmp/speech.mp3", "rb").read()).decode("ascii")+ "\">")
+        subprocess.run(["python", "/humanhummusdotcom/python_server/drungy_speak/main.py", request.form["text"], "/humanhummusdotcom/tmp/speech.ogg"])
+        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "<audio controls src=\"tmp/speech.ogg?random_number="+str(random.randint(0,99999999))+"\">")
         
     else:
         return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "")
