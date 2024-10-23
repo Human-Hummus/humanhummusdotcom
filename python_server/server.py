@@ -38,9 +38,8 @@ def random_temp(fex):
 def drungy_voice():
     if request.method == "POST":
         stuff = subprocess.run(["python", "/humanhummusdotcom/python_server/drungy_speak/main.py", request.form["text"], "/humanhummusdotcom/tmp/speech.ogg", request.form["speed"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
-        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read()
-            .replace("--TEXT--", stuff)
-            .replace("--AUDIO--", "<audio controls src=\"tmp/speech.ogg?random_number="+str(random.randint(0,99999999))+"\">")
+        print(stuff)
+        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--TEXT--", stuff).replace("--AUDIO--", "<audio controls src=\"tmp/speech.ogg?random_number="+str(random.randint(0,99999999))+"\"></audio>")
         
     else:
         return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "").replace("--TEXT--", "")
