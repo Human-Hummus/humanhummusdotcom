@@ -16,13 +16,25 @@
 			<div class="content">
 				<form action="drungy_speak" method="POST">
 					<input required name=text placeholder="Text for Drungy to say" type=text>
+					<div style="display:flex;"><input name="speed" id="speed_slider" step=0.1 value=2.0 min=0.5 max=5.0 type=range /><p id=speed></p> </div>
 					<input type="submit">
 				</form>
 				--AUDIO--
+				<br>
+				--TEXT--
 			</div>
 		</div>
 		<script src="./main.js"></script>
 		<script src="./changelog.js"></script>
 		<script src="index.js"></script>
+		<script>
+			async function dostuff() {
+				while (true){
+					document.getElementById("speed").innerHTML = " Speed: " + document.getElementById("speed_slider").value + "\t";
+  					await new Promise(resolve => setTimeout(resolve, 100));
+  				}
+			}
+			dostuff();
+		</script>
 	</body>
 </html>

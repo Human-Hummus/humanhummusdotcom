@@ -36,6 +36,7 @@
 -   Discord link
 -   Document compresser
 -   better postcard ai
+-   better drungy voice
 -   move home page misc. tech info and software used to tech stuff page.
 -   figure out pip
 -   better music player

@@ -4,10 +4,11 @@ import subprocess, os, sys
 
 inp = sys.argv[1]
 out = sys.argv[2]
+speed = sys.argv[3]
 
 ipa = subprocess.run(["espeak", inp, "-v", "en-us", "--ipa", '-q'], capture_output=True).stdout.decode("utf-8")
 
-dirf = "/humanhummusdotcom/python_server/drungy_speak/sounds/"
+dirf = cpath = os.path.dirname(os.path.abspath(__file__)) + "/sounds/"
 
 sounds = [
         ["tʃ", "tʃ.wav"],
@@ -76,7 +77,7 @@ while x < len(ipa):
                 d = dirf+"../sounds_slow/"
             if ipa[x-1]=="ˈ":
                 d = dirf+"../sounds_slow/"
-            if ipa[x-1]=="ˌ":
+            if ipa[x-1]=="ˌ" or ipa[x+1]=="ˈ":
                 d = dirf+"../sounds_fast/"
 
 
@@ -86,12 +87,13 @@ while x < len(ipa):
             break
         elif s[0] == ipa[x]:
             d = dirf
-            if ipa[x] != "#" and ipa[x+1]=="ː":
-                d = dirf+"../sounds_slow/"
-            if ipa[x] != "#" and ipa[x-1]=="ˈ":
-                d = dirf+"../sounds_slow/"
-            if ipa[x] != "#" and ipa[x-1]=="ˌ":
-                d = dirf+"../sounds_fast/"
+            if ipa[x] != "#":
+                if ipa[x+1]=="ː":
+                    d = dirf+"../sounds_slow/"
+                if ipa[x-1]=="ˈ":
+                    d = dirf+"../sounds_slow/"
+                if ipa[x-1]=="ˌ" or ipa[x+1] == "ˈ":
+                    d = dirf+"../sounds_fast/"
 
 
 
@@ -102,10 +104,11 @@ while x < len(ipa):
     if not found_sound:
         x+=1
 
-print(files)
+#print(files)
 
 open("/tmp/asd.txt", "w").write(files)
 
-subprocess.run(["ffmpeg", "-v", "0", "-f", "concat", "-y", "-safe", "0", "-i", "/tmp/asd.txt", "-af", "atempo=2.0", out])
+subprocess.run(["ffmpeg", "-v", "0", "-f", "concat", "-y", "-safe", "0", "-i", "/tmp/asd.txt", "-af", "atempo="+speed, out])
 
 print(ipa)
+print(inp)
