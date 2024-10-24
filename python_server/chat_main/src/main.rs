@@ -25,7 +25,7 @@ fn format_text(msgs:&Vec<String>) -> String{
     let mut msg = 0;
     for msg in msgs{
         let text:Vec<char> = msg.chars().collect();
-        formatted+="<p class=message>";
+        formatted+="<p style=\"color:white;font-family:fira;background:black\">";
         for chr in text{
             if chr == '&'{formatted+="&amp;"}
             else if chr == ';'{formatted+="&semi;"}
