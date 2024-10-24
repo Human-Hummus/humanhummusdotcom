@@ -110,5 +110,5 @@ open("/tmp/asd.txt", "w").write(files)
 
 subprocess.run(["ffmpeg", "-v", "0", "-f", "concat", "-y", "-safe", "0", "-i", "/tmp/asd.txt", "-af", "atempo="+speed, out])
 
-print(ipa)
-print(inp)
+print("International Phonetic Alphabet: " + ipa)
+print("Inputted Text: " + inp)

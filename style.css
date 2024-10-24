@@ -182,3 +182,8 @@ code {
 	background: black;
 	display: table;
 }
+.message{
+	color:white;
+	font-family:fira;
+	background:black
+}

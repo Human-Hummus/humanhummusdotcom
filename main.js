@@ -22,9 +22,6 @@ var menu =
 	<li><a href="` +
 	path_to_root +
 	`blog/index.html">Blog</a></li>
-	<li><a href="` +
-	path_to_root +
-	`startpage/home.html">Startpage</a></li>
 	<li><a href="`+path_to_root+`tech_stuff.html">Tech Stuff</a></li>
 	<li><a href="` +
 	path_to_root +
