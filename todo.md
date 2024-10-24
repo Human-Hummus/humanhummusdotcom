@@ -36,11 +36,13 @@
 -   Discord link
 -   Document compresser
 -   better postcard ai
--   better drungy voice
 -   move home page misc. tech info and software used to tech stuff page.
 -   figure out pip
 -   better music player
--   message box
+-   offline testing
+-   Label the IPA in drungy speak
+-   Seperate the text and the drungalwort's passport
+-   move startpage to techstuff
 -   home button
 -   changelog outline
 -   tech stuff logo
@@ -63,6 +65,4 @@
     -   Image backgrounds
     -   Export
     -   Clock
-    -   Notes
-    -   To-do
     -   Google Calendar

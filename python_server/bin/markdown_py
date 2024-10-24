@@ -1,4 +1,4 @@
-#!/humanhummusdotcom/python_server/bin/python
+#!/home/user/humanhummusdotcom/python_server/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

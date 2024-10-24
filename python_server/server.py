@@ -10,6 +10,7 @@ import subprocess
 import base64
 
 
+dirf = os.path.dirname(os.path.abspath(__file__)) + "/"
 app = Flask(__name__)
 
 smtp_server = "smtp.gmail.com"
@@ -37,12 +38,26 @@ def random_temp(fex):
 @app.route("/drungy_voice", methods=["POST", "GET"])
 def drungy_voice():
     if request.method == "POST":
-        stuff = subprocess.run(["python", "/humanhummusdotcom/python_server/drungy_speak/main.py", request.form["text"], "/humanhummusdotcom/tmp/speech.ogg", request.form["speed"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
+        stuff = subprocess.run(["python", dirf +"drungy_speak/main.py", request.form["text"], dirf+"../tmp/speech.ogg", request.form["speed"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
         print(stuff)
-        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--TEXT--", stuff).replace("--AUDIO--", "<audio controls src=\"tmp/speech.ogg?random_number="+str(random.randint(0,99999999))+"\"></audio>")
+        return open(dirf + "drungy_speak.html", "r").read().replace("--TEXT--", stuff).replace("--AUDIO--", "<audio controls src=\"tmp/speech.ogg?random_number="+str(random.randint(0,99999999))+"\"></audio>")
         
     else:
-        return open("/humanhummusdotcom/python_server/drungy_speak.html", "r").read().replace("--AUDIO--", "").replace("--TEXT--", "")
+        return open( dirf + "drungy_speak.html", "r").read().replace("--AUDIO--", "").replace("--TEXT--", "")
+
+@app.route("/chatbox", methods=["POST", "GET"])
+def chatbox():
+    if request.method == "POST":
+        name = "anon"
+        try:name = request.form["name"]
+        except:pass
+
+        stuff = subprocess.run([dirf + "chat_main/executable", "write", name+ request.form["text"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
+        return "<script>history.back()</script>";
+        
+    else:
+        return subprocess.run([dirf + "chat_main/executable"], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
+
 
 @app.route("/drungy_letter", methods=["POST"])
 def drungy_letter():
@@ -59,7 +74,7 @@ def drungy_letter():
             print(tmp_if)
 
             
-            for line in subprocess.run(['/humanhummusdotcom/python_server/drungy_selfie/executable', tmp_if], stdout=subprocess.PIPE).stdout.decode('utf-8').split("\n"):
+            for line in subprocess.run([dirf + 'drungy_selfie/executable', tmp_if], stdout=subprocess.PIPE).stdout.decode('utf-8').split("\n"):
                 if "FINAL:/tmp/" in line:
                     pic = line.split(":")[1]
                     print(pic)
@@ -69,9 +84,9 @@ def drungy_letter():
         except Exception as e:
             print("error")
             print(e)
-        text = subprocess.run(['python', '/humanhummusdotcom/python_server/main.py', 'read', '/humanhummusdotcom/python_server/6e.h5', 'run', "Dear "+ name+","], stdout=subprocess.PIPE).stdout.decode('utf-8').split("---BEGIN---")[1]
+        text = subprocess.run(['python', dirf + 'main.py', 'read', dirf+'6e.h5', 'run', "Dear "+ name+","], stdout=subprocess.PIPE).stdout.decode('utf-8').split("---BEGIN---")[1]
         if pic =="":
-            os.system("cp /humanhummusdotcom/python_server/drungy_selfie.webp /tmp/ds.webp")
+            os.system("cp "+dirf+"drungy_selfie.webp /tmp/ds.webp")
             pic = "/tmp/ds.webp"
         print(pic) 
 

@@ -6,4 +6,7 @@ python_server/drungy_selfie/executable
 python_server/drungy_selfie/Cargo.lock
 python_server/lib/
 python_server/lib64
+python_server/include
+python_server/pyvenv
+python_server/chat_main/target
 tmp/*

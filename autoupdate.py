@@ -9,6 +9,14 @@ songs = [
             ["Nyan Cat.opus", "Nyan Cat"],
             ["FNaF2 Song.opus", "The Living Toumbstone - Five Nights at Freddy's 2 Song"],
             ["I Can Swing My Sword.opus", "Tobuscus - I Can Swing My Sword"],
+            ["gangnam style.opus", "PSY - Gangnam Style"],
+            ["coffin dance.opus", "Vicetone & Tony Igy - Astronomia (Coffin Dance)"],
+            ["gasgasgas.opus", "Manuel - Gas Gas Gas"],
+            ["unity.opus", "TheFatRat - Unity"],
+            ["number1.opus", "Lazy Town - We Are Number One"],
+            ["imyours.opus", "Breakbot - Baby I'm Yours"],
+            ["sfd.opus", "Song for Denise (Maxi Version) (Putin Walk)"],
+            ["bbb.opus", "Boom, Boom, Boom!! x Creeper Rap"],
         ]
 
 def update_cl():

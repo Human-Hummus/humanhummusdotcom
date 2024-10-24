@@ -26,6 +26,9 @@ var menu =
 	path_to_root +
 	`startpage/home.html">Startpage</a></li>
 	<li><a href="`+path_to_root+`tech_stuff.html">Tech Stuff</a></li>
+	<li><a href="` +
+	path_to_root +
+	`chat.html"><img style="width:100%;"src="`+path_to_root+`assets/chat.webp"></a></li>
 </ul>
 <center><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"> -- CHANGE LOG -- </a></center>
 <ul id="change_log" style="color:var(--standard-text-color);font-size:50%;"></ul>
