@@ -49,10 +49,11 @@ def drungy_voice():
 def chatbox():
     if request.method == "POST":
         name = "anon"
-        try:name = request.form["name"]
+        try:
+            if request.form["name"] != "":name = request.form["name"]
         except:pass
 
-        stuff = subprocess.run([dirf + "chat_main/executable", "write", name+ request.form["text"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
+        stuff = subprocess.run([dirf + "chat_main/executable", "write", name+ ": " +request.form["text"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
         return "<script>history.back()</script>";
         
     else:
