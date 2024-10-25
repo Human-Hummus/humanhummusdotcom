@@ -21,8 +21,8 @@ var menu =
 	`roadmap.html"><img style="width:100%;"src="`+path_to_root+`assets/TODO.svg"></a></li>
 	<li><a href="` +
 	path_to_root +
-	`blog/index.html">Blog</a></li>
-	<li><a href="`+path_to_root+`tech_stuff.html">Tech Stuff</a></li>
+	`blog/index.html"><img style="width:100%;"src="`+path_to_root+`assets/blog.webp"></a></li>
+	<li><a href="`+path_to_root+`tech_stuff.html"><img style="width:100%;background:white;"src="`+path_to_root+`assets/tech_stuff.svg"></a></li>
 	<li><a href="` +
 	path_to_root +
 	`chat.html"><img style="width:100%;"src="`+path_to_root+`assets/chat.webp"></a></li>

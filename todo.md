@@ -39,8 +39,6 @@
 -   better music player
 -   Seperate the text and the drungalwort's passport
 -   home button
--   tech stuff logo
--   blog logo
 -   colors
     -   games
     -   software

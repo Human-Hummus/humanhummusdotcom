@@ -54,7 +54,7 @@ def chatbox():
         except:pass
 
         stuff = subprocess.run([dirf + "chat_main/executable", "write", name+ ": " +request.form["text"]], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")
-        return "<script>history.back()</script>";
+        return "<meta http-equiv=\"Refresh\" content=\"0; url='https://www.humanhummus.com'\" />";
         
     else:
         return subprocess.run([dirf + "chat_main/executable"], stdout=subprocess.PIPE).stdout.decode('utf-8').replace("\n","<br>")

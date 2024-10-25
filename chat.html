@@ -14,7 +14,7 @@
 		<div class="main">
 			<div class="menu" id="menu"></div>
 			<div class="content">
-				<embed type="text/html" src="/chatbox"></embed>
+				<embed id=em type="text/html" src="/chatbox"></embed>
 				<form action="/chatbox" method="POST">
 					<div style="display: flex">
 						<input name="name" placeholder="Your name" />
@@ -22,6 +22,9 @@
 					</div>
 					<input type="submit" value="post" />
 				</form>
+				<script>
+					document.getElementById("em").scrollTo(0,10000);
+				</script>
 			</div>
 		</div>
 		<script src="./main.js"></script>
