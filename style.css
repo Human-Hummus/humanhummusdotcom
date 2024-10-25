@@ -183,3 +183,12 @@ code {
 	display: table;
 }
 
+.grid-list{
+	font-size: 150%;
+	font-family: handdrawn;
+	list-style: url("assets/bullet.webp");
+	display: flex-grid;
+	flex-direction: grid;
+	justify-content: space-evenly;
+	column-count: 2;
+}

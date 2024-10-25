@@ -6,9 +6,7 @@ if (path_to_root == undefined) {
 var menu =
 	`
 
-<center><a href="` +
-	path_to_root +
-	`index.html">HumanHummus.com</a></center>
+<center><a href="https://www.humanhummus.com">Home</a></center>
 <ul class=cool-list> 
 	<li><a href="` +
 	path_to_root +
