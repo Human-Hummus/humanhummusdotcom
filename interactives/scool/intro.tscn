@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds7alwbml3vme"]
+[gd_scene load_steps=5 format=3 uid="uid://ds7alwbml3vme"]
 
 [ext_resource type="Script" path="res://intro.gd" id="1_36myp"]
 [ext_resource type="Texture2D" uid="uid://cj08qgw6ahhy6" path="res://Icon.webp" id="1_wpi7j"]
 [ext_resource type="AudioStream" uid="uid://ddm1rbkt1imr4" path="res://assets/music/corporate-life.mp3" id="2_3r4xj"]
+[ext_resource type="Texture2D" uid="uid://cichndyfq31qf" path="res://assets/hellway.webp" id="2_i1g3t"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_36myp")
+
+[node name="Hellway" type="Sprite2D" parent="."]
+position = Vector2(628, 348)
+scale = Vector2(0.6625, 0.659259)
+texture = ExtResource("2_i1g3t")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(79, 78)

@@ -8,7 +8,7 @@ var enemy_imgs=4
 
 func _ready():
 	Main.class_number+=1
-	var enemies = 2*Main.class_number
+	var enemies = round(1.5*Main.class_number)
 	camera = get_node("Camera3D")
 	for i in range(0,enemies):
 		var thing = get_node("example").duplicate()
@@ -30,6 +30,7 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://loss.tscn")
 	if Input.is_action_pressed("ui_left"):realx-=speed*delta
 	if Input.is_action_pressed("ui_right"):realx+=speed*delta
+	if Input.is_action_pressed("ui_up"):camera.position.z-=speed*delta
 	time_passed+=delta
 	camera.position.z-=delta*4
 	camera.position.y = sin(time_passed*10)

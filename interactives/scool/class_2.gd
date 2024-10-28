@@ -31,7 +31,7 @@ func _process(delta):
 	if len(get_node("basketball/Area3D").get_overlapping_areas()) > 0:
 		get_node("Camera3D/Correct").play()
 		wins+=0.5
-		ball.position.x = 10000
+		ball.position.z = -10000
 	var text = "Shoot hoops! Get at least 3/5! (" + str(wins) + "/" + str(attempts) + ")"
 	get_node("Camera3D/text").text = text 
 	if Input.is_action_pressed("ui_accept") && cooldown <= 0:

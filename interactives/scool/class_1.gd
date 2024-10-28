@@ -48,5 +48,5 @@ func _process(delta):
 	if is_done():
 		if time_won==0:get_node("YouWin").play()
 		time_won+=delta
-	if time_won>=5:
+	if time_won>=3:
 		get_tree().change_scene_to_file("res://fight_to_class.tscn")
