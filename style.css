@@ -191,4 +191,5 @@ code {
 	flex-direction: grid;
 	justify-content: space-evenly;
 	column-count: 2;
+	height:100%;
 }

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds7alwbml3vme"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_36myp"]
+[ext_resource type="Texture2D" uid="uid://cj08qgw6ahhy6" path="res://Icon.webp" id="1_wpi7j"]
+[ext_resource type="AudioStream" uid="uid://ddm1rbkt1imr4" path="res://assets/music/corporate-life.mp3" id="2_3r4xj"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_36myp")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(79, 78)
+texture = ExtResource("1_wpi7j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 424.0
+offset_top = 64.0
+offset_right = 836.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 53
+text = "Scool Simulator"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 344.0
+offset_right = 673.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[node name="Corporate-life" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(224, 48)
+stream = ExtResource("2_3r4xj")
+volume_db = -2.076
+autoplay = true

@@ -34,7 +34,8 @@
 -   Document compresser
 -   better postcard ai
 -   better music player
--   Seperate the text and the drungalwort's passport
+-   drungy speak mouths
+-   scool home page
 -   home button
 -   colors
     -   games

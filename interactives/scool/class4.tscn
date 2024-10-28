@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg1u5r1h3e3io"]
+
+[ext_resource type="Script" path="res://class_4.gd" id="1_kc0ay"]
+[ext_resource type="PackedScene" uid="uid://b56rckhkdh2gw" path="res://assets/peroom.blend" id="2_tnc7g"]
+[ext_resource type="AudioStream" uid="uid://dmeapkx3q4m3x" path="res://assets/music/hail.ogg" id="3_q5aq5"]
+[ext_resource type="Texture2D" uid="uid://ckv1u1wadj3r0" path="res://assets/drungy.webp" id="4_fg1ag"]
+[ext_resource type="Texture2D" uid="uid://brurebr8e3cen" path="res://assets/biden.webp" id="5_8msof"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kwwol"]
+size = Vector3(1.20947, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0phj"]
+size = Vector3(1.832, 2.7749, 1.23096)
+
+[node name="class4" type="Node3D"]
+script = ExtResource("1_kc0ay")
+
+[node name="peroom" parent="." instance=ExtResource("2_tnc7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 23, 40)
+
+[node name="Hail" type="AudioStreamPlayer" parent="Camera3D"]
+stream = ExtResource("3_q5aq5")
+autoplay = true
+
+[node name="drungy" type="Sprite3D" parent="."]
+transform = Transform3D(1.47263, 0, 0, 0, 1.81475, 0, 0, 0, 0.425, -20.6126, 6.46982, -0.0481224)
+texture = ExtResource("4_fg1ag")
+
+[node name="Area3D" type="Area3D" parent="drungy"]
+transform = Transform3D(2.35294, 0, 0, 0, 2.35294, 0, 0, 0, 2.35294, -0.911416, -3.45841, 0.11323)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="drungy/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999996, 0.446044, 0, 2.98024e-08)
+shape = SubResource("BoxShape3D_kwwol")
+
+[node name="frog" type="Sprite3D" parent="."]
+transform = Transform3D(3.08954, 0, 0, 0, 4.55196, 0, 0, 0, 0.31, 24.1136, 6.47617, 0)
+texture = ExtResource("5_8msof")
+
+[node name="Area3D" type="Area3D" parent="frog"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="frog/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, -0.130936, -0.887451, 0.115479)
+shape = SubResource("BoxShape3D_s0phj")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(3.08954, 0, 0, 0, 4.50559, 0.0441346, 0, -0.648062, 0.306842, 2.32601, 23.654, 33.7383)
+text = "Don't let the P.E. teacher sniff you for 15 seconds"

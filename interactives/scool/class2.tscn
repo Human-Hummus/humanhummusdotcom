@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjbuihhc3comv"]
+
+[ext_resource type="Script" path="res://class_2.gd" id="1_qwuk1"]
+[ext_resource type="PackedScene" uid="uid://b21yy2axkl1ip" path="res://assets/basketball.blend" id="2_1xh7m"]
+[ext_resource type="AudioStream" uid="uid://b2abt2q7b3euh" path="res://assets/music/retro_game_arcade.ogg" id="2_vehho"]
+[ext_resource type="AudioStream" uid="uid://bbkg4yeb7tuu7" path="res://assets/grunt.ogg" id="3_h5ui0"]
+[ext_resource type="PackedScene" uid="uid://vnseqsxqxwdy" path="res://assets/ball.blend" id="3_ng6ul"]
+[ext_resource type="AudioStream" uid="uid://cts5sgeeocrs5" path="res://assets/correct.mp3" id="4_g2van"]
+[ext_resource type="AudioStream" uid="uid://bnneu7waiqiie" path="res://assets/you_win.ogg" id="5_7nebr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yhd3x"]
+size = Vector3(8, 1, 15)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dja07"]
+
+[node name="Class2" type="Node2D"]
+script = ExtResource("1_qwuk1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.609135, -0.793066, 0, 0.793066, 0.609135, -9.91476, 3.43355, 20.5309)
+
+[node name="RetroGameArcade" type="AudioStreamPlayer" parent="Camera3D"]
+stream = ExtResource("2_vehho")
+autoplay = true
+
+[node name="Grunt" type="AudioStreamPlayer" parent="Camera3D"]
+stream = ExtResource("3_h5ui0")
+
+[node name="Correct" type="AudioStreamPlayer" parent="Camera3D"]
+stream = ExtResource("4_g2van")
+
+[node name="text" type="Label3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 0.966775, 0.255632, 0, -0.255632, 0.966775, 0.20717, 1.6276, -5.21643)
+text = "THIS IS THE PLACEHOLDER TEXT"
+font_size = 50
+outline_size = 27
+
+[node name="YouWin" type="AudioStreamPlayer" parent="Camera3D"]
+stream = ExtResource("5_7nebr")
+
+[node name="basketball" parent="." instance=ExtResource("2_1xh7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50549, 0, -8.06653)
+
+[node name="Area3D" type="Area3D" parent="basketball"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50549, 18, 8.06653)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="basketball/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -5)
+shape = SubResource("BoxShape3D_yhd3x")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.18976, 0)
+omni_range = 70.0
+
+[node name="ball" parent="." instance=ExtResource("3_ng6ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56264, 0, 12.5765)
+
+[node name="Area3D" type="Area3D" parent="ball"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ball/Area3D"]
+transform = Transform3D(2.17, 0, 0, 0, 2.17, 0, 0, 0, 2.17, 0, 0, 0)
+shape = SubResource("SphereShape3D_dja07")

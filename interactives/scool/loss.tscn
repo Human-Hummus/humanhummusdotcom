@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdqn0itkbfr4g"]
+
+[ext_resource type="Script" path="res://loss.gd" id="1_257pi"]
+[ext_resource type="Texture2D" uid="uid://gm11cbiwf2g8" path="res://assets/ded.webp" id="2_jpjgi"]
+[ext_resource type="AudioStream" uid="uid://dnypjnihn56yy" path="res://assets/wahwah.ogg" id="3_5ul0a"]
+
+[node name="Loss" type="Node2D"]
+script = ExtResource("1_257pi")
+
+[node name="Ded" type="Sprite2D" parent="."]
+position = Vector2(638.5, 357)
+scale = Vector2(2.00156, 1.50417)
+texture = ExtResource("2_jpjgi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Ded"]
+offset_left = -142.139
+offset_top = -115.679
+offset_right = 146.861
+offset_bottom = -23.6787
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/normal_font_size = 59
+text = " You lose"
+
+[node name="Button" type="Button" parent="Ded"]
+offset_left = -67.6971
+offset_right = 19.3029
+offset_bottom = 47.0
+text = "Restart"
+
+[node name="Wahwah" type="AudioStreamPlayer2D" parent="Ded"]
+position = Vector2(-239.563, 73.1302)
+stream = ExtResource("3_5ul0a")
+autoplay = true

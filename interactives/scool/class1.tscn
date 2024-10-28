@@ -1,0 +1,199 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn31km1gikhnr"]
+
+[ext_resource type="Script" path="res://class_1.gd" id="1_48pww"]
+[ext_resource type="Texture2D" uid="uid://d4hgj6841vi0b" path="res://assets/wood.webp" id="1_ofh4v"]
+[ext_resource type="Texture2D" uid="uid://dk05i16t8an8w" path="res://assets/paper.webp" id="2_gjdii"]
+[ext_resource type="Texture2D" uid="uid://bvl7hs700wdef" path="res://assets/teacher1.webp" id="3_xq3o3"]
+[ext_resource type="Texture2D" uid="uid://bs7tjyg0biifs" path="res://assets/check.svg" id="4_xirvv"]
+[ext_resource type="AudioStream" uid="uid://cts5sgeeocrs5" path="res://assets/correct.mp3" id="6_jjprq"]
+[ext_resource type="AudioStream" uid="uid://bnneu7waiqiie" path="res://assets/you_win.ogg" id="7_7dfqg"]
+
+[node name="Class1" type="Node2D"]
+script = ExtResource("1_48pww")
+
+[node name="Wood" type="Sprite2D" parent="."]
+position = Vector2(633.5, 356.5)
+scale = Vector2(2.00469, 1.6831)
+texture = ExtResource("1_ofh4v")
+
+[node name="Paper" type="Sprite2D" parent="."]
+position = Vector2(605, 341)
+texture = ExtResource("2_gjdii")
+
+[node name="Teacher1" type="Sprite2D" parent="."]
+position = Vector2(45, 238)
+rotation = 0.883006
+scale = Vector2(0.988764, 0.548415)
+texture = ExtResource("3_xq3o3")
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 492.0
+offset_top = 29.0
+offset_right = 708.0
+offset_bottom = 69.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Answer all the questions"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 58.0
+offset_top = 396.0
+offset_right = 274.0
+offset_bottom = 436.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "They'd better be right!"
+
+[node name="Check" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(754, 140)
+texture = ExtResource("4_xirvv")
+
+[node name="Check2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(752, 243)
+texture = ExtResource("4_xirvv")
+
+[node name="Check3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(754, 336)
+texture = ExtResource("4_xirvv")
+
+[node name="Check4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(753, 431)
+texture = ExtResource("4_xirvv")
+
+[node name="sinq" type="RichTextLabel" parent="."]
+offset_left = 395.0
+offset_top = 99.0
+offset_right = 703.0
+offset_bottom = 172.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Which is sin()"
+
+[node name="Button" type="Button" parent="sinq"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 60.0
+text = "asd"
+
+[node name="Button2" type="Button" parent="sinq"]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 27.0
+offset_right = 163.0
+offset_bottom = 58.0
+text = "asd"
+
+[node name="Button3" type="Button" parent="sinq"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 29.0
+offset_right = 279.0
+offset_bottom = 60.0
+text = "asd"
+
+[node name="scareq" type="RichTextLabel" parent="."]
+offset_left = 397.0
+offset_top = 191.0
+offset_right = 690.0
+offset_bottom = 282.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "You Should Be:"
+
+[node name="Button" type="Button" parent="scareq"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 60.0
+text = "Happy"
+
+[node name="Button2" type="Button" parent="scareq"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 27.0
+offset_right = 122.0
+offset_bottom = 58.0
+text = "sad"
+
+[node name="Button3" type="Button" parent="scareq"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 26.0
+offset_right = 199.0
+offset_bottom = 57.0
+text = "scared"
+
+[node name="scareq2" type="RichTextLabel" parent="."]
+offset_left = 393.0
+offset_top = 287.0
+offset_right = 686.0
+offset_bottom = 378.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Math is:"
+
+[node name="Button" type="Button" parent="scareq2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 60.0
+text = "Fun"
+
+[node name="Button2" type="Button" parent="scareq2"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 30.0
+offset_right = 88.0
+offset_bottom = 61.0
+text = "Bad"
+
+[node name="Button3" type="Button" parent="scareq2"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 28.0
+offset_right = 144.0
+offset_bottom = 59.0
+text = "Cringe"
+
+[node name="scareq3" type="RichTextLabel" parent="."]
+offset_left = 380.0
+offset_top = 384.0
+offset_right = 673.0
+offset_bottom = 475.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "You are:"
+
+[node name="Button" type="Button" parent="scareq3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 60.0
+text = "yourself"
+
+[node name="Button2" type="Button" parent="scareq3"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 30.0
+offset_right = 224.0
+offset_bottom = 61.0
+text = "The drungalwort"
+
+[node name="Button3" type="Button" parent="scareq3"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 29.0
+offset_right = 288.0
+offset_bottom = 60.0
+text = "IDK"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(281, 538)
+stream = ExtResource("6_jjprq")
+
+[node name="YouWin" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(194, 583)
+stream = ExtResource("7_7dfqg")
