@@ -8,7 +8,7 @@ songs = [
             ["OST E. Gadd's Theme.opus", "Luigi's Mansion OST - E. Gadd's Theme"],
             ["Nyan Cat.opus", "Nyan Cat"],
             ["FNaF2 Song.opus", "The Living Toumbstone - Five Nights at Freddy's 2 Song"],
-            #["I Can Swing My Sword.opus", "Tobuscus - I Can Swing My Sword"],
+            ["I Can Swing My Sword.opus", "Tobuscus - I Can Swing My Sword"],
             ["gangnam style.opus", "PSY - Gangnam Style"],
             ["coffin dance.opus", "Vicetone & Tony Igy - Astronomia (Coffin Dance)"],
             ["gasgasgas.opus", "Manuel - Gas Gas Gas"],

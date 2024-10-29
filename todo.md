@@ -1,5 +1,4 @@
 ## Ever-expanding To-Do list for **all** of my public projects & config files
-
 -   Games
     -   Furry Simulator
     -   Joe Biden's Burgers
@@ -35,8 +34,6 @@
 -   better postcard ai
 -   better music player
 -   drungy speak mouths
--   scool home page
--   home button
 -   colors
     -   games
     -   software
