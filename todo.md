@@ -34,6 +34,8 @@
 -   better postcard ai
 -   better music player
 -   drungy speak mouths
+-   Admit One
+-   Drungalwort Refsheet
 -   colors
     -   games
     -   software

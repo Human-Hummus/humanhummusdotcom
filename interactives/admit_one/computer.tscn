@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddijx5vmtd023"]
+
+[ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
+[ext_resource type="Texture2D" uid="uid://dun61gm4ps7sn" path="res://main.svg" id="2_y44lu"]
+[ext_resource type="Texture2D" uid="uid://qwltwfm7o7q5" path="res://check.svg" id="3_wjhq6"]
+[ext_resource type="Texture2D" uid="uid://dqpuocp7opwug" path="res://x.svg" id="4_mm4dy"]
+
+[node name="computer" type="Node2D"]
+script = ExtResource("1_i5i6u")
+
+[node name="Main" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324.5)
+scale = Vector2(0.599479, 0.599074)
+texture = ExtResource("2_y44lu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 317.0
+offset_top = 44.0
+offset_right = 811.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Application"
+
+[node name="Application" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 74.0
+offset_right = 579.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I am a 4.9 GPA dfhsdfhashfkjsaf."
+autowrap_mode = 3
+
+[node name="accept" type="TextureButton" parent="."]
+offset_left = 350.0
+offset_top = 282.0
+offset_right = 430.0
+offset_bottom = 362.0
+texture_normal = ExtResource("3_wjhq6")
+
+[node name="reject" type="TextureButton" parent="."]
+offset_left = 690.0
+offset_top = 268.0
+offset_right = 811.0
+offset_bottom = 389.0
+texture_normal = ExtResource("4_mm4dy")
+
+[node name="Stats" type="Label" parent="."]
+offset_left = 586.0
+offset_top = 72.0
+offset_right = 849.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Awards and stuff"

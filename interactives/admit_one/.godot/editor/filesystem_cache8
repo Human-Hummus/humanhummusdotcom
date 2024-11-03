@@ -1,0 +1,33 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1730666401
+Admissions.Age.translation::OptimizedTranslation::2550965205228230468::1730610392::0::1::::<><>::
+Admissions.Awards Value.translation::OptimizedTranslation::5668245743463727703::1730610392::0::1::::<><>::
+Admissions.Awards.translation::OptimizedTranslation::8459884750937125996::1730610392::0::1::::<><>::
+Admissions.csv::Translation::7107744511564348375::1730609529::1730610392::1::::<><>::
+Admissions.High School GPA.translation::OptimizedTranslation::6204498655925429609::1730610392::0::1::::<><>::
+Admissions.Name.translation::OptimizedTranslation::3020392352581310911::1730610392::0::1::::<><>::
+Admissions.SAT.translation::OptimizedTranslation::8043540376985201907::1730610392::0::1::::<><>::
+check.svg::CompressedTexture2D::1169140789628758254::1729982107::1730536190::1::::<><>::
+computer.gd::GDScript::-1::1730611492::0::1::::<>Node2D<>::
+computer.png::CompressedTexture2D::3467685702176078613::1730535110::1730535113::1::::<><>::
+computer.tscn::PackedScene::7386932738932749598::1730618737::0::1::::<><>::res://computer.gd<>uid://dun61gm4ps7sn::::res://main.svg<>uid://qwltwfm7o7q5::::res://check.svg<>uid://dqpuocp7opwug::::res://x.svg
+dialogue.gd::GDScript::-1::1730528846::0::1::::<>Node2D<>::
+dialogue.tscn::PackedScene::1577625767017348747::1730611547::0::1::::<><>::res://dialogue.gd
+export_presets.cfg::TextFile::-1::1730666401::0::1::::<><>::
+icon.svg::CompressedTexture2D::6957389950184291668::1730406164::1730406175::1::::<><>::
+intro.gd::GDScript::-1::1730528665::0::1::::<>Node2D<>::
+intro.tscn::PackedScene::3443621511970686127::1730611547::0::1::::<><>::res://intro.gd
+logo.webp::CompressedTexture2D::8296355038831671156::1730617030::1730618644::1::::<><>::
+main.gd::GDScript::-1::1730611306::0::1::::<>Node<>::
+main.svg::CompressedTexture2D::8591804827076186897::1730602861::1730602890::1::::<><>::
+room.blend::PackedScene::3774319272183161306::1730607687::1730607710::1::::<><>::
+susd.png::CompressedTexture2D::2047965332449812206::1730530166::1730530173::1::::<><>::
+x.svg::CompressedTexture2D::8314488686260740254::1728521930::1730536190::1::::<><>::
+::res://export/::1730666420
+index.apple-touch-icon.png::CompressedTexture2D::2721253505556009949::1730666420::1730666420::1::::<><>::
+index.icon.png::CompressedTexture2D::5007307564921293011::1730666420::1730666420::1::::<><>::
+index.png::CompressedTexture2D::3470311930939947861::1730666420::1730666420::1::::<><>::
+::res://tutorial/::1730611547
+bg1.webp::CompressedTexture2D::3316740256823466794::1730607682::1730607708::1::::<><>::
+main.gd::GDScript::-1::1730611457::0::1::::<>Node2D<>::
+main.tscn::PackedScene::8439159840124423680::1730611547::0::1::::<><>::res://tutorial/main.gd<>uid://wqhjbmqy3yj0::::res://dialogue.tscn<>uid://bniwhy6vblo2u::::res://tutorial/bg1.webp<>uid://4gbxpopifcoc::::res://susd.png<>uid://ddijx5vmtd023::::res://computer.tscn

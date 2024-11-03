@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c8jbrp1sk1abf"
+
+[deps]
+
+files=["res://Admissions.High School GPA.translation", "res://Admissions.SAT.translation", "res://Admissions.Name.translation", "res://Admissions.Age.translation", "res://Admissions.Awards.translation", "res://Admissions.Awards Value.translation"]
+
+source_file="res://Admissions.csv"
+dest_files=["res://Admissions.High School GPA.translation", "res://Admissions.SAT.translation", "res://Admissions.Name.translation", "res://Admissions.Age.translation", "res://Admissions.Awards.translation", "res://Admissions.Awards Value.translation"]
+
+[params]
+
+compress=true
+delimiter=0

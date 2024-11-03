@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Admit One"
+run/main_scene="res://intro.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://logo.webp"
+config/icon="res://logo.webp"
+
+[autoload]
+
+main="*res://main.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://tutorial/dialogue.dialogue")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
