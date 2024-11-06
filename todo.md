@@ -21,20 +21,24 @@
     -   Yandelere Simulator
         -   COwOha murder
         -   Has lead murder
+        -   myrawrs murder
         -   mcglee minigame
         -   add site to the computer
         -   Assets
             -   soundtrack 2
         -   murder end
-        -   myrawrs murder
         -   Pee minigame
     -   drungalworld
         -   Recreational gimkit
+    -   Admit One
+        -   Add messages app
+        -   Add website
+        -   Add video app
+        -   Website text
 -   Document compresser
 -   better postcard ai
 -   better music player
 -   drungy speak mouths
--   Admit One
 -   Drungalwort Refsheet
 -   colors
     -   games

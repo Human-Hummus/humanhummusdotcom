@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsh8y2n2usfsy"]
+[gd_scene load_steps=7 format=3 uid="uid://dsh8y2n2usfsy"]
 
 [ext_resource type="Script" path="res://tutorial/main.gd" id="1_siqlp"]
 [ext_resource type="PackedScene" uid="uid://wqhjbmqy3yj0" path="res://dialogue.tscn" id="2_r6jmc"]
 [ext_resource type="Texture2D" uid="uid://bniwhy6vblo2u" path="res://tutorial/bg1.webp" id="3_8to0m"]
 [ext_resource type="Texture2D" uid="uid://4gbxpopifcoc" path="res://susd.png" id="4_lxdcg"]
 [ext_resource type="PackedScene" uid="uid://ddijx5vmtd023" path="res://computer.tscn" id="4_xgckp"]
+[ext_resource type="AudioStream" uid="uid://b2t6fdmjvmnrw" path="res://tutorial/Audio/sigh.mp3" id="6_qpy2s"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_siqlp")
@@ -15,12 +16,19 @@ position = Vector2(575.5, 324)
 scale = Vector2(0.598437, 0.6)
 texture = ExtResource("3_8to0m")
 
-[node name="Susd" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(78, 387)
-texture = ExtResource("4_lxdcg")
-
 [node name="computer" parent="." instance=ExtResource("4_xgckp")]
 visible = false
 
 [node name="dialogue" parent="." instance=ExtResource("2_r6jmc")]
+position = Vector2(370, 224)
+scale = Vector2(0.687141, 0.657938)
+
+[node name="Susd" type="Sprite2D" parent="."]
+position = Vector2(1089, 536)
+scale = Vector2(0.195014, 0.171)
+texture = ExtResource("4_lxdcg")
+flip_h = true
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(256, 436)
+stream = ExtResource("6_qpy2s")

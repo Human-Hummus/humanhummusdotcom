@@ -1,18 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://wqhjbmqy3yj0"]
+[gd_scene load_steps=5 format=3 uid="uid://wqhjbmqy3yj0"]
 
 [ext_resource type="Script" path="res://dialogue.gd" id="1_xl300"]
+[ext_resource type="AudioStream" uid="uid://bk2ckavrhynet" path="res://assets/type.ogg" id="2_eubuq"]
+[ext_resource type="Texture2D" uid="uid://d2holrcx5ukbe" path="res://assets/side_screen.webp" id="2_jhq7h"]
+[ext_resource type="AudioStream" uid="uid://bofmw0a7b6at3" path="res://assets/click.ogg" id="2_tx3lc"]
 
 [node name="dialogue" type="Node2D"]
 script = ExtResource("1_xl300")
 
+[node name="SideScreen" type="Sprite2D" parent="."]
+position = Vector2(574, 320)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_jhq7h")
+
 [node name="Label" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 416.0
-offset_right = 1154.0
-offset_bottom = 644.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 16
-theme_override_font_sizes/font_size = 48
+offset_left = 386.0
+offset_top = 157.0
+offset_right = 1117.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 40
+text = "efasfhdasfd"
 autowrap_mode = 3
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(188, 403)
+stream = ExtResource("2_tx3lc")
+
+[node name="Type" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(262, 385)
+stream = ExtResource("2_eubuq")
