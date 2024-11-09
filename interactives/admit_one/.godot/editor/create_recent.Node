@@ -1,6 +1,7 @@
-Label
+AnimatedSprite2D
 TextureButton
+Button
+Label
 Sprite2D
 CenterContainer
 Container
-Button

@@ -4,17 +4,32 @@ var text_to_say = " "
 var done = true
 var text_said:float = 0
 
-func _ready() -> void:pass
+func _ready() -> void:
+	get_node("AnimatedSprite2D").play()
+	get_node("Close").pressed.connect(close)
+	get_node("Open").pressed.connect(open)	
+func close():
+	get_node("Close2").play()
+	get_node("Open").show()
+	get_node("Close").hide()
+	get_node("AnimatedSprite2D").hide()
+	get_node("Label").hide()
+func open():
+	get_node("Open2").play()
+	get_node("Open").hide()
+	get_node("Close").show()
+	get_node("AnimatedSprite2D").show()
+	get_node("Label").show()
 
 func _physics_process(delta: float) -> void:
 	if done == false:
 		text_said+=0.75
-		var tmp
-		if randi()%2 == 0:
-			tmp = get_node("Click").duplicate()
-		else:tmp=get_node("Type").duplicate()
-		get_node(".").add_child(tmp)
-		tmp.play()
+		#var tmp
+		#if randi()%2 == 0:
+		#	tmp = get_node("Click").duplicate()
+		#else:tmp=get_node("Type").duplicate()
+		#get_node(".").add_child(tmp)
+		#tmp.play()
 		
 		if text_said >= len(text_to_say):
 			done = true

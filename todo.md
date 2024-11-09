@@ -35,11 +35,13 @@
         -   Add website
         -   Add video app
         -   Website text
+        -   Per-class transcript
+        -   Static sound
+-   To-Do list/calendar app?
 -   Document compresser
 -   better postcard ai
 -   better music player
 -   drungy speak mouths
--   Drungalwort Refsheet
 -   colors
     -   games
     -   software

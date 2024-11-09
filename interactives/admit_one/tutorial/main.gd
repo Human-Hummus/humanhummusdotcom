@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 			p("waffle_sniffer")
 		elif dia_thing == 6:
 			dia_thing+=1
-			dialogue.say_stuff("??? > Sleep is for people who are unemployed, and you, my friend, have a job to do!")	
+			dialogue.say_stuff("??? > Sleep is for people who are unemployed, and you, my friend, have a job to do!")
 			p("sleep_unemployed")
 		elif dia_thing == 7:
 			dia_thing+=1
@@ -51,16 +51,16 @@ func _process(delta: float) -> void:
 			p("staystill")
 		elif dia_thing == 9:
 			dia_thing+=1
-			dialogue.say_stuff("??? > Or well I guess you can’t really move yet… My bad, I’ll just give you the deets and you’ll probably be untied by lunch break.")
+			dialogue.say_stuff("??? > Or well I guess you can’t really move yet… My bad, I’ll just give you the deets and you’ll probably be out by lunch break.")
 			p("guessyacantmove")
 		elif dia_thing == 10:
 			dia_thing+=1
-			dialogue.say_stuff("??? > Aight I’m gonna rapid fire some tasks at ya’, so you better listen carefully. Starting with the most important part- my name!")
+			dialogue.say_stuff("??? > Aight I’m gonna rapid fire some tasks at ya’, so you better listen carefully. Starting with the most important thing- my name!")
 			p("rapidfire")
 		elif dia_thing == 11:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > I’m the Sussy Wussy Ducky, or DuckBot for your purposes. I’ll be your guide for today.")
-			p("duckbot")		
+			p("duckbot")
 		elif dia_thing == 12:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > So here’s the situation: the boss is a bit low on moola and a bakery ain’t gonna roll in the dough.")
@@ -107,11 +107,10 @@ func _process(delta: float) -> void:
 			p("lt")
 		elif dia_thing == 22:
 			dia_thing+=1
-			dialogue.say_stuff("DuckBot > Oh was that an actual application? Erm, I hope it wasn’t a good one. Oh well, it’s your job not mine.")
+			dialogue.say_stuff("DuckBot > Oh was that an actual application? Eh, well, it’s your job not mine.")
 			p("yourjob")
 		elif dia_thing == 23:
 			dia_thing+=1
-			#get_node("computer").hide()
 			dialogue.say_stuff("DuckBot > The type of students you accept will affect our stats, y’know, what we’re known for and our average gpa and all.")
 			p("typeostud")
 		elif dia_thing == 24:
@@ -125,7 +124,7 @@ func _process(delta: float) -> void:
 		elif dia_thing == 26:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > Maybe you can edit the homepage- there’s no need to take it seriously!")
-			p("edits")
+			p("edit")
 		elif dia_thing == 27:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > Speaking of that- don’t forget you’re on your computer, take advantage of it!")
@@ -140,7 +139,7 @@ func _process(delta: float) -> void:
 			p("whatnot")
 		elif dia_thing == 30:
 			dia_thing+=1
-			dialogue.say_stuff("DuckBot > In fact, since we can’t actually afford to pay you let alone multiple employees, you also get to handle the funds!")
+			dialogue.say_stuff("DuckBot > In fact, since we can’t actually afford to pay you let alone multiple employees, so you also get to handle the funds!")
 			p("infact")
 		elif dia_thing == 31:
 			dia_thing+=1
