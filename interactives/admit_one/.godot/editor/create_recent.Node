@@ -1,7 +1,9 @@
+Label
+Control
+TabBar
 AnimatedSprite2D
 TextureButton
 Button
-Label
 Sprite2D
 CenterContainer
 Container

@@ -33,10 +33,9 @@
     -   Admit One
         -   Add messages app
         -   Add website
+        -   Add Campaign
         -   Add video app
         -   Website text
-        -   Per-class transcript
-        -   Static sound
 -   To-Do list/calendar app?
 -   Document compresser
 -   better postcard ai
