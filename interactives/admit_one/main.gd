@@ -10,7 +10,7 @@ const std_stuff = {
 }
 
 var subject_pool = [
-	"Mathematics",
+	"Math",
 	"Biology",
 	"Chemistry",
 	"Physics",
@@ -81,7 +81,7 @@ var history_class_name_pool = [
 func create_random_class():
 	var subject = subject_pool[randi() % len(subject_pool)]
 	
-	if subject == "Mathematics":
+	if subject == "Math":
 		return {
 			"class_name": math_class_name_pool[randi() % len(math_class_name_pool)],
 			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
@@ -124,14 +124,14 @@ func create_random_class():
 		}
 
 var past_admissions = []
-const names = ["Gabe", "Gabriel", "Michael", "Dan", "Daniel", "Drungalwort", "Fart", "Poopy", "Goober"]
-const schools = ["Academy for Cringe", "Based Private School", "Cringe Private School"]
-var states = "WA VT KS IL UT CA NY FL".split(" ")
-var cities = ["Anytown", "Canterlot", "Ponyville"]
+var names = "Benis Vane P.P. Shungite Tux Wobblebottom Furry Balls Walmart Chair YonKaGor Human Hummus Benadryl Borax Doofus Drungy Michael Dan Daniel Drungalwort Fart Poopy Goober".split(" ")
+var schools = "Academy for Cringe,Based Private School,Cringe Private School".split(",")
+var states = "AK AL AR AZ CA CO CT DE FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS MT NC ND NE NH NJ NM NV NY OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY DC AS GU MP PR VI".split(" ")
+var cities = "Anytown,Canterlot,Ponyville,New York".split(",")
 
 func new_app():
 	var app = std_stuff.duplicate()
-	app.graduated = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(randi_range(1900,2300))
+	app.graduated = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(randi_range(1970,2024))
 	app.birthday = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(randi_range(999,2000))
 	app.attended = str(schools[randi()%schools.size()])
 	app.citystate = str(cities[randi()%cities.size()])+", "+str(states[randi()%states.size()])

@@ -32,7 +32,6 @@
         -   Recreational gimkit
     -   Admit One
         -   Add messages app
-        -   Add website
         -   Add Campaign
         -   Add video app
         -   Website text

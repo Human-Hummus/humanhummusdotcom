@@ -1,6 +1,6 @@
-res://dialogue.tscn
-res://main.gd
-res://intro.tscn
-res://tutorial/main.tscn
 res://computer.tscn
 res://computer.gd
+res://intro.tscn
+res://tutorial/main.tscn
+res://dialogue.tscn
+res://campaign.tscn

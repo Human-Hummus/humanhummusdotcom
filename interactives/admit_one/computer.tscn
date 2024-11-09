@@ -26,12 +26,14 @@ tab_2/title = "School Website"
 tab_3/title = "Entropy"
 
 [node name="main" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="main"]
+layout_mode = 0
 offset_left = 390.0
 offset_top = 136.0
 offset_right = 884.0
@@ -40,6 +42,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Application"
 
 [node name="Application" type="Label" parent="main"]
+layout_mode = 0
 offset_left = 395.0
 offset_top = 166.0
 offset_right = 1047.0
@@ -49,6 +52,7 @@ text = "I am a 4.9 GPA dfhsdfhashfkjsaf."
 autowrap_mode = 3
 
 [node name="accept" type="TextureButton" parent="main"]
+layout_mode = 0
 offset_left = 403.0
 offset_top = 449.0
 offset_right = 483.0
@@ -56,6 +60,7 @@ offset_bottom = 529.0
 texture_normal = ExtResource("3_wjhq6")
 
 [node name="reject" type="TextureButton" parent="main"]
+layout_mode = 0
 offset_left = 927.0
 offset_top = 414.0
 offset_right = 1048.0
@@ -86,5 +91,74 @@ offset_left = 388.0
 offset_top = 132.0
 offset_right = 1055.0
 offset_bottom = 538.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Website" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Students" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 132.0
+offset_right = 1055.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Chemistry GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 152.0
+offset_right = 1071.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Biology GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 171.0
+offset_right = 1056.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Math GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 192.0
+offset_right = 1058.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Physics GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 231.0
+offset_right = 1058.0
+offset_bottom = 254.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="English GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 212.0
+offset_right = 1061.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="History GPA" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 576.0
+offset_right = 1840.0
+offset_bottom = 599.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"

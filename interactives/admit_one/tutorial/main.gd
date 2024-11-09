@@ -6,7 +6,9 @@ var audio
 func _ready() -> void:
 	dialogue = get_node("dialogue")
 	audio =get_node("Audio")
+	get_node("Button").pressed.connect(skip)
 	
+func skip():get_tree().change_scene_to_file("res://campaign.tscn")
 func p(audio_name):
 	audio.stop()
 	audio.stream = load("res://tutorial/Audio/"+audio_name+".mp3")
@@ -103,6 +105,7 @@ func _process(delta: float) -> void:
 		elif dia_thing == 21:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > Like this!")
+			get_node("computer/TabBar").current_tab = 0
 			get_node("computer").reject()
 			p("lt")
 		elif dia_thing == 22:
@@ -181,3 +184,5 @@ func _process(delta: float) -> void:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > yep I think I got all the important stuff! Aaa-nd you’re off! Go make us some money!")
 			p("last")
+		elif dia_thing == 41:
+			get_tree().change_scene_to_file("res://campaign.tscn")
