@@ -32,7 +32,6 @@
         -   Recreational gimkit
     -   Admit One
         -   Add messages app
-        -   Add Campaign
         -   Add video app
         -   Website text
 -   To-Do list/calendar app?
