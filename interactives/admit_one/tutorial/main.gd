@@ -29,12 +29,15 @@ func _process(delta: float) -> void:
 		elif dia_thing == 3:
 			dia_thing+=1
 			dialogue.say_stuff("??? > …….. *poke, poke*")
+			get_node("AnimatedSprite2D").play()
 		elif dia_thing == 4:
 			dia_thing+=1
+			get_node("AnimatedSprite2D").pause()
 			dialogue.say_stuff("??? > *sigh*")
 			p("sigh")
 		elif dia_thing == 5:
 			dia_thing+=1
+			get_node("AnimatedSprite2D").frame = 0
 			dialogue.say_stuff("??? > UP AND AT ‘EM, YA WAFFLE SNIFFER!!!")
 			get_node("Bg1").show()
 			get_node("Susd").show()

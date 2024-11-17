@@ -1,8 +1,8 @@
+Label
+AnimatedSprite2D
 Control
 Button
-Label
 TabBar
-AnimatedSprite2D
 TextureButton
 Sprite2D
 CenterContainer

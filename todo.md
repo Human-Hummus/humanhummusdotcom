@@ -32,12 +32,28 @@
         -   Recreational gimkit
     -   Admit One
         -   Add messages app
+        -   Skip tutorial pop-up
+        -   Settings Menu
+        -   Save files
+        -   Wait for dialogue for the admission to appear
+        -   Move DuckBot
+        -   Time Frame for classes
+        -   Sync voice
+        -   Gender
+        -   Main Language
+        -   Limit GPA to 4.0
+        -   Better School website
+        -   Devised admit one thing
+        -   Birthdays after 19th century
+        -   Make duckbot application be perfect
         -   Add video app
         -   Website text
 -   To-Do list/calendar app?
 -   Document compresser
 -   better postcard ai
+-   Make humanhummus main page go to arch linux
 -   better music player
+-   Scool Simulater website text
 -   drungy speak mouths
 -   colors
     -   games

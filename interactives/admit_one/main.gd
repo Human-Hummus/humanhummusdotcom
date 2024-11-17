@@ -1,5 +1,22 @@
 extends Node
 
+func race_text(r):
+	if r == race.WT:return "Caucasian (White)"
+	if r == race.AS:return "Asian/Pacific Islander"
+	if r == race.ME:return "Middle Eastern"
+	if r == race.BL:return "Black or African American"
+	if r == race.AI:return "American Indian or Alaska Native"
+	if r == race.HS:return "Hispanic and Latino Americans"
+enum race{
+	WT,
+	AS,
+	ME,
+	BL,
+	AI,
+	HS
+}
+var races = [race.WT, race.AS, race.ME, race.BL, race.AI, race.HS]
+
 const std_stuff = {
 	"graduated": "0/0/0",
 	"birthday": "0/0/0",
@@ -7,6 +24,7 @@ const std_stuff = {
 	"citystate": "fartsmith, washington",
 	"name": "Dan TDM",
 	"classes": [],
+	"race": race.WT
 }
 
 var subject_pool = [
@@ -131,14 +149,16 @@ var cities = "Anytown,Canterlot,Ponyville,New York".split(",")
 
 func new_app():
 	var app = std_stuff.duplicate()
-	app.graduated = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(randi_range(1970,2024))
-	app.birthday = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(randi_range(999,2000))
+	var yob = randi_range(1910,2024-18)
+	app.graduated = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(yob+18)
+	app.birthday = str(randi_range(0,12))+"/"+str(randi_range(0,31))+"/"+str(yob)
 	app.attended = str(schools[randi()%schools.size()])
 	app.citystate = str(cities[randi()%cities.size()])+", "+str(states[randi()%states.size()])
 	app.name = str(names[randi()%names.size()])+" "+str(names[randi()%names.size()])
 	app.classes = []
 	for i in range(0,10):
 		app.classes.append(create_random_class())
+	app.race = races[randi() % races.size()]
 	return app
 func round_to_dec(num, digit):
 	return round(num * pow(10.0, digit)) / pow(10.0, digit)

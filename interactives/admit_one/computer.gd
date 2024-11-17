@@ -8,6 +8,8 @@ func gpa_of(list):
 		toret/=2
 	return toret
 
+
+
 func update_website():
 	var admissions = main.past_admissions
 	get_node("Website/Students").text = "Student population: " + str(len(admissions))
@@ -17,7 +19,23 @@ func update_website():
 	var physics = []
 	var english = []
 	var history = []
+	var race_tally = {
+		"WT":0,
+		"AS":0,
+		"ME":0,
+		"BL":0,
+		"AI":0,
+		"HS":0	
+	}
+ 
 	for admission in admissions:
+		
+		if admission.race == main.race.WT: race_tally.WT+=1
+		if admission.race == main.race.AS: race_tally.AS+=1
+		if admission.race == main.race.ME: race_tally.ME+=1
+		if admission.race == main.race.BL: race_tally.BL+=1
+		if admission.race == main.race.AI: race_tally.AI+=1
+		if admission.race == main.race.HS: race_tally.HS+=1
 		for cl in admission.classes:
 			if cl.subject == "Chemistry":chemistry.append(cl.gpa)
 			if cl.subject == "Biology":biology.append(cl.gpa)
@@ -25,13 +43,21 @@ func update_website():
 			if cl.subject == "Physics":physics.append(cl.gpa)
 			if cl.subject == "English":english.append(cl.gpa)
 			if cl.subject == "History":history.append(cl.gpa)
+	var lpa = len(main.past_admissions)
+	if lpa == 0:lpa=1
+	print(race_tally)
 	get_node("Website/Chemistry GPA").text = "Chemistry GPA: " + str(main.round_to_dec(gpa_of(chemistry),1))
 	get_node("Website/Biology GPA").text = "Biology GPA: " + str(main.round_to_dec(gpa_of(biology),1))
 	get_node("Website/Math GPA").text = "Math GPA: " + str(main.round_to_dec(gpa_of(math),1))
 	get_node("Website/Physics GPA").text = "Physics GPA: " + str(main.round_to_dec(gpa_of(physics),1))
 	get_node("Website/English GPA").text = "English GPA: " + str(main.round_to_dec(gpa_of(english),1))
 	get_node("Website/History GPA").text = "History GPA: " + str(main.round_to_dec(gpa_of(history),1))
-
+	get_node("Website/Demographics/WT").text = str((race_tally.WT*100/lpa)) + "% " + main.race_text(main.race.WT)
+	get_node("Website/Demographics/AS").text = str((race_tally.AS*100/lpa)) + "% " + main.race_text(main.race.AS)
+	get_node("Website/Demographics/ME").text = str((race_tally.ME*100/lpa)) + "% " + main.race_text(main.race.ME)
+	get_node("Website/Demographics/BL").text = str((race_tally.BL*100/lpa)) + "% " + main.race_text(main.race.BL)
+	get_node("Website/Demographics/AI").text = str((race_tally.AI*100/lpa)) + "% " + main.race_text(main.race.AI)
+	get_node("Website/Demographics/HS").text = str((race_tally.HS*100/lpa)) + "% " + main.race_text(main.race.HS)
 var stats
 var can_press = false
 func _ready() -> void:
@@ -84,6 +110,7 @@ func new_application(stuff):
 	get_node("main/Application").text+=".   From " +stuff.citystate
 	get_node("main/Application").text+="!\nDate of Graduation: " + str(stuff.graduated)
 	get_node("main/Application").text+="\nAttended: " + stuff.attended
+	get_node("main/Application").text+="\nRace: " + main.race_text(stuff.race)
 	var classes = "Classes:\n"
 	for i in stuff.classes:
 		classes+=i.class_name+"     Grade: "+str(i.gpa)+"\n"

@@ -19,11 +19,12 @@ offset_top = 102.0
 offset_right = 1064.0
 offset_bottom = 126.0
 current_tab = 0
-tab_count = 4
+tab_count = 5
 tab_0/title = "Main"
 tab_1/title = "Transcript"
 tab_2/title = "School Website"
 tab_3/title = "Entropy"
+tab_4/title = "beYouTuful"
 
 [node name="main" type="Control" parent="."]
 visible = false
@@ -160,5 +161,63 @@ offset_left = 1173.0
 offset_top = 576.0
 offset_right = 1840.0
 offset_bottom = 599.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Demographics" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 257.0
+offset_right = 673.0
+offset_bottom = 307.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "DEMOGRAPHICS"
+
+[node name="WT" type="Label" parent="Website/Demographics"]
+offset_left = 4.0
+offset_top = 42.0
+offset_right = 671.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="AS" type="Label" parent="Website/Demographics"]
+offset_left = 3.0
+offset_top = 148.0
+offset_right = 670.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="ME" type="Label" parent="Website/Demographics"]
+offset_left = 2.0
+offset_top = 84.0
+offset_right = 669.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="BL" type="Label" parent="Website/Demographics"]
+offset_left = 3.0
+offset_top = 128.0
+offset_right = 670.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="AI" type="Label" parent="Website/Demographics"]
+offset_left = 3.0
+offset_top = 105.0
+offset_right = 670.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="HS" type="Label" parent="Website/Demographics"]
+offset_left = 3.0
+offset_top = 64.0
+offset_right = 670.0
+offset_bottom = 87.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
