@@ -89,9 +89,6 @@ func _process(delta: float) -> void:
 		elif dia_thing == 17:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > But we can’t exactly cash in the tuition if we don’t have any students… so that’s where you come in, honorable admissions office!")
-			get_node("computer").show()
-			get_node("computer").can_press = false
-			get_node("computer").new_application(main.new_app())
 			p("wyci")
 		elif dia_thing == 18:
 			dia_thing+=1
@@ -104,6 +101,9 @@ func _process(delta: float) -> void:
 		elif dia_thing == 20:
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > The job is simple, you get an application, and you either accept or reject it")
+			get_node("computer").show()
+			get_node("computer").can_press = false
+			get_node("computer").new_application(main.std_stuff.duplicate())
 			p("jobsimple")
 		elif dia_thing == 21:
 			dia_thing+=1

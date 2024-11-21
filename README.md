@@ -4,6 +4,7 @@ My website, with information, games, demos, and more!
 
 You can view [the source code for the website on GitHub](https://github.com/Human-Hummus/humanhummusdotcom/tree/main) (if you aren't already!).
 On these pages, you can view the source code for the games and demos too.
+Also visit [The HumanHummus Wiki!](https://sites.google.com/view/official-humanhummus-wiki/home) Created by SoundHaptics
 
 About me:
 

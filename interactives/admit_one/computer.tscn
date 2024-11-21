@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddijx5vmtd023"]
+[gd_scene load_steps=6 format=3 uid="uid://ddijx5vmtd023"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
 [ext_resource type="Texture2D" uid="uid://cekv2moy2wru5" path="res://computer.webp" id="2_1xq1i"]
 [ext_resource type="Texture2D" uid="uid://qwltwfm7o7q5" path="res://check.svg" id="3_wjhq6"]
 [ext_resource type="Texture2D" uid="uid://dqpuocp7opwug" path="res://x.svg" id="4_mm4dy"]
+[ext_resource type="AudioStream" uid="uid://cj01b5vckqecj" path="res://assets/click.mp3" id="5_8acvv"]
 
 [node name="computer" type="Node2D"]
 script = ExtResource("1_i5i6u")
@@ -27,7 +28,6 @@ tab_3/title = "Entropy"
 tab_4/title = "beYouTuful"
 
 [node name="main" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -96,6 +96,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="Website" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -175,6 +176,7 @@ theme_override_font_sizes/font_size = 36
 text = "DEMOGRAPHICS"
 
 [node name="WT" type="Label" parent="Website/Demographics"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 42.0
 offset_right = 671.0
@@ -183,14 +185,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="AS" type="Label" parent="Website/Demographics"]
-offset_left = 3.0
-offset_top = 148.0
-offset_right = 670.0
-offset_bottom = 171.0
+layout_mode = 0
+offset_left = 1.0
+offset_top = 151.0
+offset_right = 668.0
+offset_bottom = 174.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="ME" type="Label" parent="Website/Demographics"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 84.0
 offset_right = 669.0
@@ -199,6 +203,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="BL" type="Label" parent="Website/Demographics"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 128.0
 offset_right = 670.0
@@ -207,6 +212,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="AI" type="Label" parent="Website/Demographics"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 105.0
 offset_right = 670.0
@@ -215,9 +221,50 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="HS" type="Label" parent="Website/Demographics"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 64.0
 offset_right = 670.0
 offset_bottom = 87.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
+
+[node name="male" type="Label" parent="Website/Demographics"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 252.0
+offset_right = 668.0
+offset_bottom = 275.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="female" type="Label" parent="Website/Demographics"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 229.0
+offset_right = 668.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="non-binary" type="Label" parent="Website/Demographics"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 205.0
+offset_right = 670.0
+offset_bottom = 228.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="intersex" type="Label" parent="Website/Demographics"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 185.0
+offset_right = 671.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is a test"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(169, 364)
+stream = ExtResource("5_8acvv")

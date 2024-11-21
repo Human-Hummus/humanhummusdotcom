@@ -27,6 +27,12 @@ func update_website():
 		"AI":0,
 		"HS":0	
 	}
+	var gender_tally = {
+		"male":0,
+		"female":0,
+		"non_binary":0,
+		"intersex":0,
+	}
  
 	for admission in admissions:
 		
@@ -36,6 +42,10 @@ func update_website():
 		if admission.race == main.race.BL: race_tally.BL+=1
 		if admission.race == main.race.AI: race_tally.AI+=1
 		if admission.race == main.race.HS: race_tally.HS+=1
+		if admission.gender == "male": gender_tally.male+=1
+		if admission.gender == "female": gender_tally.female+=1
+		if admission.gender == "intersex": gender_tally.intersex+=1
+		if admission.gender == "non-binary": gender_tally.non_binary+=1
 		for cl in admission.classes:
 			if cl.subject == "Chemistry":chemistry.append(cl.gpa)
 			if cl.subject == "Biology":biology.append(cl.gpa)
@@ -58,6 +68,10 @@ func update_website():
 	get_node("Website/Demographics/BL").text = str((race_tally.BL*100/lpa)) + "% " + main.race_text(main.race.BL)
 	get_node("Website/Demographics/AI").text = str((race_tally.AI*100/lpa)) + "% " + main.race_text(main.race.AI)
 	get_node("Website/Demographics/HS").text = str((race_tally.HS*100/lpa)) + "% " + main.race_text(main.race.HS)
+	get_node("Website/Demographics/male").text = str((gender_tally.male*100/lpa)) + "% Male"
+	get_node("Website/Demographics/female").text = str((gender_tally.female*100/lpa)) + "% Female"
+	get_node("Website/Demographics/non-binary").text = str((gender_tally.non_binary*100/lpa)) + "% non-binary"
+	get_node("Website/Demographics/intersex").text = str((gender_tally.intersex*100/lpa)) + "% Intersex"
 var stats
 var can_press = false
 func _ready() -> void:
@@ -68,8 +82,10 @@ func _ready() -> void:
 	update_website()
 func accept_button():
 	if can_press:accept()
+	get_node("Click").play()
 func reject_button():
 	if can_press:reject()
+	get_node("Click").play()
 func accept():
 	main.past_admissions.append(stats)
 	can_press = false
@@ -111,6 +127,7 @@ func new_application(stuff):
 	get_node("main/Application").text+="!\nDate of Graduation: " + str(stuff.graduated)
 	get_node("main/Application").text+="\nAttended: " + stuff.attended
 	get_node("main/Application").text+="\nRace: " + main.race_text(stuff.race)
+	get_node("main/Application").text+="\nGender: " + stuff.gender
 	var classes = "Classes:\n"
 	for i in stuff.classes:
 		classes+=i.class_name+"     Grade: "+str(i.gpa)+"\n"

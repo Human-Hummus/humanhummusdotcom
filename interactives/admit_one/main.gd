@@ -18,14 +18,16 @@ enum race{
 var races = [race.WT, race.AS, race.ME, race.BL, race.AI, race.HS]
 
 const std_stuff = {
-	"graduated": "0/0/0",
-	"birthday": "0/0/0",
-	"attended": "nill",
+	"graduated": "11/12/24",
+	"birthday": "1/25/2000",
+	"attended": "Epic 100% High School",
 	"citystate": "fartsmith, washington",
 	"name": "Dan TDM",
 	"classes": [],
-	"race": race.WT
+	"race": race.BL,
+	"gender": "female",
 }
+var genders = "male female intersex non-binary".split(" ")
 
 var subject_pool = [
 	"Math",
@@ -102,42 +104,42 @@ func create_random_class():
 	if subject == "Math":
 		return {
 			"class_name": math_class_name_pool[randi() % len(math_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 		
 	elif subject == "Biology":
 		return {
 			"class_name": biology_class_name_pool[randi() % len(biology_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 		
 	elif subject == "Chemistry":
 		return {
 			"class_name": chemistry_class_name_pool[randi() % len(chemistry_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 		
 	elif subject == "Physics":
 		return {
 			"class_name": physics_class_name_pool[randi() % len(physics_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 		
 	elif subject == "English":
 		return {
 			"class_name": english_class_name_pool[randi() % len(english_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 		
 	elif subject == "History":
 		return {
 			"class_name": history_class_name_pool[randi() % len(history_class_name_pool)],
-			"gpa": round_to_dec(randf_range(0.0, 4.5),1),
+			"gpa": round_to_dec(randf_range(0.0, 4.0),1),
 			"subject": subject
 		}
 
@@ -156,6 +158,7 @@ func new_app():
 	app.citystate = str(cities[randi()%cities.size()])+", "+str(states[randi()%states.size()])
 	app.name = str(names[randi()%names.size()])+" "+str(names[randi()%names.size()])
 	app.classes = []
+	app.gender = genders[randi()%genders.size()]
 	for i in range(0,10):
 		app.classes.append(create_random_class())
 	app.race = races[randi() % races.size()]
