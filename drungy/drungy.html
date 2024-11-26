@@ -39,7 +39,8 @@
 					<center style="color: red">Get a letter from drungy!</center>
 					<input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" />
 
-					<form hx-post="/drungy_letter" enctype="multipart/form-data" style="color:black">
+					<form hx-post="https://www.humanhummus.com/drungy_letter" enctype="multipart/form-data" style="color:black">
+						<img alt="Result loading..." class="htmx-indicator" width="150" src="../assets/loading.gif"/>
 						<input name="name" type="text" placeholder="Your Name" />
 						<div style="display: flex;vertical-align: center; vertical-align: top">
 							<p style="font-size: 24; vertical-align: top">Your Selfie:</p>
