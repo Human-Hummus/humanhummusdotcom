@@ -4,6 +4,7 @@
 	<head>
 		<title>Human Hummus</title>
 		<link rel="icon" type="image/x-icon" href="../favicon.jpg" />
+		<meta name="htmx-config" content='{"selfRequestsOnly":false}'>
 		<script src="https://unpkg.com/htmx.org@2.0.3"></script>
 	</head>
 	<body>
@@ -34,11 +35,11 @@
 					</button>
 				</center>
 				<input type="image" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position: absolute; scale: 50px" src="../assets/postcard.svg" />
-				<div hx-get="/drungy_letter" enctype="multipart/form-data" hidden="true" id="postcard_submit" style="background: white; width: 25rem; padding: 5px; position: absolute; padding: 1%; margin-top: 20%; margin-left: 20%">
+				<div  hidden="true" id="postcard_submit" style="background: white; width: 25rem; padding: 5px; position: absolute; padding: 1%; margin-top: 20%; margin-left: 20%">
 					<center style="color: red">Get a letter from drungy!</center>
 					<input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" />
 
-					<form action="/drungy_letter" method="POST" enctype="multipart/form-data">
+					<form hx-post="https://www.humanhummus.com/drungy_letter" method="POST" enctype="multipart/form-data">
 						<input name="name" type="text" placeholder="Your Name" />
 						<div style="display: flex; color: black; vertical-align: center; vertical-align: top">
 							<p style="font-size: 24; vertical-align: top">Your Selfie:</p>
