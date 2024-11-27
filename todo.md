@@ -60,6 +60,12 @@
     -   Site page
     -   Readme
     -   Markdown
+    -   h2
+    -   h3
+    -   table
+    -   plaintext output
+    -   bash script output
+    -   code
 -   MDS
     -   Tutorial
     -   General info
