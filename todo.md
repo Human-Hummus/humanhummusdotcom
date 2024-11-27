@@ -43,6 +43,8 @@
         -   Add video app
         -   Website text
 -   To-Do list/calendar app?
+-   remove tech stuff
+-   integrate style.css
 -   Document compresser
 -   better postcard ai
 -   Make humanhummus main page go to arch linux
