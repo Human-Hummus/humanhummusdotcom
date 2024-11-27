@@ -1,0 +1,14 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Human Hummus - {var:title}</title>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
+	</head>
+	<body>
+		<link rel="stylesheet" href="{var:directory}style.css" />
+		{center:<h1 id="cool_header" style="font-family: handdrawn; font-size: 600%">{var:title}</h1>}
+		<button id="boykb" style="width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="assets/boykisser.webp" /></button>
+		<div class="main">
+			<div class="menu">{import:menu.tdm}</div>
+			<div class="content" style="flex-direction: row">

@@ -11,4 +11,7 @@ python_server/include
 python_server/chat_main/target
 python_server/chat_main/executable
 python_server/bin
+main
+index.html
+tech_stuff.html
 tmp/*

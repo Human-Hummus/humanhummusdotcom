@@ -1,0 +1,32 @@
+{path_to_root=.}
+{title=Human Hummus}
+{!:main:
+	<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+	<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+	<zero-md src="README.md">
+		<template>
+			<style>
+				* \{
+					font-family: fira;
+					font-size: 1.25rem;
+					color: white;
+					list-style: url("assets/bullet.webp");
+				\}
+				code \{
+					font-family: fira;
+					color: green;
+					background: black;
+					display: table;
+				\}
+				a \{
+					color: cyan;
+				\}
+			</style>
+		</template>
+	</zero-md>
+	{link:drungy/drungy.html:
+		{center:
+			<img style="animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 3s" id="dim" src="drungy/drungy.webp" />
+		}
+	}
+}

@@ -47,6 +47,7 @@ def update_cl():
 print(sys.argv)
 if len(sys.argv)>1 and sys.argv[1] == "cl":
     update_cl()
+    subprocess.call(["make", "build"])
     exit(0)
 while True:
     os.chdir("/humanhummusdotcom")
@@ -54,6 +55,7 @@ while True:
     #subprocess.call(["git", "reset", "--hard"])
     subprocess.call(["git", "pull"])
     update_cl()
+    subprocess.call(["make", "build"])
     time.sleep((60**2) * 1) # 1 hours
 
 

@@ -1,0 +1,13 @@
+{center:{link:www.humanhummus.com:{image:100%:assets/logo.webp}}}
+{list:
+	>> {link:{var:path_to_root}/interactives/index.html:{image:100%:assets/gamez.svg}}
+	>> {link:{var:path_to_root}/functional software/index.html:{image:100%:assets/software.svg}}
+	>> {link:{var:path_to_root}/roadmap.html:{image:100%:assets/TODO.svg}}
+	>> {link:{var:path_to_root}/blog/index.html:{image:100%:assets/blog.webp}}
+	>> {link:{var:path_to_root}/tech_stuff.html:{image:100%:assets/tech_stuff.svg}}
+	>> {link:{var:path_to_root}/chat.html:{image:100%:assets/chat.webp}}
+}
+{center:{link:github.com/Human-Hummus/humanhummusdotcom/commits/main/: -- CHANGE LOG -- }}
+<ul id="change_log" style="color:var(--standard-text-color);font-size:50%;"></ul>
+<p class=normal-p id="quote_of_the_hour" ></p>
+<script src="{var:path_to_root}/changelog.js"></script>
