@@ -32,7 +32,7 @@ Software used on the server:
 -   [Neovim](https://neovim.io/)
 -   [Fish](https://fishshell.com/)
 -   [cron](https://en.wikipedia.org/wiki/Cron)
--   [Debian](https://www.debian.org/)
+-   [Arch Linux](https://archlinux.org/)
 -   [git](https://git-scm.com/)
 -   [btop](https://github.com/aristocratos/btop)
 -   [Python](https://www.python.org/)

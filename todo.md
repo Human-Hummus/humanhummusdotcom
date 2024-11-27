@@ -45,10 +45,19 @@
 -   To-Do list/calendar app?
 -   remove tech stuff
 -   integrate style.css
+-   outline menu
 -   Document compresser
 -   better postcard ai
--   Make humanhummus main page go to arch linux
 -   better music player
+-   convert to FDM
+    -   todo
+    -   games
+    -   yandelsim
+    -   functional software
+    -   mds
+    -   drungy speak
+    -   sorting
+    -   blog
 -   Scool Simulater website text
 -   drungy speak mouths
 -   colors
@@ -56,7 +65,6 @@
     -   software
     -   todo
     -   blog
-    -   techstuff
 -   jsynm
 - FDM
     -   Site page
@@ -68,6 +76,7 @@
     -   plaintext output
     -   bash script output
     -   code
+    -   tests
 -   MDS
     -   Tutorial
     -   General info
