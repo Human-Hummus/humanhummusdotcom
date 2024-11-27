@@ -1,0 +1,85 @@
+{list:
+	>> Furry Simulator
+	>> Poop Game {list:
+		>>clicker
+		>>farm
+		>>intro
+		>>info
+		>>shop
+		>>title
+		}
+	>> Drungalwort{list:
+		>> Driver's license
+		>> organize
+		>> Add heather's fanart
+		>> 3D model
+		}
+	>> Drungalworld
+	>> Admit One {list:
+		>> Add messages app
+		>> Skip tutorial pop-up
+		>> Settings menu
+		>> Save files
+		>> Time frame for classes
+		>> Main Language
+		>> better school website
+		>> devised admit one thing
+		>> make duckbot application perfect
+		>> Video app
+		>> Website text
+		}
+	>> todo list app
+	>> integrate style.css
+	>> outline menu
+	>> document compressor
+	>> better postcard AI
+	>> better music player
+	>> convert to FDM {list:
+		>> todo
+		>> games
+		>> YandelSim
+		>> Functional Software
+		>> MDS
+		>> Drungy Speak
+		>> Sorting
+		>> blog
+		>> drungy
+		}
+	>> resume page
+	>> school simulater website text
+	>> drungy speak mouths
+	>> colors{list:
+		>>games
+		>> software
+		>> todo
+		>> blog
+		}
+	>> jsynm
+	>> FDM {list:
+		>> site page
+		>> readme
+		>> markdown
+		>> h2
+		>> h3
+		>> table
+		>> plaintext output
+		>> bash script output
+		>> HTML list formatting
+		>> code
+		>> tests
+		>> colors
+		}
+	>> MDS {list:
+		>> tutorial
+		>> general info
+		>> document all features
+		>> improve installer
+		}
+	>> tech info update
+	>> startpage {list:
+		>> image backgrounds
+		>> export
+		>> clock
+		>> google calendar
+		}
+}

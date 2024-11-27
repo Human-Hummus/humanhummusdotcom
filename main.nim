@@ -26,6 +26,6 @@ proc get_var*(var_name:string):string =
 var path_to_root = get_var("path_to_root")
 if not (path_to_root[^1] == '/'): path_to_root.add "/"
 
-echo "{import:"&path_to_root&"header.tdm}"
+echo "{import:"&path_to_root&"header.fdm}"
 echo paramStr(1)
-echo "{import:"&path_to_root&"footer.tdm}"
+echo "{import:"&path_to_root&"footer.fdm}"

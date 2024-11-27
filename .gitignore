@@ -13,6 +13,6 @@ python_server/chat_main/executable
 python_server/bin
 main
 index.html
-tech_stuff.html
+roadmap.html
 changelog.tdm
 tmp/*
