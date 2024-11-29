@@ -1,10 +1,10 @@
-{center:{link:www.humanhummus.com:<image width="100%" src="assets/logo.webp">}}
+{center:{link:https://www.humanhummus.com|<image width="100%" src="{var:path_to_root}assets/logo.webp">}}
 {list:
-	>> {link:{var:path_to_root}interactives/index.html:<image width="100%" src="assets/gamez.svg">}
-	>> {link:{var:path_to_root}functional software/index.html:<image width="100%" src="assets/software.svg">}
-	>> {link:{var:path_to_root}roadmap.html:<image width="100%" src="assets/TODO.svg">}
-	>> {link:{var:path_to_root}blog/index.html:<image width="100%" src="assets/blog.webp">}
-	>> {link:{var:path_to_root}chat.html:<image width="100%" src="assets/chat.webp">}
+	>> {link:{var:path_to_root}interactives/index.html|<image width="100%" src="{var:path_to_root}assets/gamez.svg">}
+	>> {link:{var:path_to_root}functional software/index.html|<image width="100%" src="{var:path_to_root}assets/software.svg">}
+	>> {link:{var:path_to_root}roadmap.html|<image width="100%" src="{var:path_to_root}assets/TODO.svg">}
+	>> {link:{var:path_to_root}blog/index.html|<image width="100%" src="{var:path_to_root}assets/blog.webp">}
+	>> {link:{var:path_to_root}chat.html|<image width="100%" src="{var:path_to_root}assets/chat.webp">}
 }
-{center:{link:github.com/Human-Hummus/humanhummusdotcom/commits/main/: -- CHANGE LOG -- }}
+{center:{link:https://github.com/Human-Hummus/humanhummusdotcom/commits/main/| -- CHANGE LOG -- }}
 {import:changelog.tdm}

@@ -34,9 +34,9 @@
 	>> document compressor
 	>> better postcard AI
 	>> better music player
+	>> fix boykisser thing
 	>> convert to FDM {list:
-		>> todo
-		>> games
+		>> ASCII art
 		>> YandelSim
 		>> Functional Software
 		>> MDS
@@ -59,15 +59,16 @@
 		>> site page
 		>> readme
 		>> markdown
-		>> h2
-		>> h3
+		>> make failed processes obvious
+		>> superscript
+		>> subscript
 		>> table
-		>> plaintext output
 		>> bash script output
 		>> HTML list formatting
 		>> code
 		>> tests
-		>> colors
+		>> colors{list:>>fg>>bg}
+		>> raw
 		}
 	>> MDS {list:
 		>> tutorial
