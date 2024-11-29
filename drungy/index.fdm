@@ -1,0 +1,118 @@
+{path_to_root=../}
+{var:directory}
+{!:../main:
+{list:
+	{p:<input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" />
+				<center>
+					<button
+						class="cool-button"
+						id="cool-button"
+						onclick="
+							document.getElementById('changed_sound').cloneNode().play();
+							var drungy = document.getElementById('drungy_img');
+							console.log(drungy.src);
+							if (drungy.src.includes('sussy'))\{drungy.src='drungy.webp';\}
+
+							else\{drungy.src='sussy_drungy.webp';\}
+							"
+						style="position: absolute; margin-left: 20%"
+					>
+						<img src="Changed_Puro.webp" />
+					</button>
+				</center>
+				<input type="image" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position: absolute; scale: 50px" src="../assets/postcard.svg" />
+				<div  hidden="true" id="postcard_submit" style="background: white; width: 25rem; padding: 5px; position: absolute; padding: 1%; margin-top: 20%; margin-left: 20%">
+					<center style="color: red">Get a letter from drungy!</center>
+					<input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" />
+
+					<form hx-post="https://www.humanhummus.com/drungy_letter" enctype="multipart/form-data" style="color:black">
+						<img alt="Result loading..." class="htmx-indicator" width="150" src="../assets/loading.gif"/>
+						<input name="name" type="text" placeholder="Your Name" />
+						<div style="display: flex;vertical-align: center; vertical-align: top">
+							<p style="font-size: 24; vertical-align: top">Your Selfie:</p>
+							<input style="vertical-align: top; padding: 1rem" name="file" type="file" accept="image/*" />
+						</div>
+						<input type="submit" value="Ask Drungy to Send Postcard!" />
+					</form>
+				</div>
+				<center><img id="drungy_img" src="drungy.webp" /></center>
+				<a href="full_drungalwort.png">Full Res Original Drungalwort Image</a>
+				<center><h2 style="font-family: death; font-size: 300%">--- INFORMATION ---</h2></center>
+				<audio id="sound1" src="heheheha.ogg" preload="auto"></audio>
+				<audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio>
+				<style>
+					.faa \{
+						height: 400px;
+						width: 400px;
+						z-index: 1000;
+						overflow: hidden;
+						background-color: white;
+					\}
+					.thething \{
+						backdrop-filter: blur(10px);
+					\}
+				</style>
+				<div class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true">
+					<input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/x.svg" />
+					<h2 style="color: black"><a href="https://www.humanhummus.com">Drungy:</a></h2>
+					<img class="faa" src="fanart/mine.webp" />
+					<h2 style="color: black"><a href="https://youtube.com/@whatamidoing7?si=XG0RIzhGqL446sjK">Sam:</a></h2>
+					<img src="fanart/sam.webp" class="faa" />
+					<img src="fanart/sam_2.webp" class="faa" />
+				</div>
+				<div id="refs" class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true">
+					<input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" src="../assets/x.svg" />
+					<h2 style="color: black">References</h2>
+					<img class="faa" src="refs/front.webp" />
+					<img class="faa" src="refs/side.webp" />
+				</div>}
+				>>{p:{list:
+					>>
+						<button
+							class="cool-button"
+							onclick="
+								const files = [
+									'heheheha.mp3',
+						   			'teemo.mp3',
+						   			'clash-royale-laugh.mp3',
+						   			'cat_laugh.mp3',
+						   			'Michael Jackson Hee Hee.mp3',
+						   			'chipmonk_laf.mp3',
+						   			'baloon_boy.mp3',
+						   			'baby-laughing-meme.mp3',
+						   			'rehehehe.mp3',
+						   			'sitcom.mp3',
+						   			'anime.mp3',
+						   		]
+								var sound = document.getElementById('sound1')
+								sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)]
+								sound.cloneNode().play();
+							"
+						>
+							Pronouns: He/He(<img width="50" height="50" src="michael_jackson.webp" />)<small style="font-size: 50%"><b> (click me!)</b></small>
+						</button>
+					>>The Drungalwort has two horns
+					>>One of the horns is broken
+					>>He has insect wings
+					>>He's "swamp green" in color
+					>>He has blue eyes
+					>>He has two tails
+					>>He has a spiked collar connecting his neck to one of his tails
+					>>He's 5 feet tall
+					>><input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" />
+				}}
+				>><img src="personal info/passport.webp" style="width: 40%" />
+				<script>
+					if (!is_uwu) \{
+						document.getElementById("cool-button").hidden = true;
+					\}
+				</script>
+			</div>
+		</div>
+		<script>
+			if (!is_uwu) \{
+				document.getElementById("cool-button").hidden = true;
+			\}
+		</script>
+		}
+}

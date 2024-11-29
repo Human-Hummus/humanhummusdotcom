@@ -24,7 +24,7 @@
 			</style>
 		</template>
 	</zero-md>
-	{link:drungy/drungy.html:
+	{link:drungy/drungy.html|
 		{center:
 			<img style="animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 3s" id="dim" src="drungy/drungy.webp" />
 		}

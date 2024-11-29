@@ -1,122 +1,31 @@
+
+./drungy/
+directory:./drungy/|format:html|path_to_root:../|
+./drungy/../main
+directory:./drungy/|format:html|path_to_root:../|
 <!doctype html>
 
 <html>
 	<head>
-		<title>Human Hummus</title>
-		<link rel="icon" type="image/x-icon" href="../favicon.jpg" />
-		<meta name="htmx-config" content='{"selfRequestsOnly":false}'>
-		<script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+		<title>Human Hummus - </title>
+		<link rel="icon" type="image/x-icon" href="favicon.jpg" />
 	</head>
 	<body>
+		<script>let path_to_root="../";</script>
+		<script src="../main.js"></script>
 		<link rel="stylesheet" href="../style.css" />
-		<center><h1 class="standard-head" style="font-family: scary; font-size: 400%">My Fursona: The Drungalwort</h1></center>
-		<script>
-			var path_to_root = "../";
-		</script>
+		<div style="text-align: center;"><h1 id="cool_header" style="font-family: handdrawn; font-size: 600%"></h1></div>
+		<button id="boykb" style="width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="../assets/boykisser.webp" /></button>
 		<div class="main">
-			<div class="menu" id="menu"></div>
-			<div class="content">
-				<input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" />
-				<center>
-					<button
-						class="cool-button"
-						id="cool-button"
-						onclick="
-							document.getElementById('changed_sound').cloneNode().play();
-							var drungy = document.getElementById('drungy_img');
-							console.log(drungy.src);
-							if (drungy.src.includes('sussy')){drungy.src='drungy.webp';}
+			<div class=menu><div style="text-align: center;"><a href="https://www.humanhummus.com"><image width="100%" src="../assets/logo.webp"></a></div>
+<ul><li><a href="../interactives/index.html"><image width="100%" src="../assets/gamez.svg"></a></li><li><a href="../functional software/index.html"><image width="100%" src="../assets/software.svg"></a></li><li><a href="../roadmap.html"><image width="100%" src="../assets/TODO.svg"></a></li><li><a href="../blog/index.html"><image width="100%" src="../assets/blog.webp"></a></li><li><a href="../chat.html"><image width="100%" src="../assets/chat.webp"></a></li></ul>
+<div style="text-align: center;"><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/">-- CHANGE LOG --</a></div>
+<div style="border-color:black;border-width:2px;border-style:solid;font-size:12px;"><ul><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/0209353f16667fed8e9100f32a367eeb7c83cc44">12 hours ago - added games to FDM pages</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/e6e2ea1f4a0b232d52efda9ad2cc26ef60316a1a">2 days ago - Migrated roadmap to tdm</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/5d1d688c3a30b0e09ee8596fa859a59801ef8f38">2 days ago - updated readme, todo, and fixed changelog.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/a6242773568bb18c4edda76c0b79fd0b137b56d6">2 days ago - Fixed horrible error</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/7cd79fd3cbb55002fcd018662f0f68be2bdf5ded">2 days ago - Changed TDM to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/d51edaa14c3a363942fdb084f1a2489e78ee1110">2 days ago - Began transition to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/afa5ac363e37ec7b2547ae087b60d6364a7fba79">3 days ago - Added htmx loading</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/b27f249ef6123f15d68433ef1348018ce70ddc09">3 days ago - added to .gitignore</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/3a517de8ba6a7e1cee52bedbe444a692243d6762">3 days ago - Actually got HTMX started</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/0e82c38ab6d7027f0ba9225d98c9e8bbe0b18ed0">3 days ago - Still testing HTMX</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/d3de9102714981c986a651cdf29dd11e24452355">3 days ago - testing htmx</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/cb22387254989ce8557e1c28173a9531b35c430e">8 days ago - Updated Admit One, README, quotes.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/273f90dfa285cba5b9cb62d3fd53c14dedb9b345">12 days ago - Added poke arm and race to Admit One</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/b8a207c20bfe51b9fef323277d48da0843755689">3 weeks ago - Added campaign and re-compiled game.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/9912bd1ece3dccf44de901024fde40aa031ee22d">3 weeks ago - Added website for Admit One</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/4e0e8cdac77e648c13811d16f1b157da06d06f78">3 weeks ago - Added per-class transcripts to Admit One.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/a9548dbdc96480d77f49417a3a76a07277ddf6ef">3 weeks ago - New vocals and stuff for the Admit One game.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/e99b4dea29570ba22b3bde8fc0b1242fd63aa476">3 weeks ago - Added Drungalwort refsheet</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/08f29b33c3cb6cc326e7a7bb89d91f44beaa17a1">3 weeks ago - Added voice acting to admit one + new dialogue thing.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/a86ce58a355e8112b34d9f95ac04b575193b255a">4 weeks ago - Added Admit One .godot to .gitignore</a></li></ul></div><div style="border-color:black;border-width:2px;border-style:solid;font-size:12px;">Quote of the hour:<br>"Putin sounds like pootin like farting"<br>Song of the hour: Tobuscus - I Can Swing My Sword<br><audio src="../assets/music/I Can Swing My Sword.opus" controls/></div>
+</div>
+			<div class="content" style="flex-direction: row">
 
-							else{drungy.src='sussy_drungy.webp';}
-							"
-						style="position: absolute; margin-left: 20%"
-					>
-						<img src="Changed_Puro.webp" />
-					</button>
-				</center>
-				<input type="image" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position: absolute; scale: 50px" src="../assets/postcard.svg" />
-				<div  hidden="true" id="postcard_submit" style="background: white; width: 25rem; padding: 5px; position: absolute; padding: 1%; margin-top: 20%; margin-left: 20%">
-					<center style="color: red">Get a letter from drungy!</center>
-					<input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" />
 
-					<form hx-post="https://www.humanhummus.com/drungy_letter" enctype="multipart/form-data" style="color:black">
-						<img alt="Result loading..." class="htmx-indicator" width="150" src="../assets/loading.gif"/>
-						<input name="name" type="text" placeholder="Your Name" />
-						<div style="display: flex;vertical-align: center; vertical-align: top">
-							<p style="font-size: 24; vertical-align: top">Your Selfie:</p>
-							<input style="vertical-align: top; padding: 1rem" name="file" type="file" accept="image/*" />
-						</div>
-						<input type="submit" value="Ask Drungy to Send Postcard!" />
-					</form>
-				</div>
-				<center><img id="drungy_img" src="drungy.webp" /></center>
-				<a href="full_drungalwort.png">Full Res Original Drungalwort Image</a>
-				<center><h2 style="font-family: death; font-size: 300%">--- INFORMATION ---</h2></center>
-				<audio id="sound1" src="heheheha.ogg" preload="auto"></audio>
-				<audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio>
-				<style>
-					.faa {
-						height: 400px;
-						width: 400px;
-						z-index: 1000;
-						overflow: hidden;
-						background-color: white;
-					}
-					.thething {
-						backdrop-filter: blur(10px);
-					}
-				</style>
-				<div class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true">
-					<input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/x.svg" />
-					<h2 style="color: black"><a href="https://www.humanhummus.com">Drungy:</a></h2>
-					<img class="faa" src="fanart/mine.webp" />
-					<h2 style="color: black"><a href="https://youtube.com/@whatamidoing7?si=XG0RIzhGqL446sjK">Sam:</a></h2>
-					<img src="fanart/sam.webp" class="faa" />
-					<img src="fanart/sam_2.webp" class="faa" />
-				</div>
-				<div id="refs" class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true">
-					<input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" src="../assets/x.svg" />
-					<h2 style="color: black">References</h2>
-					<img class="faa" src="refs/front.webp" />
-					<img class="faa" src="refs/side.webp" />
-				</div>
-				<ul class="standard-list" style="font-size: 200%">
-					<li>
-						<button
-							class="cool-button"
-							onclick="
-								const files = [
-									'heheheha.mp3',
-						   			'teemo.mp3',
-						   			'clash-royale-laugh.mp3',
-						   			'cat_laugh.mp3',
-						   			'Michael Jackson Hee Hee.mp3',
-						   			'chipmonk_laf.mp3',
-						   			'baloon_boy.mp3',
-						   			'baby-laughing-meme.mp3',
-						   			'rehehehe.mp3',
-						   			'sitcom.mp3',
-						   			'anime.mp3',
-						   		]
-								var sound = document.getElementById('sound1')
-								sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)]
-								sound.cloneNode().play();
-							"
-						>
-							Pronouns: He/He(<img width="50" height="50" src="michael_jackson.webp" />)<small style="font-size: 50%"><b> (click me!)</b></small>
-						</button>
-					</li>
-					<li>The Drungalwort has two horns</li>
-					<li>One of the horns is broken</li>
-					<li>He has insect wings</li>
-					<li>He's "swamp green" in color</li>
-					<li>He has blue eyes</li>
-					<li>He has two tails</li>
-					<li>He has a spiked collar connecting his neck to one of his tails</li>
-					<li>He's 5 feet tall</li>
-					<li><input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" /></li>
-				</ul>
-				<img src="personal info/passport.webp" style="width: 40%" />
+<ul><li><p style="text-indent:50px;"><input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" /> <center> <button class="cool-button" id="cool-button" onclick=" document.getElementById('changed_sound').cloneNode().play(); var drungy = document.getElementById('drungy_img'); console.log(drungy.src); if (drungy.src.includes('sussy')){drungy.src='drungy.webp';} else{drungy.src='sussy_drungy.webp';} " style="position: absolute; margin-left: 20%" > <img src="Changed_Puro.webp" /> </button> </center> <input type="image" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" style="position: absolute; scale: 50px" src="../assets/postcard.svg" /> <div hidden="true" id="postcard_submit" style="background: white; width: 25rem; padding: 5px; position: absolute; padding: 1%; margin-top: 20%; margin-left: 20%"> <center style="color: red">Get a letter from drungy!</center> <input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" /> <form hx-post="https://www.humanhummus.com/drungy_letter" enctype="multipart/form-data" style="color:black"> <img alt="Result loading..." class="htmx-indicator" width="150" src="../assets/loading.gif"/> <input name="name" type="text" placeholder="Your Name" /> <div style="display: flex;vertical-align: center; vertical-align: top"> <p style="font-size: 24; vertical-align: top">Your Selfie:</p> <input style="vertical-align: top; padding: 1rem" name="file" type="file" accept="image/*" /> </div> <input type="submit" value="Ask Drungy to Send Postcard!" /> </form> </div> <center><img id="drungy_img" src="drungy.webp" /></center> <a href="full_drungalwort.png">Full Res Original Drungalwort Image</a> <center><h2 style="font-family: death; font-size: 300%">--- INFORMATION ---</h2></center> <audio id="sound1" src="heheheha.ogg" preload="auto"></audio> <audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio> <style> .faa { height: 400px; width: 400px; z-index: 1000; overflow: hidden; background-color: white; } .thething { backdrop-filter: blur(10px); } </style> <div class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true"> <input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/x.svg" /> <h2 style="color: black"><a href="https://www.humanhummus.com">Drungy:</a></h2> <img class="faa" src="fanart/mine.webp" /> <h2 style="color: black"><a href="https://youtube.com/@whatamidoing7?si=XG0RIzhGqL446sjK">Sam:</a></h2> <img src="fanart/sam.webp" class="faa" /> <img src="fanart/sam_2.webp" class="faa" /> </div> <div id="refs" class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true"> <input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" src="../assets/x.svg" /> <h2 style="color: black">References</h2> <img class="faa" src="refs/front.webp" /> <img class="faa" src="refs/side.webp" /> </div></p></li><li><p style="text-indent:50px;"><ul><li><button class="cool-button" onclick=" const files = [ 'heheheha.mp3', 'teemo.mp3', 'clash-royale-laugh.mp3', 'cat_laugh.mp3', 'Michael Jackson Hee Hee.mp3', 'chipmonk_laf.mp3', 'baloon_boy.mp3', 'baby-laughing-meme.mp3', 'rehehehe.mp3', 'sitcom.mp3', 'anime.mp3', ] var sound = document.getElementById('sound1') sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)] sound.cloneNode().play(); " > Pronouns: He/He(<img width="50" height="50" src="michael_jackson.webp" />)<small style="font-size: 50%"><b> (click me!)</b></small> </button></li><li>The Drungalwort has two horns</li><li>One of the horns is broken</li><li>He has insect wings</li><li>He's "swamp green" in color</li><li>He has blue eyes</li><li>He has two tails</li><li>He has a spiked collar connecting his neck to one of his tails</li><li>He's 5 feet tall</li><li><input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" /></li></ul></p></li><li><img src="personal info/passport.webp" style="width: 40%" />
 				<script>
 					if (!is_uwu) {
 						document.getElementById("cool-button").hidden = true;
@@ -124,12 +33,51 @@
 				</script>
 			</div>
 		</div>
-		<script src="../main.js"></script>
-		<script src="../changelog.js"></script>
 		<script>
 			if (!is_uwu) {
 				document.getElementById("cool-button").hidden = true;
 			}
+		</script></li></ul>
+
+		</div>
+		<script src="changelog.js"></script>
+		<h4 style="font-size: 500%; color: red; background: black; position: absolute; margin-top: auto; margin-left: auto; margin-right: auto; width: 1150px; left: 0; right: 0; top: 40%; font-family: death" id="uwu_prompt"></h4>
+		<audio id="meow_sound" src="../assets/meow.ogg"></audio>
+		<script>
+			document.getElementById("boykb").onclick = async () => {
+				var uwup = document.getElementById("uwu_prompt");
+
+				var ms = document.getElementById("meow_sound");
+				if (!is_uwu) {
+					enable_uwu();
+					is_uwu = true;
+					uwup.innerHTML = "UwU mode:   <b>ACTIVATED</b>";
+					ms.src = "../assets/meow.ogg";
+				} else {
+					uwup.innerHTML = "UwU mode: <b>DEACTIVATED</b>";
+					disable_uwu();
+					is_uwu = false;
+					ms.src = "../assets/im_really_mad.ogg";
+				}
+				ms.cloneNode().play();
+				uwup.hidden = false;
+				await new Promise((resolve) => setTimeout(resolve, 4000));
+				uwup.hidden = true;
+			};
+			bkimg = document.getElementById("bkimg");
+			var bk_state = false;
+			function boykisser_updater() {
+				if (is_uwu && !bk_state) {
+					bk_state = true;
+					bkimg.src = "../assets/boykisser_cool.webp";
+				}
+				if (!is_uwu && bk_state) {
+					bk_state = false;
+					bkimg.src = "../assets/boykisser.webp";
+				}
+			}
+			setInterval(boykisser_updater, 100);
 		</script>
 	</body>
 </html>
+

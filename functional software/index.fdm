@@ -1,0 +1,29 @@
+{path_to_root=../}
+{!:../main:
+	{import_raw:skibidi.fdm}
+	{table:
+		{single_space:
+			<div style="display: flex; width: 300px">
+				<a href="mds.html">
+					{center:<img style="width: 150px; height: 150px" src="MDS.webp" />}
+					{center:<p>Music Download Script</p>}
+				</a>
+			</div>|
+			<div style="display: flex; width: 300px">
+				<a href="../startpage/index.html">
+					{center:<img src="startpage.webp" style="width: 150px" />}
+					{center:<p>My Start Page</p>}
+				</a>
+			</div>
+		}
+		{single_space:
+			<div style="display: flex; width: 300px">
+				<a href="configs.html">
+					{center:<img src="settings.webp" style="width: 150px" />}
+					{center:<p>My Personal Config Files</p>}
+				</a>
+			</div>
+		}
+
+	}
+}

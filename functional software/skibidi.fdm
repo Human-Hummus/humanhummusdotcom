@@ -1,0 +1,11 @@
+
+	<audio id=skibiden_audio src="skibidi_biden/sb.mp3"></audio>
+	<input id=skibiden style="position:absolute;top:5%;right:5%;width:300px;" type=image src="skibidi_biden/in.webp">
+	<script>
+			document.getElementById('skibiden'.onclick = async () => {
+				document.getElementById('skibiden').src = 'skibidi_biden/out.webp';
+			document.getElementById('skibiden_audio').cloneNode().play();
+			await new Promise((resolve) => setTimeout(resolve, 6000));
+				document.getElementById('skibiden').src = 'skibidi_biden/in.webp';
+		}
+	</script>

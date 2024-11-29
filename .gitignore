@@ -15,6 +15,7 @@ python_server/bin
 main
 index.html
 roadmap.html
+drungy/drungy.html
 
 changelog.tdm
 tmp/*
