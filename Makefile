@@ -5,3 +5,4 @@ build:
 	fdm -i interactives/index.fdm -o interactives/index.html
 	fdm -i "functional software/index.fdm" -o "functional software/index.html"
 	fdm -i drungy/index.fdm -o drungy/drungy.html
+	fdm -i interactives/admit_one/index.fdm -o interactives/admit_one/index.html

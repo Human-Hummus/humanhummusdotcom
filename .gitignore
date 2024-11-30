@@ -1,7 +1,6 @@
 interactives/YandolSim/YandelSim_source/.godot/
 interactives/poop game/source/.godot/
 interactives/admit_one/.godot/
-interactives/index.html
 changelog.js
 python_server/drungy_selfie/target
 python_server/drungy_selfie/executable
@@ -16,6 +15,9 @@ main
 index.html
 roadmap.html
 drungy/drungy.html
+functional\ software/index.html
+interactives/index.html
+interactives/admit_one/index.html
 
 changelog.tdm
 tmp/*

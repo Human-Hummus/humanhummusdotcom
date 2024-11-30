@@ -5,7 +5,7 @@
 		{single_space:
 			<div style="display: flex; width: 300px">
 				<a href="mds.html">
-					{center:<img style="width: 150px; height: 150px" src="MDS.webp" />}
+					{center:<img style="width: 150px; height: 150px" src="MDS.svg" />}
 					{center:<p>Music Download Script</p>}
 				</a>
 			</div>|

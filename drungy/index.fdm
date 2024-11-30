@@ -1,5 +1,4 @@
 {path_to_root=../}
-{var:directory}
 {!:../main:
 {list:
 	{p:<input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" />
@@ -26,7 +25,7 @@
 					<input type="image" style="position: absolute; right: -50px; top: -50px; scale: 1px" onclick="document.getElementById('postcard_submit').hidden = !document.getElementById('postcard_submit').hidden;" src="../assets/x.svg" />
 
 					<form hx-post="https://www.humanhummus.com/drungy_letter" enctype="multipart/form-data" style="color:black">
-						<img alt="Result loading..." class="htmx-indicator" width="150" src="../assets/loading.gif"/>
+						<img alt="Result loading..." class="htmx-indicator" width="150" style="position:absolute;" src="../assets/loading.gif"/>
 						<input name="name" type="text" placeholder="Your Name" />
 						<div style="display: flex;vertical-align: center; vertical-align: top">
 							<p style="font-size: 24; vertical-align: top">Your Selfie:</p>
@@ -83,9 +82,9 @@
 						   			'rehehehe.mp3',
 						   			'sitcom.mp3',
 						   			'anime.mp3',
-						   		]
-								var sound = document.getElementById('sound1')
-								sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)]
+						   		];
+								var sound = document.getElementById('sound1');
+								sound.src = 'hehe/' + files[Math.floor(Math.random() * files.length)];
 								sound.cloneNode().play();
 							"
 						>
@@ -102,11 +101,6 @@
 					>><input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" />
 				}}
 				>><img src="personal info/passport.webp" style="width: 40%" />
-				<script>
-					if (!is_uwu) \{
-						document.getElementById("cool-button").hidden = true;
-					\}
-				</script>
 			</div>
 		</div>
 		<script>

@@ -46,3 +46,37 @@ function set_cookie(cname, cvalue, exdays = 100) {
 	let expires = "expires=" + d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+document.getElementById("boykb").onclick = async () => \{
+	var uwup = document.getElementById("uwu_prompt");
+
+	var ms = document.getElementById("meow_sound");
+	if (!is_uwu) {
+		enable_uwu();
+		is_uwu = true;
+		uwup.innerHTML = "UwU mode:   <b>ACTIVATED</b>";
+		ms.src = "{var:path_to_root}assets/meow.ogg";
+	} else {
+		uwup.innerHTML = "UwU mode: <b>DEACTIVATED</b>";
+		disable_uwu();
+		is_uwu = false;
+		ms.src = "{var:path_to_root}assets/im_really_mad.ogg";
+	}
+	ms.cloneNode().play();
+	uwup.hidden = false;
+	await new Promise((resolve) => setTimeout(resolve, 4000));
+	uwup.hidden = true;
+};
+bkimg = document.getElementById("bkimg");
+var bk_state = false;
+function boykisser_updater() {
+	if (is_uwu && !bk_state) {
+		bk_state = true;
+		bkimg.src = "{var:path_to_root}assets/boykisser_cool.webp";
+	}
+	if (!is_uwu && bk_state) {
+		bk_state = false;
+		bkimg.src = "{var:path_to_root}assets/boykisser.webp";
+	}
+}
+setInterval(boykisser_updater, 100);
