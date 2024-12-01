@@ -1,5 +1,5 @@
 {center:{link:https://www.humanhummus.com|<image width="100%" src="{var:path_to_root}assets/logo.webp" />}}
-{list:
+{list(class=main_menu_list;margin-left:0):
 	>> {link:{var:path_to_root}interactives/index.html|<image width="100%" src="{var:path_to_root}assets/gamez.svg" />}
 	>> {link:{var:path_to_root}functional software/index.html|<image width="100%" src="{var:path_to_root}assets/software.svg" />}
 	>> {link:{var:path_to_root}roadmap.html|<image width="100%" src="{var:path_to_root}assets/TODO.svg" />}

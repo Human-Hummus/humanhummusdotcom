@@ -53,6 +53,14 @@ a {
 /*	text-decoration-thickness: 2px;*/
 }
 
+.main_menu_list{
+	border-style:solid;
+	border-color:red;
+	border-width:0.5%;
+	background:linear-gradient(115deg, rgba(255,0,0,1) 0%, rgba(50,255,0,1) 50%, rgba(0,3,255,1) 100%);
+}
+
+
 h1,
 h2,
 h3,
