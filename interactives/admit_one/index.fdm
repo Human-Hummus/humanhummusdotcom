@@ -2,10 +2,10 @@
 {path_to_root=../../}
 {!:../../main:
 	{list(width=100%;height=100%):
-		>><embed style="width:100%; height:100%;" src="export/index.html"></embed>
+		>><embed style="width:100%; height:500px;" src="export/index.html"></embed>
 		>>{p:
 			Admit One is our first attempt at an actually decent game.
-			Is it good? Who knows! I think it's pretty sick.
+			Is it good? Who knows! I think it's pretty cool.
 		}
 	}
 }

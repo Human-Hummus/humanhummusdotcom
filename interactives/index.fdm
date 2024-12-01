@@ -1,4 +1,5 @@
 {path_to_root=../}
+{title=Games}
 {!:../main:
 	<button id="gedage" style="background: none; border: none; top: 2.5%; right: 2.5%; position: absolute"><img src="../assets/gedagedegedagedaoh.webp" style="width: 100px" /></button>
 	<audio id="ggg" src="../assets/gedagedegedagedaoh.ogg"></audio>
@@ -9,54 +10,47 @@
 			gg.cloneNode().play();
 		\};
 	</script>
-	<ul class="grid-list">
-		<li>
-			<a href="YandolSim/info.html">
-				<div class="grid-container" style="width: 300px">
-					<center><img style="width: 100px; height: 100px" src="YandolSim/index.png" /></center>
-					<center>Yandelere Simulator</center>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="/drungy_speak">
-				<div class="grid-container" style="width: 300px">
-					<center><img style="width: 150px; height: 150px" src="dspeak.svg" /></center>
-					<center>Drungy Speak</center>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="sorting/index.html">
-				<div class="grid-container" style="width: 300px">
+	<center style="width:100%;">{table:
+		{single_space:
+		<a class=no-underline href="YandolSim/info.html">
+			<div class="grid-container">
+				{center:<img style="width: 100px; height: 100px" src="YandolSim/index.png" />}
+				Yandelere Simulator
+			</div>
+		</a>|
+		<a  class=no-underline href="/drungy_speak">
+			<div class="grid-container">
+				{center:<img style="width: 100px; height: 100px" src="dspeak.svg" />}
+				Drungy Speak
+			</div>
+		</a>}
+		{single_space:
+			<a  class=no-underline href="sorting/index.html">
+				<div class="grid-container">
 					<center><img style="width: 100px; height: 100px" src="sorting/icon.webp" /></center>
 					<center>Sorting Algorithems, Visualized</center>
 				</div>
-			</a>
-		</li>
-		<li>
-			<a href="scool/compiled/index.html">
-				<div class="grid-container" style="width: 300px">
-					<center><img style="width: 150px; height: 150px" src="scool/Icon.webp" /></center>
+			</a>|
+			<a  class=no-underline href="scool/compiled/index.html">
+				<div class="grid-container">
+					<center><img style="width: 100px; height: 100px" src="scool/Icon.webp" /></center>
 					<center>Scool Simulater</center>
 				</div>
 			</a>
-		</li>
-		<li>
-			<a href="ascii_art/index.html">
-				<div class="grid-container" style="width: 300px">
-					<center><img style="width: 200px" src="ascii_art/logo.webp" /></center>
-					<center>Ascii Art Generator</center>
+		}
+		{single_space:
+			<a class=no-underline  href="ascii_art/index.html">
+				<div class="grid-container">
+					{center:<img style="width: 200px" src="ascii_art/logo.webp" />}
+					Ascii Art Generator
+				</div>
+			</a>|
+			<a class=no-underline  href="admit_one/index.html">
+				<div class="grid-container">
+					{center:<img style="width: 200px" src="admit_one/logo.webp" />}
+					Admit One
 				</div>
 			</a>
-		</li>
-		<li>
-			<a href="admit_one/index.html">
-				<div class="grid-container" style="width: 300px">
-					<center><img style="width: 200px" src="admit_one/logo.webp" /></center>
-					<center>Admit One</center>
-				</div>
-			</a>
-		</li>
-	</ul>
+		}
+	}</center>
 }

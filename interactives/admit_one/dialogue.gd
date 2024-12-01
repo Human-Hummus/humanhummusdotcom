@@ -24,12 +24,12 @@ func open():
 func _physics_process(delta: float) -> void:
 	if done == false:
 		text_said+=0.75
-		#var tmp
-		#if randi()%2 == 0:
-		#	tmp = get_node("Click").duplicate()
-		#else:tmp=get_node("Type").duplicate()
-		#get_node(".").add_child(tmp)
-		#tmp.play()
+		var tmp
+		if randi()%2 == 0:
+			tmp = get_node("Click").duplicate()
+		else:tmp=get_node("Type").duplicate()
+		get_node(".").add_child(tmp)
+		tmp.play()
 		
 		if text_said >= len(text_to_say):
 			done = true

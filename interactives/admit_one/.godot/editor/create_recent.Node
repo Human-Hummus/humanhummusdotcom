@@ -1,9 +1,14 @@
+AnimationPlayer
+ColorRect
+Button
+HBoxContainer
+VBoxContainer
+ItemList
+CenterContainer
 Label
 AnimatedSprite2D
 Control
-Button
 TabBar
 TextureButton
 Sprite2D
-CenterContainer
 Container

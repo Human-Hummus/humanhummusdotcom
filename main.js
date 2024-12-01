@@ -1,4 +1,3 @@
-var path_to_root;
 if (path_to_root == undefined) {
 	path_to_root = "./";
 }
@@ -47,7 +46,7 @@ function set_cookie(cname, cvalue, exdays = 100) {
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-document.getElementById("boykb").onclick = async () => \{
+document.getElementById("boykb").onclick = async () => {
 	var uwup = document.getElementById("uwu_prompt");
 
 	var ms = document.getElementById("meow_sound");

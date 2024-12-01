@@ -1,6 +1,6 @@
 		</div>
-		<script src="changelog.js"></script>
 		<h4 style="font-size: 500%; color: red; background: black; position: absolute; margin-top: auto; margin-left: auto; margin-right: auto; width: 1150px; left: 0; right: 0; top: 40%; font-family: death" id="uwu_prompt"></h4>
 		<audio id="meow_sound" src="{var:path_to_root}assets/meow.ogg"></audio>
+		<script src="{var:path_to_root}main.js"></script>
 	</body>
 </html>

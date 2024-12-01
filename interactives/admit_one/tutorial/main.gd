@@ -25,10 +25,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		if dia_thing == 2:
 			dia_thing+=1
-			dialogue.say_stuff("??? > .....")
+			dialogue.say_stuff("??? > ......")
 		elif dia_thing == 3:
 			dia_thing+=1
-			dialogue.say_stuff("??? > …….. *poke, poke*")
+			dialogue.say_stuff("??? > …… *poke, poke*")
 			get_node("AnimatedSprite2D").play()
 		elif dia_thing == 4:
 			dia_thing+=1
