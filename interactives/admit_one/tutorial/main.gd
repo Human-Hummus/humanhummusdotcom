@@ -127,6 +127,7 @@ func _process(delta: float) -> void:
 			dialogue.say_stuff("DuckBot > The type of students you accept will affect our stats, y’know, what we’re known for and our average gpa and all.")
 			p("typeostud")
 		elif dia_thing == 24:
+			get_node("computer/TabBar").current_tab = 2
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > Maybe you only accept a certain type and we specialize into like a STEM school or something,")
 			p("mayb")
@@ -144,14 +145,17 @@ func _process(delta: float) -> void:
 			p("speakingof")
 		elif dia_thing == 28:
 			dia_thing+=1
+			# SWITCH TO VIDEO APP
 			dialogue.say_stuff("DuckBot > Watch a video, go online shopping, play the Washington Times Crossword…")
 			p("watchvideo")
 		elif dia_thing == 29:
 			dia_thing+=1
+			get_node("computer/TabBar").current_tab = 1
 			dialogue.say_stuff("DuckBot > Or well I mean you can do background checks on the potential students, look out for shady social media posts and what not.")
 			p("whatnot")
 		elif dia_thing == 30:
 			dia_thing+=1
+			# SWITCH TO FUNDS MANAGEMENT
 			dialogue.say_stuff("DuckBot > In fact, since we can’t actually afford to pay you let alone multiple employees, so you also get to handle the funds!")
 			p("infact")
 		elif dia_thing == 31:
@@ -179,6 +183,7 @@ func _process(delta: float) -> void:
 			dialogue.say_stuff("DuckBot > Ok, one last thing. If you need help or something or just wanna chat, I took the effort to add your contacts onto the app, Entropy.")
 			p("onelastthing")
 		elif dia_thing == 37:
+			get_node("computer/TabBar").current_tab = 3
 			dia_thing+=1
 			dialogue.say_stuff("DuckBot > I saw lots of weird names and hearts but don’t worry! Did ya' a favor! Only included contacts that were just phone numbers!")
 			p("hearts")

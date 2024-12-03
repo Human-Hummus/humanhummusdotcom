@@ -1,6 +1,6 @@
-res://tutorial/main.tscn::db67acc7cb5669ae4628ffaa8eebb61a::1733080832::res://.godot/exported/133200997/export-d14054e9ccadc1a7759dee6682518b34-main.scn
-res://computer.tscn::caf07c94fb28b13efa2b96c3132ebcd0::1733080832::res://.godot/exported/133200997/export-f6ed7d02336657d65edc34b2f53542ee-computer.scn
-res://dialogue.tscn::e0751dd0fd09bbba6bb9759dde6e234b::1733081044::res://.godot/exported/133200997/export-425954b3f349d1446ba18bd1b40f1019-dialogue.scn
-res://intro.tscn::ccb48a25aa1f8ecebd43f00f789cf691::1733080832::res://.godot/exported/133200997/export-2dff5a063e418d17c9220ff5a6df7e7a-intro.scn
-res://campaign.tscn::b2c1a2a06a20ac88868a415ff6312b4c::1733080832::res://.godot/exported/133200997/export-c0d3ef18d51e3b41bb7648b6645c578e-campaign.scn
-res://tutorial/skip_tutorial.tscn::7c1e7d72e28c636a5a9129353fd582e4::1733080832::res://.godot/exported/133200997/export-556f036959890de50c512886f0d1b263-skip_tutorial.scn
+res://tutorial/main.tscn::f535cf344b83072290d41cbc2ac12c0b::1733193578::res://.godot/exported/133200997/export-d14054e9ccadc1a7759dee6682518b34-main.scn
+res://computer.tscn::dd6c68c11f1d6dbf382265810fc534e3::1733193356::res://.godot/exported/133200997/export-f6ed7d02336657d65edc34b2f53542ee-computer.scn
+res://dialogue.tscn::3780591881142f66a8183ed84c53ff16::1733193356::res://.godot/exported/133200997/export-425954b3f349d1446ba18bd1b40f1019-dialogue.scn
+res://intro.tscn::ccb48a25aa1f8ecebd43f00f789cf691::1733193356::res://.godot/exported/133200997/export-2dff5a063e418d17c9220ff5a6df7e7a-intro.scn
+res://campaign.tscn::fd257bda959a71f82db34174d76aed96::1733193378::res://.godot/exported/133200997/export-c0d3ef18d51e3b41bb7648b6645c578e-campaign.scn
+res://tutorial/skip_tutorial.tscn::94fc696603fe11a2558ab7fd6879e22b::1733193356::res://.godot/exported/133200997/export-556f036959890de50c512886f0d1b263-skip_tutorial.scn
