@@ -83,17 +83,26 @@ func _ready() -> void:
 func accept_button():
 	if can_press:accept()
 	get_node("Click").play()
+
 func reject_button():
 	if can_press:reject()
 	get_node("Click").play()
 func accept():
 	main.past_admissions.append(stats)
+	get_node("main/stamp").play()
+	get_node("main/stamp").frame = 0
+	get_node("main/Stamp").play()
 	can_press = false
 	accept_time = 0
 	get_node("main/Application").text = ""
+	get_node("Yes").play()
 	update_website()
 func reject():
 	get_node("main/Application").text = ""
+	get_node("main/stamp").play()
+	get_node("main/Stamp").play()
+	get_node("main/stamp").frame = 0
+	get_node("No").play()
 	can_press = false
 	reject_time = 0
 
