@@ -15,6 +15,7 @@ enum race{
 	AI,
 	HS
 }
+var dia_open = true
 var races = [race.WT, race.AS, race.ME, race.BL, race.AI, race.HS]
 
 const std_stuff = {

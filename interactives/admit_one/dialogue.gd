@@ -5,16 +5,19 @@ var done = true
 var text_said:float = 0
 
 func _ready() -> void:
+	
 	get_node("AnimatedSprite2D").play()
 	get_node("Close").pressed.connect(close)
 	get_node("Open").pressed.connect(open)	
 func close():
+	main.dia_open = false
 	get_node("Close2").play()
 	get_node("Open").show()
 	get_node("Close").hide()
 	get_node("AnimatedSprite2D").hide()
 	get_node("Label").hide()
 func open():
+	main.dia_open = true
 	get_node("Open2").play()
 	get_node("Open").hide()
 	get_node("Close").show()

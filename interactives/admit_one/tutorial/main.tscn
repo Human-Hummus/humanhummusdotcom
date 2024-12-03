@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://dsh8y2n2usfsy"]
+[gd_scene load_steps=133 format=3 uid="uid://dsh8y2n2usfsy"]
 
 [ext_resource type="Script" path="res://tutorial/main.gd" id="1_siqlp"]
 [ext_resource type="PackedScene" uid="uid://wqhjbmqy3yj0" path="res://dialogue.tscn" id="2_r6jmc"]
@@ -126,6 +126,7 @@
 [ext_resource type="Texture2D" uid="uid://crfkxi2i08mcu" path="res://assets/Arm/0118.webp" id="124_g5w6v"]
 [ext_resource type="Texture2D" uid="uid://htokg7qysve0" path="res://assets/Arm/0119.webp" id="125_0bvx7"]
 [ext_resource type="Texture2D" uid="uid://dwld12t4bt0k1" path="res://assets/Arm/0120.webp" id="126_fogy6"]
+[ext_resource type="AudioStream" uid="uid://dcc1bhbx2f8js" path="res://assets/stab.mp3" id="127_y7hfl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i6ryl"]
 animations = [{
@@ -495,6 +496,94 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="Animation" id="Animation_q8emf"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.933333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_iqob4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t1xse"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h72jv"]
+_data = {
+"RESET": SubResource("Animation_iqob4"),
+"close": SubResource("Animation_t1xse"),
+"open": SubResource("Animation_q8emf")
+}
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_siqlp")
 
@@ -530,3 +619,18 @@ text = "Skip Tutorial"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(482, 267)
 sprite_frames = SubResource("SpriteFrames_i6ryl")
+
+[node name="Stab" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(126, 575)
+stream = ExtResource("127_y7hfl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1174.0
+offset_bottom = 669.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../ColorRect")
+libraries = {
+"": SubResource("AnimationLibrary_h72jv")
+}

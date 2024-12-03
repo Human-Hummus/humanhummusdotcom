@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	get_node("AnimationPlayer").play("open")
 	pass
 
 

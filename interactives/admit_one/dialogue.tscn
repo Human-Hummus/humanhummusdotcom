@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://wqhjbmqy3yj0"]
+[gd_scene load_steps=34 format=3 uid="uid://wqhjbmqy3yj0"]
 
 [ext_resource type="Script" path="res://dialogue.gd" id="1_xl300"]
 [ext_resource type="AudioStream" uid="uid://bk2ckavrhynet" path="res://assets/type.ogg" id="2_eubuq"]
@@ -28,9 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://cdqdw21dym0nj" path="res://assets/scrn/0022.webp" id="23_tbjt6"]
 [ext_resource type="Texture2D" uid="uid://dg3pmskkig7je" path="res://assets/scrn/0023.webp" id="24_kqrnr"]
 [ext_resource type="Texture2D" uid="uid://blph85ygmkgff" path="res://assets/scrn/0024.webp" id="25_phbhn"]
+[ext_resource type="Texture2D" uid="uid://bboar52d8m353" path="res://assets/close.png" id="29_uceix"]
+[ext_resource type="AudioStream" uid="uid://c3yd3mncnl5r3" path="res://assets/open.mp3" id="31_5j5pj"]
 [ext_resource type="Texture2D" uid="uid://c4dimyhv1rjth" path="res://assets/Arrow.webp" id="104_jmd3g"]
 [ext_resource type="AudioStream" uid="uid://7xnrwrgnigs3" path="res://assets/close.ogg" id="105_65yan"]
-[ext_resource type="AudioStream" uid="uid://ddykjlr8vs5yl" path="res://assets/open.ogg" id="106_gwohr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uqu2w"]
 animations = [{
@@ -145,11 +146,11 @@ volume_db = -10.0
 
 [node name="Close" type="TextureButton" parent="."]
 offset_left = 410.0
-offset_top = 556.0
-offset_right = 664.0
-offset_bottom = 796.0
-scale = Vector2(0.305, 0.305)
-texture_normal = ExtResource("104_jmd3g")
+offset_top = 548.0
+offset_right = 1050.0
+offset_bottom = 1188.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("29_uceix")
 
 [node name="Open" type="TextureButton" parent="."]
 visible = false
@@ -168,5 +169,5 @@ volume_db = 8.577
 
 [node name="Open2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(217, 447)
-stream = ExtResource("106_gwohr")
+stream = ExtResource("31_5j5pj")
 volume_db = 8.041

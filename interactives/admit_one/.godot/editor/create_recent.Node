@@ -1,6 +1,6 @@
-AnimatedSprite2D
 AnimationPlayer
 ColorRect
+AnimatedSprite2D
 Button
 HBoxContainer
 VBoxContainer

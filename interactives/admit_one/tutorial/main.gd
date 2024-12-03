@@ -4,6 +4,7 @@ var dialogue
 var audio
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	get_node("AnimationPlayer").play("open")
 	dialogue = get_node("dialogue")
 	audio =get_node("Audio")
 	get_node("Button").pressed.connect(skip)
@@ -18,6 +19,12 @@ func p(audio_name):
 var sp = 0
 var dia_thing = 1
 func _process(delta: float) -> void:
+	if main.dia_open:
+		get_node("Susd").show()
+	else:
+		get_node("Susd").hide()
+	if get_node("AnimatedSprite2D").frame == 42 or get_node("AnimatedSprite2D").frame == 55 or get_node("AnimatedSprite2D").frame == 67 or get_node("AnimatedSprite2D").frame == 75:
+		get_node("Stab").play()
 	sp+=delta
 	if !(dia_thing>1) && sp>=1:
 		dialogue.say_stuff("??? > ...")
@@ -188,4 +195,7 @@ func _process(delta: float) -> void:
 			dialogue.say_stuff("DuckBot > yep I think I got all the important stuff! Aaa-nd you’re off! Go make us some money!")
 			p("last")
 		elif dia_thing == 41:
+			dia_thing+=1
+			get_node("AnimationPlayer").play("close")
+			await get_tree().create_timer(1).timeout
 			get_tree().change_scene_to_file("res://campaign.tscn")
