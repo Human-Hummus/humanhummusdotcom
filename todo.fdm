@@ -34,9 +34,8 @@
 	>> document compressor
 	>> better postcard AI
 	>> better music player
-	>> fix boykisser thing*
 	>> Convert software page to a table*
-	>> Fix git pull issue*
+	>>> Fix git pull issue*
 	>> convert to FDM {list:
 		>> ASCII art*
 		>> YandelSim*

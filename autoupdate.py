@@ -51,7 +51,7 @@ if len(sys.argv)>1 and sys.argv[1] == "cl":
 while True:
     os.chdir("/humanhummusdotcom")
     #subprocess.call(["git", "fetch", "--all"])
-    #subprocess.call(["git", "reset", "--hard"])
+    subprocess.call(["git", "reset", "--hard"])
     subprocess.call(["git", "pull"])
     update_cl()
     subprocess.call(["make", "build"])

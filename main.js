@@ -54,12 +54,12 @@ document.getElementById("boykb").onclick = async () => {
 		enable_uwu();
 		is_uwu = true;
 		uwup.innerHTML = "UwU mode:   <b>ACTIVATED</b>";
-		ms.src = "{var:path_to_root}assets/meow.ogg";
+		ms.src = path_to_root + "assets/meow.ogg";
 	} else {
 		uwup.innerHTML = "UwU mode: <b>DEACTIVATED</b>";
 		disable_uwu();
 		is_uwu = false;
-		ms.src = "{var:path_to_root}assets/im_really_mad.ogg";
+		ms.src = path_to_root + "assets/im_really_mad.ogg";
 	}
 	ms.cloneNode().play();
 	uwup.hidden = false;
@@ -71,11 +71,11 @@ var bk_state = false;
 function boykisser_updater() {
 	if (is_uwu && !bk_state) {
 		bk_state = true;
-		bkimg.src = "{var:path_to_root}assets/boykisser_cool.webp";
+		bkimg.src = path_to_root + "assets/boykisser_cool.webp";
 	}
 	if (!is_uwu && bk_state) {
 		bk_state = false;
-		bkimg.src = "{var:path_to_root}assets/boykisser.webp";
+		bkimg.src = path_to_root + "assets/boykisser.webp";
 	}
 }
 setInterval(boykisser_updater, 100);
