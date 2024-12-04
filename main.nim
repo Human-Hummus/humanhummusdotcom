@@ -24,6 +24,9 @@ proc get_var*(var_name:string):string =
   return ""
 
 var path_to_root = get_var("path_to_root")
+if path_to_root == "":
+  echo "PATH TO ROOT DOESN'T EXIST"
+  quit(1)
 if not (path_to_root[^1] == '/'): path_to_root.add "/"
 
 echo "{import:"&path_to_root&"header.fdm}"

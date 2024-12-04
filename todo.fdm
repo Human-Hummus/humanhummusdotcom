@@ -16,48 +16,39 @@
 		}
 	>> Drungalworld
 	>> Admit One {list:
-		>> Add messages app
+		>> Add messages app*
 		>> Settings menu
 		>> Save files
 		>> Time frame for classes
 		>> Main Language
 		>> better school website
 		>> make duckbot application perfect
-		>> Video app
-		>> New accept/reject sounds
+		>> Video app*
+		>> New accept/reject sounds*
 		>> fund management
 		>> Allow editing home page{list:
 			>> edit mode
 		}
 		>> Website text
 		}
-	>> todo list app
 	>> document compressor
 	>> better postcard AI
 	>> better music player
-	>> fix boykisser thing
-	>> Convert software page to a table
-	>> Fix boykisser
+	>> fix boykisser thing*
+	>> Convert software page to a table*
+	>> Fix git pull issue*
 	>> convert to FDM {list:
-		>> ASCII art
-		>> YandelSim
-		>> chat
+		>> ASCII art*
+		>> YandelSim*
+		>> chat*
 		>> MDS
-		>> Drungy Speak
-		>> Sorting
-		>> blog
+		>> Drungy Speak*
+		>> Sorting*
 		}
 	>> resume page
-	>> school simulater website text
+	>> school simulater website text*
 	>> drungy speak mouths
-	>> Make a cooler header
-	>> get favicon working
-	>> colors{list:
-		>>games
-		>> software
-		>> todo
-		>> blog
-		}
+	>> Make a cooler header*
 	>> jsynm
 	>> FDM {list:
 		>> site page
