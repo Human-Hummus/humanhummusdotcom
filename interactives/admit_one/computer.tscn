@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ddijx5vmtd023"]
+[gd_scene load_steps=35 format=3 uid="uid://ddijx5vmtd023"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
 [ext_resource type="Texture2D" uid="uid://cekv2moy2wru5" path="res://computer.webp" id="2_1xq1i"]
@@ -32,6 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://b8t6dtgfqtmbl" path="res://assets/stamp.mp3" id="29_usxjb"]
 [ext_resource type="AudioStream" uid="uid://od4hpt6hecp2" path="res://assets/no.mp3" id="31_0vda5"]
 [ext_resource type="AudioStream" uid="uid://bgt3sobe67ns6" path="res://assets/yes.mp3" id="32_5o67r"]
+[ext_resource type="AudioStream" uid="uid://baejf6j7ilk38" path="res://assets/page_turn.mp3" id="33_va1l2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnavl"]
 animations = [{
@@ -394,3 +395,7 @@ volume_db = 7.205
 [node name="Yes" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(187, 463)
 stream = ExtResource("32_5o67r")
+
+[node name="PageTurn" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(223, 434)
+stream = ExtResource("33_va1l2")

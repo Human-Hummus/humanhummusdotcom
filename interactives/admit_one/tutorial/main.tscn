@@ -1,10 +1,10 @@
-[gd_scene load_steps=133 format=3 uid="uid://dsh8y2n2usfsy"]
+[gd_scene load_steps=141 format=3 uid="uid://dsh8y2n2usfsy"]
 
 [ext_resource type="Script" path="res://tutorial/main.gd" id="1_siqlp"]
 [ext_resource type="PackedScene" uid="uid://wqhjbmqy3yj0" path="res://dialogue.tscn" id="2_r6jmc"]
 [ext_resource type="Texture2D" uid="uid://bniwhy6vblo2u" path="res://tutorial/bg1.webp" id="3_8to0m"]
-[ext_resource type="Texture2D" uid="uid://4gbxpopifcoc" path="res://susd.png" id="4_lxdcg"]
 [ext_resource type="PackedScene" uid="uid://ddijx5vmtd023" path="res://computer.tscn" id="4_xgckp"]
+[ext_resource type="Texture2D" uid="uid://b76bht2yfdgia" path="res://assets/susd.webp" id="5_ntbwl"]
 [ext_resource type="AudioStream" uid="uid://b2t6fdmjvmnrw" path="res://tutorial/Audio/sigh.mp3" id="6_qpy2s"]
 [ext_resource type="Texture2D" uid="uid://bpce03fhtxulw" path="res://assets/Arm/0001.webp" id="7_b154c"]
 [ext_resource type="Texture2D" uid="uid://b5w1na38oy60m" path="res://assets/Arm/0002.webp" id="8_qgyre"]
@@ -127,6 +127,13 @@
 [ext_resource type="Texture2D" uid="uid://htokg7qysve0" path="res://assets/Arm/0119.webp" id="125_0bvx7"]
 [ext_resource type="Texture2D" uid="uid://dwld12t4bt0k1" path="res://assets/Arm/0120.webp" id="126_fogy6"]
 [ext_resource type="AudioStream" uid="uid://dcc1bhbx2f8js" path="res://assets/stab.mp3" id="127_y7hfl"]
+[ext_resource type="Texture2D" uid="uid://dlbmt1l2ajav7" path="res://assets/mouths/a.png" id="128_8madp"]
+[ext_resource type="Texture2D" uid="uid://qlv84edpuyyw" path="res://assets/mouths/b.png" id="129_eee7k"]
+[ext_resource type="Texture2D" uid="uid://b00yiupq54b1w" path="res://assets/mouths/c.png" id="130_qmx1i"]
+[ext_resource type="Texture2D" uid="uid://ca4f8tstl7t0y" path="res://assets/mouths/d.png" id="131_ox37d"]
+[ext_resource type="Texture2D" uid="uid://cku6nn7vpletf" path="res://assets/mouths/e.png" id="132_2i2fd"]
+[ext_resource type="Texture2D" uid="uid://cib4ynpyfbeyy" path="res://assets/mouths/f.png" id="133_bulbd"]
+[ext_resource type="Texture2D" uid="uid://p8ed1jl0qdwd" path="res://assets/mouths/g.png" id="134_vd2qo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i6ryl"]
 animations = [{
@@ -496,33 +503,6 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="Animation" id="Animation_q8emf"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.933333, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, true, false]
-}
-
 [sub_resource type="Animation" id="Animation_iqob4"]
 length = 0.001
 tracks/0/type = "value"
@@ -577,12 +557,68 @@ tracks/1/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_q8emf"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.933333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h72jv"]
 _data = {
 "RESET": SubResource("Animation_iqob4"),
 "close": SubResource("Animation_t1xse"),
 "open": SubResource("Animation_q8emf")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dyxv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("128_8madp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_eee7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_qmx1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_ox37d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_2i2fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_bulbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_vd2qo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_siqlp")
@@ -601,10 +637,10 @@ position = Vector2(370, 224)
 scale = Vector2(0.687141, 0.657938)
 
 [node name="Susd" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.415686)
-position = Vector2(1096, 545)
+visible = false
+position = Vector2(1097, 598)
 scale = Vector2(0.195014, 0.171)
-texture = ExtResource("4_lxdcg")
+texture = ExtResource("5_ntbwl")
 flip_h = true
 
 [node name="Audio" type="AudioStreamPlayer2D" parent="."]
@@ -634,3 +670,11 @@ root_node = NodePath("../ColorRect")
 libraries = {
 "": SubResource("AnimationLibrary_h72jv")
 }
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1100, 624)
+scale = Vector2(0.128906, 0.117188)
+sprite_frames = SubResource("SpriteFrames_dyxv5")
+frame = 2
+frame_progress = 0.0822725

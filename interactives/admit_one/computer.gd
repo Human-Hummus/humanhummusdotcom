@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var ac = false
 func gpa_of(list):
 	var toret = 2.0
 	for i in list:
@@ -93,10 +93,10 @@ func accept():
 	get_node("main/stamp").frame = 0
 	get_node("main/Stamp").play()
 	can_press = false
-	accept_time = 0
 	get_node("main/Application").text = ""
 	get_node("Yes").play()
 	update_website()
+	ac = true
 func reject():
 	get_node("main/Application").text = ""
 	get_node("main/stamp").play()
@@ -104,15 +104,22 @@ func reject():
 	get_node("main/stamp").frame = 0
 	get_node("No").play()
 	can_press = false
-	reject_time = 0
+	ac = false
 
 
 var reject_time = 5
 var accept_time = 5
+var prev_tab = 0
 
 func _physics_process(delta: float) -> void:
+	if get_node("main/stamp").frame == 11:
+		if ac:accept_time=0
+		else:reject_time=0
 	get_node("main/Check").modulate.a = 1- (accept_time/2)
 	get_node("main/X").modulate.a = 1- (reject_time/2)
+	if get_node("TabBar").current_tab != prev_tab:
+		prev_tab=get_node("TabBar").current_tab
+		get_node("PageTurn").play()
 	reject_time+=delta
 	accept_time+=delta
 	if get_node("TabBar").current_tab == 0:

@@ -18,8 +18,14 @@ func p(audio_name):
 	
 var sp = 0
 var dia_thing = 1
+var tt = 0
+var lt = 0
 func _process(delta: float) -> void:
-	if main.dia_open:
+	tt+=delta
+	if tt-lt > 0.1:
+		lt = tt
+		get_node("AnimatedSprite2D2").frame = randi_range(0,6)
+	if main.dia_open && dia_thing > 4:
 		get_node("Susd").show()
 	else:
 		get_node("Susd").hide()
@@ -40,10 +46,12 @@ func _process(delta: float) -> void:
 		elif dia_thing == 4:
 			dia_thing+=1
 			get_node("AnimatedSprite2D").pause()
+			get_node("AnimatedSprite2D").frame = 0
 			dialogue.say_stuff("??? > *sigh*")
 			p("sigh")
 		elif dia_thing == 5:
 			dia_thing+=1
+			get_node("AnimatedSprite2D2").show()
 			get_node("AnimatedSprite2D").frame = 0
 			dialogue.say_stuff("??? > UP AND AT ‘EM, YA WAFFLE SNIFFER!!!")
 			get_node("Bg1").show()
