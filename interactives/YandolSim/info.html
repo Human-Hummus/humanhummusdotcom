@@ -1,45 +1,47 @@
+
+
 <!doctype html>
 
 <html>
 	<head>
-		<title>Human Hummus</title>
+		<title>Human Hummus - Yandelere Simulator</title>
 		<link rel="icon" type="image/x-icon" href="../../favicon.jpg" />
 	</head>
 	<body>
+		<script>let path_to_root="../../";</script>
+		<script src="https://unpkg.com/htmx.org@2.0.3"></script>
 		<link rel="stylesheet" href="../../style.css" />
-		<center><h1 class="standard-head">Yandelere Simulator!</h1></center>
-		<script>
-			var path_to_root = "../../";
-		</script>
+		<div style="text-align: center;"><h1 class="cool-header" style="font-size: 600%">Yandelere Simulator</h1></div>
+		<button id="boykb" style="width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="../../assets/boykisser.webp" /></button>
 		<div class="main">
-			<div class="menu" id="menu"></div>
-			<div class="content">
-				<div style="position: absolute; top:50px;right:50px">
+			<div style="" class="menu" ><div style="text-align: center;"><a href="https://www.humanhummus.com"><image width="100%" src="../../assets/logo.webp" /></a></div>
+<ul style="margin-left:0;" class="main_menu_list" ><li><a href="../../interactives/index.html"><image width="100%" src="../../assets/gamez.svg" /></a></li><li><a href="../../functional software/index.html"><image width="100%" src="../../assets/software.svg" /></a></li><li><a href="../../roadmap.html"><image width="100%" src="../../assets/TODO.svg" /></a></li><li><a href="../../blog/index.html"><image width="100%" src="../../assets/blog.webp" /></a></li><li><a href="../../chat.html"><image width="100%" src="../../assets/chat.webp" /></a></li></ul>
+<div style="text-align: center;"><a href="https://github.com/Human-Hummus/humanhummusdotcom/commits/main/">-- CHANGE LOG --</a></div>
+<div style="border-color:black;border-width:2px;border-style:solid;font-size:12px;"><ul style=""><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/6b14678411e695d4c9c7cfd18e5c0348c4a8fd9a">33 hours ago - Fixed boykisser thing and fixed git</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/c9e6fcc7f44213fb36c9ce5965b9d9a25ab297a8">2 days ago - Added drungalwort story and made the blog section use FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/787a44f1af4bdc45c23d34667d063826ab7f5e37">3 days ago - Added tab switching and compiled Admit One.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/ed319b47aa714bd1a4f79ef88f77b8dc524e1172">3 days ago - Added some general polish</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/181aa57253efa42106b7ea1e6a58e732cf7ce9a2">3 days ago - Added accept/reject sounds for Admit One. Also added a stamp to the same.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/b57aed7325c118bcc8b0e0ab994a6afd82b9299d">4 days ago - Added some list formatting and fixed skibidi biden</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/5fef0ae22e34b5f625d1278168d65a4b2a0664b5">4 days ago - Updated Admit One</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/8adbe70438305ad7edde48d71dbf2ab97392325b">5 days ago - Added admit one to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/a67ecc3f525ec5f390e0d962b77f21c79bd19024">7 days ago - added drungy page to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/0209353f16667fed8e9100f32a367eeb7c83cc44">7 days ago - added games to FDM pages</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/e6e2ea1f4a0b232d52efda9ad2cc26ef60316a1a">8 days ago - Migrated roadmap to tdm</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/5d1d688c3a30b0e09ee8596fa859a59801ef8f38">8 days ago - updated readme, todo, and fixed changelog.</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/a6242773568bb18c4edda76c0b79fd0b137b56d6">9 days ago - Fixed horrible error</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/7cd79fd3cbb55002fcd018662f0f68be2bdf5ded">9 days ago - Changed TDM to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/d51edaa14c3a363942fdb084f1a2489e78ee1110">9 days ago - Began transition to FDM</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/afa5ac363e37ec7b2547ae087b60d6364a7fba79">10 days ago - Added htmx loading</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/b27f249ef6123f15d68433ef1348018ce70ddc09">10 days ago - added to .gitignore</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/3a517de8ba6a7e1cee52bedbe444a692243d6762">10 days ago - Actually got HTMX started</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/0e82c38ab6d7027f0ba9225d98c9e8bbe0b18ed0">10 days ago - Still testing HTMX</a></li><li><a style="color:cyan;text-decoration-thickness:0.1px;font-size:125%;" href="https://github.com/Human-Hummus/humanhummusdotcom/commit/d3de9102714981c986a651cdf29dd11e24452355">10 days ago - testing htmx</a></li></ul></div><div style="border-color:black;border-width:2px;border-style:solid;font-size:12px;">Quote of the hour:<br>"I hate complete senteces"<br>Song of the hour: Nyan Cat<br><audio src="../../assets/music/Nyan Cat.opus" controls/></div>
+</div>
+			<div class="content" style="flex-direction: column width=100%;">
+
+
+		<div style="position: absolute; top:50px;right:50px">
 					<button class="cool-button" onclick="document.getElementById('ring').cloneNode().play();"><img style="height: 400px" src="phone.webp" /></button>
 				</div>
-				<center>
-					<a href="index.html"><img style="scale: 100%; image-rendering: pixelated" src="play_button.webp" /></a>
-				</center>
+				<div style="text-align: center;"><a href="index.html"><img style="scale: 100%; image-rendering: pixelated" src="play_button.webp" /></a></div>
 				<audio src="ringtone.mp3" id="ring"></audio>
-				<br /><br />
 				<h2 style="font-size: 300%">Basic Information</h2>
 				<p style="font-size: 150%">
 					Yandelere Simulator is a game about Cowombia High School. It should be noted, by the way, that any resemblance to real life characters is mostly entirely coincidental. <br /><br /><big><b>PLEASE NOTE</b>: it often takes ~1-2 <b>MINUTES</b> to load the game.</big> <br /><br /><big><b>Playing on mobile</b></big
 					>: You can play on mobile if, in the title screen, you enable "mobile mode". Only Android devices can run this; <a href="https://developer.apple.com/support/alternative-browser-engines/">Apple requires <em>all browsers on IOS</em> effectively are Safari, reskined (in the US, anyways)</a> <small>man I hate Apple</small>. This matters because of <a href="https://httptoolkit.com/blog/safari-is-killing-the-web/">Safari's terrible standards compliance</a>; so this game can't run on IOS, sorry.
 				</p>
 				<img src="vicdraweria.webp" style="width:400px;">
-				<br />
-				<br />
-				<h1 id="standard-head" style="font-size: 200%; color: red; position: relative; width: 200px">Other stuff!</h1>
-				<ul id="standard-list">
-					<li><a href="https://hhummus.itch.io/yandelere-simulator">Play Yandelere Simulator on Itch.io (the most up-to-date version is on my website)</a></li>
-					<li><a href="https://sites.google.com/whitesalmonschools.org/yandelere-simulator/home">More information</a></li>
-					<li><a href="https://discord.gg/nmwj9RshPM">Discord Server</a></li>
-					<li><a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main/interactives/YandolSim/YandelSim_source">Yandelere Simulator Source Code (Godot 4)</a></li>
-				</ul>
+				<h1>Other stuff!</h1>
+				<ul style=""><li><a href="https://hhummus.itch.io/yandelere-simulator">Play Yandelere Simulator on Itch.io (the most up-to-date version is on my website)</a></li><li><a href="https://sites.google.com/whitesalmonschools.org/yandelere-simulator/home">More information</a></li><li><a href="https://discord.gg/nmwj9RshPM">Discord Server</a></li><li><a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main/interactives/YandolSim/YandelSim_source">Yandelere Simulator Source Code (Godot 4)</a></li></ul>
 			</div>
 		</div>
+
+		</div>
+		<h4 style="font-size: 500%; color: red; background: black; position: absolute; margin-top: auto; margin-left: auto; margin-right: auto; width: 1150px; left: 0; right: 0; top: 40%; font-family: death" id="uwu_prompt"></h4>
+		<audio id="meow_sound" src="../../assets/meow.ogg"></audio>
 		<script src="../../main.js"></script>
-		<script src="../../changelog.js"></script>
 	</body>
 </html>
+
