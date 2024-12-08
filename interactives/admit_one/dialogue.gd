@@ -5,7 +5,6 @@ var done = true
 var text_said:float = 0
 
 func _ready() -> void:
-	
 	get_node("AnimatedSprite2D").play()
 	get_node("Close").pressed.connect(close)
 	get_node("Open").pressed.connect(open)	

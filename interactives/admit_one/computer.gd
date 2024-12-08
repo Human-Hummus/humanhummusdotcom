@@ -8,8 +8,6 @@ func gpa_of(list):
 		toret/=2
 	return toret
 
-
-
 func update_website():
 	var admissions = main.past_admissions
 	get_node("Website/Students").text = "Student population: " + str(len(admissions))
@@ -134,6 +132,10 @@ func _physics_process(delta: float) -> void:
 		get_node("Website").show()
 	else:
 		get_node("Website").hide()
+	if get_node("TabBar").current_tab == 5:
+		get_node("budget").show()
+	else:
+		get_node("budget").hide()
 
 
 func new_application(stuff):

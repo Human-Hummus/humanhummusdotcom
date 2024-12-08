@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ddijx5vmtd023"]
+[gd_scene load_steps=36 format=3 uid="uid://ddijx5vmtd023"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
 [ext_resource type="Texture2D" uid="uid://cekv2moy2wru5" path="res://computer.webp" id="2_1xq1i"]
@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://od4hpt6hecp2" path="res://assets/no.mp3" id="31_0vda5"]
 [ext_resource type="AudioStream" uid="uid://bgt3sobe67ns6" path="res://assets/yes.mp3" id="32_5o67r"]
 [ext_resource type="AudioStream" uid="uid://baejf6j7ilk38" path="res://assets/page_turn.mp3" id="33_va1l2"]
+[ext_resource type="PackedScene" uid="uid://brh184e303vra" path="res://budget.tscn" id="34_bvy0y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnavl"]
 animations = [{
@@ -128,12 +129,13 @@ offset_top = 102.0
 offset_right = 1064.0
 offset_bottom = 126.0
 current_tab = 0
-tab_count = 5
+tab_count = 6
 tab_0/title = "Main"
 tab_1/title = "Transcript"
 tab_2/title = "School Website"
 tab_3/title = "Entropy"
 tab_4/title = "beYouTuful"
+tab_5/title = "Budget"
 
 [node name="main" type="Control" parent="."]
 layout_mode = 3
@@ -399,3 +401,11 @@ stream = ExtResource("32_5o67r")
 [node name="PageTurn" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(223, 434)
 stream = ExtResource("33_va1l2")
+
+[node name="budget" parent="." instance=ExtResource("34_bvy0y")]
+visible = false
+offset_left = 393.0
+offset_top = 135.0
+offset_right = 393.0
+offset_bottom = 135.0
+scale = Vector2(0.625, 0.625)

@@ -27,8 +27,10 @@ func _process(delta: float) -> void:
 		get_node("AnimatedSprite2D2").frame = randi_range(0,6)
 	if main.dia_open && dia_thing > 4:
 		get_node("Susd").show()
+		get_node("AnimatedSprite2D2").show()
 	else:
 		get_node("Susd").hide()
+		get_node("AnimatedSprite2D2").hide()
 	if get_node("AnimatedSprite2D").frame == 42 or get_node("AnimatedSprite2D").frame == 55 or get_node("AnimatedSprite2D").frame == 67 or get_node("AnimatedSprite2D").frame == 75:
 		get_node("Stab").play()
 	sp+=delta

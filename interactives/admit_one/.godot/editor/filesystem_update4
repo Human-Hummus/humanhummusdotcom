@@ -1,7 +1,12 @@
-res://computer.tscn
-res://computer.gd
 res://intro.tscn
+res://computer.gd
+res://computer.tscn
 res://campaign.tscn
 res://tutorial/skip_tutorial.tscn
 res://dialogue.tscn
 res://tutorial/main.tscn
+res://dialogue.gd
+res://tutorial/main.gd
+res://budget.tscn
+res://main.gd
+res://budget.gd

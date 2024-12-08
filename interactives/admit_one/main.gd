@@ -1,5 +1,6 @@
 extends Node
 
+var total_budget = 10000
 func race_text(r):
 	if r == race.WT:return "Caucasian (White)"
 	if r == race.AS:return "Asian/Pacific Islander"
@@ -29,6 +30,22 @@ const std_stuff = {
 	"gender": "female",
 }
 var genders = "male female intersex non-binary".split(" ")
+
+var budget = {
+	"shopping":0,
+	"academics":0,
+	"athletics":0,
+	"professors":0,
+	"dorms":0,
+	"campus":0,
+	"food":0,
+	"safety":0,
+}
+func real_budget() -> int:
+	var rb = total_budget
+	for i in "shopping academics athletics professors dorms campus food safety".split(" "):
+		rb-=budget[i]
+	return rb
 
 var subject_pool = [
 	"Math",
