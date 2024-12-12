@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ddijx5vmtd023"]
+[gd_scene load_steps=37 format=3 uid="uid://ddijx5vmtd023"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
 [ext_resource type="Texture2D" uid="uid://cekv2moy2wru5" path="res://computer.webp" id="2_1xq1i"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://bgt3sobe67ns6" path="res://assets/yes.mp3" id="32_5o67r"]
 [ext_resource type="AudioStream" uid="uid://baejf6j7ilk38" path="res://assets/page_turn.mp3" id="33_va1l2"]
 [ext_resource type="PackedScene" uid="uid://brh184e303vra" path="res://budget.tscn" id="34_bvy0y"]
+[ext_resource type="PackedScene" uid="uid://d2et6rpg0vchs" path="res://entropy.tscn" id="35_6ig08"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vnavl"]
 animations = [{
@@ -405,7 +406,14 @@ stream = ExtResource("33_va1l2")
 [node name="budget" parent="." instance=ExtResource("34_bvy0y")]
 visible = false
 offset_left = 393.0
-offset_top = 135.0
+offset_top = 136.0
 offset_right = 393.0
-offset_bottom = 135.0
-scale = Vector2(0.625, 0.625)
+offset_bottom = 136.0
+scale = Vector2(0.58, 0.58)
+
+[node name="entropy" parent="." instance=ExtResource("35_6ig08")]
+offset_left = 399.0
+offset_top = 147.0
+offset_right = 399.0
+offset_bottom = 147.0
+scale = Vector2(0.57, 0.57)

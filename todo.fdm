@@ -49,10 +49,16 @@
 		>> make failed processes obvious
 		>> superscript
 		>> subscript
-		>> table
 		>> bash script output
-		>> HTML list formatting
-		>> code
+		>> add
+		>> subtract
+		>> multiply
+		>> divide
+		>> round
+		>> if
+		>> equal
+		>> notequal
+		>> not
 		>> tests
 		>> colors{list:>>fg>>bg}
 		>> raw
@@ -63,11 +69,9 @@
 		>> document all features
 		>> improve installer
 		}
+	>> nimfetch {list:
+		website page
+		documentation
+	}
 	>> tech info update
-	>> startpage {list:
-		>> image backgrounds
-		>> export
-		>> clock
-		>> google calendar
-		}
 }

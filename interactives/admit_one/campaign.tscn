@@ -95,7 +95,8 @@ _data = {
 script = ExtResource("1_cebdq")
 
 [node name="computer" parent="." instance=ExtResource("2_1ixq2")]
-position = Vector2(-11, -1)
+position = Vector2(-3, -3)
+scale = Vector2(1.005, 1.005)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1174.0

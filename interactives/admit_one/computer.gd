@@ -132,6 +132,10 @@ func _physics_process(delta: float) -> void:
 		get_node("Website").show()
 	else:
 		get_node("Website").hide()
+	if get_node("TabBar").current_tab == 3:
+		get_node("entropy").show()
+	else:
+		get_node("entropy").hide()
 	if get_node("TabBar").current_tab == 5:
 		get_node("budget").show()
 	else:

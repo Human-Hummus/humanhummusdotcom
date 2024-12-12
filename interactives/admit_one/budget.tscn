@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://brh184e303vra"]
+[gd_scene load_steps=6 format=3 uid="uid://brh184e303vra"]
 
 [ext_resource type="Script" path="res://budget.gd" id="1_mf8xx"]
+[ext_resource type="Theme" uid="uid://ebm2coixkogl" path="res://budget.tres" id="2_w3q5c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0xn2"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.884347, 0, 0.204895, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vqedr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rxadp"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(6.73831e-07, 0.662876, 0.830053, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,88 +32,68 @@ layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 646.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+[node name="HBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s0xn2")
 
-[node name="shopping" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/HBoxContainer/PanelContainer"]
+material = SubResource("CanvasItemMaterial_vqedr")
 layout_mode = 2
-text = "Personal Shopping
-"
+columns = 3
 
-[node name="academics" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="academics" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Academics"
 
-[node name="athletics" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="athletics" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Athletics"
 
-[node name="professors" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="professors" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Professors"
 
-[node name="dorms" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="campus" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
+text = "Student Life"
+
+[node name="dorms" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Dorms
 "
 
-[node name="campus" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="food" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
-text = "Student Life"
-
-[node name="food" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Cafeteria"
 
-[node name="safety" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
+[node name="safety" type="Button" parent="CenterContainer/HBoxContainer/PanelContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
 text = "Safety"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
 layout_mode = 2
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-text = "Total Budget:"
-
-[node name="tbudget" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-text = "$0"
-
-[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 21
-text = "Budget Management for the Department"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
-text = "Department:"
+theme = ExtResource("2_w3q5c")
+text = "Department: "
 
 [node name="department" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme = ExtResource("2_w3q5c")
 theme_override_constants/outline_size = 5
 text = "asdasd"
 
@@ -106,17 +102,36 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
-text = "Budget:"
+theme = ExtResource("2_w3q5c")
+text = "Budget: "
 
 [node name="budget" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 7
+theme = ExtResource("2_w3q5c")
 text = "$0"
 
 [node name="slider" type="HSlider" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
+theme = ExtResource("2_w3q5c")
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rxadp")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer2/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer2/PanelContainer/HBoxContainer3"]
+layout_mode = 2
+theme = ExtResource("2_w3q5c")
+text = "Total Budget:"
+
+[node name="tbudget" type="Label" parent="CenterContainer2/PanelContainer/HBoxContainer3"]
+layout_mode = 2
+theme = ExtResource("2_w3q5c")
+text = "$0"
