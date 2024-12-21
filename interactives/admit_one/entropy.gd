@@ -40,4 +40,4 @@ func _process(delta: float) -> void:
 	if prev_s != ob.selected:
 		prev_s = ob.selected
 		update()
-	print(ob.selected)
+	#print(ob.selected)

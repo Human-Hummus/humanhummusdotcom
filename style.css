@@ -29,13 +29,12 @@
 }
 @font-face {
 	font-family: readable;
-	src: url("assets/TiresiasInfofont_bold.ttf");
+	src: url("assets/LexendDeca-Regular.ttf");
 }
 @font-face {
 	font-family: fira;
 	src: url("assets/FiraCode-Regular.ttf");
 }
-
 body {
 	image-rendering: pixelated;
 	background: var(--bg-color);
@@ -104,6 +103,7 @@ li {
 	border-radius: 3px;
 	color: var(--content-text-color);
 	flex-direction: column;
+	font-family:readable;
 }
 
 .fancy-header {

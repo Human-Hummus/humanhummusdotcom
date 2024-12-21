@@ -1,3 +1,6 @@
+TextureButton
+AnimatedSprite2D
+Control
 Label
 VBoxContainer
 ColorRect
@@ -9,6 +12,4 @@ GridContainer
 CenterContainer
 HSlider
 Button
-AnimatedSprite2D
 AnimationPlayer
-ItemList

@@ -53,7 +53,7 @@ func update_website():
 			if cl.subject == "History":history.append(cl.gpa)
 	var lpa = len(main.past_admissions)
 	if lpa == 0:lpa=1
-	print(race_tally)
+	#print(race_tally)
 	get_node("Website/Chemistry GPA").text = "Chemistry GPA: " + str(main.round_to_dec(gpa_of(chemistry),1))
 	get_node("Website/Biology GPA").text = "Biology GPA: " + str(main.round_to_dec(gpa_of(biology),1))
 	get_node("Website/Math GPA").text = "Math GPA: " + str(main.round_to_dec(gpa_of(math),1))
@@ -136,6 +136,10 @@ func _physics_process(delta: float) -> void:
 		get_node("entropy").show()
 	else:
 		get_node("entropy").hide()
+	if get_node("TabBar").current_tab == 4:
+		get_node("bytf").show()
+	else:
+		get_node("bytf").hide()
 	if get_node("TabBar").current_tab == 5:
 		get_node("budget").show()
 	else:

@@ -1,12 +1,12 @@
 {list:
 	>> Furry Simulator
 	>> Poop Game {list:
-		>>clicker
-		>>farm
-		>>intro
-		>>info
-		>>shop
-		>>title
+		>> clicker
+		>> farm
+		>> intro
+		>> info
+		>> shop
+		>> title
 		}
 	>> Drungalwort{list:
 		>> Driver's license
@@ -23,7 +23,6 @@
 		>> Main Language
 		>> better school website
 		>> make duckbot application perfect
-		>> Video app*
 		>> Allow editing home page{list:
 			>> edit mode
 		}
@@ -31,6 +30,7 @@
 		}
 	>> document compressor
 	>> better postcard AI
+	>> Convert to nim 
 	>> better music player
 	>> Convert software page to a table*
 	>> convert to FDM {list:
@@ -72,6 +72,12 @@
 	>> nimfetch {list:
 		website page
 		documentation
+		re-write in zig as zigfetch
 	}
 	>> tech info update
+	>> Configs {list:
+		EWW audio
+		EWW Music
+		EWW brightness
+	}
 }
