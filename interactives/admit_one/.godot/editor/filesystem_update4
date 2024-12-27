@@ -1,10 +1,5 @@
-res://beyoutuful.tscn
+res://computer.tscn
 res://computer.gd
 res://budget.tres
-res://computer.tscn
-res://intro.tscn
-res://campaign.tscn
 res://budget.tscn
-res://entropy.tscn
-res://entropy.gd
-res://beyoutuful.gd
+res://campus.tscn

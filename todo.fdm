@@ -16,7 +16,6 @@
 		}
 	>> Drungalworld
 	>> Admit One {list:
-		>> Add messages app*
 		>> Settings menu
 		>> Save files
 		>> Time frame for classes
@@ -28,16 +27,12 @@
 		}
 		>> Website text
 		}
+		>> Make budget un-deallocatable
+		>> buildings
 	>> document compressor
 	>> better postcard AI
 	>> Convert to nim 
 	>> better music player
-	>> Convert software page to a table*
-	>> convert to FDM {list:
-		>> chat
-		>> MDS
-		>> Sorting*
-		}
 	>> resume page
 	>> school simulater website text*
 	>> drungy speak mouths
@@ -45,23 +40,25 @@
 	>> FDM {list:
 		>> site page
 		>> readme
-		>> markdown
-		>> make failed processes obvious
-		>> superscript
-		>> subscript
-		>> bash script output
-		>> add
-		>> subtract
-		>> multiply
-		>> divide
-		>> round
-		>> if
-		>> equal
-		>> notequal
+		>> functions{list:
+			>> center
+			>> p
+			>> newline
+			>> quote
+			>> q
+			>> link
+			>> MLA format
+			>> table
+			>> code
+			>> set_space
+		}
+		>> integrated stdlib
+		>> better errors
+		>> magic markdown list
+		>> while
+		>> is_defined
 		>> not
-		>> tests
-		>> colors{list:>>fg>>bg}
-		>> raw
+		>> arrays
 		}
 	>> MDS {list:
 		>> tutorial
@@ -69,15 +66,19 @@
 		>> document all features
 		>> improve installer
 		}
-	>> nimfetch {list:
-		website page
-		documentation
-		re-write in zig as zigfetch
+	>> zetch {list:
+		>> website page
+		>> documentation
+		>> packages
+		>> df
+		>> wifi
+		>> CPU
+		>> GPU
+		>> Fix shell
+		>> WM
+		>> DE
+		>> Kernel
+		>> Uptime
 	}
 	>> tech info update
-	>> Configs {list:
-		EWW audio
-		EWW Music
-		EWW brightness
-	}
 }

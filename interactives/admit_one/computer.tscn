@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ddijx5vmtd023"]
+[gd_scene load_steps=39 format=3 uid="uid://ddijx5vmtd023"]
 
 [ext_resource type="Script" path="res://computer.gd" id="1_i5i6u"]
 [ext_resource type="Texture2D" uid="uid://cekv2moy2wru5" path="res://computer.webp" id="2_1xq1i"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://d0x1kg6fo1oaa" path="res://assets/stamp/0023.webp" id="27_sthlk"]
 [ext_resource type="Texture2D" uid="uid://cnd66jmxgdt3m" path="res://assets/stamp/0024.webp" id="28_kxrkx"]
 [ext_resource type="AudioStream" uid="uid://b8t6dtgfqtmbl" path="res://assets/stamp.mp3" id="29_usxjb"]
+[ext_resource type="Texture2D" uid="uid://dsu761rh8xxqd" path="res://assets/school_website.png" id="30_f37ac"]
 [ext_resource type="AudioStream" uid="uid://od4hpt6hecp2" path="res://assets/no.mp3" id="31_0vda5"]
 [ext_resource type="AudioStream" uid="uid://bgt3sobe67ns6" path="res://assets/yes.mp3" id="32_5o67r"]
 [ext_resource type="AudioStream" uid="uid://baejf6j7ilk38" path="res://assets/page_turn.mp3" id="33_va1l2"]
@@ -217,81 +218,115 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
 
 [node name="Website" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Students" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 388.0
-offset_top = 132.0
-offset_right = 1055.0
-offset_bottom = 155.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+[node name="SchoolWebsite" type="Sprite2D" parent="Website"]
+position = Vector2(726, 339)
+scale = Vector2(0.344792, 0.374074)
+texture = ExtResource("30_f37ac")
 
-[node name="Chemistry GPA" type="Label" parent="Website"]
+[node name="gpas_and_stuff" type="VBoxContainer" parent="Website"]
 layout_mode = 0
-offset_left = 391.0
-offset_top = 152.0
-offset_right = 1071.0
-offset_bottom = 180.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+offset_left = 422.0
+offset_top = 253.0
+offset_right = 518.0
+offset_bottom = 438.0
 
-[node name="Biology GPA" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 389.0
-offset_top = 171.0
-offset_right = 1056.0
-offset_bottom = 200.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+[node name="students" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
 
-[node name="Math GPA" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 391.0
-offset_top = 192.0
-offset_right = 1058.0
-offset_bottom = 215.0
+[node name="Students" type="Label" parent="Website/gpas_and_stuff/students"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+text = "Students"
 
-[node name="Physics GPA" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 391.0
-offset_top = 231.0
-offset_right = 1058.0
-offset_bottom = 254.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/students"]
+layout_mode = 2
+button_pressed = true
 
-[node name="English GPA" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 212.0
-offset_right = 1061.0
-offset_bottom = 235.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+[node name="physics" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
 
-[node name="History GPA" type="Label" parent="Website"]
-layout_mode = 0
-offset_left = 1173.0
-offset_top = 576.0
-offset_right = 1840.0
-offset_bottom = 599.0
+[node name="Physics GPA" type="Label" parent="Website/gpas_and_stuff/physics"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "This is a test"
+text = "Physics GPA
+"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/physics"]
+layout_mode = 2
+button_pressed = true
+
+[node name="history" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
+
+[node name="History GPA" type="Label" parent="Website/gpas_and_stuff/history"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "History GPA
+"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/history"]
+layout_mode = 2
+button_pressed = true
+
+[node name="english" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
+
+[node name="English GPA" type="Label" parent="Website/gpas_and_stuff/english"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "English GPA"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/english"]
+layout_mode = 2
+button_pressed = true
+
+[node name="math" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
+
+[node name="Math GPA" type="Label" parent="Website/gpas_and_stuff/math"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Math GPA
+"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/math"]
+layout_mode = 2
+button_pressed = true
+
+[node name="bio" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
+
+[node name="Biology GPA" type="Label" parent="Website/gpas_and_stuff/bio"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Biology GPA"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/bio"]
+layout_mode = 2
+button_pressed = true
+
+[node name="chemistry" type="HBoxContainer" parent="Website/gpas_and_stuff"]
+layout_mode = 2
+
+[node name="Chemistry GPA" type="Label" parent="Website/gpas_and_stuff/chemistry"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Chemistry GPA"
+
+[node name="CheckBox" type="CheckBox" parent="Website/gpas_and_stuff/chemistry"]
+layout_mode = 2
 
 [node name="Demographics" type="Label" parent="Website"]
 layout_mode = 0
-offset_left = 389.0
-offset_top = 257.0
-offset_right = 673.0
-offset_bottom = 307.0
+offset_left = 733.0
+offset_top = 190.0
+offset_right = 1017.0
+offset_bottom = 240.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "DEMOGRAPHICS"
@@ -385,6 +420,22 @@ offset_right = 671.0
 offset_bottom = 208.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This is a test"
+
+[node name="school" type="Label" parent="Website"]
+layout_mode = 0
+offset_left = 599.0
+offset_top = 140.0
+offset_right = 801.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 24
+text = "SchoolNameHere"
+
+[node name="edit" type="Button" parent="Website"]
+layout_mode = 0
+offset_left = 988.0
+offset_top = 142.0
+offset_right = 1046.0
+offset_bottom = 182.0
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(169, 364)

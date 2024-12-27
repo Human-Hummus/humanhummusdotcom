@@ -1,4 +1,4 @@
-[gd_scene load_steps=231 format=3 uid="uid://dh8gaf6d0hytt"]
+[gd_scene load_steps=232 format=3 uid="uid://dh8gaf6d0hytt"]
 
 [ext_resource type="Script" path="res://beyoutuful.gd" id="1_baoxx"]
 [ext_resource type="Texture2D" uid="uid://et84xnpisheg" path="res://assets/beyoutuful.webp" id="1_kx5po"]
@@ -229,6 +229,7 @@
 [ext_resource type="Texture2D" uid="uid://i17kkdl04cjh" path="res://assets/online_safety_video_images/225.jpg" id="227_itduy"]
 [ext_resource type="Texture2D" uid="uid://c6255hfs1xuie" path="res://assets/play.webp" id="228_akmr0"]
 [ext_resource type="AudioStream" uid="uid://bhthg5x8x78to" path="res://assets/internet_safety_demo.mp3" id="229_iusby"]
+[ext_resource type="Texture2D" uid="uid://cmyjleblxwmle" path="res://assets/like_share_etc.webp" id="230_aiim8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vyyxo"]
 animations = [{
@@ -928,18 +929,41 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_kx5po")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(416, 290)
-scale = Vector2(2.01562, 2.29167)
+position = Vector2(352, 245.5)
+scale = Vector2(2.5, 2.86806)
 sprite_frames = SubResource("SpriteFrames_vyyxo")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 267.0
-offset_top = 184.0
-offset_right = 523.0
-offset_bottom = 440.0
+offset_left = 196.0
+offset_top = 126.0
+offset_right = 452.0
+offset_bottom = 382.0
 texture_normal = ExtResource("228_akmr0")
 
 [node name="InternetSafetyDemo" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(98, 536)
 stream = ExtResource("229_iusby")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 453.0
+offset_right = 556.0
+offset_bottom = 557.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 37
+text = "Moe's Internet Safety Demo"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 501.0
+offset_right = 213.0
+offset_bottom = 541.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "69 views - 17 years ago"
+
+[node name="LikeShareEtc" type="Sprite2D" parent="."]
+position = Vector2(223, 559)
+texture = ExtResource("230_aiim8")

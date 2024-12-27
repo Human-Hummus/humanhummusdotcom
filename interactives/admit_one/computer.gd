@@ -8,9 +8,13 @@ func gpa_of(list):
 		toret/=2
 	return toret
 
+
+var website_edit_mode = false
 func update_website():
+	
+	print(website_edit_mode)
 	var admissions = main.past_admissions
-	get_node("Website/Students").text = "Student population: " + str(len(admissions))
+	get_node("Website/gpas_and_stuff/students/Students").text = "Student population: " + str(len(admissions))
 	var chemistry = []
 	var biology = []
 	var math = []
@@ -53,13 +57,35 @@ func update_website():
 			if cl.subject == "History":history.append(cl.gpa)
 	var lpa = len(main.past_admissions)
 	if lpa == 0:lpa=1
-	#print(race_tally)
-	get_node("Website/Chemistry GPA").text = "Chemistry GPA: " + str(main.round_to_dec(gpa_of(chemistry),1))
-	get_node("Website/Biology GPA").text = "Biology GPA: " + str(main.round_to_dec(gpa_of(biology),1))
-	get_node("Website/Math GPA").text = "Math GPA: " + str(main.round_to_dec(gpa_of(math),1))
-	get_node("Website/Physics GPA").text = "Physics GPA: " + str(main.round_to_dec(gpa_of(physics),1))
-	get_node("Website/English GPA").text = "English GPA: " + str(main.round_to_dec(gpa_of(english),1))
-	get_node("Website/History GPA").text = "History GPA: " + str(main.round_to_dec(gpa_of(history),1))
+	var items_to_do = [
+		get_node("Website/gpas_and_stuff/students"),
+		get_node("Website/gpas_and_stuff/physics"),
+		get_node("Website/gpas_and_stuff/history"),
+		get_node("Website/gpas_and_stuff/english"),
+		get_node("Website/gpas_and_stuff/math"),
+		get_node("Website/gpas_and_stuff/bio"),
+		get_node("Website/gpas_and_stuff/chemistry")]
+	if website_edit_mode:
+		for x in items_to_do:
+			for y in x.get_children():
+				y.show()
+			x.show()
+	else:
+		for x in items_to_do:
+			var is_enabled = x.get_node("CheckBox").button_pressed
+			print(is_enabled)
+			x.get_node("CheckBox").hide()
+			if is_enabled:
+				x.show()
+			else:
+				x.hide()
+			
+	get_node("Website/gpas_and_stuff/chemistry/Chemistry GPA").text = "Chemistry GPA: " + str(main.round_to_dec(gpa_of(chemistry),1))
+	get_node("Website/gpas_and_stuff/bio/Biology GPA").text = "Biology GPA: " + str(main.round_to_dec(gpa_of(biology),1))
+	get_node("Website/gpas_and_stuff/math/Math GPA").text = "Math GPA: " + str(main.round_to_dec(gpa_of(math),1))
+	get_node("Website/gpas_and_stuff/physics/Physics GPA").text = "Physics GPA: " + str(main.round_to_dec(gpa_of(physics),1))
+	get_node("Website/gpas_and_stuff/english/English GPA").text = "English GPA: " + str(main.round_to_dec(gpa_of(english),1))
+	get_node("Website/gpas_and_stuff/history/History GPA").text = "History GPA: " + str(main.round_to_dec(gpa_of(history),1))
 	get_node("Website/Demographics/WT").text = str((race_tally.WT*100/lpa)) + "% " + main.race_text(main.race.WT)
 	get_node("Website/Demographics/AS").text = str((race_tally.AS*100/lpa)) + "% " + main.race_text(main.race.AS)
 	get_node("Website/Demographics/ME").text = str((race_tally.ME*100/lpa)) + "% " + main.race_text(main.race.ME)
@@ -75,6 +101,7 @@ var can_press = false
 func _ready() -> void:
 	get_node("main/accept").pressed.connect(accept_button)
 	get_node("main/reject").pressed.connect(reject_button)
+	get_node("Website/edit").pressed.connect(change_website_mode)
 	get_node("main/Check").show()
 	get_node("main/X").show()
 	update_website()
@@ -108,6 +135,10 @@ func reject():
 var reject_time = 5
 var accept_time = 5
 var prev_tab = 0
+
+func change_website_mode():
+	website_edit_mode = !website_edit_mode
+	update_website()
 
 func _physics_process(delta: float) -> void:
 	if get_node("main/stamp").frame == 11:
