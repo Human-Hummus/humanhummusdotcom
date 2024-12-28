@@ -1,10 +1,10 @@
-CheckBox
-Button
 Label
+TextureButton
+CheckBox
 HBoxContainer
 VBoxContainer
+Button
 ColorRect
-TextureButton
 RichTextLabel
 AnimatedSprite2D
 Control

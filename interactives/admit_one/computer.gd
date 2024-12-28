@@ -64,7 +64,17 @@ func update_website():
 		get_node("Website/gpas_and_stuff/english"),
 		get_node("Website/gpas_and_stuff/math"),
 		get_node("Website/gpas_and_stuff/bio"),
-		get_node("Website/gpas_and_stuff/chemistry")]
+		get_node("Website/gpas_and_stuff/chemistry"),
+		$Website/dems/wt,
+		$Website/dems/as,
+		$Website/dems/me,
+		$Website/dems/hs,
+		$Website/dems/bl,
+		$Website/dems/ai,
+		$Website/dems/male,
+		$Website/dems/intersex,
+		$Website/dems/female,
+		$Website/dems/nonbin,]
 	if website_edit_mode:
 		for x in items_to_do:
 			for y in x.get_children():
@@ -86,16 +96,16 @@ func update_website():
 	get_node("Website/gpas_and_stuff/physics/Physics GPA").text = "Physics GPA: " + str(main.round_to_dec(gpa_of(physics),1))
 	get_node("Website/gpas_and_stuff/english/English GPA").text = "English GPA: " + str(main.round_to_dec(gpa_of(english),1))
 	get_node("Website/gpas_and_stuff/history/History GPA").text = "History GPA: " + str(main.round_to_dec(gpa_of(history),1))
-	get_node("Website/Demographics/WT").text = str((race_tally.WT*100/lpa)) + "% " + main.race_text(main.race.WT)
-	get_node("Website/Demographics/AS").text = str((race_tally.AS*100/lpa)) + "% " + main.race_text(main.race.AS)
-	get_node("Website/Demographics/ME").text = str((race_tally.ME*100/lpa)) + "% " + main.race_text(main.race.ME)
-	get_node("Website/Demographics/BL").text = str((race_tally.BL*100/lpa)) + "% " + main.race_text(main.race.BL)
-	get_node("Website/Demographics/AI").text = str((race_tally.AI*100/lpa)) + "% " + main.race_text(main.race.AI)
-	get_node("Website/Demographics/HS").text = str((race_tally.HS*100/lpa)) + "% " + main.race_text(main.race.HS)
-	get_node("Website/Demographics/male").text = str((gender_tally.male*100/lpa)) + "% Male"
-	get_node("Website/Demographics/female").text = str((gender_tally.female*100/lpa)) + "% Female"
-	get_node("Website/Demographics/non-binary").text = str((gender_tally.non_binary*100/lpa)) + "% non-binary"
-	get_node("Website/Demographics/intersex").text = str((gender_tally.intersex*100/lpa)) + "% Intersex"
+	get_node("Website/dems/wt/WT").text = str((race_tally.WT*100/lpa)) + "% " + main.race_text(main.race.WT)
+	get_node("Website/dems/as/AS").text = str((race_tally.AS*100/lpa)) + "% " + main.race_text(main.race.AS)
+	get_node("Website/dems/me/ME").text = str((race_tally.ME*100/lpa)) + "% " + main.race_text(main.race.ME)
+	get_node("Website/dems/bl/BL").text = str((race_tally.BL*100/lpa)) + "% " + main.race_text(main.race.BL)
+	get_node("Website/dems/ai/AI").text = str((race_tally.AI*100/lpa)) + "% " + main.race_text(main.race.AI)
+	get_node("Website/dems/hs/HS").text = str((race_tally.HS*100/lpa)) + "% " + main.race_text(main.race.HS)
+	get_node("Website/dems/male/male").text = str((gender_tally.male*100/lpa)) + "% Male"
+	get_node("Website/dems/female/female").text = str((gender_tally.female*100/lpa)) + "% Female"
+	get_node("Website/dems/nonbin/non-binary").text = str((gender_tally.non_binary*100/lpa)) + "% non-binary"
+	get_node("Website/dems/intersex/intersex").text = str((gender_tally.intersex*100/lpa)) + "% Intersex"
 var stats
 var can_press = false
 func _ready() -> void:

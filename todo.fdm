@@ -22,16 +22,12 @@
 		>> Main Language
 		>> better school website
 		>> make duckbot application perfect
-		>> Allow editing home page{list:
-			>> edit mode
-		}
+		>> allow editing school name
 		>> Website text
-		}
 		>> Make budget un-deallocatable
 		>> buildings
 	>> document compressor
 	>> better postcard AI
-	>> Convert to nim 
 	>> better music player
 	>> resume page
 	>> school simulater website text*
@@ -56,9 +52,7 @@
 		>> better errors
 		>> magic markdown list
 		>> while
-		>> is_defined
-		>> not
-		>> arrays
+		>> braces for spaces
 		}
 	>> MDS {list:
 		>> tutorial
@@ -75,10 +69,8 @@
 		>> CPU
 		>> GPU
 		>> Fix shell
-		>> WM
-		>> DE
+		>> Desktop
 		>> Kernel
-		>> Uptime
 	}
 	>> tech info update
 }

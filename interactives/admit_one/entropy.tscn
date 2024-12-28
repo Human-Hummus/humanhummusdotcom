@@ -42,9 +42,20 @@ offset_top = 99.0
 offset_right = 915.0
 offset_bottom = 553.0
 
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = -4.0
+offset_right = 248.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 44
+text = "Contact:"
+
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 2
-offset_right = 491.0
-offset_bottom = 71.0
+offset_left = 198.0
+offset_top = 1.0
+offset_right = 689.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 36
 button_group = SubResource("ButtonGroup_sxafo")
