@@ -1,10 +1,11 @@
-{title=Ascii Art}
-{path_to_root=../../}
-{!:../../main:
-	<input id="normal_text" type="text" />
+$title=`Ascii Art`;
+$path_to_root=`../../`;
+@../../main.fdm;
+main{
+	`<input id="normal_text" type="text" />
 	<textarea id="out" style="height: 20rem"></textarea>
 	Use Whitespace<input type="checkbox" id="whitespace"  value=true /> Use Block Chars<input type="checkbox" id="uni" />
 	<div id="linelenlab">Chars Per Line</div>
 	<input type="range" id="linelen" min="1" max="30" step="1" value="5" />
-	<script src="index.js"></script>
+	<script src="index.js"></script>`
 }

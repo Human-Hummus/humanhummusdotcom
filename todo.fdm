@@ -1,76 +1,77 @@
-{list:
-	>> Furry Simulator
-	>> Poop Game {list:
-		>> clicker
-		>> farm
-		>> intro
-		>> info
-		>> shop
-		>> title
-		}
-	>> Drungalwort{list:
-		>> Driver's license
-		>> organize
-		>> Add heather's fanart
-		>> 3D model
-		}
-	>> Drungalworld
-	>> Admit One {list:
-		>> Settings menu
-		>> Save files
-		>> Time frame for classes
-		>> Main Language
-		>> better school website
-		>> make duckbot application perfect
-		>> allow editing school name
-		>> Website text
-		>> Make budget un-deallocatable
-		>> buildings
-	>> document compressor
-	>> better postcard AI
-	>> better music player
-	>> resume page
-	>> school simulater website text*
-	>> drungy speak mouths
-	>> jsynm
-	>> FDM {list:
-		>> site page
-		>> readme
-		>> functions{list:
-			>> center
-			>> p
-			>> newline
-			>> quote
-			>> q
-			>> link
-			>> MLA format
-			>> table
-			>> code
-			>> set_space
-		}
-		>> integrated stdlib
-		>> better errors
-		>> magic markdown list
-		>> while
-		>> braces for spaces
-		}
-	>> MDS {list:
-		>> tutorial
-		>> general info
-		>> document all features
-		>> improve installer
-		}
-	>> zetch {list:
-		>> website page
-		>> documentation
-		>> packages
-		>> df
-		>> wifi
-		>> CPU
-		>> GPU
-		>> Fix shell
-		>> Desktop
-		>> Kernel
-	}
-	>> tech info update
-}
+list(
+	`Furry Simulator`,
+	`Poop Game` list(
+		`clicker`,
+		`farm`,
+		`intro`,
+		`info`,
+		`shop`,
+		`title`,
+		),
+	Drungalwort list(
+		`Driver's license`,
+		`organize`,
+		`Add heather's fanart`,
+		`3D model`,
+		),
+	Drungalworld,
+	`Admit One` list(
+		`Settings menu`,
+		`Save files`,
+		`Time frame for classes`,
+		`Main Language`,
+		`better school website`,
+		`make duckbot application perfect`,
+		`allow editing school name`,
+		`Website text`,
+		`Make budget un-deallocatable`,
+		`buildings`,
+	),
+	`document compressor`,
+	`better postcard AI`,
+	`better music player`,
+	`resume page`,
+	`school simulater website text`,
+	`drungy speak mouths`,
+	`jsynm`,
+	`Fix drungalwort story`,
+	FDM list(
+		`site page`,
+		readme,
+		functions list(
+			quote,
+			q,
+			link,
+			`MLA format`,
+			code,
+			set_space,
+			warning,
+		)
+		`relative paths`,
+		`braces for spaces`,
+		),
+	MDS list(
+		tutorial,
+		`general info`,
+		`document all features`,
+		`improve installer`,
+		),
+	zetch list(
+		`website page`,
+		`documentation`,
+		`packages`,
+		`df`,
+		`wifi`,
+		`GPU`,
+		`Fix shell`,
+		`Detect ghostty`,
+		`Kernel`,
+	),
+	muzig list(
+		`read audio files`,
+		`make list of audio`,
+		`play audio`,
+		`images(?)`,
+	),
+	`tech info update`
+)

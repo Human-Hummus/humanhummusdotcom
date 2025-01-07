@@ -20,7 +20,7 @@ songs = [
         ]
 
 def update_cl():
-    with open("changelog.tdm", 'w') as file:
+    with open("changelog.fdm", 'w') as file:
         quotes = []
         tmp_quotes = open("quotes.txt", "r").read().split("\n")
         for i in tmp_quotes:
@@ -33,13 +33,13 @@ def update_cl():
         print("Chosen Quote: " + quote)
         print("Chosen Song: " + song[1])
         file.write(
-                "<div style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\">{list:" 
-                + os.popen("git log --pretty=format:'>><a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a>' -20").read()
-                + "}</div>"
-                + "<div style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\">Quote of the hour:{newline}\"" 
+                "div(class="", style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\"){list(" 
+                + os.popen("git log --pretty=format:'`<a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a>`,' -20").read()
+                + ")}"
+                + "\ndiv(class=\"\",style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\"){`Quote of the hour:`newline()`\"" 
                 + quote 
-                + "\"{newline}"
-                +"Song of the hour: "+ song[1] + "{newline}<audio src=\"{var:path_to_root}assets/music/" + song[0] + "\" controls/></div>"
+                + "\"`newline()"
+                +"\n`Song of the hour: "+ song[1] + "`newline()`<audio src=\"`$path_to_root`assets/music/" + song[0] + "\" controls/>`}"
                 )
 
 

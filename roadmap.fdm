@@ -1,10 +1,11 @@
-{path_to_root=./}
-{title=To-Do for all of my public projects}
-{!:main:
-	<style>
-		ul \{
+$path_to_root="./";
+$title="To-Do for all of my public projects";
+@main.fdm;
+main{
+	`<style>
+		ul {
 			margin-left:5%;
-		\}
-	</style>
-	{import:todo.fdm}
+		}
+	</style>`
+	@todo.fdm;
 }

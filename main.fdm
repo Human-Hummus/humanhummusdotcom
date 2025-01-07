@@ -1,0 +1,23 @@
+@std;
+func main(){
+	if (not(is_defined($path_to_root))){
+		fatal(`$path_to_root is undefined.`)
+	}
+	body(favicon=$path_to_root "favicon.jpg"){
+		`<script>let path_to_root="`$path_to_root`";</script>`
+		`<script src="https://unpkg.com/htmx.org@2.0.3"></script>`
+		`<link rel="stylesheet" href="`$path_to_root`style.css" />`
+		center{h1(class="cool-header",style="font-size: 600%;"){$title}}
+		`<button id="boykb" style="width: 5%; top: 0px; right: 20px; position: absolute"><img id="bkimg" style="padding-left: 0px; width: 50px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px" src="`$path_to_root`assets/boykisser.webp" /></button>`
+		div(class=main){
+			div(class=menu){@menu.fdm;}
+			div(class=content, style="flex-direction: column width=100%;"){
+
+			$input
+		}}
+		`<h4 style="font-size: 500%; color: red; background: black; position: absolute; margin-top: auto; margin-left: auto; margin-right: auto; width: 1150px; left: 0; right: 0; top: 40%; font-family: death" id="uwu_prompt"></h4>`
+		`<audio id="meow_sound" src="`$path_to_root`assets/meow.ogg"></audio>`
+		`<script src="`$path_to_root`main.js"></script>`
+	}
+
+}

@@ -1,11 +1,11 @@
-{title=Admit One}
-{path_to_root=../../}
-{!:../../main:
-	{list(width=100%;height=100%):
-		>><embed style="width:100%; height:500px;" src="export/index.html"></embed>
-		>>{p:
+$title="Admit One";
+$path_to_root="../../";
+@../../main.fdm;
+main{
+	list(
+		`<embed style="width:100%; height:500px;" src="export/index.html"></embed>`
+		p{`
 			Admit One is our first attempt at an actually decent game.
-			Is it good? Who knows! I think it's pretty cool.
-		}
-	}
+			Is it good? Who knows! I think it's pretty cool.`},
+	)
 }

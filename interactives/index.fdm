@@ -1,56 +1,58 @@
-{path_to_root=../}
-{title=Games}
-{!:../main:
-	<button id="gedage" style="background: none; border: none; top: 2.5%; right: 2.5%; position: absolute"><img src="../assets/gedagedegedagedaoh.webp" style="width: 100px" /></button>
+$path_to_root=`../`;
+$title=Games;
+@../main.fdm;
+main{
+	`<button id="gedage" style="background: none; border: none; top: 2.5%; right: 2.5%; position: absolute"><img src="../assets/gedagedegedagedaoh.webp" style="width: 100px" /></button>
 	<audio id="ggg" src="../assets/gedagedegedagedaoh.ogg"></audio>
 	<script>
 		var ge = document.getElementById("gedage");
 		var gg = document.getElementById("ggg");
-		ge.onclick = async () => \{
+		ge.onclick = async () => {
 			gg.cloneNode().play();
-		\};
-	</script>
-	<center style="width:100%;">{table:
-		{single_space:
-		<a class=no-underline href="YandolSim/info.html">
+		};
+	</script>`
+	`<center style="width:100%;">`table(
+		row(
+		`<a class=no-underline href="YandolSim/info.html">
 			<div class="grid-container">
-				{center:<img style="width: 100px; height: 100px" src="YandolSim/index.png" />}
+				<center><img style="width: 100px; height: 100px" src="YandolSim/index.png" /></center>
 				Yandelere Simulator
 			</div>
-		</a>|
-		<a  class=no-underline href="/drungy_speak">
+		</a>`,
+		`<a  class=no-underline href="/drungy_speak">
 			<div class="grid-container">
-				{center:<img style="width: 100px; height: 100px" src="dspeak.svg" />}
+				<center><img style="width: 100px; height: 100px" src="dspeak.svg" /></center>
 				Drungy Speak
 			</div>
-		</a>}
-		{single_space:
-			<a  class=no-underline href="sorting/index.html">
+		</a>`),
+		row(
+			`<a  class=no-underline href="sorting/index.html">
 				<div class="grid-container">
 					<center><img style="width: 100px; height: 100px" src="sorting/icon.webp" /></center>
 					<center>Sorting Algorithems, Visualized</center>
 				</div>
-			</a>|
-			<a  class=no-underline href="scool/compiled/index.html">
+			</a>`,
+			`<a  class=no-underline href="scool/compiled/index.html">
 				<div class="grid-container">
 					<center><img style="width: 100px; height: 100px" src="scool/Icon.webp" /></center>
 					<center>Scool Simulater</center>
 				</div>
-			</a>
-		}
-		{single_space:
-			<a class=no-underline  href="ascii_art/index.html">
+			</a>`
+		),
+		row(
+			`<a class=no-underline  href="ascii_art/index.html">
 				<div class="grid-container">
-					{center:<img style="width: 200px" src="ascii_art/logo.webp" />}
+					<center><img style="width: 200px" src="ascii_art/logo.webp" /></center>
 					Ascii Art Generator
 				</div>
-			</a>|
-			<a class=no-underline  href="admit_one/index.html">
+			</a>`,
+			`<a class=no-underline  href="admit_one/index.html">
 				<div class="grid-container">
-					{center:<img style="width: 200px" src="admit_one/logo.webp" />}
+					<center><img style="width: 200px" src="admit_one/logo.webp" /></center>
 					Admit One
 				</div>
-			</a>
-		}
+			</a>`
+			)
+		)
 	}</center>
 }

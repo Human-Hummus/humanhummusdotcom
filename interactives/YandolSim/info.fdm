@@ -1,24 +1,25 @@
-{title=Yandelere Simulator}
-{path_to_root=../../}
-{!:../../main:
-		<div style="position: absolute; top:50px;right:50px">
+$title="Yandelere Simulator";
+$path_to_root="../../";
+@../../main.fdm;
+main{
+		`<div style="position: absolute; top:50px;right:50px">
 					<button class="cool-button" onclick="document.getElementById('ring').cloneNode().play();"><img style="height: 400px" src="phone.webp" /></button>
-				</div>
-				{center:<a href="index.html"><img style="scale: 100%; image-rendering: pixelated" src="play_button.webp" /></a>}
-				<audio src="ringtone.mp3" id="ring"></audio>
-				<h2 style="font-size: 300%">Basic Information</h2>
-				<p style="font-size: 150%">
+				</div>`
+				center{`<a href="index.html"><img style="scale: 100%; image-rendering: pixelated" src="play_button.webp" /></a>`}
+				`<audio src="ringtone.mp3" id="ring"></audio>`
+				`<h2 style="font-size: 300%">Basic Information</h2>`
+				`<p style="font-size: 150%">
 					Yandelere Simulator is a game about Cowombia High School. It should be noted, by the way, that any resemblance to real life characters is mostly entirely coincidental. <br /><br /><big><b>PLEASE NOTE</b>: it often takes ~1-2 <b>MINUTES</b> to load the game.</big> <br /><br /><big><b>Playing on mobile</b></big
 					>: You can play on mobile if, in the title screen, you enable "mobile mode". Only Android devices can run this; <a href="https://developer.apple.com/support/alternative-browser-engines/">Apple requires <em>all browsers on IOS</em> effectively are Safari, reskined (in the US, anyways)</a> <small>man I hate Apple</small>. This matters because of <a href="https://httptoolkit.com/blog/safari-is-killing-the-web/">Safari's terrible standards compliance</a>; so this game can't run on IOS, sorry.
-				</p>
-				<img src="vicdraweria.webp" style="width:400px;">
-				{h1:Other stuff!}
-				{list:
-					>> <a href="https://hhummus.itch.io/yandelere-simulator">Play Yandelere Simulator on Itch.io (the most up-to-date version is on my website)</a>
-					>> <a href="https://sites.google.com/whitesalmonschools.org/yandelere-simulator/home">More information</a>
-					>> <a href="https://discord.gg/nmwj9RshPM">Discord Server</a>
-					>> <a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main/interactives/YandolSim/YandelSim_source">Yandelere Simulator Source Code (Godot 4)</a>
-				}
-			</div>
-		</div>
+				</p>`
+				`<img src="vicdraweria.webp" style="width:400px;">`
+				h1{Other stuff!}
+				list(
+					`<a href="https://hhummus.itch.io/yandelere-simulator">Play Yandelere Simulator on Itch.io (the most up-to-date version is on my website)</a>`,
+					`<a href="https://sites.google.com/whitesalmonschools.org/yandelere-simulator/home">More information</a>`,
+					`<a href="https://discord.gg/nmwj9RshPM">Discord Server</a>`,
+					`<a href="https://github.com/Human-Hummus/humanhummusdotcom/tree/main/interactives/YandolSim/YandelSim_source">Yandelere Simulator Source Code (Godot 4)</a>`,
+				)
+			`</div>
+		</div>`
 }

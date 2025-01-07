@@ -1,8 +1,9 @@
-{title=Blog}
-{path_to_root=../}
-{!:../main:
-	{list:
-		>> {link:fan_pages/index.html|Fan Pages}
-		>> {link:drungy_story.html|Drungy Story}
-	}
+$title=Blog;
+$path_to_root="../";
+@../main.fdm;
+main{
+	list(
+		link(`fan_pages/index.html`){`Fan Pages`},
+		link(`drungy_story.html`){`Drungy Story`},
+	)
 }

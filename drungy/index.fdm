@@ -1,7 +1,9 @@
-{path_to_root=../}
-{!:../main:
-{list:
-	{p:<input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" />
+$path_to_root=`../`;
+$title="The Drungalwort";
+@../main.fdm;
+main{
+	list(
+		`<input type="image" style="position: absolute; bottom: 5%; right: 5%" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/fanart.svg" />
 				<center>
 					<button
 						class="cool-button"
@@ -10,9 +12,9 @@
 							document.getElementById('changed_sound').cloneNode().play();
 							var drungy = document.getElementById('drungy_img');
 							console.log(drungy.src);
-							if (drungy.src.includes('sussy'))\{drungy.src='drungy.webp';\}
+							if (drungy.src.includes('sussy')){drungy.src='drungy.webp';}
 
-							else\{drungy.src='sussy_drungy.webp';\}
+							else{drungy.src='sussy_drungy.webp';}
 							"
 						style="position: absolute; margin-left: 20%"
 					>
@@ -40,16 +42,16 @@
 				<audio id="sound1" src="heheheha.ogg" preload="auto"></audio>
 				<audio id="changed_sound" src="changed_sound.ogg" preload="auto"></audio>
 				<style>
-					.faa \{
+					.faa {
 						height: 400px;
 						width: 400px;
 						z-index: 1000;
 						overflow: hidden;
 						background-color: white;
-					\}
-					.thething \{
+					}
+					.thething {
 						backdrop-filter: blur(10px);
-					\}
+					}
 				</style>
 				<div class="thething" style="background: rgba(255, 255, 255, 0.5); padding: 5px; position: absolute; padding: 1%; margin-top: 5%; margin-left: 5%" id="fanart" hidden="true">
 					<input type="image" style="position: absolute; right: 0px; top: 0px; scale: 1px" onclick="document.getElementById('fanart').hidden = !document.getElementById('fanart').hidden;" src="../assets/x.svg" />
@@ -64,10 +66,9 @@
 					<h2 style="color: black">References</h2>
 					<img class="faa" src="refs/front.webp" />
 					<img class="faa" src="refs/side.webp" />
-				</div>}
-				>>{p:{list:
-					>>
-						<button
+				</div>`,
+				list(
+					`<button
 							class="cool-button"
 							onclick="
 								const files = [
@@ -89,24 +90,24 @@
 							"
 						>
 							Pronouns: He/He(<img width="50" height="50" src="michael_jackson.webp" />)<small style="font-size: 50%"><b> (click me!)</b></small>
-						</button>
-					>>The Drungalwort has two horns
-					>>One of the horns is broken
-					>>He has insect wings
-					>>He's "swamp green" in color
-					>>He has blue eyes
-					>>He has two tails
-					>>He has a spiked collar connecting his neck to one of his tails
-					>>He's 5 feet tall
-					>><input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" />
-				}}
-				>><img src="personal info/passport.webp" style="width: 40%" />
-			</div>
+						</button>`,
+					`The Drungalwort has two horns`,
+					`One of the horns is broken`,
+					`He has insect wings`,
+					`He's "swamp green" in color`,
+					`He has blue eyes`,
+					`He has two tails`,
+					`He has a spiked collar connecting his neck to one of his tails`,
+					`He's 5 feet tall`,
+					`<input type="button" onclick="document.getElementById('refs').hidden = !document.getElementById('refs').hidden;" value="References" />`,
+				),
+				`<img src="personal info/passport.webp" style="width: 40%" />`
+			`</div>
 		</div>
 		<script>
-			if (!is_uwu) \{
+			if (!is_uwu) {
 				document.getElementById("cool-button").hidden = true;
-			\}
-		</script>
-		}
+			}
+		</script>`
+	)
 }

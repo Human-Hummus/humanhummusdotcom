@@ -1,5 +1,5 @@
 
-	<audio id=skibiden_audio src="skibidi_biden/sb.mp3"></audio>
+	`<audio id=skibiden_audio src="skibidi_biden/sb.mp3"></audio>
 	<script>
 			async function lol(){
 				document.getElementById('skibiden').src = 'skibidi_biden/out.webp';
@@ -8,4 +8,4 @@
 				document.getElementById('skibiden').src = 'skibidi_biden/in.webp';
 			}
 	</script>
-	<input onclick="lol()" id=skibiden style="position:absolute;top:5%;right:5%;width:300px;" type=image src="skibidi_biden/in.webp">
+	<input onclick="lol()" id=skibiden style="position:absolute;top:5%;right:5%;width:300px;" type=image src="skibidi_biden/in.webp">`
