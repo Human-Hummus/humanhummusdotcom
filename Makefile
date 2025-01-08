@@ -7,6 +7,7 @@ build:
 	fdm -i interactives/ascii_art/index.fdm -o interactives/ascii_art/index.html
 	fdm -i interactives/YandolSim/info.fdm -o interactives/YandolSim/info.html
 	fdm -i "functional software/index.fdm" -o "functional software/index.html"
+	fdm -i "functional software/fdm.fdm" -o "functional software/fdm.html"
 	fdm -i blog/drungy_story.fdm -o blog/drungy_story.html
 	fdm -i blog/index.fdm -o blog/index.html
 	fdm -i python_server/drungy_speak.fdm -o python_server/drungy_speak.html

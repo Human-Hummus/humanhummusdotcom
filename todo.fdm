@@ -36,8 +36,6 @@ list(
 	`jsynm`,
 	`Fix drungalwort story`,
 	FDM list(
-		`site page`,
-		readme,
 		functions list(
 			quote,
 			q,
@@ -48,6 +46,7 @@ list(
 			warning,
 		)
 		`relative paths`,
+		`better site page`,
 		`braces for spaces`,
 		),
 	MDS list(
@@ -64,7 +63,7 @@ list(
 		`wifi`,
 		`GPU`,
 		`Fix shell`,
-		`Detect ghostty`,
+		`fix CPU`,
 		`Kernel`,
 	),
 	muzig list(

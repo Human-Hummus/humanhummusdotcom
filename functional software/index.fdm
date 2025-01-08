@@ -25,7 +25,14 @@ main{
 						center{`<img src="settings.webp" style="width: 150px" />`}
 						center{`My Personal Config Files`}
 					`</a>
-				</div>`
+				</div>`,
+				`<div style="display: flex; width: 300px">
+					<a href="fdm.html">`
+						center{`<img src="settings.webp" style="width: 150px" />`}
+						center{`FDM - Functional Document Maker`}
+					`</a>
+				</div>`,
+
 			)
 		)
 	}
