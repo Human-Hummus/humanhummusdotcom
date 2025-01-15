@@ -34,7 +34,7 @@ def update_cl():
         print("Chosen Song: " + song[1])
         file.write(
                 "div(class="", style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\"){list(" 
-                + os.popen("git log --pretty=format:'`<a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:125%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a>`,' -20").read()
+                + os.popen("git log --pretty=format:'`<a style=\"color:cyan;text-decoration-thickness:0.1px;font-size:75%;\" href=\"https://github.com/Human-Hummus/humanhummusdotcom/commit/%H\">%ar - %s</a>`,' -20").read()
                 + ")}"
                 + "\ndiv(class=\"\",style=\"border-color:black;border-width:2px;border-style:solid;font-size:12px;\"){`Quote of the hour:`newline()`\"" 
                 + quote 

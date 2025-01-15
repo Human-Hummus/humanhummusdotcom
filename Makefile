@@ -11,3 +11,4 @@ build:
 	fdm -i blog/drungy_story.fdm -o blog/drungy_story.html
 	fdm -i blog/index.fdm -o blog/index.html
 	fdm -i python_server/drungy_speak.fdm -o python_server/drungy_speak.html
+	fdm -i readme.fdm -f md -o README.md

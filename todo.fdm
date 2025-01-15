@@ -37,16 +37,15 @@ list(
 	`Fix drungalwort story`,
 	FDM list(
 		functions list(
-			quote,
-			q,
-			link,
 			`MLA format`,
 			code,
 			set_space,
 			warning,
-		)
-		`relative paths`,
-		`better site page`,
+		),
+		"comments",
+		"logo",
+		"bash export",
+		`modulate math scope`,
 		`braces for spaces`,
 		),
 	MDS list(
