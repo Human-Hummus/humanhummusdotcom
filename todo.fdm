@@ -45,6 +45,7 @@ list(
 		"comments",
 		"logo",
 		"bash export",
+		"html variables",
 		`modulate math scope`,
 		`braces for spaces`,
 		),
