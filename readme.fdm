@@ -1,3 +1,4 @@
+@std;
 p{"This is my website, with info, games, demos, and more! Welcome!"
 " You can view " link("https://github.com/Human-Hummus/humanhummusdotcom/tree/main"){"the source code for the website on GitHub"} " (if you aren't already!)."
 " Also visit " link("https://sites.google.com/view/official-humanhummus-wiki/home"){"The HumanHummus Wiki"} ", created by SoundHaptics."}
