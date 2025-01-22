@@ -4,7 +4,7 @@ $title = `FDM Playground`;
 main{
 p{"Note that imports (aside from that of @std;) are non-functional within the playground."}
 p{"Read the documentation " link("https://www.humanhummus.com/functional%20software/fdm.html"){"on my website"} " or " link("https://github.com/Human-Hummus/fdm"){"on GitHub"}}
-`<script src="fdm.js"></script>`
+`<script crossorigin="anonymous" src="fdm.js"></script>`
 table(
 row("Code", "Output"),
 row(
