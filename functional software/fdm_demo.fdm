@@ -4,16 +4,16 @@ $title = `FDM Playground`;
 main{
 p{"Note that imports (aside from that of @std;) are non-functional within the playground."}
 p{"Read the documentation " link("https://www.humanhummus.com/functional%20software/fdm.html"){"on my website"} " or " link("https://github.com/Human-Hummus/fdm"){"on GitHub"}}
-`<script crossorigin="anonymous" src="fdm.js"></script>`
+`<script  src="fdm.js"></script>`
 table(
 row("Code", "Output"),
 row(
 `<textarea id=input rows="50" cols=75 src="demo_code.fdm">`@!demo_code.fdm;`</textarea>`,
-		`<iframe id=output ></iframe>`
+		`<iframe height="500" width="500"  id=output  ></iframe>`
 )
 )
-`<script>document.getElementById('output').innerHTML = compile_text_js(document.getElementById('input').value, 'html');</script>`
+`<script>document.getElementById('output').srcdoc = "<style>html{color:white;}</style>" + compile_text_js(document.getElementById('input').value, 'html');</script>`
 newline()
-`<button onclick="document.getElementById('output').innerHTML = compile_text_js(document.getElementById('input').value, 'html');" id=pressme>Compile to HTML</button>`
+`<button onclick="document.getElementById('output').srcdoc = '<style>html{color:white;}</style>' + compile_text_js(document.getElementById('input').value, 'html');" id=pressme>Compile to HTML</button>`
 p{"Note that the fdm.js file is copied effectively directly from the main fdm project"}
 }
