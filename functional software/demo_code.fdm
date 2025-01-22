@@ -1,0 +1,26 @@
+#here I import the Standard Library, so I can do stuff like use the body{} function
+@std;
+body{
+		# this is a comment
+		h1{"FDM Demo"}
+		h2{"Grocery List"}
+		list("apple","banana","joe mama")
+		p{"This is a paragraph, they're indented. I can \"put quotes in strings\" with backslashes"}
+		code{"This is code"}
+		"strings " "are " "concatenated"
+		newline()
+		identifiers will be interpreted by default as strings though spaces will not
+		newline()
+		say_lol()
+		newline()
+		$this_is_a_variable = "1";
+		"1 + 2 = " add_two($this_is_a_variable)
+		p{"If you use quotes(\") for strings, special chars will be converted to the native language, <code>lol</code>"}
+		p{`If you use backticks(\`), however, it'll be passed directly to the output <code>lol</code>`}
+}
+func say_lol(){
+		"lol"
+}
+func add_two(number){
+		sum($number, "2")
+}

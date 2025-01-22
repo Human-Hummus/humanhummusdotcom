@@ -9,6 +9,7 @@ build:
 	fdm -i "functional software/index.fdm" -o "functional software/index.html"
 	fdm -i "functional software/fdm.fdm" -o "functional software/fdm.html"
 	fdm -i "functional software/mds.fdm" -o "functional software/mds.html"
+	fdm -i "functional software/fdm_demo.fdm" -o "functional software/fdm_demo.html"
 	fdm -i blog/drungy_story.fdm -o blog/drungy_story.html
 	fdm -i blog/index.fdm -o blog/index.html
 	fdm -i python_server/drungy_speak.fdm -o python_server/drungy_speak.html
