@@ -9,7 +9,7 @@ table(
 row("Code", "Output"),
 row(
 `<textarea id=input rows="50" cols=75 src="demo_code.fdm">`@!demo_code.fdm;`</textarea>`,
-`<embed id=output ></embed>`
+		`<iframe id=output ></iframe>`
 )
 )
 `<script>document.getElementById('output').innerHTML = compile_text_js(document.getElementById('input').value, 'html');</script>`
