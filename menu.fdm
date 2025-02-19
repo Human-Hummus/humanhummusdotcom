@@ -4,7 +4,7 @@ div(class=main_menu_list,style="margin-left=0"){list(
 	link(class="",$path_to_root`functional software/index.html`){`<image width="100%" src="`$path_to_root`assets/software.svg" />`},
 	link(class="",$path_to_root`roadmap.html`){`<image width="100%" src="`$path_to_root`assets/TODO.svg" />`},
 	link(class="",$path_to_root`blog/index.html`){`<image width="100%" src="`$path_to_root`assets/blog.webp" />`},
-	link(class="",$path_to_root`chat.html`){`<image width="100%" src="`$path_to_root`assets/chat.webp" />`},
+	link(class="",$path_to_root`portfolio/index.html`){`<image width="100%" src="`$path_to_root`assets/portfolio.svg" />`},
 )
 }
 center(class="", style="width:100%;"){link("https://github.com/Human-Hummus/humanhummusdotcom/commits/main/"){"CHANGE LOG"}}

@@ -1,0 +1,67 @@
+@keyframes fadeIn{
+		from{opacity:0;}
+		to{opacity:1;}
+}
+@keyframes expand_sd{
+		from {width: 0%;}
+		to{width:100%;}
+}
+@font-face {
+	font-family: fira;
+	src: url("../assets/FiraCode-Regular.ttf");
+}
+@keyframes fadeOut{
+		from{opacity:1;}
+		to{opacity:0;}
+}
+body{
+		background-color:black;
+		color:white;
+		animation: fadeIn 1.5s;
+}
+.main_header{
+		font: 2.5rem "Fira Sans", sans-serif;
+}
+.aka{
+		opacity:0;
+		font: 1rem "Fira Sans", sans-serif;
+		transition: .3s ease;
+
+}
+.aka.hover{
+		opacity:1;
+}
+.sub_main_header{
+		width:0;
+		overflow:hidden;
+		font: 2rem "Fira Sans", sans-serif;
+		animation:expand_sd 3.5s forwards;
+		animation-delay:1.5s;
+		white-space:nowrap;
+}
+.header_div{
+		font: 1rem fira, sans-serif;
+		display:flex;
+		justify-content:center; 
+}
+.hhimg{
+		display:flex;
+		align-items:center;
+		width:100%;
+		flex-direction:column;
+}
+a{
+		color:white;
+}
+.subheaders{
+		font: 2.5rem "Fira Sans", sans-serif;
+		white-space:nowrap;
+		overflow:hidden;
+}
+.hidden{
+		width:0;
+		transition: all 5s;
+}
+.show{
+		width:100%;
+}

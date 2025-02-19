@@ -1,12 +1,15 @@
 list(
 	"Furry Simulator",
 	"Poop Game" list(
-		"clicker",
-		"farm",
-		"intro",
 		"info",
-		"shop",
-		"title",
+		"homeless men",
+		"dogs",
+		"corn",
+		"potatoes",
+		"tomatoes",
+		"onions",
+		"soy",
+		"apples"
 		),
 	Drungalwort list(
 		"Driver's license",
@@ -30,6 +33,8 @@ list(
 	"document compressor",
 	"better postcard AI",
 	"better music player",
+	"Portfolio",
+	"remove need for www",
 	"resume page",
 	"school simulater website text",
 	"drungy speak mouths",
@@ -42,8 +47,10 @@ list(
 			warning,
 		),
 		"logo",
+		"syntactic lists",
 		"bash export",
 		"html variables",
+		"number type",
 		"braces for spaces",
 		),
 	MDS list(

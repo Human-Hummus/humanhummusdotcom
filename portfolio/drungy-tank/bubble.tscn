@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdks7ru4kegwi"]
+
+[ext_resource type="Script" path="res://bubble.gd" id="1_cc508"]
+[ext_resource type="Texture2D" uid="uid://dg3kunmjt8an3" path="res://bubble.png" id="1_ol1ko"]
+[ext_resource type="AudioStream" uid="uid://d1va4f15spw35" path="res://pop.mp3" id="3_nx5m7"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8sknq"]
+random_pitch = 2.04
+streams_count = 1
+stream_0/stream = ExtResource("3_nx5m7")
+
+[node name="bubble" type="Node2D"]
+script = ExtResource("1_cc508")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("1_ol1ko")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -85.0
+offset_top = -88.0
+offset_right = 81.0
+offset_bottom = 80.0
+
+[node name="Pop" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-3, 1)
+stream = SubResource("AudioStreamRandomizer_8sknq")
+
+[connection signal="finished" from="Pop" to="." method="_on_pop_finished"]

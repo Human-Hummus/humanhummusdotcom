@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6eexpr40oaou"]
+
+[ext_resource type="Texture2D" uid="uid://w80m3e6x1ymr" path="res://drungy.webp" id="1_bd6dn"]
+[ext_resource type="Script" path="res://main.gd" id="1_wfsig"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wfsig")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_right = 300.0
+offset_bottom = 450.0
+color = Color(0.439049, 0.439049, 0.439049, 1)
+
+[node name="Drungy" type="Sprite2D" parent="."]
+position = Vector2(152, 207)
+scale = Vector2(0.437943, 0.436111)
+texture = ExtResource("1_bd6dn")
+
+[node name="bubbles" type="Node2D" parent="."]
+
+[node name="base" type="ColorRect" parent="."]
+offset_top = 450.0
+offset_right = 300.0
+offset_bottom = 598.0
+color = Color(0.201527, 0.201527, 0.201527, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 300.0
+offset_bottom = 450.0
+mouse_filter = 2
+color = Color(0.670689, 0.67069, 0.670689, 0.337255)
