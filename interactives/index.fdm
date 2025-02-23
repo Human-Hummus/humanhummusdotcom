@@ -52,7 +52,21 @@ main{
 					Admit One
 				</div>
 			</a>`
-			)
+			),
+		row(
+			`<a class=no-underline  href="poop-factory/export/poop-factory.html">
+				<div class="grid-container">
+					<center><img style="width: 200px" src="poop-factory/icon.jpg" /></center>
+					Poop Factory
+				</div>
+			</a>`,
+			`<a class=no-underline  href="admit_one/index.html">
+				<div class="grid-container">
+					<center><img style="width: 200px" src="admit_one/logo.webp" /></center>
+					Admit One
+				</div>
+			</a>`
+		)
 		)
 	}</center>
 }

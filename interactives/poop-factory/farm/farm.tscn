@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmpof3ooys6jh"]
+
+[ext_resource type="Script" path="res://farm/farm.gd" id="1_dx4kc"]
+[ext_resource type="PackedScene" uid="uid://uiqhgrpj4yqq" path="res://farm/farm_plot.tscn" id="1_xj4g5"]
+
+[node name="farm" type="Node2D"]
+script = ExtResource("1_dx4kc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1147.0
+offset_bottom = 647.0
+color = Color(0.362829, 0.362829, 0.362829, 1)
+
+[node name="farm-plot" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(79, 87)
+
+[node name="farm-plot2" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(274, 94)
+
+[node name="farm-plot3" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(490, 82)
+
+[node name="farm-plot4" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(127, 360)
+
+[node name="farm-plot5" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(395, 379)
+
+[node name="farm-plot6" parent="." instance=ExtResource("1_xj4g5")]
+position = Vector2(650, 378)
+
+[node name="exit" type="Button" parent="."]
+offset_left = 973.0
+offset_top = 16.0
+offset_right = 1143.0
+offset_bottom = 103.0
+text = "x"
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

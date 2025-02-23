@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqqh1gabgi7br"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_fgmna"]
+[ext_resource type="PackedScene" uid="uid://cmpof3ooys6jh" path="res://farm/farm.tscn" id="2_toaer"]
+[ext_resource type="PackedScene" uid="uid://dkx0l8jus0qlk" path="res://shops/shops.tscn" id="3_0naue"]
+[ext_resource type="PackedScene" uid="uid://joxkxa54ggp4" path="res://utilities/money_counter.tscn" id="4_e6mka"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_fgmna")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 466.0
+offset_top = 428.0
+offset_right = 586.0
+offset_bottom = 500.0
+text = "poop"
+
+[node name="poops" type="Label" parent="."]
+offset_right = 107.0
+offset_bottom = 71.0
+text = "Poops"
+
+[node name="farm_go" type="Button" parent="."]
+offset_left = 993.0
+offset_top = 13.0
+offset_right = 1121.0
+offset_bottom = 65.0
+text = "Farm"
+
+[node name="shop_go" type="Button" parent="."]
+offset_left = 993.0
+offset_top = 66.0
+offset_right = 1121.0
+offset_bottom = 118.0
+text = "Shops"
+
+[node name="money_counter" parent="." instance=ExtResource("4_e6mka")]
+position = Vector2(77, 97)
+
+[node name="2p" type="Button" parent="."]
+offset_left = 158.0
+offset_top = 2.0
+offset_right = 247.0
+offset_bottom = 71.0
+text = "2x poop
+"
+
+[node name="2m" type="Button" parent="."]
+offset_left = 160.0
+offset_top = 93.0
+offset_right = 249.0
+offset_bottom = 162.0
+text = "2x money
+"
+
+[node name="farm" parent="." instance=ExtResource("2_toaer")]
+visible = false
+position = Vector2(-2, 2)
+
+[node name="shops" parent="." instance=ExtResource("3_0naue")]
+visible = false
+position = Vector2(-2, -1)
+
+[connection signal="pressed" from="farm_go" to="." method="_on_farm_go_pressed"]
+[connection signal="pressed" from="shop_go" to="." method="_on_shop_go_pressed"]
+[connection signal="pressed" from="2p" to="." method="_on_p_pressed"]
+[connection signal="pressed" from="2m" to="." method="_on_m_pressed"]

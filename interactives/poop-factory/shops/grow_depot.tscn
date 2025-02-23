@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://buu10b7tpqseg"]
+
+[ext_resource type="Script" path="res://shops/grow_depot.gd" id="1_aacql"]
+[ext_resource type="Texture2D" uid="uid://bos550kfe3usq" path="res://shops/seeds_bg.webp" id="2_wqeoo"]
+[ext_resource type="Texture2D" uid="uid://cgv214qnl1e3m" path="res://shops/rack.png" id="3_fay2f"]
+[ext_resource type="Texture2D" uid="uid://p7qk7yjxay7i" path="res://shops/vendar.png" id="4_pbq8m"]
+[ext_resource type="Texture2D" uid="uid://dvcv4dpl354i5" path="res://x.svg" id="5_tt466"]
+[ext_resource type="PackedScene" uid="uid://joxkxa54ggp4" path="res://utilities/money_counter.tscn" id="6_pmfay"]
+
+[node name="grow_depot" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1157.0
+offset_bottom = 652.0
+script = ExtResource("1_aacql")
+
+[node name="SeedsBg" type="Sprite2D" parent="."]
+position = Vector2(576, 324.5)
+scale = Vector2(0.300521, 0.302315)
+texture = ExtResource("2_wqeoo")
+
+[node name="Rack" type="Sprite2D" parent="."]
+position = Vector2(532, 345)
+scale = Vector2(0.917122, 0.925033)
+texture = ExtResource("3_fay2f")
+
+[node name="Vendar" type="Sprite2D" parent="."]
+position = Vector2(118, 387)
+scale = Vector2(0.513333, 0.508815)
+texture = ExtResource("4_pbq8m")
+
+[node name="exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = -17.0
+offset_right = 1165.0
+offset_bottom = 104.0
+texture_normal = ExtResource("5_tt466")
+
+[node name="money_counter" parent="." instance=ExtResource("6_pmfay")]
+position = Vector2(95, 20)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 159.0
+offset_right = 1065.0
+offset_bottom = 459.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 160.0
+offset_right = 1063.0
+offset_bottom = 456.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "LABEL"
+autowrap_mode = 2
+
+[node name="select_rice" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 396.0
+offset_top = 143.0
+offset_right = 468.0
+offset_bottom = 242.0
+
+[node name="select_barley" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 490.0
+offset_top = 149.0
+offset_right = 552.0
+offset_bottom = 245.0
+
+[node name="buy" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 467.0
+offset_right = 1064.0
+offset_bottom = 533.0
+text = "BUY"
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="select_rice" to="." method="_on_select_rice_pressed"]
+[connection signal="pressed" from="select_barley" to="." method="_on_select_barley_pressed"]
+[connection signal="pressed" from="buy" to="." method="_on_buy_pressed"]

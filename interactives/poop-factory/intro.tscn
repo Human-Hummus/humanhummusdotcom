@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgmvcyh8po4w4"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_7v2i3"]
+
+[node name="intro" type="Node2D"]
+script = ExtResource("1_7v2i3")
+
+[node name="start" type="Button" parent="."]
+offset_left = 460.0
+offset_top = 355.0
+offset_right = 602.0
+offset_bottom = 452.0
+text = "Start"
