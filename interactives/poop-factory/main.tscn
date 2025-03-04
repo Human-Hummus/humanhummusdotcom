@@ -1,24 +1,107 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqqh1gabgi7br"]
+[gd_scene load_steps=25 format=3 uid="uid://cqqh1gabgi7br"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_fgmna"]
+[ext_resource type="Texture2D" uid="uid://kx6w4mrwfcoq" path="res://factory_bg.jpg" id="2_cl6rr"]
 [ext_resource type="PackedScene" uid="uid://cmpof3ooys6jh" path="res://farm/farm.tscn" id="2_toaer"]
 [ext_resource type="PackedScene" uid="uid://dkx0l8jus0qlk" path="res://shops/shops.tscn" id="3_0naue"]
+[ext_resource type="Texture2D" uid="uid://bx4n6t164cyhd" path="res://body.png" id="3_4vy3p"]
 [ext_resource type="PackedScene" uid="uid://joxkxa54ggp4" path="res://utilities/money_counter.tscn" id="4_e6mka"]
+[ext_resource type="Texture2D" uid="uid://yhdqhlcgbra" path="res://faces/normal.png" id="4_jjt0j"]
+[ext_resource type="AudioStream" uid="uid://cusbkc4p1aau1" path="res://sounds/1.mp3" id="8_l6qjs"]
+[ext_resource type="AudioStream" uid="uid://b8a81h6iwsyv0" path="res://sounds/2.mp3" id="9_31df2"]
+[ext_resource type="AudioStream" uid="uid://bgkq2ewvy2fvt" path="res://sounds/11.mp3" id="10_1nlea"]
+[ext_resource type="AudioStream" uid="uid://06vqsro6srry" path="res://sounds/12.mp3" id="11_ymgue"]
+[ext_resource type="AudioStream" uid="uid://orbma8o1wq6h" path="res://sounds/13.mp3" id="12_856cp"]
+[ext_resource type="AudioStream" uid="uid://bo5ycqqpmpb2v" path="res://sounds/3.mp3" id="13_d6hcr"]
+[ext_resource type="AudioStream" uid="uid://02ws2aggr5t4" path="res://sounds/4.mp3" id="14_4kjuu"]
+[ext_resource type="AudioStream" uid="uid://bw1jlrc0y08fb" path="res://sounds/5.mp3" id="15_sfaum"]
+[ext_resource type="AudioStream" uid="uid://8hagoacum0wf" path="res://sounds/6.mp3" id="16_6kvqt"]
+[ext_resource type="AudioStream" uid="uid://kdy2q0ei3138" path="res://sounds/7.mp3" id="17_byk5p"]
+[ext_resource type="AudioStream" uid="uid://bcydtdxpo3y7s" path="res://sounds/8.mp3" id="18_scpqp"]
+[ext_resource type="AudioStream" uid="uid://dx7so8dps4ejo" path="res://sounds/9.mp3" id="19_6cxkj"]
+[ext_resource type="AudioStream" uid="uid://bsphcc82e756k" path="res://sounds/10.mp3" id="20_fe2q4"]
+
+[sub_resource type="Animation" id="Animation_swuxh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h53uy"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpq3n"]
+_data = {
+"RESET": SubResource("Animation_swuxh"),
+"fade_in": SubResource("Animation_h53uy")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fvi4k"]
+random_pitch = 1.45
+random_volume_offset_db = 1.0
+streams_count = 13
+stream_0/stream = ExtResource("8_l6qjs")
+stream_1/stream = ExtResource("9_31df2")
+stream_2/stream = ExtResource("13_d6hcr")
+stream_3/stream = ExtResource("14_4kjuu")
+stream_4/stream = ExtResource("15_sfaum")
+stream_5/stream = ExtResource("16_6kvqt")
+stream_6/stream = ExtResource("17_byk5p")
+stream_7/stream = ExtResource("18_scpqp")
+stream_8/stream = ExtResource("19_6cxkj")
+stream_9/stream = ExtResource("20_fe2q4")
+stream_10/stream = ExtResource("10_1nlea")
+stream_11/stream = ExtResource("11_ymgue")
+stream_12/stream = ExtResource("12_856cp")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_fgmna")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 466.0
-offset_top = 428.0
-offset_right = 586.0
-offset_bottom = 500.0
-text = "poop"
+[node name="FactoryBg" type="Sprite2D" parent="."]
+position = Vector2(574, 325)
+scale = Vector2(0.601042, 0.603704)
+texture = ExtResource("2_cl6rr")
 
 [node name="poops" type="Label" parent="."]
 offset_right = 107.0
 offset_bottom = 71.0
 text = "Poops"
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(576, 346)
+texture = ExtResource("3_4vy3p")
+
+[node name="face" type="Sprite2D" parent="."]
+position = Vector2(575, 210)
+scale = Vector2(1.2425, 1.38)
+texture = ExtResource("4_jjt0j")
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 461.0
+offset_top = 137.0
+offset_right = 665.0
+offset_bottom = 413.0
 
 [node name="farm_go" type="Button" parent="."]
 offset_left = 993.0
@@ -35,21 +118,21 @@ offset_bottom = 118.0
 text = "Shops"
 
 [node name="money_counter" parent="." instance=ExtResource("4_e6mka")]
-position = Vector2(77, 97)
+position = Vector2(590, 12)
 
 [node name="2p" type="Button" parent="."]
-offset_left = 158.0
-offset_top = 2.0
-offset_right = 247.0
-offset_bottom = 71.0
+offset_left = 604.0
+offset_top = 48.0
+offset_right = 693.0
+offset_bottom = 117.0
 text = "2x poop
 "
 
 [node name="2m" type="Button" parent="."]
-offset_left = 160.0
-offset_top = 93.0
-offset_right = 249.0
-offset_bottom = 162.0
+offset_left = 477.0
+offset_top = 50.0
+offset_right = 566.0
+offset_bottom = 119.0
 text = "2x money
 "
 
@@ -61,7 +144,26 @@ position = Vector2(-2, 2)
 visible = false
 position = Vector2(-2, -1)
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_right = 1168.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_wpq3n")
+}
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(156, 88)
+stream = SubResource("AudioStreamRandomizer_fvi4k")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="farm_go" to="." method="_on_farm_go_pressed"]
 [connection signal="pressed" from="shop_go" to="." method="_on_shop_go_pressed"]
 [connection signal="pressed" from="2p" to="." method="_on_p_pressed"]
 [connection signal="pressed" from="2m" to="." method="_on_m_pressed"]
+[connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

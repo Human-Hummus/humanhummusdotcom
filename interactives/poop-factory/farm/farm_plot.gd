@@ -20,10 +20,15 @@ func _physics_process(delta: float) -> void:
 	update_ob()
 	if crop != "":
 		%Label.text = crop + "; " + str(round(completed)) + "/" + str(wrld.crops[crop].requires)
+		%ProgressBar.value = completed
+		%ProgressBar.max_value = wrld.crops[crop].requires
 	else:
 		%Label.text = "Null"
+		%ProgressBar.max_value = 1
+		%ProgressBar.value = 0
 	if crop == "":
 		%Button.text = "Plant " + %OptionButton.get_item_text(%OptionButton.selected)
+		%ProgressBar.value = 0
 	elif is_ready():
 		%Button.text = "Harvest " + crop + " for $" + str(wrld.crops[crop].sells)
 	elif is_dead:

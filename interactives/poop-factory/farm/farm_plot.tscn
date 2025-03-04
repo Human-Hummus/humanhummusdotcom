@@ -1,28 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://uiqhgrpj4yqq"]
+[gd_scene load_steps=3 format=3 uid="uid://uiqhgrpj4yqq"]
 
 [ext_resource type="Script" path="res://farm/farm_plot.gd" id="1_4tjrw"]
+[ext_resource type="Texture2D" uid="uid://d3puv7niqee3l" path="res://farm/plot.png" id="2_kql8t"]
 
 [node name="farm-plot" type="Node2D"]
 script = ExtResource("1_4tjrw")
 
-[node name="Label" type="Label" parent="."]
-unique_name_in_owner = true
-offset_right = 137.0
-offset_bottom = 23.0
-text = "CROP"
-
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
-offset_left = 3.0
-offset_top = 24.0
-offset_right = 128.0
-offset_bottom = 65.0
+offset_left = 1.0
+offset_top = 95.0
+offset_right = 199.0
+offset_bottom = 136.0
 
 [node name="OptionButton" type="OptionButton" parent="."]
 unique_name_in_owner = true
-offset_left = 3.0
-offset_top = 67.0
-offset_right = 134.0
-offset_bottom = 99.0
+offset_left = 1.0
+offset_top = 138.0
+offset_right = 201.0
+offset_bottom = 170.0
+
+[node name="Plot" type="Sprite2D" parent="."]
+position = Vector2(100, 0.749992)
+scale = Vector2(0.771654, 0.764583)
+texture = ExtResource("2_kql8t")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1.0
+offset_top = 71.0
+offset_right = 138.0
+offset_bottom = 94.0
+text = "CROP"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 198.0
+offset_top = -88.0
+offset_right = 231.0
+offset_bottom = 171.0
+fill_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

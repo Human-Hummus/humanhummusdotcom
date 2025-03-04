@@ -20,6 +20,10 @@ config/icon="res://icon.jpg"
 
 wrld="*res://wrld.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [physics]
 
 common/physics_ticks_per_second=24
