@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://cqqh1gabgi7br"]
+[gd_scene load_steps=29 format=3 uid="uid://cqqh1gabgi7br"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_fgmna"]
+[ext_resource type="Script" uid="uid://b6dhakp5yg1b5" path="res://main.gd" id="1_fgmna"]
 [ext_resource type="Texture2D" uid="uid://kx6w4mrwfcoq" path="res://factory_bg.jpg" id="2_cl6rr"]
 [ext_resource type="PackedScene" uid="uid://cmpof3ooys6jh" path="res://farm/farm.tscn" id="2_toaer"]
 [ext_resource type="PackedScene" uid="uid://dkx0l8jus0qlk" path="res://shops/shops.tscn" id="3_0naue"]
@@ -20,6 +20,14 @@
 [ext_resource type="AudioStream" uid="uid://bcydtdxpo3y7s" path="res://sounds/8.mp3" id="18_scpqp"]
 [ext_resource type="AudioStream" uid="uid://dx7so8dps4ejo" path="res://sounds/9.mp3" id="19_6cxkj"]
 [ext_resource type="AudioStream" uid="uid://bsphcc82e756k" path="res://sounds/10.mp3" id="20_fe2q4"]
+[ext_resource type="Texture2D" uid="uid://duj3i2up2xxmn" path="res://tanks/1.png" id="21_exe0i"]
+[ext_resource type="PackedScene" uid="uid://cvcf7ot25y7em" path="res://utilities/poops.tscn" id="22_hmcl7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqkab"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jroo"]
+bg_color = Color(0.350422, 0.141845, 0.0278908, 1)
 
 [sub_resource type="Animation" id="Animation_swuxh"]
 length = 0.001
@@ -53,8 +61,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wpq3n"]
 _data = {
-"RESET": SubResource("Animation_swuxh"),
-"fade_in": SubResource("Animation_h53uy")
+&"RESET": SubResource("Animation_swuxh"),
+&"fade_in": SubResource("Animation_h53uy")
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_fvi4k"]
@@ -82,11 +90,6 @@ script = ExtResource("1_fgmna")
 position = Vector2(574, 325)
 scale = Vector2(0.601042, 0.603704)
 texture = ExtResource("2_cl6rr")
-
-[node name="poops" type="Label" parent="."]
-offset_right = 107.0
-offset_bottom = 71.0
-text = "Poops"
 
 [node name="Body" type="Sprite2D" parent="."]
 position = Vector2(576, 346)
@@ -121,20 +124,37 @@ text = "Shops"
 position = Vector2(590, 12)
 
 [node name="2p" type="Button" parent="."]
-offset_left = 604.0
-offset_top = 48.0
-offset_right = 693.0
-offset_bottom = 117.0
+offset_left = 158.0
+offset_top = 6.0
+offset_right = 247.0
+offset_bottom = 75.0
 text = "2x poop
 "
 
 [node name="2m" type="Button" parent="."]
-offset_left = 477.0
-offset_top = 50.0
-offset_right = 566.0
-offset_bottom = 119.0
+offset_left = 53.0
+offset_top = 6.0
+offset_right = 142.0
+offset_bottom = 75.0
 text = "2x money
 "
+
+[node name="poops2" parent="." instance=ExtResource("22_hmcl7")]
+position = Vector2(584, 87)
+
+[node name="tank" type="Sprite2D" parent="."]
+position = Vector2(94, 392)
+scale = Vector2(1.74606, 1.9125)
+texture = ExtResource("21_exe0i")
+
+[node name="tankbar" type="ProgressBar" parent="."]
+offset_left = 53.0
+offset_top = 206.0
+offset_right = 97.0
+offset_bottom = 546.0
+theme_override_styles/background = SubResource("StyleBoxFlat_yqkab")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2jroo")
+fill_mode = 3
 
 [node name="farm" parent="." instance=ExtResource("2_toaer")]
 visible = false
@@ -153,7 +173,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
 libraries = {
-"": SubResource("AnimationLibrary_wpq3n")
+&"": SubResource("AnimationLibrary_wpq3n")
 }
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]

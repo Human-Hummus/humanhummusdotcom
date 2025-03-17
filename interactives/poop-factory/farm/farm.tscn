@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmpof3ooys6jh"]
+[gd_scene load_steps=6 format=3 uid="uid://cmpof3ooys6jh"]
 
-[ext_resource type="Script" path="res://farm/farm.gd" id="1_dx4kc"]
+[ext_resource type="Script" uid="uid://dwmt1aovdilum" path="res://farm/farm.gd" id="1_dx4kc"]
+[ext_resource type="Texture2D" uid="uid://xt4rn8whdpd5" path="res://farm/bg.png" id="2_a1lvl"]
 [ext_resource type="Texture2D" uid="uid://dvcv4dpl354i5" path="res://x.svg" id="3_0ce1h"]
 [ext_resource type="PackedScene" uid="uid://uiqhgrpj4yqq" path="res://farm/farm_plot.tscn" id="3_wpyek"]
+[ext_resource type="PackedScene" uid="uid://cvcf7ot25y7em" path="res://utilities/poops.tscn" id="4_p7wwe"]
 
 [node name="farm" type="Node2D"]
 script = ExtResource("1_dx4kc")
@@ -12,29 +14,43 @@ offset_right = 1159.0
 offset_bottom = 647.0
 color = Color(0.362829, 0.362829, 0.362829, 1)
 
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(579, 322.75)
+scale = Vector2(1.54133, 1.14884)
+texture = ExtResource("2_a1lvl")
+
 [node name="exit" type="TextureButton" parent="."]
-offset_left = 1022.0
-offset_top = -2.0
-offset_right = 1143.0
-offset_bottom = 119.0
+offset_left = 1041.0
+offset_top = -1.0
+offset_right = 1162.0
+offset_bottom = 120.0
 texture_normal = ExtResource("3_0ce1h")
 
 [node name="farm-plot" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(116, 115)
+position = Vector2(243, 158)
+scale = Vector2(0.785, 0.785)
+
+[node name="poops" parent="." instance=ExtResource("4_p7wwe")]
+position = Vector2(622, 38)
 
 [node name="farm-plot2" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(460, 109)
+position = Vector2(519, 156)
+scale = Vector2(0.785, 0.785)
 
 [node name="farm-plot3" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(796, 106)
+position = Vector2(797, 159)
+scale = Vector2(0.785, 0.785)
 
 [node name="farm-plot4" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(115, 397)
+position = Vector2(246, 486)
+scale = Vector2(0.785, 0.785)
 
 [node name="farm-plot5" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(459, 395)
+position = Vector2(523, 483)
+scale = Vector2(0.785, 0.785)
 
 [node name="farm-plot6" parent="." instance=ExtResource("3_wpyek")]
-position = Vector2(799, 398)
+position = Vector2(796, 487)
+scale = Vector2(0.785, 0.785)
 
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

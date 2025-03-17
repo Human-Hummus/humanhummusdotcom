@@ -1,12 +1,13 @@
-ProgressBar
+Button
 VBoxContainer
+CenterContainer
+ProgressBar
+Label
 HBoxContainer
 Container
 GridContainer
 TextureButton
 AnimationPlayer
 ColorRect
-Button
-Label
 Control
 OptionButton

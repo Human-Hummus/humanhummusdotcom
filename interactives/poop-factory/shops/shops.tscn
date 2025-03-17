@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkx0l8jus0qlk"]
 
-[ext_resource type="Script" path="res://shops/shops.gd" id="1_wgs34"]
+[ext_resource type="Script" uid="uid://d35xebo6ynq1v" path="res://shops/shops.gd" id="1_wgs34"]
 [ext_resource type="Texture2D" uid="uid://de344urthmo15" path="res://shops/s.png" id="2_0hwat"]
 [ext_resource type="PackedScene" uid="uid://buu10b7tpqseg" path="res://shops/grow_depot.tscn" id="3_ya04n"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgmvcyh8po4w4"]
 
-[ext_resource type="Script" path="res://intro.gd" id="1_7v2i3"]
+[ext_resource type="Script" uid="uid://dm65rjc1ovik3" path="res://intro.gd" id="1_7v2i3"]
 [ext_resource type="Texture2D" uid="uid://0auumagsve50" path="res://main.jpg" id="2_e8oep"]
 
 [sub_resource type="Animation" id="Animation_8i4pk"]
@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h3vxm"]
 _data = {
-"RESET": SubResource("Animation_8i4pk"),
-"fade_out": SubResource("Animation_pp4ie")
+&"RESET": SubResource("Animation_8i4pk"),
+&"fade_out": SubResource("Animation_pp4ie")
 }
 
 [node name="intro" type="Node2D"]

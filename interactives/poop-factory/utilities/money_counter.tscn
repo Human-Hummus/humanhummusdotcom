@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://joxkxa54ggp4"]
 
-[ext_resource type="Script" path="res://utilities/money_counter.gd" id="1_u53l5"]
+[ext_resource type="Script" uid="uid://dd7tn86a545v2" path="res://utilities/money_counter.gd" id="1_u53l5"]
 
 [node name="money_counter" type="Node2D"]
 script = ExtResource("1_u53l5")

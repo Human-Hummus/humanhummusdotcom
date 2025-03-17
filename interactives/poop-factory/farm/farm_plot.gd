@@ -39,8 +39,9 @@ func _physics_process(delta: float) -> void:
 		completed+=wrld.crops[crop].persecond*delta
 	else:
 		%Button.text = crop + " consuming " + str(wrld.crops[crop].persecond) + "/s"
-		if wrld.poops < wrld.crops[crop].persecond:
+		if wrld.poops < wrld.crops[crop].persecond*delta:
 			is_dead = true
+			$CropDeath.play()
 		else:
 			wrld.poops-=wrld.crops[crop].persecond*delta
 			completed+=wrld.crops[crop].persecond*delta
@@ -49,18 +50,22 @@ func _on_button_pressed() -> void:
 		#plant
 		crop = %OptionButton.get_item_text(%OptionButton.selected)
 		is_dead = false
+		$Plant.play()
 	elif is_ready():
 		#harvest
 		wrld.add_money(wrld.crops[crop].sells)
 		crop = ""
 		completed = 0
+		$Sell.play()
 	elif is_dead:
 		#remove dead crop
 		crop = ""
+		$ClearDead.play()
 	elif wrld.poops+completed >= wrld.crops[crop].requires:
 		#fertilize
 		wrld.poops-=wrld.crops[crop].requires-completed
 		completed = wrld.crops[crop].requires
+		$Fertilize.play()
 	else:
 		#do nothing
 		pass

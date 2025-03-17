@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://uiqhgrpj4yqq"]
+[gd_scene load_steps=7 format=3 uid="uid://uiqhgrpj4yqq"]
 
-[ext_resource type="Script" path="res://farm/farm_plot.gd" id="1_4tjrw"]
-[ext_resource type="Texture2D" uid="uid://d3puv7niqee3l" path="res://farm/plot.png" id="2_kql8t"]
+[ext_resource type="Script" uid="uid://cn7has376y7c7" path="res://farm/farm_plot.gd" id="1_4tjrw"]
+[ext_resource type="AudioStream" uid="uid://cqsyltvfkvvs4" path="res://farm/sell.mp3" id="2_pe1q5"]
+[ext_resource type="AudioStream" uid="uid://chjgg1fg4cmmu" path="res://farm/plant.mp3" id="3_pycc5"]
+[ext_resource type="AudioStream" uid="uid://dlqn5k08tw7ci" path="res://farm/clear_dead.mp3" id="4_ruu26"]
+[ext_resource type="AudioStream" uid="uid://bwm8wcdjt0ted" path="res://farm/fertilize.mp3" id="5_ruu26"]
+[ext_resource type="AudioStream" uid="uid://clxv2wvah5j2k" path="res://farm/crop_death.mp3" id="6_8w1ji"]
 
 [node name="farm-plot" type="Node2D"]
 script = ExtResource("1_4tjrw")
@@ -10,20 +14,15 @@ script = ExtResource("1_4tjrw")
 unique_name_in_owner = true
 offset_left = 1.0
 offset_top = 95.0
-offset_right = 199.0
+offset_right = 226.0
 offset_bottom = 136.0
 
 [node name="OptionButton" type="OptionButton" parent="."]
 unique_name_in_owner = true
 offset_left = 1.0
 offset_top = 138.0
-offset_right = 201.0
+offset_right = 225.0
 offset_bottom = 170.0
-
-[node name="Plot" type="Sprite2D" parent="."]
-position = Vector2(100, 0.749992)
-scale = Vector2(0.771654, 0.764583)
-texture = ExtResource("2_kql8t")
 
 [node name="Label" type="Label" parent="."]
 unique_name_in_owner = true
@@ -35,10 +34,30 @@ text = "CROP"
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 198.0
-offset_top = -88.0
-offset_right = 231.0
-offset_bottom = 171.0
+offset_left = 228.0
+offset_top = -15.0
+offset_right = 261.0
+offset_bottom = 173.0
 fill_mode = 3
+
+[node name="Sell" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(105, 183)
+stream = ExtResource("2_pe1q5")
+
+[node name="Plant" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(97, 182)
+stream = ExtResource("3_pycc5")
+
+[node name="ClearDead" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(115, 183)
+stream = ExtResource("4_ruu26")
+
+[node name="Fertilize" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(126, 183)
+stream = ExtResource("5_ruu26")
+
+[node name="CropDeath" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(135, 180)
+stream = ExtResource("6_8w1ji")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -12,7 +12,9 @@ func poop():
 
 
 func _physics_process(delta: float) -> void:
-	$poops.text = "Poops: " + str(round(wrld.poops)) + "/" + str(wrld.max_poops)
+	$tankbar.max_value = wrld.max_poops
+	$tankbar.value = wrld.poops
+	
 
 
 

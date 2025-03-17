@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvcf7ot25y7em"]
+
+[ext_resource type="Script" uid="uid://bpv854vsbfocy" path="res://utilities/poops.gd" id="1_d2ncb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1x87"]
+bg_color = Color(0, 0, 0, 1)
+border_width_top = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpqj1"]
+bg_color = Color(0.402699, 0.185581, 0.0671448, 1)
+
+[node name="poops" type="Node2D"]
+script = ExtResource("1_d2ncb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = -138.0
+offset_top = -43.0
+offset_right = 140.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.346337, 0.166917, 0.0701556, 1)
+theme_override_colors/font_outline_color = Color(0.930922, 0.529371, 0.188176, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "POOPS"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_k1x87")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kpqj1")
+show_percentage = false
