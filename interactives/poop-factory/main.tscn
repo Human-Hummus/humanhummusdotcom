@@ -151,7 +151,7 @@ offset_bottom = 65.0
 text = "Farm"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(87, 558)
+position = Vector2(86, 533)
 emission_shape = 2
 emission_sphere_radius = 13.93
 scale_amount_max = 11.11
