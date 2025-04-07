@@ -1,3 +1,10 @@
+ColorRect
+TextureButton
+TextureRect
+Camera2D
+CPUParticles2D
+CanvasModulate
+CanvasLayer
 Button
 VBoxContainer
 CenterContainer
@@ -5,9 +12,3 @@ ProgressBar
 Label
 HBoxContainer
 Container
-GridContainer
-TextureButton
-AnimationPlayer
-ColorRect
-Control
-OptionButton

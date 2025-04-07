@@ -1,16 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkx0l8jus0qlk"]
+[gd_scene load_steps=7 format=3 uid="uid://dkx0l8jus0qlk"]
 
 [ext_resource type="Script" uid="uid://d35xebo6ynq1v" path="res://shops/shops.gd" id="1_wgs34"]
 [ext_resource type="Texture2D" uid="uid://de344urthmo15" path="res://shops/s.png" id="2_0hwat"]
 [ext_resource type="PackedScene" uid="uid://buu10b7tpqseg" path="res://shops/grow_depot.tscn" id="3_ya04n"]
+[ext_resource type="PackedScene" uid="uid://dy8xj5h2wfn0a" path="res://shops/gizmoes.tscn" id="4_y42h7"]
+[ext_resource type="Shader" uid="uid://pjn2xomnxbfy" path="res://rain.gdshader" id="5_tt1bx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f574w"]
+shader = ExtResource("5_tt1bx")
+shader_parameter/count = 150
+shader_parameter/slant = -0.01
+shader_parameter/speed = 50.0
+shader_parameter/blur = 0.002
+shader_parameter/colour = Color(1, 1, 1, 1)
+shader_parameter/size = Vector2(0.005, 0.2)
 
 [node name="shops" type="Node2D"]
 script = ExtResource("1_wgs34")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 658.0
 
 [node name="S" type="Sprite2D" parent="."]
 position = Vector2(575.5, 324.5)
 scale = Vector2(1.532, 1.55476)
 texture = ExtResource("2_0hwat")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_f574w")
+offset_right = 1159.0
+offset_bottom = 648.0
+mouse_filter = 2
 
 [node name="home" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -45,5 +66,10 @@ text = "go_moes_gizmos"
 [node name="grow_depot" parent="." instance=ExtResource("3_ya04n")]
 visible = false
 
+[node name="gizmoes" parent="." instance=ExtResource("4_y42h7")]
+visible = false
+position = Vector2(-1, -5)
+
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="go_grow_depot" to="." method="_on_go_grow_depot_pressed"]
+[connection signal="pressed" from="go_moes_gizmos" to="." method="_on_go_moes_gizmos_pressed"]

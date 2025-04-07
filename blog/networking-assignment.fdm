@@ -1,0 +1,8 @@
+$title="What I Know About Networking; A School Assignment";
+$path_to_root="../";
+@../main.fdm;
+main{
+    p{
+        "Over the course of the past few days I've learned about networking"
+    }
+}

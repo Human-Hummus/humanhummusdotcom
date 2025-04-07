@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy8xj5h2wfn0a"]
+
+[ext_resource type="Script" uid="uid://b1b5pr5h0r878" path="res://shops/gizmoes.gd" id="1_00bl5"]
+[ext_resource type="Texture2D" uid="uid://bsfn7unr3xbws" path="res://shops/moes_bg.png" id="1_56efu"]
+[ext_resource type="Texture2D" uid="uid://dvcv4dpl354i5" path="res://x.svg" id="3_vmlnq"]
+
+[node name="gizmoes" type="Node2D"]
+script = ExtResource("1_00bl5")
+
+[node name="MoesBg" type="Sprite2D" parent="."]
+position = Vector2(578.5, 320)
+scale = Vector2(0.602604, 0.601852)
+texture = ExtResource("1_56efu")
+
+[node name="Exit" type="TextureButton" parent="."]
+offset_left = 1059.0
+offset_top = -24.0
+offset_right = 1180.0
+offset_bottom = 97.0
+texture_normal = ExtResource("3_vmlnq")
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

@@ -1,10 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmpof3ooys6jh"]
+[gd_scene load_steps=10 format=3 uid="uid://cmpof3ooys6jh"]
 
 [ext_resource type="Script" uid="uid://dwmt1aovdilum" path="res://farm/farm.gd" id="1_dx4kc"]
 [ext_resource type="Texture2D" uid="uid://xt4rn8whdpd5" path="res://farm/bg.png" id="2_a1lvl"]
 [ext_resource type="Texture2D" uid="uid://dvcv4dpl354i5" path="res://x.svg" id="3_0ce1h"]
 [ext_resource type="PackedScene" uid="uid://uiqhgrpj4yqq" path="res://farm/farm_plot.tscn" id="3_wpyek"]
 [ext_resource type="PackedScene" uid="uid://cvcf7ot25y7em" path="res://utilities/poops.tscn" id="4_p7wwe"]
+[ext_resource type="Shader" uid="uid://bww1ni3kkr8a8" path="res://vhs.gdshader" id="6_mjpad"]
+[ext_resource type="AudioStream" uid="uid://bjh5hjdefk7ai" path="res://farm/deactivate.mp3" id="7_udp8x"]
+[ext_resource type="AudioStream" uid="uid://cednhowwavyih" path="res://farm/activate.mp3" id="8_ol6uc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qys1r"]
+shader = ExtResource("6_mjpad")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
 
 [node name="farm" type="Node2D"]
 script = ExtResource("1_dx4kc")
@@ -18,6 +38,12 @@ color = Color(0.362829, 0.362829, 0.362829, 1)
 position = Vector2(579, 322.75)
 scale = Vector2(1.54133, 1.14884)
 texture = ExtResource("2_a1lvl")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_qys1r")
+offset_right = 1154.0
+offset_bottom = 644.0
+mouse_filter = 2
 
 [node name="exit" type="TextureButton" parent="."]
 offset_left = 1041.0
@@ -52,5 +78,13 @@ scale = Vector2(0.785, 0.785)
 [node name="farm-plot6" parent="." instance=ExtResource("3_wpyek")]
 position = Vector2(796, 487)
 scale = Vector2(0.785, 0.785)
+
+[node name="Deactivate" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(17, 633)
+stream = ExtResource("7_udp8x")
+
+[node name="Activate" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(43, 633)
+stream = ExtResource("8_ol6uc")
 
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
