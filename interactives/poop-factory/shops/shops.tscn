@@ -1,10 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkx0l8jus0qlk"]
+[gd_scene load_steps=16 format=3 uid="uid://dkx0l8jus0qlk"]
 
 [ext_resource type="Script" uid="uid://d35xebo6ynq1v" path="res://shops/shops.gd" id="1_wgs34"]
-[ext_resource type="Texture2D" uid="uid://de344urthmo15" path="res://shops/s.png" id="2_0hwat"]
+[ext_resource type="Texture2D" uid="uid://bgjw3onn8ullo" path="res://shops/s.webp" id="2_evr4v"]
 [ext_resource type="PackedScene" uid="uid://buu10b7tpqseg" path="res://shops/grow_depot.tscn" id="3_ya04n"]
 [ext_resource type="PackedScene" uid="uid://dy8xj5h2wfn0a" path="res://shops/gizmoes.tscn" id="4_y42h7"]
 [ext_resource type="Shader" uid="uid://pjn2xomnxbfy" path="res://rain.gdshader" id="5_tt1bx"]
+[ext_resource type="AudioStream" uid="uid://bweqhuxqysu61" path="res://shops/vendar_greetings/1.mp3" id="6_tpfjq"]
+[ext_resource type="AudioStream" uid="uid://dt4bcrc06pjcu" path="res://shops/vendar_greetings/2.mp3" id="7_evr4v"]
+[ext_resource type="AudioStream" uid="uid://7w5lwcw4rcrn" path="res://shops/vendar_greetings/3.mp3" id="8_yrhqa"]
+[ext_resource type="AudioStream" uid="uid://bg1jmyut73lo0" path="res://shops/vendar_greetings/4.mp3" id="9_hvpjf"]
+[ext_resource type="AudioStream" uid="uid://f7k33ls1swou" path="res://shops/vendar_greetings/5.mp3" id="10_frqjm"]
+[ext_resource type="AudioStream" uid="uid://b3bh0w5gam6x5" path="res://shops/vendar_greetings/6.mp3" id="11_3s771"]
+[ext_resource type="AudioStream" uid="uid://dru6uu1qxyv1b" path="res://shops/vendar_greetings/7.mp3" id="12_mt1u2"]
+[ext_resource type="PackedScene" uid="uid://wo0d8tjvlwgu" path="res://shops/Public Resources/public_resources.tscn" id="13_evr4v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f574w"]
 shader = ExtResource("5_tt1bx")
@@ -15,6 +23,16 @@ shader_parameter/blur = 0.002
 shader_parameter/colour = Color(1, 1, 1, 1)
 shader_parameter/size = Vector2(0.005, 0.2)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2xskh"]
+streams_count = 7
+stream_0/stream = ExtResource("6_tpfjq")
+stream_1/stream = ExtResource("7_evr4v")
+stream_2/stream = ExtResource("8_yrhqa")
+stream_3/stream = ExtResource("9_hvpjf")
+stream_4/stream = ExtResource("10_frqjm")
+stream_5/stream = ExtResource("11_3s771")
+stream_6/stream = ExtResource("12_mt1u2")
+
 [node name="shops" type="Node2D"]
 script = ExtResource("1_wgs34")
 
@@ -23,9 +41,9 @@ offset_right = 1154.0
 offset_bottom = 658.0
 
 [node name="S" type="Sprite2D" parent="."]
-position = Vector2(575.5, 324.5)
-scale = Vector2(1.532, 1.55476)
-texture = ExtResource("2_0hwat")
+position = Vector2(579.5, 329.332)
+scale = Vector2(1.54267, 1.5781)
+texture = ExtResource("2_evr4v")
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_f574w")
@@ -35,31 +53,32 @@ mouse_filter = 2
 
 [node name="home" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 1020.0
-offset_top = 281.0
-offset_right = 1131.0
-offset_bottom = 513.0
+offset_left = 1034.0
+offset_top = 279.0
+offset_right = 1145.0
+offset_bottom = 511.0
 text = "x"
 
 [node name="go_grow_depot" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 33.0
-offset_top = 109.0
-offset_right = 398.0
-offset_bottom = 496.0
+offset_top = 112.0
+offset_right = 365.0
+offset_bottom = 499.0
 text = "Grow depot"
 
 [node name="go_public_resources" type="Button" parent="."]
-offset_left = 576.0
-offset_top = 190.0
-offset_right = 715.0
-offset_bottom = 504.0
+modulate = Color(1, 1, 1, 0)
+offset_left = 371.0
+offset_top = 128.0
+offset_right = 712.0
+offset_bottom = 505.0
 text = "go_public_resources"
 
 [node name="go_moes_gizmos" type="Button" parent="."]
-offset_left = 841.0
-offset_top = 179.0
-offset_right = 978.0
+modulate = Color(1, 1, 1, 0)
+offset_left = 735.0
+offset_top = 115.0
+offset_right = 1002.0
 offset_bottom = 517.0
 text = "go_moes_gizmos"
 
@@ -70,6 +89,14 @@ visible = false
 visible = false
 position = Vector2(-1, -5)
 
+[node name="vendar_greeting" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_2xskh")
+
+[node name="public_resources" parent="." instance=ExtResource("13_evr4v")]
+visible = false
+position = Vector2(17, 11)
+
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="go_grow_depot" to="." method="_on_go_grow_depot_pressed"]
+[connection signal="pressed" from="go_public_resources" to="." method="_on_go_public_resources_pressed"]
 [connection signal="pressed" from="go_moes_gizmos" to="." method="_on_go_moes_gizmos_pressed"]

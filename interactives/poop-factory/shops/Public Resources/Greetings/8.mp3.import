@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rm1woslkv1fi"
+path="res://.godot/imported/8.mp3-b6a2a73db4f69258ee86c76e444e240a.mp3str"
+
+[deps]
+
+source_file="res://shops/Public Resources/Greetings/8.mp3"
+dest_files=["res://.godot/imported/8.mp3-b6a2a73db4f69258ee86c76e444e240a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

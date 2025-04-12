@@ -7,6 +7,12 @@
 [node name="gizmoes" type="Node2D"]
 script = ExtResource("1_00bl5")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -39.0
+offset_top = -20.0
+offset_right = 1174.0
+offset_bottom = 664.0
+
 [node name="MoesBg" type="Sprite2D" parent="."]
 position = Vector2(578.5, 320)
 scale = Vector2(0.602604, 0.601852)

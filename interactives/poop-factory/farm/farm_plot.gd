@@ -33,6 +33,7 @@ func _physics_process(delta: float) -> void:
 		%Button.text = "Harvest " + crop + " for $" + str(wrld.crops[crop].sells)
 	elif is_dead:
 		%Button.text = "Remove dead crop"
+		completed = 0
 	elif wrld.poops+completed >= wrld.crops[crop].requires:
 		%Button.text = "Fertilize " + crop + " for " + str(round(wrld.crops[crop].requires-completed))
 		wrld.poops-=wrld.crops[crop].persecond*delta

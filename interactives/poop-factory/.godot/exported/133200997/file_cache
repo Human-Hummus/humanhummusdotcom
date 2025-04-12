@@ -1,9 +1,13 @@
-res://farm/farm.tscn::2ecefab95673ed89210c48ca7412dfef::1743988867::res://.godot/exported/133200997/export-e6da91e5e44e5c8e54caea3480b634b6-farm.scn
-res://farm/farm_plot.tscn::512fa342c5332e9ccfdc0800f5887afe::1743988867::res://.godot/exported/133200997/export-6a173cdafcc38b25028c1b94fbed5f91-farm_plot.scn
-res://shops/grow_depot.tscn::e88634576a65fc8e8db76ee823593b4d::1743988867::res://.godot/exported/133200997/export-7786ca3d3fdcc33f95e94d3b0f96ce11-grow_depot.scn
-res://shops/shops.tscn::97366d4a261e6c05cca18bf2f1ef6ebe::1743988867::res://.godot/exported/133200997/export-f412c209e490d6435bbba08915c84941-shops.scn
+res://farm/farm.tscn::2ecefab95673ed89210c48ca7412dfef::1744438734::res://.godot/exported/133200997/export-e6da91e5e44e5c8e54caea3480b634b6-farm.scn
+res://farm/farm_plot.tscn::ccfa8397a8d4fdecb44fa145bc2ababa::1744438734::res://.godot/exported/133200997/export-6a173cdafcc38b25028c1b94fbed5f91-farm_plot.scn
+res://shops/grow_depot.tscn::e88634576a65fc8e8db76ee823593b4d::1744438734::res://.godot/exported/133200997/export-7786ca3d3fdcc33f95e94d3b0f96ce11-grow_depot.scn
+res://shops/shops.tscn::4793fac13d09c286bd7c2cc2e81de18c::1744438734::res://.godot/exported/133200997/export-f412c209e490d6435bbba08915c84941-shops.scn
 res://utilities/money_counter.tscn::2882a0071f0266266576fc5e531133e1::1741303078::res://.godot/exported/133200997/export-c647a73f510ce5774666597984fa16af-money_counter.scn
-res://intro.tscn::0e4d79de691604a925922ed283c0b37e::1743988867::res://.godot/exported/133200997/export-2dff5a063e418d17c9220ff5a6df7e7a-intro.scn
-res://main.tscn::826bfb0e9fc9ae5ab0de0c6efbda828e::1743988867::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://intro.tscn::0e4d79de691604a925922ed283c0b37e::1744438734::res://.godot/exported/133200997/export-2dff5a063e418d17c9220ff5a6df7e7a-intro.scn
+res://main.tscn::0b9b4bd0c4b11c8dbd200d87efd69643::1744438734::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
 res://utilities/poops.tscn::51680b01107f4e9153765a4c644365db::1741303078::res://.godot/exported/133200997/export-9d3203707444e393e63c405408d265b7-poops.scn
-res://shops/gizmoes.tscn::49b319b637567ac060393316ec7c8ac4::1743988867::res://.godot/exported/133200997/export-446ff67560b284bf65142ff978024b7b-gizmoes.scn
+res://shops/gizmoes.tscn::af4e6047f538f52c4504afe3529085b3::1744438734::res://.godot/exported/133200997/export-446ff67560b284bf65142ff978024b7b-gizmoes.scn
+res://farm/farm_plot.tres::3ca65cd522829141bbf423c53e9bacac::1744438657::res://.godot/exported/133200997/export-0bb2710c085437788834ff575c68f2fa-farm_plot.res
+res://farm/farm_plot_dropdown.tres::03955685eb8707fcf075de0f8b93600e::1744438657::res://.godot/exported/133200997/export-9b72db296ed58d869a6fe905faa45a1f-farm_plot_dropdown.res
+res://friends/friends.tscn::106df9c1390afaed708e6efcbdc3ca4a::1744438734::res://.godot/exported/133200997/export-4bc3d7bbebbda3337ac3544895ecd6f1-friends.scn
+res://shops/Public Resources/public_resources.tscn::93150fd144bafc12ab7151cdca9ff3f5::1744438734::res://.godot/exported/133200997/export-83914a448fad85d68c0aea54a1f0cbaa-public_resources.scn

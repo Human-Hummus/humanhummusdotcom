@@ -1,0 +1,56 @@
+[gd_scene load_steps=16 format=3 uid="uid://wo0d8tjvlwgu"]
+
+[ext_resource type="Script" uid="uid://d3y0ixrs24u6h" path="res://shops/Public Resources/public_resources.gd" id="1_4km0q"]
+[ext_resource type="Texture2D" uid="uid://bj1c1wdpd30b4" path="res://shops/Public Resources/bg.jpg" id="2_7ijt2"]
+[ext_resource type="Texture2D" uid="uid://dvcv4dpl354i5" path="res://x.svg" id="3_7ijt2"]
+[ext_resource type="AudioStream" uid="uid://d1ftrrq1t1a07" path="res://shops/Public Resources/Greetings/1.mp3" id="4_4i6ue"]
+[ext_resource type="AudioStream" uid="uid://bcj4xoiiqwyam" path="res://shops/Public Resources/Greetings/2.mp3" id="5_3bp0r"]
+[ext_resource type="AudioStream" uid="uid://c4xda6fbwnnmg" path="res://shops/Public Resources/Greetings/11.mp3" id="6_q0x23"]
+[ext_resource type="AudioStream" uid="uid://b51o88umvpvn0" path="res://shops/Public Resources/Greetings/3.mp3" id="7_511to"]
+[ext_resource type="AudioStream" uid="uid://0vej4vmdq27t" path="res://shops/Public Resources/Greetings/4.mp3" id="8_hhdki"]
+[ext_resource type="AudioStream" uid="uid://brcsnpww85pv4" path="res://shops/Public Resources/Greetings/5.mp3" id="9_k4i7x"]
+[ext_resource type="AudioStream" uid="uid://peje84tekdtk" path="res://shops/Public Resources/Greetings/6.mp3" id="10_f33sc"]
+[ext_resource type="AudioStream" uid="uid://bo7baohxo25il" path="res://shops/Public Resources/Greetings/7.mp3" id="11_s7ijh"]
+[ext_resource type="AudioStream" uid="uid://rm1woslkv1fi" path="res://shops/Public Resources/Greetings/8.mp3" id="12_qbm3o"]
+[ext_resource type="AudioStream" uid="uid://dgb8277w3qodc" path="res://shops/Public Resources/Greetings/9.mp3" id="13_u44i8"]
+[ext_resource type="AudioStream" uid="uid://vwokqwwcqups" path="res://shops/Public Resources/Greetings/10.mp3" id="14_lp7pk"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nh3k4"]
+streams_count = 11
+stream_0/stream = ExtResource("4_4i6ue")
+stream_1/stream = ExtResource("5_3bp0r")
+stream_2/stream = ExtResource("7_511to")
+stream_3/stream = ExtResource("8_hhdki")
+stream_4/stream = ExtResource("9_k4i7x")
+stream_5/stream = ExtResource("10_f33sc")
+stream_6/stream = ExtResource("11_s7ijh")
+stream_7/stream = ExtResource("12_qbm3o")
+stream_8/stream = ExtResource("13_u44i8")
+stream_9/stream = ExtResource("14_lp7pk")
+stream_10/stream = ExtResource("6_q0x23")
+
+[node name="public_resources" type="Node2D"]
+script = ExtResource("1_4km0q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -35.0
+offset_top = -22.0
+offset_right = 1178.0
+offset_bottom = 703.0
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(571, 324)
+scale = Vector2(2.27451, 2.01176)
+texture = ExtResource("2_7ijt2")
+
+[node name="exit" type="TextureButton" parent="."]
+offset_left = 1025.0
+offset_top = -8.0
+offset_right = 1146.0
+offset_bottom = 113.0
+texture_normal = ExtResource("3_7ijt2")
+
+[node name="greeting" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_nh3k4")
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

@@ -13,6 +13,14 @@ var crops = {
 	
 }
 
+var friends = {
+	"bob": false,
+	"doggo":false,
+	"pooper_5000":false,
+	"janet":false,
+	"doug":false
+}
+
 func try_buy(amt):
 	if money>=amt:
 		money-=amt
