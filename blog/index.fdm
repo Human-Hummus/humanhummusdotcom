@@ -7,5 +7,6 @@ main{
 		link(`drungy_story.html`){`Drungy Story`},
 		link(`networking_assignment.html`){"Networking Assignment"},
 		link(`it_trends.html`){"My Thoughts on IT Trends"}
+		link(`ethics.html`){"My Thoughts on Ethical and Legal Issues in Software Development"}
 	)
 }
