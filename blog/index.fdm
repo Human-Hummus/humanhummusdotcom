@@ -5,6 +5,7 @@ main{
 	list(
 		link(`fan_pages/index.html`){`Fan Pages`},
 		link(`drungy_story.html`){`Drungy Story`},
-		link(`networking_assignment.html`){"Networking assignment"},
+		link(`networking_assignment.html`){"Networking Assignment"},
+		link(`it_trends.html`){"My Thoughts on IT Trends"}
 	)
 }

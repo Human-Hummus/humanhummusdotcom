@@ -1,0 +1,22 @@
+$title="My Thoughts on the Emergence of Memory-Safe Programming Languages";
+$path_to_root="../";
+@../main.fdm;
+main{
+    p{"I think that the emergence of memory-safe languages, notably Rust, has been absolutely fantastic! It allows for better security, easier development, and with Rust, great performance."}
+    p{"I personally use Nim and Rust for virtually all of my projects, and while I'm not sure how well Nim specifically fits into this category, I certainly think it's a part of a new class of programming languages, which I am a huge fan of."}
+    h1{"My Presentation on Such (School Assignment)"}
+    h1{"The Emergence of Memory Safe Programming Languages"}
+    p{"Programming, especially low-level programming, involves a lot of memory management – and that leaves the developer vulnurable to a whole slew of memory safety issues. The implications of which range from benign visual bugs to comprimised passwords and databases. Unless, of course, you use a memory safe language."}
+    p{"There are a variety of memory safe languages. Some, like Python and Ruby, simply have some memory safety as a side effect of the implemmentation of the language; a garbage collector insures memory is cleared at runtime, degrading performance, but making it substantially easier for the developer. These languages (typically high level) also often implemment array boundry checks to disallow illegal or unwanted memory accesses."}
+    p{"The above languages have been around since the ‘90s, but a new kind of compiled, memory safe, high-performance languages has emerged since the early 2000s. The most notable being Rust, Nim, Go, and Zig*. Some of these langages (Nim**, Go) implement a garbage collector at runtime. The problem with this is the performance is still often less than ideal, as it often has to stop the program to clear unneeded memory."}
+    p{"But there is another way – Rust. Rust is memory safe and performant. How? With RAII. RAII allows the compiler to determine when to and when not to free memory. Combine this with immutablility by default, array bounds checking, and other methods, and Rust becomes a very safe language. And a performant one."}
+    p{"This has triggered a quite rapid adoption of Rust by the Computer Science community. Notably, the NSA recommends it’s use. Rust is being used everywhere from NASA to hobbiests’ computers."}
+    p{"Overall, the adoption of memory safe languages will undoubtably eliminate many bugs and change the world for the better."}
+    p{"* While Zig implemments some memory safety features, and I consider it to be in this category of languages, it is not entirely memory safe."}
+    p{"** Nim can implemment a garbage collector, but does not need to."}
+    p{"Sources:
+https://www.youtube.com/watch?v=c32zXYAK7CI
+https://www.youtube.com/watch?v=pTMvh6VzDls
+https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3215760/nsa-releases-guidance-on-how-to-protect-against-software-memory-safety-issues/
+"}
+}
