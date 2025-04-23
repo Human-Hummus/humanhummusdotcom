@@ -13,13 +13,22 @@ var crops = {
 	
 }
 
-var friends = {
-	"bob": false,
-	"doggo":false,
-	"pooper_5000":false,
-	"janet":false,
-	"doug":false
-}
+var friends = [
+	{
+		"name": "bob",
+		"owned": false,
+		"cost": 5,
+		"pps": 3,
+		"image": preload("res://friends/friends/bob.png")
+	},
+	{
+		"name": "doggo",
+		"owned": false,
+		"cost": 10,
+		"pps": 6,
+		"image": preload("res://friends/friends/doggo.png")
+	}
+]
 
 func try_buy(amt):
 	if money>=amt:

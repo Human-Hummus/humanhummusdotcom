@@ -14,5 +14,6 @@ build:
 	fdm -i blog/networking-assignment.fdm -o blog/networking_assignment.html
 	fdm -i blog/it_trends.fdm -o blog/it_trends.html
 	fdm -i blog/ethics.fdm -o blog/ethics.html
+	fdm -i blog/leadership.fdm -o blog/leadership.html
 	fdm -i python_server/drungy_speak.fdm -o python_server/drungy_speak.html
 	fdm -i readme.fdm -f md -o README.md

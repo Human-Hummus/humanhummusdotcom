@@ -68,10 +68,10 @@ text = "Grow depot"
 
 [node name="go_public_resources" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 371.0
-offset_top = 128.0
-offset_right = 712.0
-offset_bottom = 505.0
+offset_left = 368.0
+offset_top = 143.0
+offset_right = 709.0
+offset_bottom = 520.0
 text = "go_public_resources"
 
 [node name="go_moes_gizmos" type="Button" parent="."]

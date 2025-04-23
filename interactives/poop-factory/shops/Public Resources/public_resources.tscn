@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://wo0d8tjvlwgu"]
+[gd_scene load_steps=18 format=3 uid="uid://wo0d8tjvlwgu"]
 
 [ext_resource type="Script" uid="uid://d3y0ixrs24u6h" path="res://shops/Public Resources/public_resources.gd" id="1_4km0q"]
 [ext_resource type="Texture2D" uid="uid://bj1c1wdpd30b4" path="res://shops/Public Resources/bg.jpg" id="2_7ijt2"]
@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://rm1woslkv1fi" path="res://shops/Public Resources/Greetings/8.mp3" id="12_qbm3o"]
 [ext_resource type="AudioStream" uid="uid://dgb8277w3qodc" path="res://shops/Public Resources/Greetings/9.mp3" id="13_u44i8"]
 [ext_resource type="AudioStream" uid="uid://vwokqwwcqups" path="res://shops/Public Resources/Greetings/10.mp3" id="14_lp7pk"]
+[ext_resource type="Texture2D" uid="uid://rwpgmu3pwg2j" path="res://friends/friends/bob.png" id="15_3bp0r"]
+[ext_resource type="AudioStream" uid="uid://2w1fh07msx1j" path="res://shops/fart.mp3" id="16_q0x23"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nh3k4"]
 streams_count = 11
@@ -43,6 +45,13 @@ position = Vector2(571, 324)
 scale = Vector2(2.27451, 2.01176)
 texture = ExtResource("2_7ijt2")
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.654902)
+offset_left = 529.0
+offset_top = 17.0
+offset_right = 1035.0
+offset_bottom = 638.0
+
 [node name="exit" type="TextureButton" parent="."]
 offset_left = 1025.0
 offset_top = -8.0
@@ -53,4 +62,40 @@ texture_normal = ExtResource("3_7ijt2")
 [node name="greeting" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_nh3k4")
 
+[node name="forward" type="Button" parent="."]
+offset_left = 988.0
+offset_top = 21.0
+offset_right = 1032.0
+offset_bottom = 65.0
+text = "->"
+
+[node name="back" type="Button" parent="."]
+offset_left = 533.0
+offset_top = 19.0
+offset_right = 577.0
+offset_bottom = 63.0
+text = "<-"
+
+[node name="name" type="Label" parent="."]
+offset_left = 582.0
+offset_top = 42.0
+offset_right = 984.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="image" type="Sprite2D" parent="."]
+position = Vector2(803, 257)
+scale = Vector2(0.454102, 0.389648)
+texture = ExtResource("15_3bp0r")
+
+[node name="Fart" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(6, 42)
+stream = ExtResource("16_q0x23")
+
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="forward" to="." method="_on_forward_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
