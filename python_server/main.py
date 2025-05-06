@@ -2,7 +2,7 @@ import tensorflow as tf
 import random, sys
 import numpy as np
 
-datapoints = 10000
+datapoints = 1000
 runn = 20
 width = 1000
 length = 5 
