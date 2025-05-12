@@ -10,6 +10,11 @@
 	font-family: fira;
 	src: url("../assets/FiraCode-Regular.ttf");
 }
+@font-face {
+	font-family: readable;
+	src: url("../assets/LexendDeca-Regular.ttf");
+}
+
 @keyframes fadeOut{
 		from{opacity:1;}
 		to{opacity:0;}

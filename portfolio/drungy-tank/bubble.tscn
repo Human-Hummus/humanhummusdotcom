@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdks7ru4kegwi"]
 
-[ext_resource type="Script" path="res://bubble.gd" id="1_cc508"]
+[ext_resource type="Script" uid="uid://bkmmqlnajyjvg" path="res://bubble.gd" id="1_cc508"]
 [ext_resource type="Texture2D" uid="uid://dg3kunmjt8an3" path="res://bubble.png" id="1_ol1ko"]
 [ext_resource type="AudioStream" uid="uid://d1va4f15spw35" path="res://pop.mp3" id="3_nx5m7"]
 
