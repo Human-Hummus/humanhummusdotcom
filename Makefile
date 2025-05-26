@@ -11,10 +11,5 @@ build:
 	fdm -i "functional software/fdm_demo.fdm" -o "functional software/fdm_demo.html"
 	fdm -i blog/drungy_story.fdm -o blog/drungy_story.html
 	fdm -i blog/index.fdm -o blog/index.html
-	fdm -i blog/networking-assignment.fdm -o blog/networking_assignment.html
-	fdm -i blog/it_trends.fdm -o blog/it_trends.html
-	fdm -i blog/ethics.fdm -o blog/ethics.html
-	fdm -i blog/leadership.fdm -o blog/leadership.html
-	fdm -i blog/wdmfll.fdm -o blog/wdmfll.html
 	fdm -i python_server/drungy_speak.fdm -o python_server/drungy_speak.html
 	fdm -i readme.fdm -f md -o README.md
