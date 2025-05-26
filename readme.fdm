@@ -1,7 +1,5 @@
 @std;
-p{"This is my website, with info, games, demos, and more! Welcome!"
-" You can view " link("https://github.com/Human-Hummus/humanhummusdotcom/tree/main"){"the source code for the website on GitHub"} " (if you aren't already!)."
-" Also visit " link("https://sites.google.com/view/official-humanhummus-wiki/home"){"The HumanHummus Wiki"} ", created by SoundHaptics."}
+h3{"This is my website, with info, games, demos, and more! Welcome!"}
 h2{"About me:"}
 list(
 		"I'm Alex! Hellowo.",
@@ -11,18 +9,13 @@ list(
 				link("mailto:michael.a.deross@gmail.com"){"E-mail me!"}),
 
 )
+h2{"About This Site:"}
+p{"www.HumanHummus.com is meant to be my personal website (generally) where I host projects, ideas and my portfolio, and talk about my life. " 
+"One thing you should probably know about this website is that while I make ALL of the code (unless explicitly stated otherwise), most of the assets currently present are not mine; They're made by my (best UwU) friend, "
+link(`https://www.instagram.com/soun.dhaptics/`){"SoundHaptics"}
+" You can view " link("https://github.com/Human-Hummus/humanhummusdotcom/tree/main"){"the source code for the website on GitHub"} " (if you aren't already!)."
+" Also visit " link("https://sites.google.com/view/official-humanhummus-wiki/home"){"The HumanHummus Wiki"} ", created by SoundHaptics."}
 h1{"Misc. tech info:"}
-h2{"Installing/running the server"}
-list(
-		"Copy etc.nginx to /etc/nginx on the hosting server. If starting from scratch, these files will need to be updated with certbot.",
-		"Set autoupdate.py to run on boot, to keep the server up to date." list(
-				"Run crontab -e to get to the config file for cron",
-				"Add @reboot python3 /humanhummusdotcom/autoupdate.py",
-				"and @reboot sleep 10s && fish /humanhummusdotcom/python_server/exec.fish"
-				),
-		"If you're building the server from scratch, git clone this git repo in the root dir.",
-		"Run python autoupdate.py cl (cl meaning change locally) to update the changelog and re-compile files locally",
-		)
 h2{"Software used on the server"}
 list(
 		link("https://nginx.org/en/"){"NGiNX"},
@@ -37,5 +30,16 @@ list(
 		link("https://ffmpeg.org/"){FFmpeg},
 		link("https://github.com/espeak-ng/espeak-ng/"){"espeak-ng"},
 )
+h2{"Installing/running the server"}
+list(
+		"Copy etc.nginx to /etc/nginx on the hosting server. If starting from scratch, these files will need to be updated with certbot.",
+		"Set autoupdate.py to run on boot, to keep the server up to date." list(
+				"Run crontab -e to get to the config file for cron",
+				"Add @reboot python3 /humanhummusdotcom/autoupdate.py",
+				"and @reboot sleep 10s && fish /humanhummusdotcom/python_server/exec.fish"
+				),
+		"If you're building the server from scratch, git clone this git repo in the root dir.",
+		"Run python autoupdate.py cl (cl meaning change locally) to update the changelog and re-compile files locally",
+		)
 p{"If you're reading this on GitHub, and think it's strange I'd show my social media here, remember that this readme is shown on the main page of the site."}
 
